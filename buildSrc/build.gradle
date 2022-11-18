@@ -1,0 +1,21 @@
+plugins {
+    id 'java-library'
+    id 'java-gradle-plugin'
+}
+
+group 'com.entropy.rcp'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    opencsv
+}
+
+dependencies {
+    gradleApi()
+    opencsv 'com.opencsv:opencsv:5.7.0'
+    implementation configurations.opencsv.dependencies
+}

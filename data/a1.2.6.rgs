@@ -1180,6 +1180,239 @@
 #
 # Obfuscated name mappings (some of these may be unchanged due to polymorphism constraints):
 #
+.field_map com/jcraft/jogg/SyncState/pageseek field_15001_pageseek
+.field_map com/jcraft/jogg/SyncState/chksum field_15002_chksum
+.field_map com/jcraft/jogg/Page/crc_lookup field_15004_crc_lookup
+.method_map com/jcraft/jogg/Page/crc_entry (I)I func_15003_crc_entry
+.field_map com/jcraft/jogg/StreamState/body_returned field_15005_body_returned
+.field_map com/jcraft/jogg/Buffer/mask field_15006_mask
+.field_map com/jcraft/jogg/Buffer/BUFFER_INCREMENT field_15007_BUFFER_INCREMENT
+.method_map com/jcraft/jorbis/Mdct/mdct_kernel ([F[FIIII)[F func_15008_mdct_kernel
+.field_map com/jcraft/jorbis/CodeBook/t field_15010_t
+.method_map com/jcraft/jorbis/CodeBook/dist (I[FI[FI)F func_15009_dist
+.field_map com/jcraft/jorbis/Info/VI_MAPB field_15011_VI_MAPB
+.field_map com/jcraft/jorbis/Info/OV_ENOTAUDIO field_15012_OV_ENOTAUDIO
+.field_map com/jcraft/jorbis/Info/VI_WINDOWB field_15013_VI_WINDOWB
+.field_map com/jcraft/jorbis/Info/_vorbis field_15014__vorbis
+.field_map com/jcraft/jorbis/Info/VI_FLOORB field_15015_VI_FLOORB
+.field_map com/jcraft/jorbis/Info/VI_RESB field_15016_VI_RESB
+.field_map com/jcraft/jorbis/Info/OV_EBADPACKET field_15017_OV_EBADPACKET
+.field_map com/jcraft/jorbis/Info/VI_TIMEB field_15018_VI_TIMEB
+.method_map com/jcraft/jorbis/StaticCodeBook/maptype1_quantvals ()I func_15023_maptype1_quantvals
+.field_map com/jcraft/jorbis/Floor1/FLOOR_fromdB_LOOKUP field_15021_FLOOR_fromdB_LOOKUP
+.method_map com/jcraft/jorbis/Floor1/render_point (IIIII)I func_15019_render_point
+.method_map com/jcraft/jorbis/Floor1/render_line (IIII[F)V func_15020_render_line
+.field_map com/jcraft/jorbis/Residue0/_01inverse_partword field_15022__01inverse_partword
+.field_map com/jcraft/jorbis/Comment/OV_EIMPL field_15026_OV_EIMPL
+.field_map com/jcraft/jorbis/Comment/_vorbis field_15027__vorbis
+.field_map com/jcraft/jorbis/Comment/_vendor field_15028__vendor
+.method_map com/jcraft/jorbis/Comment/add ([B)V func_15024_add
+.method_map com/jcraft/jorbis/Comment/query ([BI)I func_15025_query
+.field_map paulscode/sound/libraries/LibraryLWJGLOpenAL/GET field_15038_GET
+.field_map paulscode/sound/libraries/LibraryLWJGLOpenAL/listenerVelocity field_15039_listenerVelocity
+.field_map paulscode/sound/libraries/LibraryLWJGLOpenAL/listenerPositionAL field_15040_listenerPositionAL
+.field_map paulscode/sound/libraries/LibraryLWJGLOpenAL/ALBufferMap field_15041_ALBufferMap
+.field_map paulscode/sound/libraries/LibraryLWJGLOpenAL/SET field_15042_SET
+.field_map paulscode/sound/libraries/LibraryLWJGLOpenAL/alPitchSupported field_15043_alPitchSupported
+.field_map paulscode/sound/libraries/LibraryLWJGLOpenAL/listenerOrientation field_15044_listenerOrientation
+.field_map paulscode/sound/libraries/LibraryLWJGLOpenAL/XXX field_15045_XXX
+.method_map paulscode/sound/libraries/LibraryLWJGLOpenAL/alPitchSupported (ZZ)Z func_15036_alPitchSupported
+.method_map paulscode/sound/libraries/LibraryLWJGLOpenAL/checkALError ()Z func_15037_checkALError
+.field_map paulscode/sound/libraries/SourceLWJGLOpenAL/sourceVelocity field_15061_sourceVelocity
+.field_map paulscode/sound/libraries/SourceLWJGLOpenAL/myBuffer field_15062_myBuffer
+.field_map paulscode/sound/libraries/SourceLWJGLOpenAL/sourcePosition field_15063_sourcePosition
+.field_map paulscode/sound/libraries/SourceLWJGLOpenAL/channelOpenAL field_15064_channelOpenAL
+.field_map paulscode/sound/libraries/SourceLWJGLOpenAL/listenerPosition field_15065_listenerPosition
+.method_map paulscode/sound/libraries/SourceLWJGLOpenAL/calculateDistance ()V func_15056_calculateDistance
+.method_map paulscode/sound/libraries/SourceLWJGLOpenAL/calculateGain ()V func_15057_calculateGain
+.method_map paulscode/sound/libraries/SourceLWJGLOpenAL/checkPitch ()V func_15058_checkPitch
+.method_map paulscode/sound/libraries/SourceLWJGLOpenAL/resetALInformation ()V func_15059_resetALInformation
+.method_map paulscode/sound/libraries/SourceLWJGLOpenAL/checkALError ()Z func_15060_checkALError
+.method_map paulscode/sound/libraries/ChannelLWJGLOpenAL/checkALError ()Z func_15067_checkALError
+.field_map paulscode/sound/codecs/CodecWav/GET field_15107_GET
+.field_map paulscode/sound/codecs/CodecWav/logger field_15108_logger
+.field_map paulscode/sound/codecs/CodecWav/endOfStream field_15109_endOfStream
+.field_map paulscode/sound/codecs/CodecWav/SET field_15110_SET
+.field_map paulscode/sound/codecs/CodecWav/myAudioInputStream field_15111_myAudioInputStream
+.field_map paulscode/sound/codecs/CodecWav/initialized field_15112_initialized
+.field_map paulscode/sound/codecs/CodecWav/XXX field_15113_XXX
+.method_map paulscode/sound/codecs/CodecWav/errorMessage (Ljava/lang/String;)V func_15100_errorMessage
+.method_map paulscode/sound/codecs/CodecWav/endOfStream (ZZ)Z func_15101_endOfStream
+.method_map paulscode/sound/codecs/CodecWav/printStackTrace (Ljava/lang/Exception;)V func_15102_printStackTrace
+.method_map paulscode/sound/codecs/CodecWav/convertAudioBytes ([BZ)[B func_15103_convertAudioBytes
+.method_map paulscode/sound/codecs/CodecWav/appendByteArrays ([B[BI)[B func_15104_appendByteArrays
+.method_map paulscode/sound/codecs/CodecWav/trimArray ([BI)[B func_15105_trimArray
+.method_map paulscode/sound/codecs/CodecWav/initialized (ZZ)Z func_15106_initialized
+.field_map paulscode/sound/codecs/CodecJOrbis/endOfStream field_15077_endOfStream
+.field_map paulscode/sound/codecs/CodecJOrbis/audioFormat field_15078_audioFormat
+.field_map paulscode/sound/codecs/CodecJOrbis/initialized field_15079_initialized
+.field_map paulscode/sound/codecs/CodecJOrbis/pcmInfo field_15080_pcmInfo
+.field_map paulscode/sound/codecs/CodecJOrbis/inputStream field_15081_inputStream
+.field_map paulscode/sound/codecs/CodecJOrbis/bufferSize field_15082_bufferSize
+.field_map paulscode/sound/codecs/CodecJOrbis/jorbisComment field_15083_jorbisComment
+.field_map paulscode/sound/codecs/CodecJOrbis/count field_15084_count
+.field_map paulscode/sound/codecs/CodecJOrbis/index field_15085_index
+.field_map paulscode/sound/codecs/CodecJOrbis/joggPage field_15086_joggPage
+.field_map paulscode/sound/codecs/CodecJOrbis/joggPacket field_15087_joggPacket
+.field_map paulscode/sound/codecs/CodecJOrbis/pcmIndex field_15088_pcmIndex
+.field_map paulscode/sound/codecs/CodecJOrbis/jorbisBlock field_15089_jorbisBlock
+.field_map paulscode/sound/codecs/CodecJOrbis/SET field_15090_SET
+.field_map paulscode/sound/codecs/CodecJOrbis/joggSyncState field_15091_joggSyncState
+.field_map paulscode/sound/codecs/CodecJOrbis/buffer field_15092_buffer
+.field_map paulscode/sound/codecs/CodecJOrbis/jorbisInfo field_15093_jorbisInfo
+.field_map paulscode/sound/codecs/CodecJOrbis/XXX field_15094_XXX
+.field_map paulscode/sound/codecs/CodecJOrbis/jorbisDspState field_15095_jorbisDspState
+.field_map paulscode/sound/codecs/CodecJOrbis/joggStreamState field_15096_joggStreamState
+.field_map paulscode/sound/codecs/CodecJOrbis/convertedBufferSize field_15097_convertedBufferSize
+.field_map paulscode/sound/codecs/CodecJOrbis/GET field_15098_GET
+.field_map paulscode/sound/codecs/CodecJOrbis/logger field_15099_logger
+.method_map paulscode/sound/codecs/CodecJOrbis/readHeader ()Z func_15068_readHeader
+.method_map paulscode/sound/codecs/CodecJOrbis/initialized (ZZ)Z func_15069_initialized
+.method_map paulscode/sound/codecs/CodecJOrbis/appendByteArrays ([B[B)[B func_15070_appendByteArrays
+.method_map paulscode/sound/codecs/CodecJOrbis/readBytes ()[B func_15071_readBytes
+.method_map paulscode/sound/codecs/CodecJOrbis/endOfStream (ZZ)Z func_15072_endOfStream
+.method_map paulscode/sound/codecs/CodecJOrbis/trimArray ([BI)[B func_15073_trimArray
+.method_map paulscode/sound/codecs/CodecJOrbis/printStackTrace (Ljava/lang/Exception;)V func_15074_printStackTrace
+.method_map paulscode/sound/codecs/CodecJOrbis/decodeCurrentPacket ()[B func_15075_decodeCurrentPacket
+.method_map paulscode/sound/codecs/CodecJOrbis/errorMessage (Ljava/lang/String;)V func_15076_errorMessage
+.field_map paulscode/sound/StreamThread/streamingSources field_15127_streamingSources
+.field_map paulscode/sound/StreamThread/logger field_15128_logger
+.field_map paulscode/sound/StreamThread/listLock field_15129_listLock
+.method_map paulscode/sound/StreamThread/errorMessage (Ljava/lang/String;)V func_15123_errorMessage
+.method_map paulscode/sound/StreamThread/message (Ljava/lang/String;)V func_15124_message
+.method_map paulscode/sound/StreamThread/errorCheck (ZLjava/lang/String;)Z func_15125_errorCheck
+.method_map paulscode/sound/StreamThread/importantMessage (Ljava/lang/String;)V func_15126_importantMessage
+.field_map paulscode/sound/SoundSystem/initialized field_15169_initialized
+.field_map paulscode/sound/SoundSystem/SET field_15170_SET
+.field_map paulscode/sound/SoundSystem/lastException field_15171_lastException
+.field_map paulscode/sound/SoundSystem/sourcePlayList field_15172_sourcePlayList
+.field_map paulscode/sound/SoundSystem/XXX field_15173_XXX
+.field_map paulscode/sound/SoundSystem/GET field_15174_GET
+.field_map paulscode/sound/SoundSystem/currentLibrary field_15175_currentLibrary
+.method_map paulscode/sound/SoundSystem/CommandQueueSound (Ljava/lang/String;Lpaulscode/sound/FilenameURL;)V func_15130_CommandQueueSound
+.method_map paulscode/sound/SoundSystem/CommandFlush (Ljava/lang/String;)V func_15131_CommandFlush
+.method_map paulscode/sound/SoundSystem/CommandMoveListener (FFF)V func_15132_CommandMoveListener
+.method_map paulscode/sound/SoundSystem/CommandSetDistOrRoll (Ljava/lang/String;F)V func_15133_CommandSetDistOrRoll
+.method_map paulscode/sound/SoundSystem/CommandTurnListener (F)V func_15134_CommandTurnListener
+.method_map paulscode/sound/SoundSystem/CommandSetListenerOrientation (FFFFFF)V func_15135_CommandSetListenerOrientation
+.method_map paulscode/sound/SoundSystem/CommandSetLooping (Ljava/lang/String;Z)V func_15136_CommandSetLooping
+.method_map paulscode/sound/SoundSystem/CommandPlay (Ljava/lang/String;)V func_15137_CommandPlay
+.method_map paulscode/sound/SoundSystem/copySources (Ljava/util/HashMap;)Ljava/util/HashMap; func_15138_copySources
+.method_map paulscode/sound/SoundSystem/CommandFadeOut (Ljava/lang/String;Lpaulscode/sound/FilenameURL;J)V func_15139_CommandFadeOut
+.method_map paulscode/sound/SoundSystem/CommandRawDataStream (Ljavax/sound/sampled/AudioFormat;ZLjava/lang/String;FFFIF)V func_15140_CommandRawDataStream
+.method_map paulscode/sound/SoundSystem/CommandNewSource (ZZZLjava/lang/String;Lpaulscode/sound/FilenameURL;FFFIF)V func_15141_CommandNewSource
+.method_map paulscode/sound/SoundSystem/initialized (ZZ)Z func_15142_initialized
+.method_map paulscode/sound/SoundSystem/CommandRemoveSource (Ljava/lang/String;)V func_15143_CommandRemoveSource
+.method_map paulscode/sound/SoundSystem/CommandRewind (Ljava/lang/String;)V func_15144_CommandRewind
+.method_map paulscode/sound/SoundSystem/CommandSetMasterVolume (F)V func_15145_CommandSetMasterVolume
+.method_map paulscode/sound/SoundSystem/CommandSetVolume (Ljava/lang/String;F)V func_15146_CommandSetVolume
+.method_map paulscode/sound/SoundSystem/CommandCheckFadeVolumes ()V func_15147_CommandCheckFadeVolumes
+.method_map paulscode/sound/SoundSystem/CommandSetListenerAngle (F)V func_15148_CommandSetListenerAngle
+.method_map paulscode/sound/SoundSystem/CommandCull (Ljava/lang/String;)V func_15149_CommandCull
+.method_map paulscode/sound/SoundSystem/CommandSetAttenuation (Ljava/lang/String;I)V func_15150_CommandSetAttenuation
+.method_map paulscode/sound/SoundSystem/CommandNewLibrary (Ljava/lang/Class;)V func_15151_CommandNewLibrary
+.method_map paulscode/sound/SoundSystem/CommandQuickPlay (ZZZLjava/lang/String;Lpaulscode/sound/FilenameURL;FFFIFZ)V func_15152_CommandQuickPlay
+.method_map paulscode/sound/SoundSystem/CommandSetTemporary (Ljava/lang/String;Z)V func_15153_CommandSetTemporary
+.method_map paulscode/sound/SoundSystem/CommandLoadSound (Lpaulscode/sound/FilenameURL;)V func_15154_CommandLoadSound
+.method_map paulscode/sound/SoundSystem/CommandFadeOutIn (Ljava/lang/String;Lpaulscode/sound/FilenameURL;JJ)V func_15155_CommandFadeOutIn
+.method_map paulscode/sound/SoundSystem/CommandUnloadSound (Ljava/lang/String;)V func_15156_CommandUnloadSound
+.method_map paulscode/sound/SoundSystem/currentLibrary (ZLjava/lang/Class;)Ljava/lang/Class; func_15157_currentLibrary
+.method_map paulscode/sound/SoundSystem/CommandSetPosition (Ljava/lang/String;FFF)V func_15158_CommandSetPosition
+.method_map paulscode/sound/SoundSystem/CommandActivate (Ljava/lang/String;)V func_15159_CommandActivate
+.method_map paulscode/sound/SoundSystem/CommandSetPitch (Ljava/lang/String;F)V func_15160_CommandSetPitch
+.method_map paulscode/sound/SoundSystem/CommandStop (Ljava/lang/String;)V func_15161_CommandStop
+.method_map paulscode/sound/SoundSystem/CommandFeedRawAudioData (Ljava/lang/String;[B)V func_15162_CommandFeedRawAudioData
+.method_map paulscode/sound/SoundSystem/CommandDequeueSound (Ljava/lang/String;Ljava/lang/String;)V func_15163_CommandDequeueSound
+.method_map paulscode/sound/SoundSystem/CommandSetPriority (Ljava/lang/String;Z)V func_15164_CommandSetPriority
+.method_map paulscode/sound/SoundSystem/CommandSetListenerPosition (FFF)V func_15165_CommandSetListenerPosition
+.method_map paulscode/sound/SoundSystem/lastException (ZLpaulscode/sound/SoundSystemException;)Lpaulscode/sound/SoundSystemException; func_15166_lastException
+.method_map paulscode/sound/SoundSystem/CommandInitialize ()V func_15167_CommandInitialize
+.method_map paulscode/sound/SoundSystem/CommandPause (Ljava/lang/String;)V func_15168_CommandPause
+.field_map paulscode/sound/Library/normalChannelSourceNames field_15030_normalChannelSourceNames
+.field_map paulscode/sound/Library/midiChannel field_15031_midiChannel
+.field_map paulscode/sound/Library/nextNormalChannel field_15032_nextNormalChannel
+.field_map paulscode/sound/Library/nextStreamingChannel field_15033_nextStreamingChannel
+.field_map paulscode/sound/Library/streamingChannelSourceNames field_15034_streamingChannelSourceNames
+.field_map paulscode/sound/Library/logger field_15035_logger
+.method_map paulscode/sound/Library/getNextChannel (Lpaulscode/sound/Source;)Lpaulscode/sound/Channel; func_15029_getNextChannel
+.field_map paulscode/sound/Source/XXX field_15049_XXX
+.field_map paulscode/sound/Source/GET field_15050_GET
+.field_map paulscode/sound/Source/logger field_15051_logger
+.field_map paulscode/sound/Source/stopped field_15052_stopped
+.field_map paulscode/sound/Source/active field_15053_active
+.field_map paulscode/sound/Source/paused field_15054_paused
+.field_map paulscode/sound/Source/SET field_15055_SET
+.method_map paulscode/sound/Source/paused (ZZ)Z func_15046_paused
+.method_map paulscode/sound/Source/active (ZZ)Z func_15047_active
+.method_map paulscode/sound/Source/stopped (ZZ)Z func_15048_stopped
+.field_map paulscode/sound/Channel/logger field_15066_logger
+.field_map paulscode/sound/SoundSystemException/serialVersionUID serialVersionUID
+.field_map paulscode/sound/SoundSystemException/myType field_15176_myType
+.class_map paulscode/sound/SimpleThread$1 1
+.field_map paulscode/sound/SimpleThread/GET field_15117_GET
+.field_map paulscode/sound/SimpleThread/kill field_15118_kill
+.field_map paulscode/sound/SimpleThread/alive field_15119_alive
+.field_map paulscode/sound/SimpleThread/SET field_15120_SET
+.field_map paulscode/sound/SimpleThread/XXX field_15121_XXX
+.method_map paulscode/sound/SimpleThread/rerun ()V func_15114_rerun
+.method_map paulscode/sound/SimpleThread/alive (ZZ)Z func_15115_alive
+.method_map paulscode/sound/SimpleThread/kill (ZZ)Z func_15116_kill
+.field_map paulscode/sound/CommandThread/soundSystem field_15122_soundSystem
+.field_map paulscode/sound/FilenameURL/filename field_15179_filename
+.field_map paulscode/sound/FilenameURL/url field_15180_url
+.field_map paulscode/sound/FilenameURL/logger field_15181_logger
+.method_map paulscode/sound/FilenameURL/printStackTrace (Ljava/lang/Exception;)V func_15177_printStackTrace
+.method_map paulscode/sound/FilenameURL/errorMessage (Ljava/lang/String;)V func_15178_errorMessage
+.method_map paulscode/sound/SoundSystemConfig$Codec/instantiationErrorMessage ()V func_15182_instantiationErrorMessage
+.field_map paulscode/sound/SoundSystemConfig/midiCodec field_15185_midiCodec
+.field_map paulscode/sound/SoundSystemConfig/streamingBufferSize field_15186_streamingBufferSize
+.field_map paulscode/sound/SoundSystemConfig/defaultFadeDistance field_15187_defaultFadeDistance
+.field_map paulscode/sound/SoundSystemConfig/numberNormalChannels field_15188_numberNormalChannels
+.field_map paulscode/sound/SoundSystemConfig/numberStreamingBuffers field_15189_numberStreamingBuffers
+.field_map paulscode/sound/SoundSystemConfig/numberStreamingChannels field_15190_numberStreamingChannels
+.field_map paulscode/sound/SoundSystemConfig/masterGain field_15191_masterGain
+.field_map paulscode/sound/SoundSystemConfig/codecs field_15192_codecs
+.field_map paulscode/sound/SoundSystemConfig/soundFilesPackage field_15193_soundFilesPackage
+.field_map paulscode/sound/SoundSystemConfig/fileChunkSize field_15194_fileChunkSize
+.field_map paulscode/sound/SoundSystemConfig/maxFileSize field_15195_maxFileSize
+.field_map paulscode/sound/SoundSystemConfig/libraries field_15196_libraries
+.field_map paulscode/sound/SoundSystemConfig/logger field_15197_logger
+.field_map paulscode/sound/SoundSystemConfig/defaultRolloffFactor field_15198_defaultRolloffFactor
+.field_map paulscode/sound/SoundSystemConfig/defaultAttenuationModel field_15199_defaultAttenuationModel
+.method_map paulscode/sound/SoundSystemConfig/errorMessage (Ljava/lang/String;)V func_15183_errorMessage
+.method_map paulscode/sound/SoundSystemConfig/runMethod (Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object; func_15184_runMethod
+.class_map paulscode/sound/MidiChannel$1 1
+.field_map paulscode/sound/MidiChannel/synthesizer field_15213_synthesizer
+.field_map paulscode/sound/MidiChannel/sequenceQueueLock field_15214_sequenceQueueLock
+.field_map paulscode/sound/MidiChannel/loading field_15215_loading
+.field_map paulscode/sound/MidiChannel/sequenceQueue field_15216_sequenceQueue
+.field_map paulscode/sound/MidiChannel/sequencer field_15217_sequencer
+.field_map paulscode/sound/MidiChannel/synthDevice field_15218_synthDevice
+.field_map paulscode/sound/MidiChannel/filenameURL field_15219_filenameURL
+.field_map paulscode/sound/MidiChannel/fadeThread field_15220_fadeThread
+.field_map paulscode/sound/MidiChannel/gain field_15221_gain
+.field_map paulscode/sound/MidiChannel/sequence field_15222_sequence
+.field_map paulscode/sound/MidiChannel/CHANGE_VOLUME field_15223_CHANGE_VOLUME
+.field_map paulscode/sound/MidiChannel/SET field_15224_SET
+.field_map paulscode/sound/MidiChannel/XXX field_15225_XXX
+.field_map paulscode/sound/MidiChannel/toLoop field_15226_toLoop
+.field_map paulscode/sound/MidiChannel/sourcename field_15227_sourcename
+.field_map paulscode/sound/MidiChannel/GET field_15228_GET
+.field_map paulscode/sound/MidiChannel/logger field_15229_logger
+.field_map paulscode/sound/MidiChannel/END_OF_TRACK field_15230_END_OF_TRACK
+.method_map paulscode/sound/MidiChannel/toLoop (ZZ)Z func_15200_toLoop
+.method_map paulscode/sound/MidiChannel/loading (ZZ)Z func_15201_loading
+.method_map paulscode/sound/MidiChannel/openMidiDevice (Ljava/lang/String;)Ljavax/sound/midi/MidiDevice; func_15202_openMidiDevice
+.method_map paulscode/sound/MidiChannel/sourcename (ZLjava/lang/String;)Ljava/lang/String; func_15203_sourcename
+.method_map paulscode/sound/MidiChannel/getSynthesizer ()V func_15204_getSynthesizer
+.method_map paulscode/sound/MidiChannel/reset ()V func_15205_reset
+.method_map paulscode/sound/MidiChannel/filenameURL (ZLpaulscode/sound/FilenameURL;)Lpaulscode/sound/FilenameURL; func_15206_filenameURL
+.method_map paulscode/sound/MidiChannel/checkFadeOut ()Z func_15207_checkFadeOut
+.method_map paulscode/sound/MidiChannel/getSequencer ()V func_15208_getSequencer
+.method_map paulscode/sound/MidiChannel/setSequence (Ljava/net/URL;)V func_15209_setSequence
+.method_map paulscode/sound/MidiChannel/openSequencer (Ljava/lang/String;)Ljavax/sound/midi/Sequencer; func_15210_openSequencer
+.method_map paulscode/sound/MidiChannel/incrementSequence ()Z func_15211_incrementSequence
+.method_map paulscode/sound/MidiChannel/init ()V func_15212_init
 .field_map net/minecraft/client/MinecraftApplet/b field_6234_b
 .field_map net/minecraft/client/MinecraftApplet/a field_6235_a
 .field_map net/minecraft/client/MinecraftApplet/c field_6236_c

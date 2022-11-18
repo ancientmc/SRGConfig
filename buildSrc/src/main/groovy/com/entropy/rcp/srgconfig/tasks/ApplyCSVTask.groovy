@@ -2,33 +2,41 @@ package com.entropy.rcp.srgconfig.tasks
 
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
-import com.opencsv.exceptions.CsvValidationException;
+import com.opencsv.exceptions.CsvValidationException
+import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.TaskAction
 
-class FixClassesTask {
+
+class ApplyCSVTask extends DefaultTask {
     @InputFile File scriptFile
     @InputFile File csvFile
-    CSVReader reader
-    String[] nextLine
-    int rowNumber = 0
 
     @TaskAction
-    void exec() {
+    void exec() throws CsvValidationException, IOException {
+        String srgName = ""
+        String mcpName = ""
+        String[] nextLine
+        int rowNumber = 0
+        CSVReader csvReader = new CSVReaderBuilder(new FileReader(csvFile)).withSkipLines(1).build()
 
-    }
-
-    void applytoFile(File file, String srgName, String mcpName) throws IOException {
-        Scanner scanner = new Scanner(file)
-        StringBuffer buffer = new StringBuffer()
-        while(scanner.hasNextLine()) {
-            buffer.append(scanner.nextLine() + System.lineSeparator())
+        while((nextLine = csvReader.readNext()) != null) {
+            rowNumber++
+            for (int i = 1; i < nextLine.length; i++) {
+                srgName = nextLine[0]
+                mcpName = nextLine[1]
+                Scanner scanner = new Scanner(scriptFile)
+                StringBuffer buffer = new StringBuffer()
+                while (scanner.hasNextLine()) {
+                    buffer.append(scanner.nextLine() + System.lineSeparator())
+                }
+                String contents = buffer.toString()
+                scanner.close()
+                contents = contents.replaceAll(srgName, mcpName)
+                FileWriter writer = new FileWriter(scriptFile)
+                writer.append(contents)
+                writer.flush()
+            }
         }
-        String contents = buffer.toString()
-        scanner.close();
-
     }
-
-
-
 }

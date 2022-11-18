@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'java-library'
 }
 
 group 'org.example'
@@ -9,11 +9,35 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+import com.entropy.rcp.srgconfig.tasks.*
+
+ext {
+    MC_VERSION = "a1.2.6"
+    DIR_DATA = "$project.projectDir\\data"
+    RGS_FILE = "${DIR_DATA}\\${MC_VERSION}.rgs"
+    SRG_FILE = "${DIR_DATA}\\${MC_VERSION}.srg"
+    CLASS_CSV = "${DIR_DATA}\\csv\\classes_${MC_VERSION}.csv"
+    FIELDS_CSV = "${DIR_DATA}\\csv\\fields_${MC_VERSION}.csv"
+    METHODS_CSV = "${DIR_DATA}\\csv\\methods_${MC_VERSION}.csv"
 }
 
-test {
-    useJUnitPlatform()
+task applyClassCSV(type: ApplyCSVTask) {
+    scriptFile = file(RGS_FILE)
+    csvFile = file(CLASS_CSV)
+}
+
+task convertToSRG(type: JavaExec) {
+    main = "uk.jamierocks.rgs2srg.Main"
+    classpath = files("${DIR_DATA}\\rgs2srg.jar")
+    args("-i", RGS_FILE, "-o", SRG_FILE)
+}
+
+task applyFields(type: ApplyCSVTask) {
+    scriptFile = file(SRG_FILE)
+    csvFile = file(FIELDS_CSV)
+}
+
+task applyMethods(type: ApplyCSVTask) {
+    scriptFile = file(SRG_FILE)
+    csvFile = file(METHODS_CSV)
 }
