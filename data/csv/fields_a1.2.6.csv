@@ -2423,7 +2423,7 @@ field_40214_a,rand,Release 1.2.5
 field_40215_f,guiTop,Release 1.2.5
 field_40216_e,guiLeft,Release 1.2.5
 field_40217_h,field_40217_h,Release 1.0.0
-field_4022_aR,lightStoneDust,Release 1.2.5
+field_4022_aR,glowstoneDust,Release 1.2.5
 field_40220_w,bookModel,Release 1.2.5
 field_40221_n,field_40221_n,Release 1.0.0
 field_40222_o,field_40222_o,Release 1.0.0
@@ -2622,7 +2622,7 @@ field_40506_o,efficiency,Release 1.2.5
 field_40507_l,knockback,Release 1.2.5
 field_40508_m,fireAspect,Release 1.2.5
 field_40509_j,smite,Release 1.2.5
-field_4051_bd,slowSand,Release 1.2.5
+field_4051_bd,soulSand,Release 1.2.5
 field_40510_k,baneOfArthropods,Release 1.2.5
 field_40511_h,aquaAffinity,Release 1.2.5
 field_40512_i,sharpness,Release 1.2.5
@@ -2827,11 +2827,11 @@ field_4159_s,netherCaveGenerator,Release 1.2.5
 field_416_af,plantRed,Release 1.2.5
 field_4160_r,netherrackExclusivityNoise,Release 1.2.5
 field_4161_q,gravelNoise,Release 1.2.5
-field_4162_p,slowsandNoise,Release 1.2.5
+field_4162_p,soulSandNoise,Release 1.2.5
 field_4163_o,field_4163_o,Release 1.0.0
 field_4164_n,worldObj,Release 1.2.5
 field_4165_m,netherrackExculsivityNoiseGen,Release 1.2.5
-field_4166_l,slowsandGravelNoiseGen,Release 1.2.5
+field_4166_l,soulSandGravelNoiseGen,Release 1.2.5
 field_4167_k,netherNoiseGen3,Release 1.2.5
 field_4168_j,netherNoiseGen2,Release 1.2.5
 field_4169_i,netherNoiseGen1,Release 1.2.5

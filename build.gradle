@@ -13,12 +13,23 @@ import com.entropy.rcp.srgconfig.tasks.*
 
 ext {
     MC_VERSION = "a1.2.6"
+    MCP_VERSION = "2.5"
     DIR_DATA = "$project.projectDir\\data"
+    MAPPINGS_ZIP = "${DIR_DATA}\\mappings-mcp-${MCP_VERSION}.zip"
     RGS_FILE = "${DIR_DATA}\\${MC_VERSION}.rgs"
     SRG_FILE = "${DIR_DATA}\\${MC_VERSION}.srg"
     CLASS_CSV = "${DIR_DATA}\\csv\\classes_${MC_VERSION}.csv"
     FIELDS_CSV = "${DIR_DATA}\\csv\\fields_${MC_VERSION}.csv"
     METHODS_CSV = "${DIR_DATA}\\csv\\methods_${MC_VERSION}.csv"
+}
+
+clean {
+    delete(file(RGS_FILE), file(SRG_FILE))
+}
+
+task extractRGSFile(type: Copy) {
+    from zipTree(file(MAPPINGS_ZIP))
+    into file(DIR_DATA)
 }
 
 task applyClassCSV(type: ApplyCSVTask) {
