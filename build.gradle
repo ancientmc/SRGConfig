@@ -32,7 +32,7 @@ task extractRGSFile(type: Copy) {
     into file(DIR_DATA)
 }
 
-task applyClassCSV(type: ApplyCSVTask) {
+task applyClassesCSV(type: ApplyCSVTask) {
     scriptFile = file(RGS_FILE)
     csvFile = file(CLASS_CSV)
 }
@@ -43,12 +43,12 @@ task convertToSRG(type: JavaExec) {
     args("-i", RGS_FILE, "-o", SRG_FILE)
 }
 
-task applyFields(type: ApplyCSVTask) {
+task applyFieldsCSV(type: ApplyCSVTask) {
     scriptFile = file(SRG_FILE)
     csvFile = file(FIELDS_CSV)
 }
 
-task applyMethods(type: ApplyCSVTask) {
+task applyMethodsCSV(type: ApplyCSVTask) {
     scriptFile = file(SRG_FILE)
     csvFile = file(METHODS_CSV)
 }

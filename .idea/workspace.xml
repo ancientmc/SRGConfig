@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="upd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/data/mappings-mcp-2.5.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/a1.2.6.rgs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/csv/classes_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/classes_a1.2.6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/csv/fields_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/fields_a1.2.6.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +17,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -190,11 +197,19 @@
       <option name="project" value="LOCAL" />
       <updated>1668736044071</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- updated some field, method, &amp; class names to fit with modern MC&#10;- added some new tasks, a clean task and a task that extracts a fresh copy of the RGS file from a ZIP archive">
+      <created>1668765941029</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668765941029</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed everything lol whoops" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed everything lol whoops" />
+    <MESSAGE value="- updated some field, method, &amp; class names to fit with modern MC&#10;- added some new tasks, a clean task and a task that extracts a fresh copy of the RGS file from a ZIP archive" />
+    <option name="LAST_COMMIT_MESSAGE" value="- updated some field, method, &amp; class names to fit with modern MC&#10;- added some new tasks, a clean task and a task that extracts a fresh copy of the RGS file from a ZIP archive" />
   </component>
 </project>
