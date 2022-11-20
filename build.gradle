@@ -49,7 +49,6 @@ clean {
             file(SRG_FILE),
             file(TEST_DIR_JARS),
             file(TEST_DIR_TEMP),
-            file(TEST_DIR_CFG).listFiles(gitIgnoreFilter),
             file(TEST_DIR_LOGS).listFiles(gitIgnoreFilter))
 }
 
@@ -67,6 +66,10 @@ task convertToSRG(type: JavaExec) {
     main = "uk.jamierocks.rgs2srg.Main"
     classpath = files("${DIR_DATA}\\rgs2srg.jar")
     args("-i", RGS_FILE, "-o", SRG_FILE)
+}
+
+task removeUnusedLines(type: RemoveUnusedLinesTask) {
+    scriptFile = file(SRG_FILE)
 }
 
 task applyFieldsCSV(type: ApplyCSVTask) {
