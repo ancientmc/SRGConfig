@@ -1,5 +1,6 @@
 plugins {
     id 'java-library'
+    id 'de.undercouch.download' version '4.1.2'
 }
 
 group 'org.example'
@@ -7,6 +8,16 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven { url = 'https://nexus.velocitypowered.com/repository/maven-public/' }
+}
+
+configurations {
+    testrg
+}
+
+dependencies {
+    testrg 'de.oceanlabs.mcp:RetroGuard:3.6.6'
+    testrg configurations.testrg.dependencies
 }
 
 import com.entropy.rcp.srgconfig.tasks.*
@@ -21,10 +32,25 @@ ext {
     CLASS_CSV = "${DIR_DATA}\\csv\\classes_${MC_VERSION}.csv"
     FIELDS_CSV = "${DIR_DATA}\\csv\\fields_${MC_VERSION}.csv"
     METHODS_CSV = "${DIR_DATA}\\csv\\methods_${MC_VERSION}.csv"
+    TEST_MC_JAR = "https://piston-data.mojang.com/v1/objects/a68c817afd6c05c253ba5462287c2c19bbb57935/client.jar"
+    TEST_DIR_JARS = "${DIR_DATA}\\jars"
+    TEST_BASE_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}.jar"
+    TEST_SRG_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}-srg.jar"
+    TEST_DIR_TEMP = "${TEST_DIR_JARS}\\temp\\"
+    TEST_DIR_CFG = "${DIR_DATA}\\cfg"
+    TEST_RG_CFG = project.getConfigurations().findByName("testrg")
+    TEST_DIR_LOGS = "${DIR_DATA}\\logs"
 }
 
+FileFilter gitIgnoreFilter = (File file) -> { return !file.getName().endsWith(".gitignore") }
+
 clean {
-    delete(file(RGS_FILE), file(SRG_FILE))
+    delete(file(RGS_FILE),
+            file(SRG_FILE),
+            file(TEST_DIR_JARS),
+            file(TEST_DIR_TEMP),
+            file(TEST_DIR_CFG).listFiles(gitIgnoreFilter),
+            file(TEST_DIR_LOGS).listFiles(gitIgnoreFilter))
 }
 
 task extractRGSFile(type: Copy) {
@@ -52,3 +78,26 @@ task applyMethodsCSV(type: ApplyCSVTask) {
     scriptFile = file(SRG_FILE)
     csvFile = file(METHODS_CSV)
 }
+
+task testDownloadJar(type: Download) {
+    src TEST_MC_JAR
+    dest TEST_BASE_JAR
+}
+
+task testDeobfJar(type: JavaExec) {
+    main "RetroGuard"
+    classpath = files(TEST_RG_CFG)
+    args("-searge", "${DIR_DATA}\\cfg\\retroguard.cfg")
+}
+
+// Since I use IntelliJ IDEA I can unzip the jar and view the still-compiled class files with the built-in version of
+// FernFlower to make sure everything works correctly. I don't know how it works in other IDEs like Eclipse, NetBeans, etc.
+// I do not intend on fully installing Fernflower (via Maven) and making a decompile class task in this repo, so if you
+// don't use IDEA and still want to view the source files here, use something like JD GUI, Enigma, or javadecompilers.com.
+task testUnzipJar(type: Copy) {
+    from zipTree(TEST_SRG_JAR)
+    into file(TEST_DIR_TEMP)
+}
+
+
+
