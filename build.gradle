@@ -52,6 +52,10 @@ clean {
             file(TEST_DIR_LOGS).listFiles(gitIgnoreFilter))
 }
 
+task buildSRG(type: GradleBuild) {
+    tasks = ['extractRGSFile', 'applyClassesCSV', 'convertToSRG', 'removeUnusedLines', 'applyFieldsCSV', 'applyMethodsCSV']
+}
+
 task extractRGSFile(type: Copy) {
     from zipTree(file(MAPPINGS_ZIP))
     into file(DIR_DATA)
