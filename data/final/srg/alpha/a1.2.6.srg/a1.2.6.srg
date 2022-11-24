@@ -125,7 +125,7 @@ CL: lt net/minecraft/src/TileEntityFurnace
 CL: ls net/minecraft/src/FontRenderer
 CL: lr net/minecraft/src/LogoEffectRandomizer
 CL: lq net/minecraft/src/Packet50PreChunk
-CL: lp net/minecraft/src/WorldGenGlowstone2
+CL: lp net/minecraft/src/WorldGenGlowStone2
 CL: lo net/minecraft/src/MaterialLiquid
 CL: ln net/minecraft/src/TextureFlamesFX
 CL: lm net/minecraft/src/ModelSpider
@@ -234,7 +234,7 @@ CL: ho net/minecraft/src/RenderSorter
 CL: hn net/minecraft/src/RenderArrow
 CL: hm net/minecraft/src/RenderEntity
 CL: hl net/minecraft/src/Packet0KeepAlive
-CL: hk net/minecraft/src/BlockGlowstone
+CL: hk net/minecraft/src/BlockGlowStone
 CL: hj net/minecraft/src/EntityFish
 CL: hi net/minecraft/src/IInventory
 CL: hh net/minecraft/src/ItemReed
@@ -329,12 +329,12 @@ CL: dx net/minecraft/src/Item
 CL: dw net/minecraft/src/BlockSand
 CL: dv net/minecraft/src/Packet28EntityVelocity
 CL: du net/minecraft/src/GuiDownloadTerrain
-CL: dt net/minecraft/src/WorldGenGlowstone1
+CL: dt net/minecraft/src/WorldGenGlowStone1
 CL: ds net/minecraft/src/GLAllocation
 CL: dr net/minecraft/src/GuiChat
 CL: dq net/minecraft/src/EntityCreeper
 CL: dp net/minecraft/src/EntityBoat
-CL: do net/minecraft/src/CanvasMajongLogo
+CL: do net/minecraft/src/CanvasMojangLogo
 CL: dn net/minecraft/src/WorldGenCactus
 CL: dm net/minecraft/src/Pathfinder
 CL: dl net/minecraft/src/MapGenBase
@@ -513,8 +513,8 @@ FD: net/minecraft/client/Minecraft/a net/minecraft/client/Minecraft/fullscreen
 FD: net/minecraft/isom/IsomPreviewApplet/a net/minecraft/isom/IsomPreviewApplet/field_15231_a
 FD: qm/b net/minecraft/src/ChunkCoordIntPair/chunkZPos
 FD: qm/a net/minecraft/src/ChunkCoordIntPair/chunkXPos
-FD: qk/a net/minecraft/src/ItemFood/itemName
-FD: qj/a net/minecraft/src/BlockStep/blockName
+FD: qk/a net/minecraft/src/ItemFood/healAmount
+FD: qj/a net/minecraft/src/BlockStep/blockType
 FD: qi/a net/minecraft/src/Packet255KickDisconnect/reason
 FD: qh/b net/minecraft/src/BlockFire/abilityToCatchFire
 FD: qh/a net/minecraft/src/BlockFire/chanceToEncourageFire
@@ -542,10 +542,10 @@ FD: qd/h net/minecraft/src/EntityMinecart/cargoItems
 FD: qd/g net/minecraft/src/EntityMinecart/pushZ
 FD: qd/f net/minecraft/src/EntityMinecart/pushX
 FD: qd/e net/minecraft/src/EntityMinecart/fuel
-FD: qd/d net/minecraft/src/EntityMinecart/entityRiderPitchDelta
-FD: qd/c net/minecraft/src/EntityMinecart/firstUpdate
-FD: qd/b net/minecraft/src/EntityMinecart/nextStepDistance
-FD: qd/a net/minecraft/src/EntityMinecart/nextEntityID
+FD: qd/d net/minecraft/src/EntityMinecart/minecartType
+FD: qd/c net/minecraft/src/EntityMinecart/minecartRockDirection
+FD: qd/b net/minecraft/src/EntityMinecart/minecartTimeSinceHit
+FD: qd/a net/minecraft/src/EntityMinecart/minecartCurrentDamage
 FD: qc/b net/minecraft/src/TileEntitySign/lineBeingEdited
 FD: qc/a net/minecraft/src/TileEntitySign/signText
 FD: pz/a net/minecraft/src/RenderZombieSimple/scale
@@ -585,7 +585,7 @@ FD: pt/b net/minecraft/src/EntityPigZombie/randomSoundDelay
 FD: pt/a net/minecraft/src/EntityPigZombie/angerLevel
 FD: pt/c net/minecraft/src/EntityPigZombie/defaultHeldItem
 FD: ps/b net/minecraft/src/EntityOtherPlayerMP/otherPlayerMPPosRotationIncrements
-FD: ps/a net/minecraft/src/EntityOtherPlayerMP/damageRemainder
+FD: ps/a net/minecraft/src/EntityOtherPlayerMP/field_20924_a
 FD: ps/bz net/minecraft/src/EntityOtherPlayerMP/otherPlayerMPPitch
 FD: ps/by net/minecraft/src/EntityOtherPlayerMP/otherPlayerMPYaw
 FD: ps/bx net/minecraft/src/EntityOtherPlayerMP/otherPlayerMPZ
@@ -1042,14 +1042,14 @@ FD: lw/bi net/minecraft/src/Entity/inWater
 FD: lw/bh net/minecraft/src/Entity/maxAir
 FD: lw/e net/minecraft/src/Entity/entityRiderYawDelta
 FD: lw/bg net/minecraft/src/Entity/fire
-FD: lw/d net/minecraft/src/Entity/entityRiderPitchDelta
+FD: lw/d net/minecraft/src/Entity/minecartType
 FD: lw/bf net/minecraft/src/Entity/fireResistance
-FD: lw/c net/minecraft/src/Entity/firstUpdate
+FD: lw/c net/minecraft/src/Entity/minecartRockDirection
 FD: lw/be net/minecraft/src/Entity/ticksExisted
 FD: lw/bd net/minecraft/src/Entity/rand
-FD: lw/b net/minecraft/src/Entity/nextStepDistance
+FD: lw/b net/minecraft/src/Entity/minecartTimeSinceHit
 FD: lw/bc net/minecraft/src/Entity/field_9313_bc
-FD: lw/a net/minecraft/src/Entity/nextEntityID
+FD: lw/a net/minecraft/src/Entity/minecartCurrentDamage
 FD: lw/bb net/minecraft/src/Entity/entityCollisionReduction
 FD: lw/ba net/minecraft/src/Entity/noClip
 FD: lv/i net/minecraft/src/EntityArrow/ticksInAir
@@ -1817,7 +1817,7 @@ FD: ed/e net/minecraft/src/Packet15Place/itemStack
 FD: ed/d net/minecraft/src/Packet15Place/direction
 FD: ed/c net/minecraft/src/Packet15Place/zPosition
 FD: ec/f net/minecraft/src/RenderLiving/renderPassModel
-FD: ec/e net/minecraft/src/RenderLiving/renderBlocks
+FD: ec/e net/minecraft/src/RenderLiving/mainModel
 FD: eb/n net/minecraft/src/EntityPlayer/fishEntity
 FD: eb/m net/minecraft/src/EntityPlayer/dimension
 FD: eb/l net/minecraft/src/EntityPlayer/username
@@ -1968,7 +1968,7 @@ FD: dp/d net/minecraft/src/EntityBoat/boatPosRotationIncrements
 FD: dp/c net/minecraft/src/EntityBoat/boatRockDirection
 FD: dp/b net/minecraft/src/EntityBoat/boatTimeSinceHit
 FD: dp/a net/minecraft/src/EntityBoat/boatCurrentDamage
-FD: do/a net/minecraft/src/CanvasMajongLogo/logo
+FD: do/a net/minecraft/src/CanvasMojangLogo/logo
 FD: dm/b net/minecraft/src/Pathfinder/path
 FD: dm/a net/minecraft/src/Pathfinder/worldMap
 FD: dm/d net/minecraft/src/Pathfinder/pathOptions
@@ -2282,7 +2282,7 @@ FD: az/b net/minecraft/src/EntityFireball/accelerationX
 FD: az/a net/minecraft/src/EntityFireball/field_9406_a
 FD: ay/a net/minecraft/src/GuiUnused/message1
 FD: ay/h net/minecraft/src/GuiUnused/message2
-FD: ax/c net/minecraft/src/CraftingInventoryCB/windowId
+FD: ax/c net/minecraft/src/CraftingInventoryCB/crafters
 FD: aw/b net/minecraft/src/NoiseGenerator2/field_4291_b
 FD: aw/a net/minecraft/src/NoiseGenerator2/field_4292_a
 FD: aw/g net/minecraft/src/NoiseGenerator2/field_4293_g
@@ -2303,7 +2303,7 @@ FD: as/a net/minecraft/src/EntityCow/unusedBoolean
 FD: ar/c net/minecraft/src/SlotCrafting/craftMatrix
 FD: aq/b net/minecraft/src/Render/renderManager
 FD: aq/a net/minecraft/src/Render/modelBase
-FD: aq/e net/minecraft/src/Render/renderBlocks
+FD: aq/e net/minecraft/src/Render/mainModel
 FD: aq/d net/minecraft/src/Render/shadowOpaque
 FD: aq/c net/minecraft/src/Render/shadowSize
 FD: ap/a net/minecraft/src/BlockPressurePlate/triggerMobType
@@ -3121,7 +3121,7 @@ MD: lq/a (Ljava/io/DataInputStream;)V net/minecraft/src/Packet50PreChunk/readPac
 MD: lq/a (Lmo;)V net/minecraft/src/Packet50PreChunk/processPacket (Lnet/minecraft/src/NetHandler;)V
 MD: lq/a (Ljava/io/DataOutputStream;)V net/minecraft/src/Packet50PreChunk/writePacketData (Ljava/io/DataOutputStream;)V
 MD: lq/a ()I net/minecraft/src/Packet50PreChunk/getPacketSize ()I
-MD: lp/a (Lcy;Ljava/util/Random;III)Z net/minecraft/src/WorldGenGlowstone2/generate (Lnet/minecraft/src/World;Ljava/util/Random;III)Z
+MD: lp/a (Lcy;Ljava/util/Random;III)Z net/minecraft/src/WorldGenGlowStone2/generate (Lnet/minecraft/src/World;Ljava/util/Random;III)Z
 MD: lo/a ()Z net/minecraft/src/MaterialLiquid/isSolid ()Z
 MD: lo/d ()Z net/minecraft/src/MaterialLiquid/isLiquid ()Z
 MD: lo/c ()Z net/minecraft/src/MaterialLiquid/blocksMovement ()Z
@@ -3142,7 +3142,6 @@ MD: li/a ()I net/minecraft/src/Packet29DestroyEntity/getPacketSize ()I
 MD: lh/a_ ()Lji; net/minecraft/src/BlockContainer/getBlockEntity ()Lnet/minecraft/src/TileEntity;
 MD: lh/b (Lcy;III)V net/minecraft/src/BlockContainer/onBlockRemoval (Lnet/minecraft/src/World;III)V
 MD: lh/e (Lcy;III)V net/minecraft/src/BlockContainer/onBlockAdded (Lnet/minecraft/src/World;III)V
-MD: lg/values ()[Llg; net/minecraft/src/EnumMobType/func_4131_values ()[Llg;
 MD: lf/b (IIII)V net/minecraft/src/ImageBufferDownload/func_884_b (IIII)V
 MD: lf/a (IIII)V net/minecraft/src/ImageBufferDownload/func_885_a (IIII)V
 MD: lf/a (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage; net/minecraft/src/ImageBufferDownload/parseUserSkin (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;
@@ -3648,7 +3647,7 @@ MD: hl/a (Ljava/io/DataInputStream;)V net/minecraft/src/Packet0KeepAlive/readPac
 MD: hl/a (Lmo;)V net/minecraft/src/Packet0KeepAlive/processPacket (Lnet/minecraft/src/NetHandler;)V
 MD: hl/a (Ljava/io/DataOutputStream;)V net/minecraft/src/Packet0KeepAlive/writePacketData (Ljava/io/DataOutputStream;)V
 MD: hl/a ()I net/minecraft/src/Packet0KeepAlive/getPacketSize ()I
-MD: hk/a (ILjava/util/Random;)I net/minecraft/src/BlockGlowstone/idDropped (ILjava/util/Random;)I
+MD: hk/a (ILjava/util/Random;)I net/minecraft/src/BlockGlowStone/idDropped (ILjava/util/Random;)I
 MD: hj/a (DDDFFI)V net/minecraft/src/EntityFish/setPositionAndRotation2 (DDDFFI)V
 MD: hj/e_ ()V net/minecraft/src/EntityFish/onUpdate ()V
 MD: hj/k ()I net/minecraft/src/EntityFish/catchFish ()I
@@ -3771,7 +3770,6 @@ MD: gz/a (Ljava/lang/Class;)Lfr; net/minecraft/src/TileEntityRenderer/getSpecial
 MD: gz/b (Lji;)Lfr; net/minecraft/src/TileEntityRenderer/getSpecialRendererForEntity (Lnet/minecraft/src/TileEntity;)Lnet/minecraft/src/TileEntitySpecialRenderer;
 MD: gz/a (Lcy;Lfu;Lls;Leb;F)V net/minecraft/src/TileEntityRenderer/setRenderingContext (Lnet/minecraft/src/World;Lnet/minecraft/src/RenderEngine;Lnet/minecraft/src/FontRenderer;Lnet/minecraft/src/EntityPlayer;F)V
 MD: gz/a (Lji;F)V net/minecraft/src/TileEntityRenderer/renderTileEntity (Lnet/minecraft/src/TileEntity;F)V
-MD: gy/values ()[Lgy; net/minecraft/src/EnumCreatureType/func_4145_values ()[Lgy;
 MD: gx/a ()B net/minecraft/src/NBTTagEnd/getId ()B
 MD: gx/a (Ljava/io/DataOutput;)V net/minecraft/src/NBTTagEnd/write (Ljava/io/DataOutput;)V
 MD: gx/a (Ljava/io/DataInput;)V net/minecraft/src/NBTTagEnd/load (Ljava/io/DataInput;)V
@@ -3898,7 +3896,6 @@ MD: fz/b ()Z net/minecraft/src/BlockSnow/renderAsNormalBlock ()Z
 MD: fy/b (Lpk;IIII)Z net/minecraft/src/BlockBreakable/shouldSideBeRendered (Lnet/minecraft/src/IBlockAccess;IIII)Z
 MD: fy/a ()Z net/minecraft/src/BlockBreakable/isOpaqueCube ()Z
 MD: fx/a (Lbw;Lbw;)I net/minecraft/src/EntitySorter/sortByDistanceToEntity (Lnet/minecraft/src/WorldRenderer;Lnet/minecraft/src/WorldRenderer;)I
-MD: fw/values ()[Lfw; net/minecraft/src/EnumOS1/func_1064_values ()[Lfw;
 MD: fv/a (Ljava/io/DataInputStream;)V net/minecraft/src/Packet24MobSpawn/readPacketData (Ljava/io/DataInputStream;)V
 MD: fv/a (Lmo;)V net/minecraft/src/Packet24MobSpawn/processPacket (Lnet/minecraft/src/NetHandler;)V
 MD: fv/a (Ljava/io/DataOutputStream;)V net/minecraft/src/Packet24MobSpawn/writePacketData (Ljava/io/DataOutputStream;)V
@@ -3983,7 +3980,6 @@ MD: fo/b (Lly;)V net/minecraft/src/InventoryPlayer/readFromNBT (Lnet/minecraft/s
 MD: fn/a (Lhi;)V net/minecraft/src/CraftingInventoryWorkbenchCB/onCraftMatrixChanged (Lnet/minecraft/src/IInventory;)V
 MD: fn/a (Leb;)V net/minecraft/src/CraftingInventoryWorkbenchCB/onCraftGuiClosed (Lnet/minecraft/src/EntityPlayer;)V
 MD: fm/a (Lcy;Ljava/util/Random;III)Z net/minecraft/src/WorldGenReed/generate (Lnet/minecraft/src/World;Ljava/util/Random;III)Z
-MD: fl/values ()[Lfl; net/minecraft/src/EnumArt/func_1105_values ()[Lfl;
 MD: fk/a (Lhf;DDDFF)V net/minecraft/src/RenderChicken/doRenderLiving (Lnet/minecraft/src/EntityLiving;DDDFF)V
 MD: fk/a (Llw;DDDFF)V net/minecraft/src/RenderChicken/doRender (Lnet/minecraft/src/Entity;DDDFF)V
 MD: fk/a (Lou;F)F net/minecraft/src/RenderChicken/getWingRotation (Lnet/minecraft/src/EntityChicken;F)F
@@ -4189,7 +4185,7 @@ MD: du/a (IIF)V net/minecraft/src/GuiDownloadTerrain/drawScreen (IIF)V
 MD: du/a ()V net/minecraft/src/GuiDownloadTerrain/initGui ()V
 MD: du/g ()V net/minecraft/src/GuiDownloadTerrain/updateScreen ()V
 MD: du/a (CI)V net/minecraft/src/GuiDownloadTerrain/keyTyped (CI)V
-MD: dt/a (Lcy;Ljava/util/Random;III)Z net/minecraft/src/WorldGenGlowstone1/generate (Lnet/minecraft/src/World;Ljava/util/Random;III)Z
+MD: dt/a (Lcy;Ljava/util/Random;III)Z net/minecraft/src/WorldGenGlowStone1/generate (Lnet/minecraft/src/World;Ljava/util/Random;III)Z
 MD: ds/d (I)Ljava/nio/FloatBuffer; net/minecraft/src/GLAllocation/createDirectFloatBuffer (I)Ljava/nio/FloatBuffer;
 MD: ds/a (I)I net/minecraft/src/GLAllocation/generateDisplayLists (I)I
 MD: ds/c (I)Ljava/nio/IntBuffer; net/minecraft/src/GLAllocation/createDirectIntBuffer (I)Ljava/nio/IntBuffer;
@@ -4512,7 +4508,6 @@ MD: ci/a (Lmo;)V net/minecraft/src/Packet51MapChunk/processPacket (Lnet/minecraf
 MD: ci/a (Ljava/io/DataOutputStream;)V net/minecraft/src/Packet51MapChunk/writePacketData (Ljava/io/DataOutputStream;)V
 MD: ci/a ()I net/minecraft/src/Packet51MapChunk/getPacketSize ()I
 MD: i/a (Lhr;)V net/minecraft/src/MinecraftAppletImpl/displayUnexpectedThrowable (Lnet/minecraft/src/UnexpectedThrowable;)V
-MD: ch/values ()[Lch; net/minecraft/src/EnumSkyBlock/func_4151_values ()[Lch;
 MD: h/a ()B net/minecraft/src/NBTTagFloat/getId ()B
 MD: h/a (Ljava/io/DataInput;)V net/minecraft/src/NBTTagFloat/load (Ljava/io/DataInput;)V
 MD: h/a (Ljava/io/DataOutput;)V net/minecraft/src/NBTTagFloat/write (Ljava/io/DataOutput;)V
