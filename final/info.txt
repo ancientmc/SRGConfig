@@ -1,3 +1,3 @@
 This directory contains the outputted SRG files for people to browse.
 
-Once each SRG file is ready and free of major problems, I'll intend on uploading them to a ZIP file for download on GitHub.
+Once each SRG file is ready and free of major problems, I'll be uploading them to a ZIP file for download on GitHub.

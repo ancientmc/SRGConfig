@@ -56,6 +56,10 @@ task buildSRG(type: GradleBuild) {
     tasks = ['extractRGSFile', 'applyClassesCSV', 'convertToSRG', 'removeUnusedLines', 'applyFieldsCSV', 'applyMethodsCSV']
 }
 
+task testSRG(type: GradleBuild) {
+    tasks = ['testDownloadJar', 'testDeobfJar', 'testUnzipJar']
+}
+
 task extractRGSFile(type: Copy) {
     from zipTree(file(MAPPINGS_ZIP))
     into file(DIR_DATA)
@@ -88,7 +92,7 @@ task applyMethodsCSV(type: ApplyCSVTask) {
 
 task copySRGToFinal(type: Copy) {
     from file(SRG_FILE)
-    into file("${DIR_DATA}\\final\\srg\\alpha\\")
+    into file("final\\srg\\alpha\\")
 }
 
 task testDownloadJar(type: Download) {

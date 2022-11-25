@@ -1,4 +1,4 @@
-## SrgConfig ##
+## SRGConfig ##
 This is an internal tool created for the Retro Coder Pack (RCP). It isn’t really intended for end-users to use, but 
 downloading and usage is permitted, and feedback is highly encouraged. 
 
@@ -20,9 +20,9 @@ even ones not present in the current version being worked on, for Minecraft Alph
 either by editing the CSV directly or retooling the program.
 
 # MCP VERSIONS USED FOR NAMES. ALL RIGHTS RESERVED. #
-v2.5 (Alpha 1.2.6)
-v2.8 (Beta 1.2_02)
-Beta 1.4_01
-Beta 1.7.3
-1.0.0
-1.2.5
+v2.5 (Alpha 1.2.6),
+v2.8 (Beta 1.2_02),
+v3.0 (Beta 1.4_01),
+v4.3 (Beta 1.7.3),
+v5.0 (1.0.0),
+v6.2 (1.2.5)

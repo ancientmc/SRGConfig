@@ -600,7 +600,7 @@ FD: pp/i net/minecraft/src/EntityFX/particleRed
 FD: pp/h net/minecraft/src/EntityFX/particleGravity
 FD: pp/g net/minecraft/src/EntityFX/particleScale
 FD: pp/f net/minecraft/src/EntityFX/particleMaxAge
-FD: pp/e net/minecraft/src/EntityFX/entityRiderYawDelta
+FD: pp/e net/minecraft/src/EntityFX/particleAge
 FD: pp/d net/minecraft/src/EntityFX/particleTextureJitterY
 FD: pp/c net/minecraft/src/EntityFX/particleTextureJitterX
 FD: pp/b net/minecraft/src/EntityFX/particleTextureIndex
@@ -1042,14 +1042,14 @@ FD: lw/bi net/minecraft/src/Entity/inWater
 FD: lw/bh net/minecraft/src/Entity/maxAir
 FD: lw/e net/minecraft/src/Entity/entityRiderYawDelta
 FD: lw/bg net/minecraft/src/Entity/fire
-FD: lw/d net/minecraft/src/Entity/minecartType
+FD: lw/d net/minecraft/src/Entity/entityRiderPitchDelta
 FD: lw/bf net/minecraft/src/Entity/fireResistance
-FD: lw/c net/minecraft/src/Entity/minecartRockDirection
+FD: lw/c net/minecraft/src/Entity/firstUpdate
 FD: lw/be net/minecraft/src/Entity/ticksExisted
 FD: lw/bd net/minecraft/src/Entity/rand
-FD: lw/b net/minecraft/src/Entity/minecartTimeSinceHit
+FD: lw/b net/minecraft/src/Entity/nextStepDistance
 FD: lw/bc net/minecraft/src/Entity/field_9313_bc
-FD: lw/a net/minecraft/src/Entity/minecartCurrentDamage
+FD: lw/a net/minecraft/src/Entity/nextEntityID
 FD: lw/bb net/minecraft/src/Entity/entityCollisionReduction
 FD: lw/ba net/minecraft/src/Entity/noClip
 FD: lv/i net/minecraft/src/EntityArrow/ticksInAir
@@ -2303,7 +2303,7 @@ FD: as/a net/minecraft/src/EntityCow/unusedBoolean
 FD: ar/c net/minecraft/src/SlotCrafting/craftMatrix
 FD: aq/b net/minecraft/src/Render/renderManager
 FD: aq/a net/minecraft/src/Render/modelBase
-FD: aq/e net/minecraft/src/Render/mainModel
+FD: aq/e net/minecraft/src/Render/renderBlocks
 FD: aq/d net/minecraft/src/Render/shadowOpaque
 FD: aq/c net/minecraft/src/Render/shadowSize
 FD: ap/a net/minecraft/src/BlockPressurePlate/triggerMobType

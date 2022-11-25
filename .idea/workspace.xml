@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/csv/fields_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/fields_a1.2.6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/final/srg/alpha/a1.2.6.srg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mappings-mcp-2.5.zip" beforeDir="false" afterPath="$PROJECT_DIR$/data/mappings-mcp-2.5.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final/info.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,17 +54,20 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Programs/Projects/RCP/SRGConfig/final/srg/alpha&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/Programs/Projects/RCP/SRGConfig/data/final/srg&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programs\Projects\RCP\SRGConfig\data\final\srg" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\final\srg\alpha" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data\csv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programs\Projects\RCP\SRGConfig\final\srg\alpha" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data" />
+      <recent name="D:\Programs\Projects\RCP\SRGConfig\data\final\srg\alpha" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.entropy.rcp.srgconfig.tasks" />
@@ -154,7 +163,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SRGConfig [testDeobfJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SRGConfig [testSRG]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -165,7 +174,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="testDeobfJar" />
+            <option value="testSRG" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -198,10 +207,10 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.SRGConfig [generate]" />
+      <item itemvalue="Gradle.SRGConfig [testSRG]" />
       <item itemvalue="Gradle.SRGConfig [copySRGToFinal]" />
       <item itemvalue="Gradle.SRGConfig [testUnzipJar]" />
       <item itemvalue="Gradle.SRGConfig [buildSRG]" />
-      <item itemvalue="Gradle.SRGConfig [testDeobfJar]" />
       <item itemvalue="Gradle.SRGConfig [clean]" />
     </list>
     <recent_temporary>
@@ -209,8 +218,8 @@
         <item itemvalue="Gradle.SRGConfig [clean]" />
         <item itemvalue="Gradle.SRGConfig [copySRGToFinal]" />
         <item itemvalue="Gradle.SRGConfig [buildSRG]" />
+        <item itemvalue="Gradle.SRGConfig [testSRG]" />
         <item itemvalue="Gradle.SRGConfig [testUnzipJar]" />
-        <item itemvalue="Gradle.SRGConfig [testDeobfJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669346650750</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- fixed mistake with copying srg file task, everything should be good now.">
+      <created>1669347099821</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669347099822</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -283,17 +299,7 @@
     <MESSAGE value="- added task that removes unneeded field/method lines from the SRG file (paulscode and jcraft methods/fields)&#10;- fixed mistake involving retroguard config files getting deleted by clean task&#10;- added &quot;final&quot; folder that shows a copy of the outputted mappings generated from SRGConfig." />
     <MESSAGE value="- changed some class names&#10;- updated remove unused lines task" />
     <MESSAGE value="- Fixed some of the field names being incorrect. The mistakes sprung from SRG name refactorings that ocurred from version to version. I can't really explain it in full here, so dig around in the CSV files to understand what I'm talking about. I still need to look at more classes to fix them all.&#10;- added a text file to explain the &quot;final&quot; directory&#10;- added a task that copies the generated SRG file into the &quot;final&quot; directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed some of the field names being incorrect. The mistakes sprung from SRG name refactorings that ocurred from version to version. I can't really explain it in full here, so dig around in the CSV files to understand what I'm talking about. I still need to look at more classes to fix them all.&#10;- added a text file to explain the &quot;final&quot; directory&#10;- added a task that copies the generated SRG file into the &quot;final&quot; directory" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/build.gradle</url>
-          <line>46</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="- fixed mistake with copying srg file task, everything should be good now." />
+    <option name="LAST_COMMIT_MESSAGE" value="- fixed mistake with copying srg file task, everything should be good now." />
   </component>
 </project>
