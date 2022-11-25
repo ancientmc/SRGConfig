@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/final/info.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/csv/fields_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/fields_a1.2.6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mappings-mcp-2.5.zip" beforeDir="false" afterPath="$PROJECT_DIR$/data/mappings-mcp-2.5.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/srg/alpha/a1.2.6.srg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669253939955</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- Fixed some of the field names being incorrect. The mistakes sprung from SRG name refactorings that ocurred from version to version. I can't really explain it in full here, so dig around in the CSV files to understand what I'm talking about. I still need to look at more classes to fix them all.&#10;- added a text file to explain the &quot;final&quot; directory&#10;- added a task that copies the generated SRG file into the &quot;final&quot; directory">
+      <created>1669346650750</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669346650750</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -280,7 +282,8 @@
     <MESSAGE value="- major overhauls involving the CSV files. The files have been reworked. Things should be somewhat more efficient now.&#10;- added some test tasks involving RetroGuard" />
     <MESSAGE value="- added task that removes unneeded field/method lines from the SRG file (paulscode and jcraft methods/fields)&#10;- fixed mistake involving retroguard config files getting deleted by clean task&#10;- added &quot;final&quot; folder that shows a copy of the outputted mappings generated from SRGConfig." />
     <MESSAGE value="- changed some class names&#10;- updated remove unused lines task" />
-    <option name="LAST_COMMIT_MESSAGE" value="- changed some class names&#10;- updated remove unused lines task" />
+    <MESSAGE value="- Fixed some of the field names being incorrect. The mistakes sprung from SRG name refactorings that ocurred from version to version. I can't really explain it in full here, so dig around in the CSV files to understand what I'm talking about. I still need to look at more classes to fix them all.&#10;- added a text file to explain the &quot;final&quot; directory&#10;- added a task that copies the generated SRG file into the &quot;final&quot; directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixed some of the field names being incorrect. The mistakes sprung from SRG name refactorings that ocurred from version to version. I can't really explain it in full here, so dig around in the CSV files to understand what I'm talking about. I still need to look at more classes to fix them all.&#10;- added a text file to explain the &quot;final&quot; directory&#10;- added a task that copies the generated SRG file into the &quot;final&quot; directory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
