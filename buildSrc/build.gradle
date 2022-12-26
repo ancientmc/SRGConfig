@@ -3,7 +3,7 @@ plugins {
     id 'java-gradle-plugin'
 }
 
-group 'com.entropy.rcp'
+group 'com.ancientmc.acp'
 version '1.0-SNAPSHOT'
 
 repositories {

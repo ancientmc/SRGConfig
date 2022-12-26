@@ -20,18 +20,19 @@ dependencies {
     testrg configurations.testrg.dependencies
 }
 
-import com.entropy.rcp.srgconfig.tasks.*
+import com.ancientmc.acp.srgconfig.tasks.*
 
 ext {
     MC_VERSION = "a1.2.6"
-    MCP_VERSION = "2.5"
     DIR_DATA = "$project.projectDir\\data"
-    MAPPINGS_ZIP = "${DIR_DATA}\\mappings-mcp-${MCP_VERSION}.zip"
-    RGS_FILE = "${DIR_DATA}\\${MC_VERSION}.rgs"
-    SRG_FILE = "${DIR_DATA}\\${MC_VERSION}.srg"
-    CLASS_CSV = "${DIR_DATA}\\csv\\classes_${MC_VERSION}.csv"
-    FIELDS_CSV = "${DIR_DATA}\\csv\\fields_${MC_VERSION}.csv"
-    METHODS_CSV = "${DIR_DATA}\\csv\\methods_${MC_VERSION}.csv"
+    DIR_MAPPINGS = "${DIR_DATA}\\mappings\\versions\\${MC_VERSION}"
+    MAPPINGS_ZIP = "${DIR_MAPPINGS}\\mappings-${MC_VERSION}.zip"
+    RGS_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.rgs"
+    SRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.srg"
+    CLASS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\classes_${MC_VERSION}.csv"
+    FIELDS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\fields_${MC_VERSION}.csv"
+    METHODS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\methods_${MC_VERSION}.csv"
+
     TEST_MC_JAR = "https://piston-data.mojang.com/v1/objects/a68c817afd6c05c253ba5462287c2c19bbb57935/client.jar"
     TEST_DIR_JARS = "${DIR_DATA}\\jars"
     TEST_BASE_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}.jar"
@@ -53,7 +54,7 @@ clean {
 }
 
 task buildSRG(type: GradleBuild) {
-    tasks = ['extractRGSFile', 'applyClassesCSV', 'convertToSRG', 'removeUnusedLines', 'applyFieldsCSV', 'applyMethodsCSV']
+    tasks = ['extractRGSFile', 'applyClassesCSV', 'convertToSRG', 'removeUnwantedLines', 'applyFieldsCSV', 'applyMethodsCSV']
 }
 
 task testSRG(type: GradleBuild) {
@@ -62,7 +63,7 @@ task testSRG(type: GradleBuild) {
 
 task extractRGSFile(type: Copy) {
     from zipTree(file(MAPPINGS_ZIP))
-    into file(DIR_DATA)
+    into file(DIR_MAPPINGS)
 }
 
 task applyClassesCSV(type: ApplyCSVTask) {
@@ -76,7 +77,7 @@ task convertToSRG(type: JavaExec) {
     args("-i", RGS_FILE, "-o", SRG_FILE)
 }
 
-task removeUnusedLines(type: RemoveUnusedLinesTask) {
+task removeUnwantedLines(type: RemoveUnwantedLinesTask) {
     scriptFile = file(SRG_FILE)
 }
 

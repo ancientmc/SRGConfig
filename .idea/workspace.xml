@@ -8,10 +8,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/csv/fields_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/fields_a1.2.6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/final/srg/alpha/a1.2.6.srg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mappings-mcp-2.5.zip" beforeDir="false" afterPath="$PROJECT_DIR$/data/mappings-mcp-2.5.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final/info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/final/info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/entropy/rcp/srgconfig/tasks/ApplyCSVTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/acp/srgconfig/tasks/ApplyCSVTask.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/entropy/rcp/srgconfig/tasks/RemoveUnusedLinesTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/acp/srgconfig/tasks/RemoveUnwantedLinesTask.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/csv/classes_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/classes_a1.2.6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/csv/fields_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/fields_a1.2.6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/csv/methods_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/methods_a1.2.6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mappings-mcp-2.5.zip" beforeDir="false" afterPath="$PROJECT_DIR$/data/mappings/versions/a1.2.6/mappings-a1.2.6.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,17 +57,20 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Programs/Projects/RCP/SRGConfig/data/final/srg&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/Programs/Projects/AncientMC/SRGConfig/data/mappings&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\mappings" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data\final\srg" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\final\srg\alpha" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data\csv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\csv\versions\a1.2.6" />
+      <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\mappings" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\final\srg\alpha" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data\final\srg\alpha" />
@@ -75,6 +81,27 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.SRGConfig [clean]">
+    <configuration name="SRGConfig [applyFieldsCSV]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="applyFieldsCSV" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="SRGConfig [buildSRG]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -138,6 +165,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="SRGConfig [extractRGSFile]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="extractRGSFile" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="SRGConfig [generate]" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -163,53 +211,11 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SRGConfig [testSRG]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="testSRG" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SRGConfig [testUnzipJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="testUnzipJar" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Gradle.SRGConfig [generate]" />
-      <item itemvalue="Gradle.SRGConfig [testSRG]" />
+      <item itemvalue="Gradle.SRGConfig [extractRGSFile]" />
+      <item itemvalue="Gradle.SRGConfig [applyFieldsCSV]" />
       <item itemvalue="Gradle.SRGConfig [copySRGToFinal]" />
-      <item itemvalue="Gradle.SRGConfig [testUnzipJar]" />
       <item itemvalue="Gradle.SRGConfig [buildSRG]" />
       <item itemvalue="Gradle.SRGConfig [clean]" />
     </list>
@@ -218,8 +224,8 @@
         <item itemvalue="Gradle.SRGConfig [clean]" />
         <item itemvalue="Gradle.SRGConfig [copySRGToFinal]" />
         <item itemvalue="Gradle.SRGConfig [buildSRG]" />
-        <item itemvalue="Gradle.SRGConfig [testSRG]" />
-        <item itemvalue="Gradle.SRGConfig [testUnzipJar]" />
+        <item itemvalue="Gradle.SRGConfig [extractRGSFile]" />
+        <item itemvalue="Gradle.SRGConfig [applyFieldsCSV]" />
       </list>
     </recent_temporary>
   </component>
@@ -288,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669347099822</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- as it turns out, the original RGS file from version 2.5 used in the conversion process had duplicate SRG values. This explains some of the naming errors that I mentioned in commit 7d78552. These duplicates are resolved in newer MCP versions, so I just copied the SRG names over for the erroneous fields.&#10;- fixed issue with file not showing up on GitHub. Yet another mistake with git by me, it seems.">
+      <created>1669417220189</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669417220189</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -300,6 +313,7 @@
     <MESSAGE value="- changed some class names&#10;- updated remove unused lines task" />
     <MESSAGE value="- Fixed some of the field names being incorrect. The mistakes sprung from SRG name refactorings that ocurred from version to version. I can't really explain it in full here, so dig around in the CSV files to understand what I'm talking about. I still need to look at more classes to fix them all.&#10;- added a text file to explain the &quot;final&quot; directory&#10;- added a task that copies the generated SRG file into the &quot;final&quot; directory" />
     <MESSAGE value="- fixed mistake with copying srg file task, everything should be good now." />
-    <option name="LAST_COMMIT_MESSAGE" value="- fixed mistake with copying srg file task, everything should be good now." />
+    <MESSAGE value="- as it turns out, the original RGS file from version 2.5 used in the conversion process had duplicate SRG values. This explains some of the naming errors that I mentioned in commit 7d78552. These duplicates are resolved in newer MCP versions, so I just copied the SRG names over for the erroneous fields.&#10;- fixed issue with file not showing up on GitHub. Yet another mistake with git by me, it seems." />
+    <option name="LAST_COMMIT_MESSAGE" value="- as it turns out, the original RGS file from version 2.5 used in the conversion process had duplicate SRG values. This explains some of the naming errors that I mentioned in commit 7d78552. These duplicates are resolved in newer MCP versions, so I just copied the SRG names over for the erroneous fields.&#10;- fixed issue with file not showing up on GitHub. Yet another mistake with git by me, it seems." />
   </component>
 </project>

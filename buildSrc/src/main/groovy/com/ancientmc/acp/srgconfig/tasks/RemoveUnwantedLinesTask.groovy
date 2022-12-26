@@ -1,10 +1,10 @@
-package com.entropy.rcp.srgconfig.tasks
+package com.ancientmc.acp.srgconfig.tasks
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.TaskAction
 
-class RemoveUnusedLinesTask extends DefaultTask {
+class RemoveUnwantedLinesTask extends DefaultTask {
     @InputFile File scriptFile
 
     @TaskAction
