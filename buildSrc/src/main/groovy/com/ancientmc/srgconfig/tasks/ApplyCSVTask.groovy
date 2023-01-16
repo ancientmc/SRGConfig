@@ -1,4 +1,4 @@
-package com.ancientmc.acp.srgconfig.tasks
+package com.ancientmc.srgconfig.tasks
 
 import com.opencsv.CSVReader
 import com.opencsv.CSVReaderBuilder

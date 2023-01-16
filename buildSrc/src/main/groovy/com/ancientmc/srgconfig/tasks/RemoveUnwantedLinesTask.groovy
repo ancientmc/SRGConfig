@@ -1,4 +1,4 @@
-package com.ancientmc.acp.srgconfig.tasks
+package com.ancientmc.srgconfig.tasks
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.InputFile

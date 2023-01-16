@@ -3,8 +3,8 @@ plugins {
     id 'de.undercouch.download' version '4.1.2'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'com.ancientmc.srgconfig'
+version '0.1.0-beta'
 
 repositories {
     mavenCentral()
@@ -20,7 +20,7 @@ dependencies {
     testrg configurations.testrg.dependencies
 }
 
-import com.ancientmc.acp.srgconfig.tasks.*
+import com.ancientmc.srgconfig.tasks.*
 
 ext {
     MC_VERSION = "a1.2.6"
@@ -61,56 +61,62 @@ task testSRG(type: GradleBuild) {
     tasks = ['testDownloadJar', 'testDeobfJar', 'testUnzipJar']
 }
 
+// Extracts the base script from a ZIP file.
 task extractRGSFile(type: Copy) {
     from zipTree(file(MAPPINGS_ZIP))
     into file(DIR_MAPPINGS)
 }
 
+// Appends the class mappings with packages and tweaks some of the class names.
 task applyClassesCSV(type: ApplyCSVTask) {
     scriptFile = file(RGS_FILE)
     csvFile = file(CLASS_CSV)
 }
 
+// Converts the RGS file to a more up-to-date SRG file. This tool was originally developed by Jamie Mansfield and LexTeam.
 task convertToSRG(type: JavaExec) {
     main = "uk.jamierocks.rgs2srg.Main"
     classpath = files("${DIR_DATA}\\rgs2srg.jar")
     args("-i", RGS_FILE, "-o", SRG_FILE)
 }
 
+// Removes unwanted mappings, mostly belonging to library classes.
 task removeUnwantedLines(type: RemoveUnwantedLinesTask) {
     scriptFile = file(SRG_FILE)
 }
 
+// Converts the fields from SRG to MCP.
 task applyFieldsCSV(type: ApplyCSVTask) {
     scriptFile = file(SRG_FILE)
     csvFile = file(FIELDS_CSV)
 }
 
+// Converts the methods from SRG to MCP.
 task applyMethodsCSV(type: ApplyCSVTask) {
     scriptFile = file(SRG_FILE)
     csvFile = file(METHODS_CSV)
 }
 
+// Copies the final SRG file into the final directory.
 task copySRGToFinal(type: Copy) {
     from file(SRG_FILE)
     into file("final\\srg\\alpha\\")
 }
 
+// Testing task for downloading the Minecraft Jar.
 task testDownloadJar(type: Download) {
     src TEST_MC_JAR
     dest TEST_BASE_JAR
 }
 
+// Testing task for deobfuscating the JAR using RetroGuard.
 task testDeobfJar(type: JavaExec) {
     main "RetroGuard"
     classpath = files(TEST_RG_CFG)
     args("-searge", "${DIR_DATA}\\cfg\\retroguard.cfg")
 }
 
-// Since I use IntelliJ IDEA I can unzip the jar and view the still-compiled class files with the built-in version of
-// FernFlower to make sure everything works correctly. I don't know how it works in other IDEs like Eclipse, NetBeans, etc.
-// I do not intend on fully installing Fernflower (via Maven) and making a decompile class task in this repo, so if you
-// don't use IDEA and still want to view the source files here, use something like JD GUI, Enigma, or javadecompilers.com.
+// Testing task for unzipping the JAR in order to peek into the class files using IntelliJ's built-in version of Fernflower.
 task testUnzipJar(type: Copy) {
     from zipTree(TEST_SRG_JAR)
     into file(TEST_DIR_TEMP)
