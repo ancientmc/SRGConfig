@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="- The last of the">
+      <change afterPath="$PROJECT_DIR$/final/srg/alpha/a1.2.6-re.srg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/RemoveUnwantedLinesTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/RemoveUnwantedLinesTask.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/cfg/attributes.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/data/cfg/options.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/cfg/retroguard.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/data/cfg/retroguard.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/csv/versions/a1.2.6/fields_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/fields_a1.2.6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/csv/versions/a1.2.6/classes_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/classes_a1.2.6.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/mappings/versions/a1.2.6/mappings-a1.2.6.zip" beforeDir="false" afterPath="$PROJECT_DIR$/data/mappings/versions/a1.2.6/mappings-a1.2.6.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final/srg/alpha/a1.2.6.srg" beforeDir="false" afterPath="$PROJECT_DIR$/final/srg/alpha/a1.2.6.srg" afterDir="false" />
     </list>
@@ -49,6 +53,12 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SRGConfig" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SRGConfig" type="f1a62948:ProjectNode" />
                 <item name="buildSrc" type="2d1252cf:ModuleNode" />
               </path>
               <path>
@@ -70,6 +80,11 @@
         <option value="moist-mason &lt;67809772+moist-mason@users.noreply.github.com&gt;" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -80,28 +95,28 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Programs/Projects/AncientMC/SRGConfig/data/mappings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/mason/Desktop/ACP/SRGConfig/final/srg/alpha"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mason\Desktop\ACP\SRGConfig\final\srg\alpha" />
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\mappings" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data\final\srg" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\final\srg\alpha" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data" />
-      <recent name="D:\Programs\Projects\RCP\SRGConfig\data\csv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mason\Desktop\ACP\SRGConfig\final\srg\alpha" />
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\csv\versions\a1.2.6" />
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\mappings" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\final\srg\alpha" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\data" />
-      <recent name="D:\Programs\Projects\RCP\SRGConfig\data\final\srg\alpha" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.entropy.rcp.srgconfig.tasks" />
@@ -109,6 +124,27 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.SRGConfig [clean]">
+    <configuration name="SRGConfig [buildSRG]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--rerun-tasks" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildSRG" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="SRGConfig [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -121,27 +157,6 @@
         <option name="taskNames">
           <list>
             <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SRGConfig [copySRGToFinal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="copySRGToFinal" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -218,7 +233,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SRGConfig [testUnzipJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SRGConfig [testReobfJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -229,7 +244,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="testUnzipJar" />
+            <option value="testReobfJar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -241,19 +256,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.SRGConfig [generate]" />
-      <item itemvalue="Gradle.SRGConfig [testDeobfJar]" />
+      <item itemvalue="Gradle.SRGConfig [buildSRG]" />
       <item itemvalue="Gradle.SRGConfig [testDownloadJar]" />
-      <item itemvalue="Gradle.SRGConfig [testUnzipJar]" />
-      <item itemvalue="Gradle.SRGConfig [copySRGToFinal]" />
+      <item itemvalue="Gradle.SRGConfig [testReobfJar]" />
+      <item itemvalue="Gradle.SRGConfig [testDeobfJar]" />
       <item itemvalue="Gradle.SRGConfig [clean]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.SRGConfig [clean]" />
-        <item itemvalue="Gradle.SRGConfig [copySRGToFinal]" />
-        <item itemvalue="Gradle.SRGConfig [testUnzipJar]" />
+        <item itemvalue="Gradle.SRGConfig [testReobfJar]" />
         <item itemvalue="Gradle.SRGConfig [testDeobfJar]" />
         <item itemvalue="Gradle.SRGConfig [testDownloadJar]" />
+        <item itemvalue="Gradle.SRGConfig [buildSRG]" />
       </list>
     </recent_temporary>
   </component>

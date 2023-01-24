@@ -111,7 +111,7 @@ task testDownloadJar(type: Download) {
 
 // Testing task for deobfuscating the JAR using RetroGuard.
 task testDeobfJar(type: JavaExec) {
-    main "RetroGuard"
+    mainClass = "RetroGuard"
     classpath = files(TEST_RG_CFG)
     args("-searge", "${DIR_DATA}\\cfg\\retroguard.cfg")
 }
@@ -122,5 +122,10 @@ task testUnzipJar(type: Copy) {
     into file(TEST_DIR_TEMP)
 }
 
+task testReobfJar(type: JavaExec) {
+    mainClass = "RetroGuard"
+    classpath = files(TEST_RG_CFG)
+    args("-notch", "${DIR_DATA}\\cfg\\retroguard.cfg")
+}
 
 

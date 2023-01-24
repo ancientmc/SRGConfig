@@ -13,13 +13,12 @@ class RemoveUnwantedLinesTask extends DefaultTask {
         String currentLine
         String paulscodePkg = "paulscode/"
         String jcraftPkg = "com/jcraft/"
-        String valuesMethods = "_values"
         BufferedReader reader = new BufferedReader(new FileReader(scriptFile))
         BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))
 
         while((currentLine = reader.readLine()) != null) {
             String t = currentLine.trim()
-            if(t.contains(paulscodePkg) || t.contains(jcraftPkg) || t.contains(valuesMethods)) {
+            if(t.contains(paulscodePkg) || t.contains(jcraftPkg)) {
                 continue
             }
             writer.write(currentLine + System.getProperty("line.separator"))
