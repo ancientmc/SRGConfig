@@ -91,6 +91,8 @@ class Rgs2Srg extends DefaultTask {
         return entry.value
     }
 
+    // This was mostly taken from the original Rgs2Srg
+    // https://github.com/Lexteam/rgs2srg/blob/master/src/main/java/uk/jamierocks/rgs2srg/MappingsConverter.java
     String getSrgSignature(String notchSig) {
         String inner = notchSig.substring(notchSig.indexOf('(') + 1, notchSig.indexOf(')'))
         String outer = notchSig.substring(notchSig.indexOf(')') + 1)
