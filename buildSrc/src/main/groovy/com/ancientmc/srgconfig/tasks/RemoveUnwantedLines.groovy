@@ -2,19 +2,24 @@ package com.ancientmc.srgconfig.tasks
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.InputFile
+import org.gradle.api.tasks.OutputFile
 import org.gradle.api.tasks.TaskAction
 
-class RemoveUnwantedLinesTask extends DefaultTask {
-    @InputFile File scriptFile
+/**
+ * Removes unwanted lines from the RGS file.
+ */
+class RemoveUnwantedLines extends DefaultTask {
+    @InputFile File input
+    @OutputFile File output
+
 
     @TaskAction
     void exec() {
-        File tempFile = new File("data\\temp.srg")
         String currentLine
         String paulscodePkg = "paulscode/"
         String jcraftPkg = "com/jcraft/"
-        BufferedReader reader = new BufferedReader(new FileReader(scriptFile))
-        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))
+        BufferedReader reader = new BufferedReader(new FileReader(input))
+        BufferedWriter writer = new BufferedWriter(new FileWriter(output))
 
         while((currentLine = reader.readLine()) != null) {
             String t = currentLine.trim()
@@ -25,7 +30,5 @@ class RemoveUnwantedLinesTask extends DefaultTask {
         }
         writer.close()
         reader.close()
-        scriptFile.delete()
-        tempFile.renameTo(scriptFile)
     }
 }

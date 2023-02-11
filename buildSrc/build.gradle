@@ -3,11 +3,12 @@ plugins {
     id 'java-gradle-plugin'
 }
 
-group 'com.ancientmc.acp'
-version '1.0-SNAPSHOT'
+group 'com.ancientmc.srgconfig'
+version '0.2.0-beta'
 
 repositories {
     mavenCentral()
+    maven { url = 'https://maven.minecraftforge.net'}
 }
 
 configurations {
@@ -19,4 +20,7 @@ dependencies {
     opencsv 'com.opencsv:opencsv:5.7.0'
     implementation configurations.opencsv.dependencies
     implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'net.minecraftforge:srgutils:0.4.13'
+    implementation 'org.ow2.asm:asm:9.4'
+    implementation 'org.ow2.asm:asm-tree:9.4'
 }

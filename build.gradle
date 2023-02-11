@@ -4,20 +4,23 @@ plugins {
 }
 
 group 'com.ancientmc.srgconfig'
-version '0.1.0-beta'
+version '0.2.0-beta'
 
 repositories {
     mavenCentral()
-    maven { url = 'https://nexus.velocitypowered.com/repository/maven-public/' }
+    maven { url = 'https://maven.minecraftforge.net' }
+    maven { url = 'https://maven.quiltmc.org/repository/release/' }
 }
 
 configurations {
-    testrg
+    retroguard
+    mcinject
 }
 
 dependencies {
-    testrg 'de.oceanlabs.mcp:RetroGuard:3.6.6'
-    testrg configurations.testrg.dependencies
+    retroguard 'de.oceanlabs.mcp:RetroGuard:3.6.6'
+    retroguard configurations.retroguard.dependencies
+    mcinject 'de.oceanlabs.mcp:mcinjector:3.8.0'
 }
 
 import com.ancientmc.srgconfig.tasks.*
@@ -28,7 +31,10 @@ ext {
     DIR_MAPPINGS = "${DIR_DATA}\\mappings\\versions\\${MC_VERSION}"
     MAPPINGS_ZIP = "${DIR_MAPPINGS}\\mappings-${MC_VERSION}.zip"
     RGS_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.rgs"
+    RGS_FILE_STRIPPED = "${DIR_MAPPINGS}\\${MC_VERSION}-stripped.rgs"
     SRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.srg"
+    TSRG_FILE_BASE = "${DIR_MAPPINGS}\\${MC_VERSION}-base.tsrg"
+    TSRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.tsrg"
     CLASS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\classes_${MC_VERSION}.csv"
     FIELDS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\fields_${MC_VERSION}.csv"
     METHODS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\methods_${MC_VERSION}.csv"
@@ -37,9 +43,10 @@ ext {
     TEST_DIR_JARS = "${DIR_DATA}\\jars"
     TEST_BASE_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}.jar"
     TEST_SRG_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}-srg.jar"
+    TEST_INJECT_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}-inject.jar"
+    TEST_DECOMP_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}-decomp.jar"
     TEST_DIR_TEMP = "${TEST_DIR_JARS}\\temp\\"
     TEST_DIR_CFG = "${DIR_DATA}\\cfg"
-    TEST_RG_CFG = project.getConfigurations().findByName("testrg")
     TEST_DIR_LOGS = "${DIR_DATA}\\logs"
 }
 
@@ -68,31 +75,44 @@ task extractRGSFile(type: Copy) {
 }
 
 // Appends the class mappings with packages and tweaks some of the class names.
-task applyClassesCSV(type: ApplyCSVTask) {
+task applyClassesCSV(type: ApplyCsv) {
     scriptFile = file(RGS_FILE)
     csvFile = file(CLASS_CSV)
 }
 
-// Converts the RGS file to a more up-to-date SRG file. This tool was originally developed by Jamie Mansfield and LexTeam.
-task convertToSRG(type: JavaExec) {
-    main = "uk.jamierocks.rgs2srg.Main"
-    classpath = files("${DIR_DATA}\\rgs2srg.jar")
-    args("-i", RGS_FILE, "-o", SRG_FILE)
+// Removes unwanted mappings, mostly belonging to library classes.
+task removeUnwantedLines(type: RemoveUnwantedLines) {
+    input = file(RGS_FILE)
+    output = file(RGS_FILE_STRIPPED)
 }
 
-// Removes unwanted mappings, mostly belonging to library classes.
-task removeUnwantedLines(type: RemoveUnwantedLinesTask) {
-    scriptFile = file(SRG_FILE)
+// Converts the RGS file to a more up-to-date SRG file. This tool was originally developed by Jamie Mansfield and LexTeam.
+task rgs2Srg(type: Rgs2Srg) {
+    rgs = file(RGS_FILE_STRIPPED)
+    srg = file(SRG_FILE)
+}
+
+// Uses Forge's SrgUtils to easily convert SRG to TSRGv2
+task srg2Tsrg(type: Srg2Tsrg) {
+    srg = file(SRG_FILE)
+    tsrg = file(TSRG_FILE_BASE)
+}
+
+// Auto-generates param names and adds them to the TSRG file.
+task addParams(type: AddParams) {
+    tsrg = file(TSRG_FILE_BASE)
+    jar = file(TEST_SRG_JAR)
+    tsrgP = file(TSRG_FILE)
 }
 
 // Converts the fields from SRG to MCP.
-task applyFieldsCSV(type: ApplyCSVTask) {
+task applyFieldsCSV(type: ApplyCsv) {
     scriptFile = file(SRG_FILE)
     csvFile = file(FIELDS_CSV)
 }
 
 // Converts the methods from SRG to MCP.
-task applyMethodsCSV(type: ApplyCSVTask) {
+task applyMethodsCSV(type: ApplyCsv) {
     scriptFile = file(SRG_FILE)
     csvFile = file(METHODS_CSV)
 }
@@ -110,21 +130,30 @@ task testDownloadJar(type: Download) {
 }
 
 // Testing task for deobfuscating the JAR using RetroGuard.
-task testDeobfJar(type: JavaExec) {
+// Currently useless, since we're moving away from old SRG
+task testDeobfJar(type: JavaExec, dependsOn: testDownloadJar) {
     mainClass = "RetroGuard"
-    classpath = files(TEST_RG_CFG)
+    classpath = files(project.configurations.findByName("retroguard"))
     args("-searge", "${DIR_DATA}\\cfg\\retroguard.cfg")
+}
+
+// Injects the JAR with exceptions
+task testInjectJar(type: JavaExec) {
+    mainClass = 'de.oceanlabs.mcp.mcinjector.MCInjector'
+    classpath = files(project.configurations.getByName("mcinject"))
+    args('--in', TEST_SRG_JAR, '--out', TEST_INJECT_JAR)
 }
 
 // Testing task for unzipping the JAR in order to peek into the class files using IntelliJ's built-in version of Fernflower.
 task testUnzipJar(type: Copy) {
-    from zipTree(TEST_SRG_JAR)
+    from zipTree(file(TEST_DECOMP_JAR))
     into file(TEST_DIR_TEMP)
 }
 
+// Currently useless
 task testReobfJar(type: JavaExec) {
     mainClass = "RetroGuard"
-    classpath = files(TEST_RG_CFG)
+    classpath = files(project.configurations.getByName("retroguard"))
     args("-notch", "${DIR_DATA}\\cfg\\retroguard.cfg")
 }
 

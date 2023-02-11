@@ -8,7 +8,7 @@ import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.TaskAction
 
 
-class ApplyCSVTask extends DefaultTask {
+class ApplyCsv extends DefaultTask {
     @InputFile File scriptFile
     @InputFile File csvFile
 
