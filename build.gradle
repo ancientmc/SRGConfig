@@ -130,7 +130,6 @@ task testDownloadJar(type: Download) {
 }
 
 // Testing task for deobfuscating the JAR using RetroGuard.
-// Currently useless, since we're moving away from old SRG
 task testDeobfJar(type: JavaExec, dependsOn: testDownloadJar) {
     mainClass = "RetroGuard"
     classpath = files(project.configurations.findByName("retroguard"))
@@ -150,7 +149,7 @@ task testUnzipJar(type: Copy) {
     into file(TEST_DIR_TEMP)
 }
 
-// Currently useless
+// Testing task for reobfuscation
 task testReobfJar(type: JavaExec) {
     mainClass = "RetroGuard"
     classpath = files(project.configurations.getByName("retroguard"))

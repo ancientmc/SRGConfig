@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="- The last of the">
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/Rgs2Srg.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/Srg2Tsrg.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/GetParamMap.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/cfg/exceptions.exc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/wip-mappings/a1.2.6.tsrg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/ApplyCSVTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/ApplyCsv.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/RemoveUnwantedLinesTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/RemoveUnwantedLines.groovy" afterDir="false" />
-    </list>
+    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,6 +82,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -364,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672057747310</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="attribution in Rgs2Srg">
+      <created>1676083243586</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676083243587</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,7 +384,8 @@
     <MESSAGE value="- fixed mistake with copying srg file task, everything should be good now." />
     <MESSAGE value="- as it turns out, the original RGS file from version 2.5 used in the conversion process had duplicate SRG values. This explains some of the naming errors that I mentioned in commit 7d78552. These duplicates are resolved in newer MCP versions, so I just copied the SRG names over for the erroneous fields.&#10;- fixed issue with file not showing up on GitHub. Yet another mistake with git by me, it seems." />
     <MESSAGE value="- Converted &quot;brand&quot; names in README/packages&#10;- kind of major overhaul to a lot of the directory structuring, mainly to account for future versions&#10;- Renamed &quot;MobSpawner[Biome]&quot; class family to &quot;BiomeGen[Biome]&quot;, to reflect method names referencing them&#10;- Removed unneeded enum fields whose existence I'm honestly unsure about.&#10;- Renamed one of the tasks&#10;- Some other stuff probably&#10;&#10;This will be the last update to the mappings before ACP's full beta release, unless I find some glaring inconsistency that needs to be worked out." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Converted &quot;brand&quot; names in README/packages&#10;- kind of major overhaul to a lot of the directory structuring, mainly to account for future versions&#10;- Renamed &quot;MobSpawner[Biome]&quot; class family to &quot;BiomeGen[Biome]&quot;, to reflect method names referencing them&#10;- Removed unneeded enum fields whose existence I'm honestly unsure about.&#10;- Renamed one of the tasks&#10;- Some other stuff probably&#10;&#10;This will be the last update to the mappings before ACP's full beta release, unless I find some glaring inconsistency that needs to be worked out." />
+    <MESSAGE value="attribution in Rgs2Srg" />
+    <option name="LAST_COMMIT_MESSAGE" value="attribution in Rgs2Srg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
