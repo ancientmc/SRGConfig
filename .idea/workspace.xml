@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,18 +95,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Programs/Projects/AncientMC/Rosetta&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/Programs/Projects/AncientMC/SRGConfig/data/wip-mappings",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\wip-mappings" />
@@ -370,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676083501515</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="parse through methods without &quot;func&quot; prefix (ones inherited from non-MC classes) in AddParams">
+      <created>1676242398002</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676242398002</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -397,7 +403,8 @@
     <MESSAGE value="- Converted &quot;brand&quot; names in README/packages&#10;- kind of major overhaul to a lot of the directory structuring, mainly to account for future versions&#10;- Renamed &quot;MobSpawner[Biome]&quot; class family to &quot;BiomeGen[Biome]&quot;, to reflect method names referencing them&#10;- Removed unneeded enum fields whose existence I'm honestly unsure about.&#10;- Renamed one of the tasks&#10;- Some other stuff probably&#10;&#10;This will be the last update to the mappings before ACP's full beta release, unless I find some glaring inconsistency that needs to be worked out." />
     <MESSAGE value="attribution in Rgs2Srg" />
     <MESSAGE value="silly me these aren't useless" />
-    <option name="LAST_COMMIT_MESSAGE" value="silly me these aren't useless" />
+    <MESSAGE value="parse through methods without &quot;func&quot; prefix (ones inherited from non-MC classes) in AddParams" />
+    <option name="LAST_COMMIT_MESSAGE" value="parse through methods without &quot;func&quot; prefix (ones inherited from non-MC classes) in AddParams" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
