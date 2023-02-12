@@ -18,6 +18,7 @@ ab net/minecraft/src/CompressedStreamTools
 	a (Ljava/io/DataInput;)Liq; func_1141_a
 		0 o p_1141_0
 	a (Liq;)[B func_1142_a
+		0 o p_1142_0
 	a (Liq;Ljava/io/OutputStream;)V func_1143_a
 		0 o p_1143_0
 		1 o p_1143_1
@@ -117,6 +118,7 @@ ah net/minecraft/src/CanvasIsomPreview
 		1 o p_1266_1
 	a ()Ljava/io/File; func_1263_a
 	a (Ljava/lang/String;)Ljava/io/File; func_1264_a
+		1 o p_1264_1
 	a (Ljava/awt/Graphics2D;)V func_1268_a
 		1 o p_1268_1
 	a (II)Lkw; func_1267_a
@@ -1476,6 +1478,7 @@ cp net/minecraft/src/WorldGenDungeons
 		4 o p_516_4
 		5 o p_516_5
 	b (Ljava/util/Random;)Ljava/lang/String; func_531_b
+		1 o p_531_1
 cq net/minecraft/src/Packet8UpdateHealth
 	a field_9275_a
 	a (Ljava/io/DataOutputStream;)V func_322_a
@@ -1688,6 +1691,8 @@ cy net/minecraft/src/World
 		3 o p_634_3
 		4 o p_634_4
 	a (Ljava/lang/Class;Lco;)Ljava/util/List; func_657_a
+		1 o p_657_1
+		2 o p_657_2
 	a (Leb;III)Z func_6466_a
 		1 o p_6466_1
 		2 o p_6466_2
@@ -1808,6 +1813,8 @@ cy net/minecraft/src/World
 		5 o p_683_5
 		7 o p_683_7
 	a (Llw;Lco;)Ljava/util/List; func_697_a
+		1 o p_697_1
+		2 o p_697_2
 	a (Lco;Lhb;)Z func_689_a
 		1 o p_689_1
 		2 o p_689_2
@@ -1858,6 +1865,8 @@ cy net/minecraft/src/World
 	b (Ljava/util/List;)V func_632_b
 		1 o p_632_1
 	b (Llw;Lco;)Ljava/util/List; func_659_b
+		1 o p_659_1
+		2 o p_659_2
 	b (F)F func_619_c
 		1 o p_619_1
 	b (II)Lha; func_673_a
@@ -2061,6 +2070,7 @@ d net/minecraft/src/TexturePackBase
 	c field_6489_c
 	d field_6488_d
 	a (Ljava/lang/String;)Ljava/io/InputStream; func_6481_a
+		1 o p_6481_1
 	a (Lnet/minecraft/client/Minecraft;)V func_6485_a
 		1 o p_6485_1
 	a ()V func_6482_a
@@ -2406,8 +2416,11 @@ ds net/minecraft/src/GLAllocation
 	a (Ljava/nio/IntBuffer;)V func_1128_a
 		0 o p_1128_0
 	b (I)Ljava/nio/ByteBuffer; func_1127_b
+		0 o p_1127_0
 	c (I)Ljava/nio/IntBuffer; func_1125_c
+		0 o p_1125_0
 	d (I)Ljava/nio/FloatBuffer; func_1123_d
+		0 o p_1123_0
 dt net/minecraft/src/WorldGenGlowStone1
 	a (Lcy;Ljava/util/Random;III)Z func_516_a
 		1 o p_516_1
@@ -2814,8 +2827,22 @@ ei net/minecraft/src/WorldChunkManagerHell
 	f field_4200_f
 	g field_4199_g
 	a ([DIIII)[D func_4071_a
+		1 o p_4071_1
+		2 o p_4071_2
+		3 o p_4071_3
+		4 o p_4071_4
+		5 o p_4071_5
 	a (IIII)[Lgg; func_4069_a
+		1 o p_4069_1
+		2 o p_4069_2
+		3 o p_4069_3
+		4 o p_4069_4
 	a ([Lgg;IIII)[Lgg; func_4070_a
+		1 o p_4070_1
+		2 o p_4070_2
+		3 o p_4070_3
+		4 o p_4070_4
+		5 o p_4070_5
 	a (II)Lgg; func_4073_a
 		1 o p_4073_1
 		2 o p_4073_2
@@ -2864,6 +2891,9 @@ em net/minecraft/src/ScreenShotHelper
 	c field_4289_c
 	d field_4288_d
 	a (Ljava/io/File;II)Ljava/lang/String; func_4148_a
+		0 o p_4148_0
+		1 o p_4148_1
+		2 o p_4148_2
 en net/minecraft/src/CraftingManager
 	a field_6541_a
 	b field_1662_b
@@ -3218,6 +3248,7 @@ fd net/minecraft/src/NBTBase
 		0 o p_739_0
 	b ()Ljava/lang/String; func_737_b
 	b (B)Ljava/lang/String; func_731_b
+		0 o p_731_0
 	b (Ljava/io/DataInput;)Lfd; func_734_b
 		0 o p_734_0
 fe net/minecraft/src/WorldGenBigTree
@@ -3545,6 +3576,7 @@ fq net/minecraft/src/EntityList
 	a (Llw;)I func_1082_a
 		0 o p_1082_0
 	b (Llw;)Ljava/lang/String; func_1083_b
+		0 o p_1083_0
 fr net/minecraft/src/TileEntitySpecialRenderer
 	a field_6509_a
 	a (Ljava/lang/String;)V func_6507_a
@@ -3593,6 +3625,7 @@ fu net/minecraft/src/RenderEngine
 	a (I)V func_1078_a
 		1 o p_1078_1
 	a (Ljava/io/InputStream;)Ljava/awt/image/BufferedImage; func_6526_a
+		1 o p_6526_1
 	a (Ljava/lang/String;)I func_1070_a
 		1 o p_1070_1
 	a (Ljava/awt/image/BufferedImage;I)V func_1068_a
@@ -3608,6 +3641,7 @@ fu net/minecraft/src/RenderEngine
 		1 o p_1072_1
 		2 o p_1072_2
 	b (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage; func_1069_b
+		1 o p_1069_1
 	b (I)V func_1076_b
 		1 o p_1076_1
 	b (II)I func_1077_b
@@ -3793,10 +3827,12 @@ ge net/minecraft/src/MCHashTable
 		3 o p_1053_3
 		4 o p_1053_4
 	a (I)Ljava/lang/Object; func_1057_a
+		1 o p_1057_1
 	a (II)I func_1062_a
 		0 o p_1062_0
 		1 o p_1062_1
 	b (I)Ljava/lang/Object; func_1052_b
+		1 o p_1052_1
 	c (I)Lor; func_1054_c
 		1 o p_1054_1
 	d (I)I func_1056_d
@@ -3830,6 +3866,7 @@ gg net/minecraft/src/BiomeGenBase
 	s field_4238_s
 	t field_4237_t
 	a (Lgy;)[Ljava/lang/Class; func_4118_a
+		1 o p_4118_1
 	a (I)Lgg; func_4124_a
 		1 o p_4124_1
 	a (F)I func_4126_a
@@ -3987,6 +4024,7 @@ gq net/minecraft/src/GameSettings
 		1 o p_1048_1
 		2 o p_1048_2
 	a (I)Ljava/lang/String; func_1043_a
+		1 o p_1043_1
 	b (II)V func_1045_b
 		1 o p_1045_1
 		2 o p_1045_2
@@ -3996,6 +4034,7 @@ gq net/minecraft/src/GameSettings
 	c (I)F func_1049_c
 		1 o p_1049_1
 	d (I)Ljava/lang/String; func_1047_d
+		1 o p_1047_1
 gr net/minecraft/src/RecipeSorter
 	a field_1557_a
 	a (Lcd;Lcd;)I func_1040_a
@@ -4219,6 +4258,7 @@ ha net/minecraft/src/Chunk
 		2 o p_1013_2
 		3 o p_1013_3
 	a (J)Ljava/util/Random; func_997_a
+		1 o p_997_1
 	a (II)Z func_1017_a
 		1 o p_1017_1
 		2 o p_1017_2
@@ -4924,6 +4964,7 @@ id net/minecraft/src/Packet21PickupSpawn
 		1 o p_323_1
 ie net/minecraft/src/ImageBuffer
 	a (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage; func_883_a
+		1 o p_883_1
 if net/minecraft/src/ChunkCoordinates
 	a field_1518_a
 	b field_1517_b
@@ -5132,7 +5173,9 @@ iq net/minecraft/src/NBTTagCompound
 	h (Ljava/lang/String;)D func_757_h
 		1 o p_757_1
 	i (Ljava/lang/String;)Ljava/lang/String; func_755_i
+		1 o p_755_1
 	j (Ljava/lang/String;)[B func_759_j
+		1 o p_759_1
 	k (Ljava/lang/String;)Liq; func_743_k
 		1 o p_743_1
 	l (Ljava/lang/String;)Lly; func_753_l
@@ -5469,6 +5512,10 @@ ja net/minecraft/src/BlockFlowing
 		3 o p_15233_3
 		4 o p_15233_4
 	k (Lcy;III)[Z func_297_k
+		1 o p_297_1
+		2 o p_297_2
+		3 o p_297_3
+		4 o p_297_4
 	l (Lcy;III)Z func_295_l
 		1 o p_295_1
 		2 o p_295_2
@@ -5761,7 +5808,9 @@ jq net/minecraft/src/NetworkManager
 	d (Ljq;)V func_965_d
 		0 o p_965_0
 	e (Ljq;)Ljava/lang/Thread; func_969_e
+		0 o p_969_0
 	f (Ljq;)Ljava/lang/Thread; func_963_f
+		0 o p_963_0
 jr net/minecraft/src/Packet3Chat
 	a field_517_a
 	a (Ljava/io/DataOutputStream;)V func_322_a
@@ -5969,6 +6018,10 @@ kb net/minecraft/src/EntityRenderer
 		1 o p_4139_1
 		2 o p_4139_2
 	a (FFFF)Ljava/nio/FloatBuffer; func_908_a
+		1 o p_908_1
+		2 o p_908_2
+		3 o p_908_3
+		4 o p_908_4
 	a ()V func_911_a
 	b (F)V func_4136_b
 		1 o p_4136_1
@@ -6095,6 +6148,13 @@ kj net/minecraft/src/ChunkProviderHell
 		2 o p_4059_2
 		3 o p_4059_3
 	a ([DIIIIII)[D func_4057_a
+		1 o p_4057_1
+		2 o p_4057_2
+		3 o p_4057_3
+		4 o p_4057_4
+		5 o p_4057_5
+		6 o p_4057_6
+		7 o p_4057_7
 	b (II[B)V func_4058_b
 		1 o p_4058_1
 		2 o p_4058_2
@@ -6372,7 +6432,15 @@ kz net/minecraft/src/BlockReed
 l net/minecraft/src/RenderHelper
 	a field_1695_a
 	a (DDDD)Ljava/nio/FloatBuffer; func_1157_a
+		0 o p_1157_0
+		2 o p_1157_2
+		4 o p_1157_4
+		6 o p_1157_6
 	a (FFFF)Ljava/nio/FloatBuffer; func_1156_a
+		0 o p_1156_0
+		1 o p_1156_1
+		2 o p_1156_2
+		3 o p_1156_3
 	a ()V func_1159_a
 	b ()V func_1158_b
 la net/minecraft/src/ItemSeeds
@@ -6517,6 +6585,7 @@ le net/minecraft/src/GuiSelectWorld
 	c (I)V func_584_c
 		1 o p_584_1
 	d (I)Ljava/lang/String; func_586_d
+		1 o p_586_1
 	j ()V func_585_j
 lf net/minecraft/src/ImageBufferDownload
 	a field_1343_a
@@ -6528,6 +6597,7 @@ lf net/minecraft/src/ImageBufferDownload
 		3 o p_885_3
 		4 o p_885_4
 	a (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage; func_883_a
+		1 o p_883_1
 	b (IIII)V func_884_b
 		1 o p_884_1
 		2 o p_884_2
@@ -7581,6 +7651,8 @@ mu net/minecraft/src/ChunkLoader
 		0 o p_816_0
 		1 o p_816_1
 	a (II)Ljava/io/File; func_817_a
+		1 o p_817_1
+		2 o p_817_2
 	a (Lcy;Lha;)V func_812_a
 		1 o p_812_1
 		2 o p_812_2
@@ -7786,6 +7858,7 @@ net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 		1 o p_6258_1
 		2 o p_6258_2
 	a (Ljava/lang/String;)Ljava/io/File; func_6264_a
+		0 o p_6264_0
 	a (Lhr;)V func_4007_a
 		1 o p_4007_1
 	a (Ljava/lang/String;Ljava/lang/String;)V func_6269_a
@@ -7845,15 +7918,50 @@ nf net/minecraft/src/NoiseGeneratorOctaves
 	a field_1192_a
 	b field_1191_b
 	a ([DDDDIIIDDD)[D func_807_a
+		1 o p_807_1
+		2 o p_807_2
+		4 o p_807_4
+		6 o p_807_6
+		8 o p_807_8
+		9 o p_807_9
+		10 o p_807_10
+		11 o p_807_11
+		13 o p_807_13
+		15 o p_807_15
 	a (DD)D func_806_a
 		1 o p_806_1
 		3 o p_806_3
 	a ([DIIIIDDD)[D func_4109_a
+		1 o p_4109_1
+		2 o p_4109_2
+		3 o p_4109_3
+		4 o p_4109_4
+		5 o p_4109_5
+		6 o p_4109_6
+		8 o p_4109_8
+		10 o p_4109_10
 ng net/minecraft/src/NoiseGeneratorOctaves2
 	a field_4234_a
 	b field_4233_b
 	a ([DDDIIDDD)[D func_4112_a
+		1 o p_4112_1
+		2 o p_4112_2
+		4 o p_4112_4
+		6 o p_4112_6
+		7 o p_4112_7
+		8 o p_4112_8
+		10 o p_4112_10
+		12 o p_4112_12
 	a ([DDDIIDDDD)[D func_4111_a
+		1 o p_4111_1
+		2 o p_4111_2
+		4 o p_4111_4
+		6 o p_4111_6
+		7 o p_4111_7
+		8 o p_4111_8
+		10 o p_4111_10
+		12 o p_4111_12
+		14 o p_4111_14
 nh net/minecraft/src/Packet30Entity
 	a field_485_a
 	b field_484_b
@@ -8596,6 +8704,7 @@ od net/minecraft/src/TexturePackCustom
 	g field_6494_g
 	h field_6493_h
 	a (Ljava/lang/String;)Ljava/io/InputStream; func_6481_a
+		1 o p_6481_1
 	a (Lnet/minecraft/client/Minecraft;)V func_6485_a
 		1 o p_6485_1
 	a ()V func_6482_a
@@ -8603,6 +8712,7 @@ od net/minecraft/src/TexturePackCustom
 		1 o p_6484_1
 	b ()V func_6480_b
 	b (Ljava/lang/String;)Ljava/lang/String; func_6492_b
+		1 o p_6492_1
 	c (Lnet/minecraft/client/Minecraft;)V func_6483_c
 		1 o p_6483_1
 oe net/minecraft/src/TextureWaterFX
@@ -8888,6 +8998,8 @@ oz net/minecraft/src/WorldProvider
 	a (Ljava/io/File;)Lai; func_4092_a
 		1 o p_4092_1
 	b (FF)[F func_4097_b
+		1 o p_4097_1
+		2 o p_4097_2
 	b ()V func_4093_b
 	c ()Lbd; func_4094_c
 	d ()Z func_6477_d
@@ -9137,8 +9249,22 @@ po net/minecraft/src/WorldChunkManager
 	f field_4193_f
 	g field_4192_g
 	a ([DIIII)[D func_4071_a
+		1 o p_4071_1
+		2 o p_4071_2
+		3 o p_4071_3
+		4 o p_4071_4
+		5 o p_4071_5
 	a (IIII)[Lgg; func_4069_a
+		1 o p_4069_1
+		2 o p_4069_2
+		3 o p_4069_3
+		4 o p_4069_4
 	a ([Lgg;IIII)[Lgg; func_4070_a
+		1 o p_4070_1
+		2 o p_4070_2
+		3 o p_4070_3
+		4 o p_4070_4
+		5 o p_4070_5
 	a (II)Lgg; func_4073_a
 		1 o p_4073_1
 		2 o p_4073_2
@@ -9311,6 +9437,13 @@ px net/minecraft/src/ChunkProviderGenerate
 		3 o p_4062_3
 		4 o p_4062_4
 	a ([DIIIIII)[D func_4061_a
+		1 o p_4061_1
+		2 o p_4061_2
+		3 o p_4061_3
+		4 o p_4061_4
+		5 o p_4061_5
+		6 o p_4061_6
+		7 o p_4061_7
 	b (II)Lha; func_533_b
 		1 o p_533_1
 		2 o p_533_2

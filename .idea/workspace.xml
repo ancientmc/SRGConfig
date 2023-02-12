@@ -7,6 +7,7 @@
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/wip-mappings/a1.2.6.tsrg" beforeDir="false" afterPath="$PROJECT_DIR$/data/wip-mappings/a1.2.6.tsrg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,11 +117,11 @@
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\buildSrc\src\main\groovy\com\ancientmc\srgconfig\tasks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\wip-mappings" />
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\mappings\versions\a1.2.6" />
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\csv\versions\a1.2.6" />
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\mappings" />
       <recent name="D:\Programs\Projects\RCP\SRGConfig\final\srg\alpha" />
-      <recent name="D:\Programs\Projects\RCP\SRGConfig\data" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.entropy.rcp.srgconfig.tasks" />
@@ -133,7 +134,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--stacktrace" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -376,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676242398002</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="they're back, but something still seems wrong since there's still less lines than there were initially. I'm pushing this anyway so I can use git to investigate.">
+      <created>1676244150275</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676244150275</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -404,7 +412,8 @@
     <MESSAGE value="attribution in Rgs2Srg" />
     <MESSAGE value="silly me these aren't useless" />
     <MESSAGE value="parse through methods without &quot;func&quot; prefix (ones inherited from non-MC classes) in AddParams" />
-    <option name="LAST_COMMIT_MESSAGE" value="parse through methods without &quot;func&quot; prefix (ones inherited from non-MC classes) in AddParams" />
+    <MESSAGE value="they're back, but something still seems wrong since there's still less lines than there were initially. I'm pushing this anyway so I can use git to investigate." />
+    <option name="LAST_COMMIT_MESSAGE" value="they're back, but something still seems wrong since there's still less lines than there were initially. I'm pushing this anyway so I can use git to investigate." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

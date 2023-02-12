@@ -19,7 +19,7 @@ class AddParams extends DefaultTask {
     @OutputFile File tsrgP // output TSRGv2 file with parameters.
 
     // Descriptor regex for methods
-    @Internal Pattern descRgx = Pattern.compile("\\([^)]*\\)[A-Za-z]+;|\\([^)]*\\)[A-Za-z]+")
+    @Internal Pattern descRgx = Pattern.compile("\\([^)]*\\).+")
 
     @TaskAction
     void exec() {
