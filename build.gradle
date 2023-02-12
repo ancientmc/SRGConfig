@@ -140,7 +140,7 @@ task testDeobfJar(type: JavaExec, dependsOn: testDownloadJar) {
 task testInjectJar(type: JavaExec) {
     mainClass = 'de.oceanlabs.mcp.mcinjector.MCInjector'
     classpath = files(project.configurations.getByName("mcinject"))
-    args('--in', TEST_SRG_JAR, '--out', TEST_INJECT_JAR)
+    args('--in', 'data\\jars\\a1.2.6-params.jar', '--out', TEST_INJECT_JAR, "--lvt=LVT")
 }
 
 // Testing task for unzipping the JAR in order to peek into the class files using IntelliJ's built-in version of Fernflower.

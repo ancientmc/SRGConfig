@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="" />
+    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,18 +96,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Programs/Projects/AncientMC/SRGConfig/data/wip-mappings",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programs/Projects/AncientMC/Rosetta&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data\wip-mappings" />
@@ -124,76 +128,13 @@
       <recent name="com.entropy.rcp.srgconfig" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SRGConfig [DeobfJarTsrg]">
-    <configuration name="SRGConfig [DeobfJarFR]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="DeobfJarFR" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SRGConfig [DeobfJarTsrg]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="DeobfJarTsrg" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SRGConfig [DeobfJarVignette]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="DeobfJarVignette" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.SRGConfig [addParams]">
     <configuration name="SRGConfig [addParams]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--rerun-tasks" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -206,7 +147,7 @@
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>true</DebugAllEnabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="SRGConfig [generate]" type="GradleRunConfiguration" factoryName="Gradle">
@@ -234,7 +175,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SRGConfig [testDecompJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SRGConfig [rgs2Srg]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -245,7 +186,70 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="testDecompJar" />
+            <option value="rgs2Srg" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SRGConfig [srg2Tsrg]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="srg2Tsrg" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SRGConfig [testDeobfJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="testDeobfJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SRGConfig [testDownloadJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="testDownloadJar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -257,19 +261,19 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.SRGConfig [generate]" />
+      <item itemvalue="Gradle.SRGConfig [rgs2Srg]" />
+      <item itemvalue="Gradle.SRGConfig [srg2Tsrg]" />
+      <item itemvalue="Gradle.SRGConfig [testDeobfJar]" />
+      <item itemvalue="Gradle.SRGConfig [testDownloadJar]" />
       <item itemvalue="Gradle.SRGConfig [addParams]" />
-      <item itemvalue="Gradle.SRGConfig [DeobfJarFR]" />
-      <item itemvalue="Gradle.SRGConfig [testDecompJar]" />
-      <item itemvalue="Gradle.SRGConfig [DeobfJarVignette]" />
-      <item itemvalue="Gradle.SRGConfig [DeobfJarTsrg]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SRGConfig [DeobfJarTsrg]" />
         <item itemvalue="Gradle.SRGConfig [addParams]" />
-        <item itemvalue="Gradle.SRGConfig [DeobfJarFR]" />
-        <item itemvalue="Gradle.SRGConfig [DeobfJarVignette]" />
-        <item itemvalue="Gradle.SRGConfig [testDecompJar]" />
+        <item itemvalue="Gradle.SRGConfig [testDeobfJar]" />
+        <item itemvalue="Gradle.SRGConfig [testDownloadJar]" />
+        <item itemvalue="Gradle.SRGConfig [srg2Tsrg]" />
+        <item itemvalue="Gradle.SRGConfig [rgs2Srg]" />
       </list>
     </recent_temporary>
   </component>
@@ -359,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676083243587</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="silly me these aren't useless">
+      <created>1676083501515</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676083501515</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -385,7 +396,8 @@
     <MESSAGE value="- as it turns out, the original RGS file from version 2.5 used in the conversion process had duplicate SRG values. This explains some of the naming errors that I mentioned in commit 7d78552. These duplicates are resolved in newer MCP versions, so I just copied the SRG names over for the erroneous fields.&#10;- fixed issue with file not showing up on GitHub. Yet another mistake with git by me, it seems." />
     <MESSAGE value="- Converted &quot;brand&quot; names in README/packages&#10;- kind of major overhaul to a lot of the directory structuring, mainly to account for future versions&#10;- Renamed &quot;MobSpawner[Biome]&quot; class family to &quot;BiomeGen[Biome]&quot;, to reflect method names referencing them&#10;- Removed unneeded enum fields whose existence I'm honestly unsure about.&#10;- Renamed one of the tasks&#10;- Some other stuff probably&#10;&#10;This will be the last update to the mappings before ACP's full beta release, unless I find some glaring inconsistency that needs to be worked out." />
     <MESSAGE value="attribution in Rgs2Srg" />
-    <option name="LAST_COMMIT_MESSAGE" value="attribution in Rgs2Srg" />
+    <MESSAGE value="silly me these aren't useless" />
+    <option name="LAST_COMMIT_MESSAGE" value="silly me these aren't useless" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -559,12 +571,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy</url>
-          <line>35</line>
+          <line>44</line>
           <option name="timeStamp" value="151" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy</url>
-          <line>36</line>
+          <line>45</line>
           <option name="timeStamp" value="152" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
@@ -582,11 +594,6 @@
         <PinnedItemInfo parentTag="org.objectweb.asm.tree.MethodNode" memberName="signature" />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <inline-watch fileUrl="jar://$PROJECT_DIR$/forgeart.jar!/net/minecraftforge/fart/internal/EnhancedRemapper.class" line="321">
-        <watch expression="((MMethod)this).params" language="JAVA" custom="net.minecraftforge.fart.internal.EnhancedRemapper.MClass.MMethod" />
-      </inline-watch>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SRGConfig$SRGConfig__DeobfJarTsrg_.ic" NAME="SRGConfig [DeobfJarTsrg] Coverage Results" MODIFIED="1676081689002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
