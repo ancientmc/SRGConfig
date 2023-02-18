@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/DownloadJar.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/DownloadJson.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/DownloadLibraries.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/DumpConstructors.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/UpdateExc.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/GetConstructorList.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/Utils.groovy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/srg-classes_a1.2.6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/ApplyCsv.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/ApplyCsv.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/GetParamMap.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/GetParamMap.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cfg/exceptions.exc" beforeDir="false" afterPath="$PROJECT_DIR$/data/cfg/exceptions-base.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mappings/versions/a1.2.6/mappings-a1.2.6.zip" beforeDir="false" afterPath="$PROJECT_DIR$/data/mappings/versions/a1.2.6/mappings-a1.2.6.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/wip-mappings/a1.2.6.tsrg" beforeDir="false" afterPath="$PROJECT_DIR$/data/wip-mappings/a1.2.6.tsrg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/GetConstructorList.groovy" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -406,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676244808015</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="wip stuff mainly&#10;- a bunch of new tasks&#10;- mappings zip now contains SRG file and not RGS (I still have a backup)&#10;&#10;plan on making a post somewhere to outline this process and my plans for ACP 0.2.0">
+      <created>1676718814867</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676718814867</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -436,7 +427,8 @@
     <MESSAGE value="parse through methods without &quot;func&quot; prefix (ones inherited from non-MC classes) in AddParams" />
     <MESSAGE value="they're back, but something still seems wrong since there's still less lines than there were initially. I'm pushing this anyway so I can use git to investigate." />
     <MESSAGE value="It looks better, but I'm considering this a test until I can compare again (is there a way to do this in the IDE? Probably)" />
-    <option name="LAST_COMMIT_MESSAGE" value="It looks better, but I'm considering this a test until I can compare again (is there a way to do this in the IDE? Probably)" />
+    <MESSAGE value="wip stuff mainly&#10;- a bunch of new tasks&#10;- mappings zip now contains SRG file and not RGS (I still have a backup)&#10;&#10;plan on making a post somewhere to outline this process and my plans for ACP 0.2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip stuff mainly&#10;- a bunch of new tasks&#10;- mappings zip now contains SRG file and not RGS (I still have a backup)&#10;&#10;plan on making a post somewhere to outline this process and my plans for ACP 0.2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
