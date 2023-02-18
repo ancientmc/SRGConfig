@@ -1,6 +1,6 @@
 plugins {
     id 'java-library'
-    id 'de.undercouch.download' version '4.1.2'
+    id 'de.undercouch.download'
 }
 
 group 'com.ancientmc.srgconfig'
@@ -14,20 +14,29 @@ repositories {
 
 configurations {
     retroguard
+    forgeart
+    jarsplitter
+    installertools
     mcinject
 }
 
 dependencies {
     retroguard 'de.oceanlabs.mcp:RetroGuard:3.6.6'
     retroguard configurations.retroguard.dependencies
+    forgeart 'net.minecraftforge:ForgeAutoRenamingTool:0.1.24'
+    jarsplitter 'net.minecraftforge:jarsplitter:1.1.4'
+    installertools 'net.minecraftforge:installertools:1.3.2'
     mcinject 'de.oceanlabs.mcp:mcinjector:3.8.0'
 }
 
 import com.ancientmc.srgconfig.tasks.*
+import groovy.json.JsonSlurper
+import net.minecraftforge.srgutils.IMappingFile
 
 ext {
     MC_VERSION = "a1.2.6"
     DIR_DATA = "$project.projectDir\\data"
+    DIR_BUILD = "$project.buildDir"
     DIR_MAPPINGS = "${DIR_DATA}\\mappings\\versions\\${MC_VERSION}"
     MAPPINGS_ZIP = "${DIR_MAPPINGS}\\mappings-${MC_VERSION}.zip"
     RGS_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.rgs"
@@ -35,19 +44,24 @@ ext {
     SRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.srg"
     TSRG_FILE_BASE = "${DIR_MAPPINGS}\\${MC_VERSION}-base.tsrg"
     TSRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.tsrg"
+    SRG_CLASSES_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\srg-classes_${MC_VERSION}.csv"
     CLASS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\classes_${MC_VERSION}.csv"
     FIELDS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\fields_${MC_VERSION}.csv"
     METHODS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\methods_${MC_VERSION}.csv"
 
-    TEST_MC_JAR = "https://piston-data.mojang.com/v1/objects/a68c817afd6c05c253ba5462287c2c19bbb57935/client.jar"
-    TEST_DIR_JARS = "${DIR_DATA}\\jars"
-    TEST_BASE_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}.jar"
-    TEST_SRG_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}-srg.jar"
-    TEST_INJECT_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}-inject.jar"
-    TEST_DECOMP_JAR = "${TEST_DIR_JARS}\\${MC_VERSION}-decomp.jar"
-    TEST_DIR_TEMP = "${TEST_DIR_JARS}\\temp\\"
-    TEST_DIR_CFG = "${DIR_DATA}\\cfg"
-    TEST_DIR_LOGS = "${DIR_DATA}\\logs"
+    JSON = "${DIR_BUILD}\\game_data\\${MC_VERSION}.json"
+    LIBRARIES = "${DIR_BUILD}\\libraries\\"
+    LIBS_FILE = "${DIR_BUILD}\\map_data\\libraries-list.txt"
+    INHERITANCE = "${DIR_BUILD}\\map_data\\inheritance.json"
+    DIR_JARS = "${DIR_BUILD}\\jars"
+    BASE_JAR = "${DIR_JARS}\\${MC_VERSION}.jar"
+    SLIM_JAR = "${DIR_JARS}\\${MC_VERSION}-slim.jar"
+    SRG_JAR = "${DIR_JARS}\\${MC_VERSION}-srg.jar"
+    INJECT_JAR = "${DIR_JARS}\\${MC_VERSION}-inject.jar"
+    DECOMP_JAR = "${DIR_JARS}\\${MC_VERSION}-decomp.jar"
+    DIR_TEMP = "${DIR_JARS}\\temp\\"
+    DIR_CFG = "${DIR_DATA}\\cfg"
+    DIR_LOGS = "${DIR_BUILD}\\logs"
 }
 
 FileFilter gitIgnoreFilter = (File file) -> { return !file.getName().endsWith(".gitignore") }
@@ -55,9 +69,9 @@ FileFilter gitIgnoreFilter = (File file) -> { return !file.getName().endsWith(".
 clean {
     delete(file(RGS_FILE),
             file(SRG_FILE),
-            file(TEST_DIR_JARS),
-            file(TEST_DIR_TEMP),
-            file(TEST_DIR_LOGS).listFiles(gitIgnoreFilter))
+            file(DIR_JARS),
+            file(DIR_TEMP),
+            file(DIR_LOGS).listFiles(gitIgnoreFilter))
 }
 
 task buildSRG(type: GradleBuild) {
@@ -68,14 +82,39 @@ task testSRG(type: GradleBuild) {
     tasks = ['testDownloadJar', 'testDeobfJar', 'testUnzipJar']
 }
 
+task downloadVersionManifest(type: Download) {
+    src 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json'
+    dest DIR_BUILD + '/game_data/version_manifest.json'
+}
+
+// Downloads JSON
+task downloadJson(type: DownloadJson, dependsOn: downloadVersionManifest) {
+    manifest = downloadVersionManifest.dest
+    version = MC_VERSION
+    json = file(JSON)
+}
+
+// Downloads Libraries
+task downloadLibraries(type: DownloadLibraries, dependsOn: downloadJson) {
+    json = downloadJson.json
+    libraries = file(LIBRARIES)
+    list = file(LIBS_FILE)
+}
+
+// Downloads the JAR
+task downloadJar(type: DownloadJar, dependsOn: downloadJson) {
+    json = downloadJson.json
+    jar = file(BASE_JAR)
+}
+
 // Extracts the base script from a ZIP file.
-task extractRGSFile(type: Copy) {
+task extractScript(type: Copy) {
     from zipTree(file(MAPPINGS_ZIP))
     into file(DIR_MAPPINGS)
 }
 
 // Appends the class mappings with packages and tweaks some of the class names.
-task applyClassesCSV(type: ApplyCsv) {
+task applyClassesCsv(type: ApplyCsv) {
     scriptFile = file(RGS_FILE)
     csvFile = file(CLASS_CSV)
 }
@@ -86,10 +125,37 @@ task removeUnwantedLines(type: RemoveUnwantedLines) {
     output = file(RGS_FILE_STRIPPED)
 }
 
-// Converts the RGS file to a more up-to-date SRG file. This tool was originally developed by Jamie Mansfield and LexTeam.
+// Converts the RGS file to a more up-to-date SRG file. This is based on a tool originally developed by Jamie Mansfield and LexTeam.
+// Some things manually need to be entered in, which will hopefully be patched in the future.
 task rgs2Srg(type: Rgs2Srg) {
     rgs = file(RGS_FILE_STRIPPED)
     srg = file(SRG_FILE)
+}
+
+// Strips the jar of all non-source files
+task stripJar(type: JavaExec, dependsOn: extractScript) {
+    mainClass = 'net.minecraftforge.jarsplitter.ConsoleTool'
+    classpath = files(project.configurations.getByName('jarsplitter'))
+    args('--input', BASE_JAR, '--slim', SLIM_JAR, '--extra', "${DIR_JARS}\\${MC_VERSION}-extra.jar", '--srg', SRG_FILE)
+}
+
+// Deobfuscates the JAR using the SRG file
+task deobfJarSrg(type: JavaExec) {
+    main = 'net.minecraftforge.fart.Main'
+    classpath = project.configurations.getByName('forgeart')
+    args('--input', SLIM_JAR, '--output', SRG_JAR, '--map', SRG_FILE)
+}
+
+// Creates a JSON inheritance map of the JAR using
+task extractInheritance(type: JavaExec) {
+    main = 'net.minecraftforge.installertools.ConsoleTool'
+    classpath = project.configurations.getByName('installertools')
+    args('--task', 'EXTRACT_INHERITANCE', '--input', SRG_JAR, '--output', INHERITANCE)
+}
+
+task dumpConstructors(type: DumpConstructors) {
+    json = file(INHERITANCE)
+    constructors = file("${DIR_BUILD}\\map_data\\constructors.txt")
 }
 
 // Uses Forge's SrgUtils to easily convert SRG to TSRGv2
@@ -101,8 +167,14 @@ task srg2Tsrg(type: Srg2Tsrg) {
 // Auto-generates param names and adds them to the TSRG file.
 task addParams(type: AddParams) {
     tsrg = file(TSRG_FILE_BASE)
-    jar = file(TEST_SRG_JAR)
+    jar = file(SRG_JAR)
     tsrgP = file(TSRG_FILE)
+}
+
+task updateExc(type: UpdateExc) {
+    excOld = file(DIR_BUILD + '/map_data/exceptions-base.txt')
+    srg = file(SRG_FILE)
+    excNew = file(DIR_BUILD + '/map_data/exceptions.txt')
 }
 
 // Converts the fields from SRG to MCP.
@@ -123,14 +195,8 @@ task copySRGToFinal(type: Copy) {
     into file("final\\srg\\alpha\\")
 }
 
-// Testing task for downloading the Minecraft Jar.
-task testDownloadJar(type: Download) {
-    src TEST_MC_JAR
-    dest TEST_BASE_JAR
-}
-
 // Testing task for deobfuscating the JAR using RetroGuard.
-task testDeobfJar(type: JavaExec, dependsOn: testDownloadJar) {
+task testDeobfJar(type: JavaExec) {
     mainClass = "RetroGuard"
     classpath = files(project.configurations.findByName("retroguard"))
     args("-searge", "${DIR_DATA}\\cfg\\retroguard.cfg")
@@ -140,13 +206,13 @@ task testDeobfJar(type: JavaExec, dependsOn: testDownloadJar) {
 task testInjectJar(type: JavaExec) {
     mainClass = 'de.oceanlabs.mcp.mcinjector.MCInjector'
     classpath = files(project.configurations.getByName("mcinject"))
-    args('--in', 'data\\jars\\a1.2.6-params.jar', '--out', TEST_INJECT_JAR, "--lvt=LVT")
+    args('--in', BASE_JAR, '--out', INJECT_JAR, "--lvt=LVT", '--exc', DIR_BUILD + '/map_data/exceptions.txt')
 }
 
 // Testing task for unzipping the JAR in order to peek into the class files using IntelliJ's built-in version of Fernflower.
 task testUnzipJar(type: Copy) {
-    from zipTree(file(TEST_DECOMP_JAR))
-    into file(TEST_DIR_TEMP)
+    from zipTree(file(DECOMP_JAR))
+    into file(DIR_TEMP)
 }
 
 // Testing task for reobfuscation

@@ -44,13 +44,13 @@ class AddParams extends DefaultTask {
         List<String> paramList = new ArrayList<>()
         def params = GetParamMap.getMap(jar)
         def entry = params.find { it.key == methodName }
-        for(int index : entry.value) {
+        for(int i = 0; i < entry.value; i++) {
             String methodId
             if(methodName.contains("func_")) {
                 String[] mSplit = methodName.split("_")
                 methodId = mSplit[1]
             } else methodId = methodName
-            String param = "\n\t\t" + index + " o " + "p_" + methodId + "_" + index
+            String param = "\n\t\t" + i + " o " + "p_" + methodId + "_" + i
             paramList.add(param)
         }
         StringBuilder builder = new StringBuilder()

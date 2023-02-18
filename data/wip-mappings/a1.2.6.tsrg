@@ -5102,6 +5102,9 @@ in net/minecraft/src/MusInputStream
 	c field_1516_c
 	d field_1515_d
 	read ([BII)I read
+		1 o p_read_1
+		2 o p_read_2
+		3 o p_read_3
 	read ()I read
 io net/minecraft/src/Packet39AttachEntity
 	a field_6365_a

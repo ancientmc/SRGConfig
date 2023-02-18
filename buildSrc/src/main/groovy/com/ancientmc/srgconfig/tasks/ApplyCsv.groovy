@@ -7,7 +7,9 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.TaskAction
 
-
+// TODO: Make this way faster because it's really slow and I hate it. It's probably because of my shitty older code, but it also
+// TODO: may be because of how Java parses text in general. Forge keeps things contained in ZIP files when parsing CSVs, and I'm beginning
+// TODO: to understand why. Rewrite will be soon, probably using Groovy stuff. Also, can you not do multi-line TODOs?
 class ApplyCsv extends DefaultTask {
     @InputFile File scriptFile
     @InputFile File csvFile
