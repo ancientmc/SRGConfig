@@ -14,10 +14,26 @@ class Utils {
      */
     static Map<String, String> getClassMap(File file) {
         Map<String, String> classMap = new HashMap<>()
-        IMappingFile mapping = IMappingFile.load(file)
+        IMappingFile mapping = IMappingFile.load(file as File)
         for(IMappingFile.IClass clazz : mapping.getClasses()) {
             classMap.put(clazz.original, clazz.mapped)
         }
         return classMap
+    }
+
+    /**
+     * Retrieves the mapped descriptor of a method by a mapped method name and obfuscated descriptor with
+     * data from a TSRG/SRG file.
+     */
+    static String getMappedDesc(File file, String mappedMethod, String desc) {
+        IMappingFile mapping = IMappingFile.load(file as File)
+        for(IMappingFile.IClass clazz : mapping.getClasses()) {
+            for(IMappingFile.IMethod method : clazz.getMethods()) {
+                if( method.mapped == mappedMethod && method.descriptor == desc) {
+                    return method.mappedDescriptor
+                }
+            }
+        }
+        return null
     }
 }

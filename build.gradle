@@ -140,41 +140,50 @@ task stripJar(type: JavaExec, dependsOn: extractScript) {
 }
 
 // Deobfuscates the JAR using the SRG file
-task deobfJarSrg(type: JavaExec) {
+task deobfJarSrg(type: JavaExec, dependsOn: stripJar) {
     main = 'net.minecraftforge.fart.Main'
     classpath = project.configurations.getByName('forgeart')
     args('--input', SLIM_JAR, '--output', SRG_JAR, '--map', SRG_FILE)
 }
 
-// Creates a JSON inheritance map of the JAR using
+// Creates a JSON inheritance map of the JAR using Forge's InstallerTools
 task extractInheritance(type: JavaExec) {
     main = 'net.minecraftforge.installertools.ConsoleTool'
     classpath = project.configurations.getByName('installertools')
     args('--task', 'EXTRACT_INHERITANCE', '--input', SRG_JAR, '--output', INHERITANCE)
 }
 
-task dumpConstructors(type: DumpConstructors) {
+// Dumps constructor info from inheritance map into a text file
+task dumpConstructors(type: DumpConstructors, dependsOn: extractInheritance) {
     json = file(INHERITANCE)
     constructors = file("${DIR_BUILD}\\map_data\\constructors.txt")
 }
 
-// Uses Forge's SrgUtils to easily convert SRG to TSRGv2
-task srg2Tsrg(type: Srg2Tsrg) {
+// Adds the constructors to the SRG file.
+task addConstructors(type: AddConstructors, dependsOn: dumpConstructors) {
     srg = file(SRG_FILE)
+    constructors = file("${DIR_BUILD}\\map_data\\constructors.txt")
+    newSrg = file(SRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}-ctrs.srg")
+}
+
+// Uses Forge's SrgUtils to easily convert SRG to TSRGv2
+task srg2Tsrg(type: Srg2Tsrg, dependsOn: addConstructors) {
+    srg = file(addConstructors.newSrg)
     tsrg = file(TSRG_FILE_BASE)
 }
 
 // Auto-generates param names and adds them to the TSRG file.
-task addParams(type: AddParams) {
+task addParams(type: AddParams, dependsOn: srg2Tsrg) {
     tsrg = file(TSRG_FILE_BASE)
     jar = file(SRG_JAR)
     tsrgP = file(TSRG_FILE)
 }
 
+// Converts a template exceptions file with SRG names to one with notch (obfuscated) names.
 task updateExc(type: UpdateExc) {
-    excOld = file(DIR_BUILD + '/map_data/exceptions-base.txt')
+    excOld = file("${DIR_CFG}\\exceptions-base.txt")
     srg = file(SRG_FILE)
-    excNew = file(DIR_BUILD + '/map_data/exceptions.txt')
+    excNew = file("${DIR_DATA}\\wip-mappings\\exceptions.txt")
 }
 
 // Converts the fields from SRG to MCP.

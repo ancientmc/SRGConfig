@@ -30,7 +30,9 @@ class DumpConstructors extends DefaultTask {
         jsonObj.each { clazz,data ->
             String className = data.name
             Collection<String> methods = data.methods?.keySet()?.findAll { (it.toString().contains('<init>') || it.toString().contains('<clinit>')) }
-            methods.each { lines.add(className + " " + it as String) }
+            methods.each {
+                lines.add(className + " " + it as String)
+            }
         }
         return lines
     }

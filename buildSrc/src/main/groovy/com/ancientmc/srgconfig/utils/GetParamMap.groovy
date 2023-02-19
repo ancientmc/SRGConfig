@@ -26,7 +26,7 @@ class GetParamMap {
                 reader.accept(node, 0)
                 for(MethodNode mNode : node.methods) {
                     def mParser = new MethodParser(mNode)
-                    String name = mParser.name
+                    String name = mParser.name + ' ' + mParser.desc
                     int params = mParser.params
                     map.put(name, params)
                 }
