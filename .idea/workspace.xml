@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddConstructors.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/DumpConstructors.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/DumpConstructors.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/GetParamMap.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/GetParamMap.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/Utils.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/Utils.groovy" afterDir="false" />
-    </list>
+    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -432,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676719324294</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="- constructors and their parameters now get mapped onto the TSRG file. &#10;- update TSRG file in WIP mapping folder&#10;- show exceptions file">
+      <created>1676765102671</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1676765102671</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +463,8 @@
     <MESSAGE value="It looks better, but I'm considering this a test until I can compare again (is there a way to do this in the IDE? Probably)" />
     <MESSAGE value="wip stuff mainly&#10;- a bunch of new tasks&#10;- mappings zip now contains SRG file and not RGS (I still have a backup)&#10;&#10;plan on making a post somewhere to outline this process and my plans for ACP 0.2.0" />
     <MESSAGE value="remove unneeded util class" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove unneeded util class" />
+    <MESSAGE value="- constructors and their parameters now get mapped onto the TSRG file. &#10;- update TSRG file in WIP mapping folder&#10;- show exceptions file" />
+    <option name="LAST_COMMIT_MESSAGE" value="- constructors and their parameters now get mapped onto the TSRG file. &#10;- update TSRG file in WIP mapping folder&#10;- show exceptions file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
