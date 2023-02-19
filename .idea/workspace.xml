@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/CreateParamsCsv.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -442,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676765189375</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- Add param csv generator task.&#10;- Start work on param csv mapping.">
+      <created>1676795489045</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1676795489045</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -476,7 +481,8 @@
     <MESSAGE value="remove unneeded util class" />
     <MESSAGE value="- constructors and their parameters now get mapped onto the TSRG file. &#10;- update TSRG file in WIP mapping folder&#10;- show exceptions file" />
     <MESSAGE value="- forgot to update the TSRG file whoops" />
-    <option name="LAST_COMMIT_MESSAGE" value="- forgot to update the TSRG file whoops" />
+    <MESSAGE value="- Add param csv generator task.&#10;- Start work on param csv mapping." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add param csv generator task.&#10;- Start work on param csv mapping." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
