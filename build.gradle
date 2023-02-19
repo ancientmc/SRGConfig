@@ -48,6 +48,7 @@ ext {
     CLASS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\classes_${MC_VERSION}.csv"
     FIELDS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\fields_${MC_VERSION}.csv"
     METHODS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\methods_${MC_VERSION}.csv"
+    PARAMS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\params_${MC_VERSION}.csv"
 
     JSON = "${DIR_BUILD}\\game_data\\${MC_VERSION}.json"
     LIBRARIES = "${DIR_BUILD}\\libraries\\"
@@ -184,6 +185,11 @@ task updateExc(type: UpdateExc) {
     excOld = file("${DIR_CFG}\\exceptions-base.txt")
     srg = file(SRG_FILE)
     excNew = file("${DIR_DATA}\\wip-mappings\\exceptions.txt")
+}
+
+task createParamsCsv(type: CreateParamsCsv) {
+    tsrg = file(TSRG_FILE)
+    csv = file(PARAMS_CSV)
 }
 
 // Converts the fields from SRG to MCP.
