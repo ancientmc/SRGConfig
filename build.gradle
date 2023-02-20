@@ -194,7 +194,7 @@ task createParamsCsv(type: CreateParamsCsv) {
 
 // Converts the fields from SRG to MCP.
 task applyFieldsCSV(type: ApplyCsv) {
-    scriptFile = file(SRG_FILE)
+    scriptFile = file(TSRG_FILE)
     csvFile = file(FIELDS_CSV)
 }
 
