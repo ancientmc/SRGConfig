@@ -8,7 +8,7 @@ import org.gradle.api.tasks.OutputFile
 import org.gradle.api.tasks.TaskAction
 
 /**
- * Replaces template exceptions file with SRG names into one with notch method/class names and descriptors.
+ * Replaces template exceptions file containing SRG names into one containing notch method/class names and descriptors.
  */
 class UpdateExc extends DefaultTask {
     @InputFile File excOld // exceptions file with SRG names

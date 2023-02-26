@@ -8,22 +8,20 @@ import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.TaskAction
 
-import java.nio.file.Files
-
 class ApplyCsv extends DefaultTask {
-    @InputFile File scriptFile
-    @InputFile File csvFile
+    @InputFile File script
+    @InputFile File csv
 
     @TaskAction
     void exec() throws CsvValidationException, IOException {
         List<String> lines = new ArrayList<>()
-        scriptFile.text.eachLine { line ->
+        script.text.eachLine { line ->
             def matches = getMap().findAll { line.contains(it.key) }
             matches.each { line = line.replaceAll(it.key, it.value) }
             lines.add(line)
         }
 
-        scriptFile.withWriter('UTF-8') { writer ->
+        script.withWriter('UTF-8') { writer ->
             lines.each {
                 writer.write(it + '\n')
                 writer.flush()
@@ -36,7 +34,7 @@ class ApplyCsv extends DefaultTask {
         Map<String, String> map = new HashMap<>()
         String[] nextLine
         int rowNumber = 0
-        CSVReader csvReader = new CSVReaderBuilder(new FileReader(csvFile)).withSkipLines(1).build()
+        CSVReader csvReader = new CSVReaderBuilder(new FileReader(csv)).withSkipLines(1).build()
         while((nextLine = csvReader.readNext()) != null) {
             rowNumber++
             for (int i = 1; i < nextLine.length; i++) {

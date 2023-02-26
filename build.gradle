@@ -44,8 +44,7 @@ ext {
     SRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.srg"
     TSRG_FILE_BASE = "${DIR_MAPPINGS}\\${MC_VERSION}-base.tsrg"
     TSRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.tsrg"
-    SRG_CLASSES_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\srg-classes_${MC_VERSION}.csv"
-    CLASS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\classes_${MC_VERSION}.csv"
+    CLASSES_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\classes_${MC_VERSION}.csv"
     FIELDS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\fields_${MC_VERSION}.csv"
     METHODS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\methods_${MC_VERSION}.csv"
     PARAMS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\params_${MC_VERSION}.csv"
@@ -116,8 +115,8 @@ task extractScript(type: Copy) {
 
 // Appends the class mappings with packages and tweaks some of the class names.
 task applyClassesCsv(type: ApplyCsv) {
-    scriptFile = file(RGS_FILE)
-    csvFile = file(CLASS_CSV)
+    script = file(RGS_FILE)
+    csv = file(CLASSES_CSV)
 }
 
 // Removes unwanted mappings, mostly belonging to library classes.
@@ -143,14 +142,14 @@ task stripJar(type: JavaExec, dependsOn: extractScript) {
 // Deobfuscates the JAR using the SRG file
 task deobfJarSrg(type: JavaExec, dependsOn: stripJar) {
     main = 'net.minecraftforge.fart.Main'
-    classpath = project.configurations.getByName('forgeart')
+    classpath = files(project.configurations.getByName('forgeart'))
     args('--input', SLIM_JAR, '--output', SRG_JAR, '--map', SRG_FILE)
 }
 
 // Creates a JSON inheritance map of the JAR using Forge's InstallerTools
-task extractInheritance(type: JavaExec) {
+task extractInheritance(type: JavaExec, dependsOn: deobfJarSrg) {
     main = 'net.minecraftforge.installertools.ConsoleTool'
-    classpath = project.configurations.getByName('installertools')
+    classpath = files(project.configurations.getByName('installertools'))
     args('--task', 'EXTRACT_INHERITANCE', '--input', SRG_JAR, '--output', INHERITANCE)
 }
 
@@ -177,7 +176,7 @@ task srg2Tsrg(type: Srg2Tsrg, dependsOn: addConstructors) {
 task addParams(type: AddParams, dependsOn: srg2Tsrg) {
     tsrg = file(TSRG_FILE_BASE)
     jar = file(SRG_JAR)
-    tsrgP = file(TSRG_FILE)
+    newTsrg = file(TSRG_FILE)
 }
 
 // Converts a template exceptions file with SRG names to one with notch (obfuscated) names.
@@ -187,6 +186,7 @@ task updateExc(type: UpdateExc) {
     excNew = file("${DIR_DATA}\\wip-mappings\\exceptions.txt")
 }
 
+// Creates an empty params csv file
 task createParamsCsv(type: CreateParamsCsv) {
     tsrg = file(TSRG_FILE)
     csv = file(PARAMS_CSV)
@@ -194,15 +194,25 @@ task createParamsCsv(type: CreateParamsCsv) {
 
 // Converts the fields from SRG to MCP.
 task applyFieldsCSV(type: ApplyCsv) {
-    scriptFile = file(TSRG_FILE)
-    csvFile = file(FIELDS_CSV)
+    script = file(TSRG_FILE)
+    csv = file(FIELDS_CSV)
 }
 
 // Converts the methods from SRG to MCP.
 task applyMethodsCSV(type: ApplyCsv) {
-    scriptFile = file(SRG_FILE)
-    csvFile = file(METHODS_CSV)
+    script = file(TSRG_FILE)
+    csv = file(METHODS_CSV)
 }
+
+// Converts the params to a SRG file.
+task applyParamsCsv(type: ApplyCsv) {
+    script = file(TSRG_FILE)
+    csv = file(PARAMS_CSV)
+}
+
+/**
+ * Everything beyond this point is WIP
+ */
 
 // Copies the final SRG file into the final directory.
 task copySRGToFinal(type: Copy) {

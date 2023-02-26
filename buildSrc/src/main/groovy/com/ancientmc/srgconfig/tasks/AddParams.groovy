@@ -17,7 +17,7 @@ import java.util.regex.Pattern
 class AddParams extends DefaultTask {
     @InputFile File tsrg // input TSRGv2 file without parameters.
     @InputFile File jar // remapped jar
-    @OutputFile File tsrgP // output TSRGv2 file with parameters via the getConstructorId method in the Utils class.
+    @OutputFile File newTsrg // output TSRGv2 file with parameters via the getConstructorId method in the Utils class.
 
     // Descriptor regex for methods
     @Internal Pattern descRgx = Pattern.compile("\\([^)]*\\).+")
@@ -25,7 +25,7 @@ class AddParams extends DefaultTask {
     @TaskAction
     void exec() {
         int ctrId // numerical constructor id
-        FileWriter writer = new FileWriter(tsrgP)
+        FileWriter writer = new FileWriter(newTsrg)
         tsrg.text.eachLine { line ->
             ctrId++
             String[] split = line.split(" ")
