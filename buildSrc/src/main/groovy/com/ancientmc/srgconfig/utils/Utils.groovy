@@ -1,5 +1,7 @@
 package com.ancientmc.srgconfig.utils
 
+import com.opencsv.CSVReader
+import com.opencsv.CSVReaderBuilder
 import net.minecraftforge.srgutils.IMappingFile
 
 /**
@@ -35,5 +37,21 @@ class Utils {
             }
         }
         return null
+    }
+
+    static def getClassIdMap(File csv) {
+        Map<String, String> map = new HashMap<>()
+        String[] nextLine
+        int rowNumber = 0
+        CSVReader csvReader = new CSVReaderBuilder(new FileReader(csv)).withSkipLines(1).build()
+        while((nextLine = csvReader.readNext()) != null) {
+            rowNumber++
+            for (int i = 1; i < nextLine.length; i++) {
+                String id = nextLine[0]
+                String className = nextLine[1]
+                map.put(id, className)
+            }
+        }
+        return map
     }
 }

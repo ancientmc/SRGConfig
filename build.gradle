@@ -21,17 +21,12 @@ configurations {
 }
 
 dependencies {
-    retroguard 'de.oceanlabs.mcp:RetroGuard:3.6.6'
-    retroguard configurations.retroguard.dependencies
     forgeart 'net.minecraftforge:ForgeAutoRenamingTool:0.1.24'
     jarsplitter 'net.minecraftforge:jarsplitter:1.1.4'
     installertools 'net.minecraftforge:installertools:1.3.2'
-    mcinject 'de.oceanlabs.mcp:mcinjector:3.8.0'
 }
 
 import com.ancientmc.srgconfig.tasks.*
-import groovy.json.JsonSlurper
-import net.minecraftforge.srgutils.IMappingFile
 
 ext {
     MC_VERSION = "a1.2.6"
@@ -57,6 +52,7 @@ ext {
     BASE_JAR = "${DIR_JARS}\\${MC_VERSION}.jar"
     SLIM_JAR = "${DIR_JARS}\\${MC_VERSION}-slim.jar"
     SRG_JAR = "${DIR_JARS}\\${MC_VERSION}-srg.jar"
+    TSRG_JAR = "${DIR_JARS}\\${MC_VERSION}-tsrg.jar"
     INJECT_JAR = "${DIR_JARS}\\${MC_VERSION}-inject.jar"
     DECOMP_JAR = "${DIR_JARS}\\${MC_VERSION}-decomp.jar"
     DIR_TEMP = "${DIR_JARS}\\temp\\"
@@ -133,7 +129,7 @@ task rgs2Srg(type: Rgs2Srg) {
 }
 
 // Strips the jar of all non-source files
-task stripJar(type: JavaExec, dependsOn: extractScript) {
+task stripJar(type: JavaExec, dependsOn: [downloadJar, extractScript]) {
     mainClass = 'net.minecraftforge.jarsplitter.ConsoleTool'
     classpath = files(project.configurations.getByName('jarsplitter'))
     args('--input', BASE_JAR, '--slim', SLIM_JAR, '--extra', "${DIR_JARS}\\${MC_VERSION}-extra.jar", '--srg', SRG_FILE)
@@ -176,39 +172,47 @@ task srg2Tsrg(type: Srg2Tsrg, dependsOn: addConstructors) {
 task addParams(type: AddParams, dependsOn: srg2Tsrg) {
     tsrg = file(TSRG_FILE_BASE)
     jar = file(SRG_JAR)
+    csv = file("${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\ids_${MC_VERSION}.csv")
     newTsrg = file(TSRG_FILE)
 }
 
 // Converts a template exceptions file with SRG names to one with notch (obfuscated) names.
-task updateExc(type: UpdateExc) {
+task updateExc(type: UpdateExc, dependsOn: addConstructors) {
     excOld = file("${DIR_CFG}\\exceptions-base.txt")
     srg = file(SRG_FILE)
-    excNew = file("${DIR_DATA}\\wip-mappings\\exceptions.txt")
+    excNew = file("${DIR_BUILD}\\map_data\\exceptions.txt")
 }
 
 // Creates an empty params csv file
-task createParamsCsv(type: CreateParamsCsv) {
+task createParamsCsv(type: CreateParamsCsv, dependsOn: addParams) {
     tsrg = file(TSRG_FILE)
     csv = file(PARAMS_CSV)
 }
 
 // Converts the fields from SRG to MCP.
-task applyFieldsCSV(type: ApplyCsv) {
+task applyFieldsCsv(type: ApplyCsv, dependsOn: addParams) {
     script = file(TSRG_FILE)
     csv = file(FIELDS_CSV)
 }
 
 // Converts the methods from SRG to MCP.
-task applyMethodsCSV(type: ApplyCsv) {
+task applyMethodsCsv(type: ApplyCsv, dependsOn: addParams) {
     script = file(TSRG_FILE)
     csv = file(METHODS_CSV)
 }
 
 // Converts the params to a SRG file.
-task applyParamsCsv(type: ApplyCsv) {
-    script = file(TSRG_FILE)
-    csv = file(PARAMS_CSV)
+task applyParamsCsv(type: ApplyCsv, dependsOn: addParams) {
+    if(file(PARAMS_CSV) != null) {
+        script = file(TSRG_FILE)
+        csv = file(PARAMS_CSV)
+    } else {
+        logger.error("Parameter CSV file not found. Please run the createParamCsv task, and then fill in the parameter names before running this task.")
+    }
 }
+
+// Applies all the CSVs at once
+task applyAllCsv(dependsOn: [applyFieldsCsv, applyMethodsCsv, applyParamsCsv]) {}
 
 /**
  * Everything beyond this point is WIP
@@ -220,31 +224,17 @@ task copySRGToFinal(type: Copy) {
     into file("final\\srg\\alpha\\")
 }
 
-// Testing task for deobfuscating the JAR using RetroGuard.
-task testDeobfJar(type: JavaExec) {
-    mainClass = "RetroGuard"
-    classpath = files(project.configurations.findByName("retroguard"))
-    args("-searge", "${DIR_DATA}\\cfg\\retroguard.cfg")
+// Injects the JAR with params and constructors
+task mcinject(type: JavaExec, dependsOn: [downloadJar, updateExc]) {
+    main = 'de.oceanlabs.mcp.mcinjector.MCInjector'
+    classpath = files('data\\mcinjector.jar') // temporary
+    args('--in', BASE_JAR, '--out', INJECT_JAR, '--lvt=LVT', '--exc', "${DIR_BUILD}\\map_data\\exceptions.txt")
 }
 
-// Injects the JAR with exceptions
-task testInjectJar(type: JavaExec) {
-    mainClass = 'de.oceanlabs.mcp.mcinjector.MCInjector'
-    classpath = files(project.configurations.getByName("mcinject"))
-    args('--in', BASE_JAR, '--out', INJECT_JAR, "--lvt=LVT", '--exc', DIR_BUILD + '/map_data/exceptions.txt')
+// Deobfuscates the JAR using the complete TSRG file
+task deobfJarMain(type: JavaExec, dependsOn: [mcinject, applyAllCsv]) {
+    main = 'net.minecraftforge.fart.Main'
+    classpath = files(project.configurations.getByName('forgeart'))
+    args('--input', INJECT_JAR, '--output', TSRG_JAR, '--map', TSRG_FILE)
 }
-
-// Testing task for unzipping the JAR in order to peek into the class files using IntelliJ's built-in version of Fernflower.
-task testUnzipJar(type: Copy) {
-    from zipTree(file(DECOMP_JAR))
-    into file(DIR_TEMP)
-}
-
-// Testing task for reobfuscation
-task testReobfJar(type: JavaExec) {
-    mainClass = "RetroGuard"
-    classpath = files(project.configurations.getByName("retroguard"))
-    args("-notch", "${DIR_DATA}\\cfg\\retroguard.cfg")
-}
-
 

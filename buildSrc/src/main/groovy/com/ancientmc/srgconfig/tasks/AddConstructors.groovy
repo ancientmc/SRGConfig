@@ -20,7 +20,7 @@ class AddConstructors extends DefaultTask {
         Map<String, String> map = Utils.getClassMap(srg)
         List<String> lines = new ArrayList<>()
         constructors.text.eachLine { line ->
-            String[] split = line.split(" ")
+            String[] split = line.split(' ')
 
             String mcpMethod = split[0] + '/' + split[1]
             String mcpDesc = split[2]

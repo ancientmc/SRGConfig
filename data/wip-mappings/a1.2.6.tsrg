@@ -1,12 +1,12 @@
-tsrg2 obf srg
+tsrg2 left right
 a net/minecraft/src/Packet7UseEntity
 	a field_9277_a
 	b field_9276_b
 	c field_9278_c
 	<init> (III)V <init>
-		0 o p_i12_0
-		1 o p_i12_1
-		2 o p_i12_2
+		0 o p_i1066_0
+		1 o p_i1066_1
+		2 o p_i1066_2
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -41,8 +41,8 @@ ac net/minecraft/src/ItemPickaxe
 	bc field_328_aY
 	<clinit> ()V <clinit>
 	<init> (II)V <init>
-		0 o p_i35_0
-		1 o p_i35_1
+		0 o p_i1120_0
+		1 o p_i1120_1
 	a (Lnq;)Z func_4018_a
 		0 o p_4018_0
 ad net/minecraft/src/TextureFX
@@ -53,7 +53,7 @@ ad net/minecraft/src/TextureFX
 	e field_1129_e
 	f field_1128_f
 	<init> (I)V <init>
-		0 o p_i44_0
+		0 o p_i1137_0
 	a ()V func_783_a
 	a (Lfu;)V func_782_a
 		0 o p_782_0
@@ -63,7 +63,7 @@ ae net/minecraft/src/TextureCompassFX
 	i field_4229_i
 	j field_4228_j
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i52_0
+		0 o p_i1158_0
 	a ()V func_783_a
 af net/minecraft/src/RenderItem
 	a field_201_d
@@ -112,8 +112,8 @@ af net/minecraft/src/RenderItem
 ag net/minecraft/src/ItemBucket
 	a field_331_a
 	<init> (II)V <init>
-		0 o p_i66_0
-		1 o p_i66_1
+		0 o p_i1198_0
+		1 o p_i1198_1
 	a (Lfp;Lcy;Leb;)Lfp; func_193_a
 		0 o p_193_0
 		1 o p_193_1
@@ -191,7 +191,7 @@ ai net/minecraft/src/IChunkLoader
 aj net/minecraft/src/WorldGenFlowers
 	a field_885_a
 	<init> (I)V <init>
-		0 o p_i114_0
+		0 o p_i1255_0
 	a (Lcy;Ljava/util/Random;III)Z func_516_a
 		0 o p_516_0
 		1 o p_516_1
@@ -200,7 +200,7 @@ aj net/minecraft/src/WorldGenFlowers
 		4 o p_516_4
 ak net/minecraft/src/EntityAnimals
 	<init> (Lcy;)V <init>
-		0 o p_i117_0
+		0 o p_i1271_0
 	a ()Z func_433_a
 	a (III)F func_439_a
 		0 o p_439_0
@@ -215,8 +215,8 @@ al net/minecraft/src/SoundPoolEntry
 	a field_1781_a
 	b field_1780_b
 	<init> (Ljava/lang/String;Ljava/net/URL;)V <init>
-		0 o p_i126_0
-		1 o p_i126_1
+		0 o p_i1291_0
+		1 o p_i1291_1
 am net/minecraft/src/EntityGhast
 	a field_20901_a
 	b field_20900_b
@@ -227,7 +227,7 @@ am net/minecraft/src/EntityGhast
 	g field_4123_g
 	h field_4122_h
 	<init> (Lcy;)V <init>
-		0 o p_i136_0
+		0 o p_i1310_0
 	a ()Z func_433_a
 	a (DDDD)Z func_4050_a
 		0 o p_4050_0
@@ -244,9 +244,9 @@ am net/minecraft/src/EntityGhast
 an net/minecraft/src/BlockRedstoneOre
 	a field_468_a
 	<init> (IIZ)V <init>
-		0 o p_i148_0
-		1 o p_i148_1
-		2 o p_i148_2
+		0 o p_i1331_0
+		1 o p_i1331_1
+		2 o p_i1331_2
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -301,9 +301,9 @@ ao net/minecraft/src/Vec3D
 	e field_1777_e
 	<clinit> ()V <clinit>
 	<init> (DDD)V <init>
-		0 o p_i166_0
-		1 o p_i166_1
-		2 o p_i166_2
+		0 o p_i1346_0
+		1 o p_i1346_1
+		2 o p_i1346_2
 	a (DDD)Lao; func_1260_a
 		0 o p_1260_0
 		1 o p_1260_1
@@ -352,9 +352,9 @@ ao net/minecraft/src/Vec3D
 ap net/minecraft/src/BlockPressurePlate
 	a field_467_a
 	<init> (IILlg;)V <init>
-		0 o p_i187_0
-		1 o p_i187_1
-		2 o p_i187_2
+		0 o p_i1367_0
+		1 o p_i1367_1
+		2 o p_i1367_2
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -486,19 +486,19 @@ aq net/minecraft/src/Render
 ar net/minecraft/src/SlotCrafting
 	c field_1125_c
 	<init> (Lex;Lhi;Lhi;III)V <init>
-		0 o p_i225_0
-		1 o p_i225_1
-		2 o p_i225_2
-		3 o p_i225_3
-		4 o p_i225_4
-		5 o p_i225_5
+		0 o p_i1408_0
+		1 o p_i1408_1
+		2 o p_i1408_2
+		3 o p_i1408_3
+		4 o p_i1408_4
+		5 o p_i1408_5
 	a (Lfp;)Z func_4105_a
 		0 o p_4105_0
 	a ()V func_4103_a
 as net/minecraft/src/EntityCow
 	a field_761_a
 	<init> (Lcy;)V <init>
-		0 o p_i230_0
+		0 o p_i1427_0
 	a (Leb;)Z func_353_a
 		0 o p_353_0
 	a (Liq;)V func_352_a
@@ -521,15 +521,15 @@ at net/minecraft/src/EntitySnowball
 	h field_810_h
 	i field_809_i
 	<init> (Lcy;Lhf;)V <init>
-		0 o p_i249_0
-		1 o p_i249_1
+		0 o p_i1444_0
+		1 o p_i1444_1
 	<init> (Lcy;)V <init>
-		0 o p_i250_0
+		0 o p_i1445_0
 	<init> (Lcy;DDD)V <init>
-		0 o p_i251_0
-		1 o p_i251_1
-		2 o p_i251_2
-		3 o p_i251_3
+		0 o p_i1446_0
+		1 o p_i1446_1
+		2 o p_i1446_2
+		3 o p_i1446_3
 	a (D)Z func_384_a
 		0 o p_384_0
 	a (DDD)V func_6375_a
@@ -552,15 +552,15 @@ at net/minecraft/src/EntitySnowball
 	i_ ()F func_392_h_
 au net/minecraft/src/ItemSoup
 	<init> (II)V <init>
-		0 o p_i261_0
-		1 o p_i261_1
+		0 o p_i1464_0
+		1 o p_i1464_1
 	a (Lfp;Lcy;Leb;)Lfp; func_193_a
 		0 o p_193_0
 		1 o p_193_1
 		2 o p_193_2
 av net/minecraft/src/PanelCrashReport
 	<init> (Lhr;)V <init>
-		0 o p_i264_0
+		0 o p_i1478_0
 aw net/minecraft/src/NoiseGenerator2
 	a field_4292_a
 	b field_4291_b
@@ -572,7 +572,7 @@ aw net/minecraft/src/NoiseGenerator2
 	<clinit> ()V <clinit>
 	<init> ()V <init>
 	<init> (Ljava/util/Random;)V <init>
-		0 o p_i275_0
+		0 o p_i1502_0
 	a (D)I func_4155_a
 		0 o p_4155_0
 	a ([IDD)D func_4156_a
@@ -620,13 +620,13 @@ az net/minecraft/src/EntityFireball
 	k field_9396_k
 	l field_9395_l
 	<init> (Lcy;Lhf;DDD)V <init>
-		0 o p_i303_0
-		1 o p_i303_1
-		2 o p_i303_2
-		3 o p_i303_3
-		4 o p_i303_4
+		0 o p_i1559_0
+		1 o p_i1559_1
+		2 o p_i1559_2
+		3 o p_i1559_3
+		4 o p_i1559_4
 	<init> (Lcy;)V <init>
-		0 o p_i304_0
+		0 o p_i1560_0
 	a (D)Z func_384_a
 		0 o p_384_0
 	a (Llw;I)Z func_396_a
@@ -652,9 +652,9 @@ b net/minecraft/src/PathPoint
 	i field_1710_i
 	j field_1709_j
 	<init> (III)V <init>
-		0 o p_i324_0
-		1 o p_i324_1
-		2 o p_i324_2
+		0 o p_i1576_0
+		1 o p_i1576_1
+		2 o p_i1576_2
 	a (Lb;)F func_1180_a
 		0 o p_1180_0
 	a ()Z func_1179_a
@@ -685,7 +685,7 @@ bb net/minecraft/src/GuiGameOver
 bc net/minecraft/src/ItemBlock
 	a field_330_a
 	<init> (I)V <init>
-		0 o p_i346_0
+		0 o p_i1633_0
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -712,7 +712,7 @@ bd net/minecraft/src/IChunkProvider
 	b ()Z func_536_b
 be net/minecraft/src/EntitySpider
 	<init> (Lcy;)V <init>
-		0 o p_i356_0
+		0 o p_i1670_0
 	a (Llw;F)V func_437_a
 		0 o p_437_0
 		1 o p_437_1
@@ -731,8 +731,8 @@ bf net/minecraft/src/GuiOptions
 	h field_996_h
 	i field_995_i
 	<init> (Lbp;Lgq;)V <init>
-		0 o p_i370_0
-		1 o p_i370_1
+		0 o p_i1688_0
+		1 o p_i1688_1
 	a (Lgh;)V func_572_a
 		0 o p_572_0
 	a ()V func_6448_a
@@ -752,29 +752,29 @@ bg net/minecraft/src/SpawnerAnimals
 		0 o p_4154_0
 bh net/minecraft/src/EntityBubbleFX
 	<init> (Lcy;DDDDDD)V <init>
-		0 o p_i381_0
-		1 o p_i381_1
-		2 o p_i381_2
-		3 o p_i381_3
-		4 o p_i381_4
-		5 o p_i381_5
-		6 o p_i381_6
+		0 o p_i1731_0
+		1 o p_i1731_1
+		2 o p_i1731_2
+		3 o p_i1731_3
+		4 o p_i1731_4
+		5 o p_i1731_5
+		6 o p_i1731_6
 	e_ ()V func_370_e_
 bi net/minecraft/src/StepSound
 	a field_1678_a
 	b field_1677_b
 	c field_1679_c
 	<init> (Ljava/lang/String;FF)V <init>
-		0 o p_i387_0
-		1 o p_i387_1
-		2 o p_i387_2
+		0 o p_i1747_0
+		1 o p_i1747_1
+		2 o p_i1747_2
 	a ()Ljava/lang/String; func_1146_a
 	b ()F func_1147_b
 	c ()F func_1144_c
 	d ()Ljava/lang/String; func_1145_d
 bj net/minecraft/src/ItemFishingRod
 	<init> (I)V <init>
-		0 o p_i393_0
+		0 o p_i1764_0
 	a ()Z func_4017_a
 	a (Lfp;Lcy;Leb;)Lfp; func_193_a
 		0 o p_193_0
@@ -787,7 +787,7 @@ bk net/minecraft/src/RenderBlocks
 	c field_1774_c
 	d field_1773_d
 	<init> (Lpk;)V <init>
-		0 o p_i402_0
+		0 o p_i1788_0
 	<init> ()V <init>
 	a (IIILhb;)F func_1224_a
 		0 o p_1224_0
@@ -982,8 +982,8 @@ bn net/minecraft/src/ThreadDownloadResources
 	b field_1767_b
 	c field_1769_c
 	<init> (Ljava/io/File;Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i456_0
-		1 o p_i456_1
+		0 o p_i1841_0
+		1 o p_i1841_1
 	a (Ljava/net/URL;Ljava/io/File;J)V func_1212_a
 		0 o p_1212_0
 		1 o p_1212_1
@@ -1004,9 +1004,9 @@ bo net/minecraft/src/BlockRedstoneTorch
 	b field_450_b
 	<clinit> ()V <clinit>
 	<init> (IIZ)V <init>
-		0 o p_i467_0
-		1 o p_i467_1
-		2 o p_i467_2
+		0 o p_i1862_0
+		1 o p_i1862_1
+		2 o p_i1862_2
 	a (Lcy;IIIZ)Z func_273_a
 		0 o p_273_0
 		1 o p_273_1
@@ -1120,10 +1120,10 @@ bq net/minecraft/src/EntityPlayerSP
 	c field_4134_c
 	d field_4133_d
 	<init> (Lnet/minecraft/client/Minecraft;Lcy;Lea;I)V <init>
-		0 o p_i515_0
-		1 o p_i515_1
-		2 o p_i515_2
-		3 o p_i515_3
+		0 o p_i1897_0
+		1 o p_i1897_1
+		2 o p_i1897_2
+		3 o p_i1897_3
 	a (Ljava/lang/String;)V func_461_a
 		0 o p_461_0
 	a (Lhi;)V func_452_a
@@ -1157,8 +1157,8 @@ bq net/minecraft/src/EntityPlayerSP
 	r ()V func_9367_r
 br net/minecraft/src/BlockMobSpawner
 	<init> (II)V <init>
-		0 o p_i536_0
-		1 o p_i536_1
+		0 o p_i1920_0
+		1 o p_i1920_1
 	a ()Z func_217_b
 	a (Ljava/util/Random;)I func_229_a
 		0 o p_229_0
@@ -1173,7 +1173,7 @@ bt net/minecraft/src/PathEntity
 	b field_1764_b
 	c field_1766_c
 	<init> ([Lb;)V <init>
-		0 o p_i547_0
+		0 o p_i1957_0
 	a (Llw;)Lao; func_1205_a
 		0 o p_1205_0
 	a ()V func_1206_a
@@ -1192,7 +1192,7 @@ bu net/minecraft/src/Packet22Collect
 bv net/minecraft/src/WorldGenLakes
 	a field_15235_a
 	<init> (I)V <init>
-		0 o p_i561_0
+		0 o p_i1996_0
 	a (Lcy;Ljava/util/Random;III)Z func_516_a
 		0 o p_516_0
 		1 o p_516_1
@@ -1234,13 +1234,13 @@ bw net/minecraft/src/WorldRenderer
 	z field_1732_z
 	<clinit> ()V <clinit>
 	<init> (Lcy;Ljava/util/List;IIIII)V <init>
-		0 o p_i597_0
-		1 o p_i597_1
-		2 o p_i597_2
-		3 o p_i597_3
-		4 o p_i597_4
-		5 o p_i597_5
-		6 o p_i597_6
+		0 o p_i2011_0
+		1 o p_i2011_1
+		2 o p_i2011_2
+		3 o p_i2011_3
+		4 o p_i2011_4
+		5 o p_i2011_5
+		6 o p_i2011_6
 	a (I)I func_1200_a
 		0 o p_1200_0
 	a (III)V func_1197_a
@@ -1261,7 +1261,7 @@ bw net/minecraft/src/WorldRenderer
 bx net/minecraft/src/EntitySheep
 	a field_760_a
 	<init> (Lcy;)V <init>
-		0 o p_i611_0
+		0 o p_i2034_0
 	a (Llw;I)Z func_396_a
 		0 o p_396_0
 		1 o p_396_1
@@ -1274,7 +1274,7 @@ bx net/minecraft/src/EntitySheep
 	f_ ()Ljava/lang/String; func_6394_f_
 by net/minecraft/src/ItemSnowball
 	<init> (I)V <init>
-		0 o p_i619_0
+		0 o p_i2053_0
 	a (Lfp;Lcy;Leb;)Lfp; func_193_a
 		0 o p_193_0
 		1 o p_193_1
@@ -1285,8 +1285,8 @@ bz net/minecraft/src/EffectRenderer
 	c field_1731_c
 	d field_1730_d
 	<init> (Lcy;Lfu;)V <init>
-		0 o p_i626_0
-		1 o p_i626_1
+		0 o p_i2070_0
+		1 o p_i2070_1
 	a (IIII)V func_1191_a
 		0 o p_1191_0
 		1 o p_1191_1
@@ -1311,7 +1311,7 @@ bz net/minecraft/src/EffectRenderer
 c net/minecraft/src/BlockChest
 	a field_457_a
 	<init> (I)V <init>
-		0 o p_i637_0
+		0 o p_i2088_0
 	a (Lpk;IIII)I func_211_a
 		0 o p_211_0
 		1 o p_211_1
@@ -1344,8 +1344,8 @@ c net/minecraft/src/BlockChest
 		3 o p_286_3
 ca net/minecraft/src/BlockLadder
 	<init> (II)V <init>
-		0 o p_i646_0
-		1 o p_i646_1
+		0 o p_i2110_0
+		1 o p_i2110_1
 	a ()Z func_217_b
 	a (Lcy;III)Z func_243_a
 		0 o p_243_0
@@ -1384,10 +1384,10 @@ cb net/minecraft/src/ItemTool
 	bc field_324_aY
 	bd field_323_aZ
 	<init> (III[Lnq;)V <init>
-		0 o p_i661_0
-		1 o p_i661_1
-		2 o p_i661_2
-		3 o p_i661_3
+		0 o p_i2125_0
+		1 o p_i2125_1
+		2 o p_i2125_2
+		3 o p_i2125_3
 	a (Lfp;IIII)V func_203_a
 		0 o p_203_0
 		1 o p_203_1
@@ -1423,10 +1423,10 @@ cd net/minecraft/src/CraftingRecipe
 	d field_1726_d
 	e field_1725_e
 	<init> (II[ILfp;)V <init>
-		0 o p_i680_0
-		1 o p_i680_1
-		2 o p_i680_2
-		3 o p_i680_3
+		0 o p_i2167_0
+		1 o p_i2167_1
+		2 o p_i2167_2
+		3 o p_i2167_3
 	a ([I)Z func_1182_a
 		0 o p_1182_0
 	a ()I func_1184_a
@@ -1520,9 +1520,9 @@ ch net/minecraft/src/EnumSkyBlock
 	d field_1721_d
 	<clinit> ()V <clinit>
 	<init> (Ljava/lang/String;II)V <init>
-		0 o p_i717_0
-		1 o p_i717_1
-		2 o p_i717_2
+		0 o p_i2244_0
+		1 o p_i2244_1
+		2 o p_i2244_2
 	values ()[Lch; values
 ci net/minecraft/src/Packet51MapChunk
 	a field_573_a
@@ -1543,7 +1543,7 @@ ci net/minecraft/src/Packet51MapChunk
 		0 o p_323_0
 cj net/minecraft/src/ModelPig
 	<init> (F)V <init>
-		0 o p_i734_0
+		0 o p_i2280_0
 	<init> ()V <init>
 ck net/minecraft/src/ModelZombie
 	<init> ()V <init>
@@ -1560,8 +1560,8 @@ cl net/minecraft/src/ThreadDownloadImageData
 	c field_1708_c
 	d field_1707_d
 	<init> (Ljava/lang/String;Lie;)V <init>
-		0 o p_i744_0
-		1 o p_i744_1
+		0 o p_i2317_0
+		1 o p_i2317_1
 cm net/minecraft/src/EntityPickupFX
 	a field_675_a
 	o field_679_o
@@ -1569,10 +1569,10 @@ cm net/minecraft/src/EntityPickupFX
 	q field_677_q
 	r field_676_r
 	<init> (Lcy;Llw;Llw;F)V <init>
-		0 o p_i751_0
-		1 o p_i751_1
-		2 o p_i751_2
-		3 o p_i751_3
+		0 o p_i2333_0
+		1 o p_i2333_1
+		2 o p_i2333_2
+		3 o p_i2333_3
 	a (Lis;FFFFFF)V func_406_a
 		0 o p_406_0
 		1 o p_406_1
@@ -1585,8 +1585,8 @@ cm net/minecraft/src/EntityPickupFX
 	l_ ()I func_404_c
 cn net/minecraft/src/BlockStone
 	<init> (II)V <init>
-		0 o p_i756_0
-		1 o p_i756_1
+		0 o p_i2355_0
+		1 o p_i2355_1
 	a (ILjava/util/Random;)I func_240_a
 		0 o p_240_0
 		1 o p_240_1
@@ -1601,12 +1601,12 @@ co net/minecraft/src/AxisAlignedBB
 	h field_1699_h
 	<clinit> ()V <clinit>
 	<init> (DDDDDD)V <init>
-		0 o p_i768_0
-		1 o p_i768_1
-		2 o p_i768_2
-		3 o p_i768_3
-		4 o p_i768_4
-		5 o p_i768_5
+		0 o p_i2373_0
+		1 o p_i2373_1
+		2 o p_i2373_2
+		3 o p_i2373_3
+		4 o p_i2373_4
+		5 o p_i2373_5
 	a (DDD)Lco; func_1170_a
 		0 o p_1170_0
 		1 o p_1170_1
@@ -1696,13 +1696,13 @@ cq net/minecraft/src/Packet8UpdateHealth
 cr net/minecraft/src/Packet13PlayerLookMove
 	<init> ()V <init>
 	<init> (DDDDFFZ)V <init>
-		0 o p_i803_0
-		1 o p_i803_1
-		2 o p_i803_2
-		3 o p_i803_3
-		4 o p_i803_4
-		5 o p_i803_5
-		6 o p_i803_6
+		0 o p_i2430_0
+		1 o p_i2430_1
+		2 o p_i2430_2
+		3 o p_i2430_3
+		4 o p_i2430_4
+		5 o p_i2430_5
+		6 o p_i2430_6
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
 	a ()I func_329_a
@@ -1714,13 +1714,13 @@ cs net/minecraft/src/ChunkCache
 	c field_1062_c
 	d field_1061_d
 	<init> (Lcy;IIIIII)V <init>
-		0 o p_i812_0
-		1 o p_i812_1
-		2 o p_i812_2
-		3 o p_i812_3
-		4 o p_i812_4
-		5 o p_i812_5
-		6 o p_i812_6
+		0 o p_i2451_0
+		1 o p_i2451_1
+		2 o p_i2451_2
+		3 o p_i2451_3
+		4 o p_i2451_4
+		5 o p_i2451_5
+		6 o p_i2451_6
 	a ()Lpo; func_4075_a
 	a (III)I func_600_a
 		0 o p_600_0
@@ -1759,8 +1759,8 @@ ct net/minecraft/src/GuiConnectFailed
 	a field_992_a
 	h field_993_h
 	<init> (Ljava/lang/String;Ljava/lang/String;)V <init>
-		0 o p_i825_0
-		1 o p_i825_1
+		0 o p_i2471_0
+		1 o p_i2471_1
 	a (CI)V func_580_a
 		0 o p_580_0
 		1 o p_580_1
@@ -1778,8 +1778,8 @@ cu net/minecraft/src/ChunkProviderIso
 	c field_901_c
 	d field_900_d
 	<init> (Lcy;Lai;)V <init>
-		0 o p_i836_0
-		1 o p_i836_1
+		0 o p_i2487_0
+		1 o p_i2487_1
 	a (ZLpu;)Z func_535_a
 		0 o p_535_0
 		1 o p_535_1
@@ -1817,8 +1817,8 @@ cv net/minecraft/src/ModelBoat
 		5 o p_864_5
 cw net/minecraft/src/BlockObsidian
 	<init> (II)V <init>
-		0 o p_i850_0
-		1 o p_i850_1
+		0 o p_i2525_0
+		1 o p_i2525_1
 	a (Ljava/util/Random;)I func_229_a
 		0 o p_229_0
 	a (ILjava/util/Random;)I func_240_a
@@ -1827,9 +1827,9 @@ cw net/minecraft/src/BlockObsidian
 cx net/minecraft/src/BlockPumpkin
 	a field_4072_a
 	<init> (IIZ)V <init>
-		0 o p_i855_0
-		1 o p_i855_1
-		2 o p_i855_2
+		0 o p_i2544_0
+		1 o p_i2544_1
+		2 o p_i2544_2
 	a (Lcy;IIILhf;)V func_4026_a
 		0 o p_4026_0
 		1 o p_4026_1
@@ -1893,24 +1893,24 @@ cy net/minecraft/src/World
 	z field_1026_y
 	<clinit> ()V <clinit>
 	<init> (Ljava/io/File;Ljava/lang/String;)V <init>
-		0 o p_i902_0
-		1 o p_i902_1
+		0 o p_i2568_0
+		1 o p_i2568_1
 	<init> (Ljava/lang/String;Loz;J)V <init>
-		0 o p_i903_0
-		1 o p_i903_1
-		2 o p_i903_2
+		0 o p_i2569_0
+		1 o p_i2569_1
+		2 o p_i2569_2
 	<init> (Ljava/io/File;Ljava/lang/String;J)V <init>
-		0 o p_i904_0
-		1 o p_i904_1
-		2 o p_i904_2
+		0 o p_i2570_0
+		1 o p_i2570_1
+		2 o p_i2570_2
 	<init> (Ljava/io/File;Ljava/lang/String;JLoz;)V <init>
-		0 o p_i905_0
-		1 o p_i905_1
-		2 o p_i905_2
-		3 o p_i905_3
+		0 o p_i2571_0
+		1 o p_i2571_1
+		2 o p_i2571_2
+		3 o p_i2571_3
 	<init> (Lcy;Loz;)V <init>
-		0 o p_i906_0
-		1 o p_i906_1
+		0 o p_i2572_0
+		1 o p_i2572_1
 	a (III)I func_600_a
 		0 o p_600_0
 		1 o p_600_1
@@ -2356,10 +2356,10 @@ da net/minecraft/src/RenderBoat
 db net/minecraft/src/EntityLavaFX
 	a field_674_a
 	<init> (Lcy;DDD)V <init>
-		0 o p_i1044_0
-		1 o p_i1044_1
-		2 o p_i1044_2
-		3 o p_i1044_3
+		0 o p_i2637_0
+		1 o p_i2637_1
+		2 o p_i2637_2
+		3 o p_i2637_3
 	a (F)F func_382_a
 		0 o p_382_0
 	a (Lis;FFFFFF)V func_406_a
@@ -2383,10 +2383,10 @@ dc net/minecraft/src/ModelBiped
 	i field_1278_i
 	j field_1277_j
 	<init> (FF)V <init>
-		0 o p_i1059_0
-		1 o p_i1059_1
+		0 o p_i2661_0
+		1 o p_i2661_1
 	<init> (F)V <init>
-		0 o p_i1060_0
+		0 o p_i2662_0
 	<init> ()V <init>
 	a (FFFFFF)V func_863_a
 		0 o p_863_0
@@ -2404,7 +2404,7 @@ dc net/minecraft/src/ModelBiped
 		5 o p_864_5
 dd net/minecraft/src/BlockWorkbench
 	<init> (I)V <init>
-		0 o p_i1065_0
+		0 o p_i2678_0
 	a (I)I func_218_a
 		0 o p_218_0
 	a (Lcy;IIILeb;)Z func_250_a
@@ -2415,18 +2415,18 @@ dd net/minecraft/src/BlockWorkbench
 		4 o p_250_4
 de net/minecraft/src/BlockGlass
 	<init> (IILhb;Z)V <init>
-		0 o p_i1069_0
-		1 o p_i1069_1
-		2 o p_i1069_2
-		3 o p_i1069_3
+		0 o p_i2698_0
+		1 o p_i2698_1
+		2 o p_i2698_2
+		3 o p_i2698_3
 	a (Ljava/util/Random;)I func_229_a
 		0 o p_229_0
 df net/minecraft/src/WorldGenMinable
 	a field_884_a
 	b field_883_b
 	<init> (II)V <init>
-		0 o p_i1074_0
-		1 o p_i1074_1
+		0 o p_i2715_0
+		1 o p_i2715_1
 	a (Lcy;Ljava/util/Random;III)Z func_516_a
 		0 o p_516_0
 		1 o p_516_1
@@ -2435,8 +2435,8 @@ df net/minecraft/src/WorldGenMinable
 		4 o p_516_4
 dg net/minecraft/src/BlockJukeBox
 	<init> (II)V <init>
-		0 o p_i1077_0
-		1 o p_i1077_1
+		0 o p_i2735_0
+		1 o p_i2735_1
 	a (Lcy;IIIIF)V func_216_a
 		0 o p_216_0
 		1 o p_216_1
@@ -2462,7 +2462,7 @@ dh net/minecraft/src/EntitySkeleton
 	a field_4119_a
 	<clinit> ()V <clinit>
 	<init> (Lcy;)V <init>
-		0 o p_i1085_0
+		0 o p_i2758_0
 	a (Llw;F)V func_437_a
 		0 o p_437_0
 		1 o p_437_1
@@ -2511,7 +2511,7 @@ dk net/minecraft/src/GuiTexturePacks
 	o field_6454_o
 	p field_6453_p
 	<init> (Lbp;)V <init>
-		0 o p_i1122_0
+		0 o p_i2810_0
 	a (IIII)V func_6452_a
 		0 o p_6452_0
 		1 o p_6452_1
@@ -2556,7 +2556,7 @@ dm net/minecraft/src/Pathfinder
 	c field_1676_c
 	d field_1675_d
 	<init> (Lpk;)V <init>
-		0 o p_i1141_0
+		0 o p_i2846_0
 	a (III)Lb; func_1136_a
 		0 o p_1136_0
 		1 o p_1136_1
@@ -2632,12 +2632,12 @@ dp net/minecraft/src/EntityBoat
 	k field_9387_k
 	l field_9386_l
 	<init> (Lcy;)V <init>
-		0 o p_i1171_0
+		0 o p_i2905_0
 	<init> (Lcy;DDD)V <init>
-		0 o p_i1172_0
-		1 o p_i1172_1
-		2 o p_i1172_2
-		3 o p_i1172_3
+		0 o p_i2906_0
+		1 o p_i2906_1
+		2 o p_i2906_2
+		3 o p_i2906_3
 	a (Llw;I)Z func_396_a
 		0 o p_396_0
 		1 o p_396_1
@@ -2675,7 +2675,7 @@ dq net/minecraft/src/EntityCreeper
 	d field_765_d
 	e field_12241_e
 	<init> (Lcy;)V <init>
-		0 o p_i1194_0
+		0 o p_i2926_0
 	a (B)V func_9282_a
 		0 o p_9282_0
 	a (Llw;F)V func_437_a
@@ -2740,7 +2740,7 @@ du net/minecraft/src/GuiDownloadTerrain
 	a field_983_a
 	h field_984_h
 	<init> (Lib;)V <init>
-		0 o p_i1233_0
+		0 o p_i2998_0
 	a (CI)V func_580_a
 		0 o p_580_0
 		1 o p_580_1
@@ -2758,12 +2758,12 @@ dv net/minecraft/src/Packet28EntityVelocity
 	c field_6369_c
 	d field_6368_d
 	<init> (Llw;)V <init>
-		0 o p_i1244_0
+		0 o p_i3023_0
 	<init> (IDDD)V <init>
-		0 o p_i1245_0
-		1 o p_i1245_1
-		2 o p_i1245_2
-		3 o p_i1245_3
+		0 o p_i3024_0
+		1 o p_i3024_1
+		2 o p_i3024_2
+		3 o p_i3024_3
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -2776,8 +2776,8 @@ dw net/minecraft/src/BlockSand
 	a field_466_a
 	<clinit> ()V <clinit>
 	<init> (II)V <init>
-		0 o p_i1254_0
-		1 o p_i1254_1
+		0 o p_i3042_0
+		1 o p_i3042_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -2913,7 +2913,7 @@ dx net/minecraft/src/Item
 	z field_210_z
 	<clinit> ()V <clinit>
 	<init> (I)V <init>
-		0 o p_i1367_0
+		0 o p_i3057_0
 	a (I)Ldx; func_4022_a
 		0 o p_4022_0
 	a (Lfp;)I func_196_a
@@ -2975,8 +2975,8 @@ dz net/minecraft/src/Slot
 	a field_1119_a
 	b field_1118_b
 	<init> (Lhi;I)V <init>
-		0 o p_i1391_0
-		1 o p_i1391_1
+		0 o p_i3097_0
+		1 o p_i3097_1
 	a (Lfp;)Z func_4105_a
 		0 o p_4105_0
 	a ()V func_4103_a
@@ -2988,8 +2988,8 @@ dz net/minecraft/src/Slot
 	e ()I func_4104_e
 e net/minecraft/src/BlockOreBlock
 	<init> (II)V <init>
-		0 o p_i1400_0
-		1 o p_i1400_1
+		0 o p_i3114_0
+		1 o p_i3114_1
 	a (I)I func_218_a
 		0 o p_218_0
 ea net/minecraft/src/Session
@@ -2999,8 +2999,8 @@ ea net/minecraft/src/Session
 	d field_6542_d
 	<clinit> ()V <clinit>
 	<init> (Ljava/lang/String;Ljava/lang/String;)V <init>
-		0 o p_i1408_0
-		1 o p_i1408_1
+		0 o p_i3134_0
+		1 o p_i3134_1
 eb net/minecraft/src/EntityPlayer
 	a field_781_a
 	e field_778_b
@@ -3014,7 +3014,7 @@ eb net/minecraft/src/EntityPlayer
 	m field_4129_m
 	n field_4128_n
 	<init> (Lcy;)V <init>
-		0 o p_i1421_0
+		0 o p_i3154_0
 	a (Leo;)V func_446_a
 		0 o p_446_0
 	a (Liq;)V func_352_a
@@ -3071,8 +3071,8 @@ ec net/minecraft/src/RenderLiving
 	e field_20920_e
 	f field_6332_f
 	<init> (Lgm;F)V <init>
-		0 o p_i1455_0
-		1 o p_i1455_1
+		0 o p_i3171_0
+		1 o p_i3171_1
 	a (Lhf;)F func_172_a
 		0 o p_172_0
 	a (Lgm;)V func_4013_a
@@ -3117,11 +3117,11 @@ ed net/minecraft/src/Packet15Place
 	d field_568_d
 	e field_567_e
 	<init> (IIIII)V <init>
-		0 o p_i1472_0
-		1 o p_i1472_1
-		2 o p_i1472_2
-		3 o p_i1472_3
-		4 o p_i1472_4
+		0 o p_i3188_0
+		1 o p_i3188_1
+		2 o p_i3188_2
+		3 o p_i3188_3
+		4 o p_i3188_4
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -3132,13 +3132,13 @@ ed net/minecraft/src/Packet15Place
 		0 o p_323_0
 ee net/minecraft/src/EntityExplodeFX
 	<init> (Lcy;DDDDDD)V <init>
-		0 o p_i1479_0
-		1 o p_i1479_1
-		2 o p_i1479_2
-		3 o p_i1479_3
-		4 o p_i1479_4
-		5 o p_i1479_5
-		6 o p_i1479_6
+		0 o p_i3213_0
+		1 o p_i3213_1
+		2 o p_i3213_2
+		3 o p_i3213_3
+		4 o p_i3213_4
+		5 o p_i3213_5
+		6 o p_i3213_6
 	a (Lis;FFFFFF)V func_406_a
 		0 o p_406_0
 		1 o p_406_1
@@ -3151,7 +3151,7 @@ ee net/minecraft/src/EntityExplodeFX
 ef net/minecraft/src/EntityMobs
 	f field_762_e
 	<init> (Lcy;)V <init>
-		0 o p_i1484_0
+		0 o p_i3226_0
 	a (Llw;F)V func_437_a
 		0 o p_437_0
 		1 o p_437_1
@@ -3178,8 +3178,8 @@ eg net/minecraft/src/RecipesTools
 		0 o p_1122_0
 eh net/minecraft/src/BlockBookshelf
 	<init> (II)V <init>
-		0 o p_i1500_0
-		1 o p_i1500_1
+		0 o p_i3267_0
+		1 o p_i3267_1
 	a (I)I func_218_a
 		0 o p_218_0
 	a (Ljava/util/Random;)I func_229_a
@@ -3189,9 +3189,9 @@ ei net/minecraft/src/WorldChunkManagerHell
 	f field_4200_f
 	g field_4199_g
 	<init> (Lgg;DD)V <init>
-		0 o p_i1507_0
-		1 o p_i1507_1
-		2 o p_i1507_2
+		0 o p_i3287_0
+		1 o p_i3287_1
+		2 o p_i3287_2
 	a ([DIIII)[D func_4071_a
 		0 o p_4071_0
 		1 o p_4071_1
@@ -3219,8 +3219,8 @@ ei net/minecraft/src/WorldChunkManagerHell
 		1 o p_4072_1
 ej net/minecraft/src/BlockSapling
 	<init> (II)V <init>
-		0 o p_i1515_0
-		1 o p_i1515_1
+		0 o p_i3303_0
+		1 o p_i3303_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -3286,13 +3286,13 @@ eo net/minecraft/src/EntityItem
 	e field_803_e
 	f field_802_f
 	<init> (Lcy;DDDLfp;)V <init>
-		0 o p_i1554_0
-		1 o p_i1554_1
-		2 o p_i1554_2
-		3 o p_i1554_3
-		4 o p_i1554_4
+		0 o p_i3402_0
+		1 o p_i3402_1
+		2 o p_i3402_2
+		3 o p_i3402_3
+		4 o p_i3402_4
 	<init> (Lcy;)V <init>
-		0 o p_i1555_0
+		0 o p_i3403_0
 	a (I)V func_355_a
 		0 o p_355_0
 	a (Llw;I)Z func_396_a
@@ -3313,7 +3313,7 @@ eo net/minecraft/src/EntityItem
 ep net/minecraft/src/NBTTagByteArray
 	a field_1096_a
 	<init> ([B)V <init>
-		0 o p_i1566_0
+		0 o p_i3419_0
 	<init> ()V <init>
 	a (Ljava/io/DataInput;)V func_736_a
 		0 o p_736_0
@@ -3325,8 +3325,8 @@ eq net/minecraft/src/Packet16BlockItemSwitch
 	a field_563_a
 	b field_562_b
 	<init> (II)V <init>
-		0 o p_i1575_0
-		1 o p_i1575_1
+		0 o p_i3439_0
+		1 o p_i3439_1
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -3340,8 +3340,8 @@ er net/minecraft/src/GuiChest
 	l field_981_l
 	m field_980_m
 	<init> (Lhi;Lhi;)V <init>
-		0 o p_i1585_0
-		1 o p_i1585_1
+		0 o p_i3454_0
+		1 o p_i3454_1
 	a (F)V func_589_a
 		0 o p_589_0
 	j ()V func_587_j
@@ -3366,8 +3366,8 @@ et net/minecraft/src/TexturePortalFX
 eu net/minecraft/src/ItemDoor
 	a field_321_a
 	<init> (ILhb;)V <init>
-		0 o p_i1605_0
-		1 o p_i1605_1
+		0 o p_i3514_0
+		1 o p_i3514_1
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -3388,19 +3388,19 @@ ew net/minecraft/src/PositionTexureVertex
 	b field_1654_b
 	c field_1656_c
 	<init> (Lew;FF)V <init>
-		0 o p_i1616_0
-		1 o p_i1616_1
-		2 o p_i1616_2
+		0 o p_i3553_0
+		1 o p_i3553_1
+		2 o p_i3553_2
 	<init> (FFFFF)V <init>
-		0 o p_i1617_0
-		1 o p_i1617_1
-		2 o p_i1617_2
-		3 o p_i1617_3
-		4 o p_i1617_4
+		0 o p_i3554_0
+		1 o p_i3554_1
+		2 o p_i3554_2
+		3 o p_i3554_3
+		4 o p_i3554_4
 	<init> (Lao;FF)V <init>
-		0 o p_i1618_0
-		1 o p_i1618_1
-		2 o p_i1618_2
+		0 o p_i3555_0
+		1 o p_i3555_1
+		2 o p_i3555_2
 	a (FF)Lew; func_1115_a
 		0 o p_1115_0
 		1 o p_1115_1
@@ -3438,7 +3438,7 @@ ex net/minecraft/src/GuiContainer
 	j ()V func_587_j
 ey net/minecraft/src/ItemRedstone
 	<init> (I)V <init>
-		0 o p_i1638_0
+		0 o p_i3587_0
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -3502,8 +3502,8 @@ f net/minecraft/src/RenderGlobal
 	y field_1434_y
 	z field_1433_z
 	<init> (Lnet/minecraft/client/Minecraft;Lfu;)V <init>
-		0 o p_i1694_0
-		1 o p_i1694_1
+		0 o p_i3629_0
+		1 o p_i3629_1
 	a (Leb;Lnx;ILfp;F)V func_959_a
 		0 o p_959_0
 		1 o p_959_1
@@ -3619,7 +3619,7 @@ fa net/minecraft/src/Packet10Flying
 	h field_554_h
 	i field_553_i
 	<init> (Z)V <init>
-		0 o p_i1735_0
+		0 o p_i3650_0
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -3649,7 +3649,7 @@ fc net/minecraft/src/EntityCreature
 	g field_751_f
 	h field_750_g
 	<init> (Lcy;)V <init>
-		0 o p_i1749_0
+		0 o p_i3682_0
 	a (Llw;F)V func_437_a
 		0 o p_437_0
 		1 o p_437_1
@@ -3746,8 +3746,8 @@ ff net/minecraft/src/TexturePackList
 	f field_6536_f
 	g field_6535_g
 	<init> (Lnet/minecraft/client/Minecraft;Ljava/io/File;)V <init>
-		0 o p_i1807_0
-		1 o p_i1807_1
+		0 o p_i3745_0
+		1 o p_i3745_1
 	a (Ld;)Z func_6531_a
 		0 o p_6531_0
 	a ()V func_6532_a
@@ -3778,16 +3778,16 @@ fg net/minecraft/src/ModelCreeper
 fh net/minecraft/src/EntityReddustFX
 	a field_673_a
 	<init> (Lcy;DDDF)V <init>
-		0 o p_i1824_0
-		1 o p_i1824_1
-		2 o p_i1824_2
-		3 o p_i1824_3
-		4 o p_i1824_4
+		0 o p_i3783_0
+		1 o p_i3783_1
+		2 o p_i3783_2
+		3 o p_i3783_3
+		4 o p_i3783_4
 	<init> (Lcy;DDD)V <init>
-		0 o p_i1825_0
-		1 o p_i1825_1
-		2 o p_i1825_2
-		3 o p_i1825_3
+		0 o p_i3784_0
+		1 o p_i3784_1
+		2 o p_i3784_2
+		3 o p_i3784_3
 	a (Lis;FFFFFF)V func_406_a
 		0 o p_406_0
 		1 o p_406_1
@@ -3826,8 +3826,8 @@ fj net/minecraft/src/CodecMus
 	openInputStream ()Ljava/io/InputStream; openInputStream
 fk net/minecraft/src/RenderChicken
 	<init> (Lgm;F)V <init>
-		0 o p_i1845_0
-		1 o p_i1845_1
+		0 o p_i3839_0
+		1 o p_i3839_1
 	a (Lou;DDDFF)V func_181_a
 		0 o p_181_0
 		1 o p_181_1
@@ -3888,13 +3888,13 @@ fl net/minecraft/src/EnumArt
 	z field_1623_z
 	<clinit> ()V <clinit>
 	<init> (Ljava/lang/String;ILjava/lang/String;IIII)V <init>
-		0 o p_i1883_0
-		1 o p_i1883_1
-		2 o p_i1883_2
-		3 o p_i1883_3
-		4 o p_i1883_4
-		5 o p_i1883_5
-		6 o p_i1883_6
+		0 o p_i3856_0
+		1 o p_i3856_1
+		2 o p_i3856_2
+		3 o p_i3856_3
+		4 o p_i3856_4
+		5 o p_i3856_5
+		6 o p_i3856_6
 	values ()[Lfl; values
 fm net/minecraft/src/WorldGenReed
 	<init> ()V <init>
@@ -3921,7 +3921,7 @@ fo net/minecraft/src/InventoryPlayer
 	f field_845_f
 	g field_844_g
 	<init> (Leb;)V <init>
-		0 o p_i1902_0
+		0 o p_i3914_0
 	a (Lnq;)F func_508_a
 		0 o p_508_0
 	a (Llw;)I func_502_a
@@ -3981,26 +3981,26 @@ fp net/minecraft/src/ItemStack
 	c field_1617_c
 	d field_1616_d
 	<init> (III)V <init>
-		0 o p_i1937_0
-		1 o p_i1937_1
-		2 o p_i1937_2
+		0 o p_i3934_0
+		1 o p_i3934_1
+		2 o p_i3934_2
 	<init> (I)V <init>
-		0 o p_i1938_0
+		0 o p_i3935_0
 	<init> (II)V <init>
-		0 o p_i1939_0
-		1 o p_i1939_1
+		0 o p_i3936_0
+		1 o p_i3936_1
 	<init> (Lnq;I)V <init>
-		0 o p_i1940_0
-		1 o p_i1940_1
+		0 o p_i3937_0
+		1 o p_i3937_1
 	<init> (Lnq;)V <init>
-		0 o p_i1941_0
+		0 o p_i3938_0
 	<init> (Liq;)V <init>
-		0 o p_i1942_0
+		0 o p_i3939_0
 	<init> (Ldx;I)V <init>
-		0 o p_i1943_0
-		1 o p_i1943_1
+		0 o p_i3940_0
+		1 o p_i3940_1
 	<init> (Ldx;)V <init>
-		0 o p_i1944_0
+		0 o p_i3941_0
 	a (Lhf;)V func_1092_a
 		0 o p_1092_0
 	a (Liq;)Liq; func_1086_a
@@ -4111,8 +4111,8 @@ fu net/minecraft/src/RenderEngine
 	k field_6527_k
 	<clinit> ()V <clinit>
 	<init> (Lff;Lgq;)V <init>
-		0 o p_i2009_0
-		1 o p_i2009_1
+		0 o p_i4025_0
+		1 o p_i4025_1
 	a (Lad;)V func_1066_a
 		0 o p_1066_0
 	a (Ljava/lang/String;Ljava/lang/String;)I func_1071_a
@@ -4155,7 +4155,7 @@ fv net/minecraft/src/Packet24MobSpawn
 	f field_549_f
 	g field_548_g
 	<init> (Lhf;)V <init>
-		0 o p_i2033_0
+		0 o p_i4048_0
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -4173,13 +4173,13 @@ fw net/minecraft/src/EnumOS1
 	f field_6525_f
 	<clinit> ()V <clinit>
 	<init> (Ljava/lang/String;I)V <init>
-		0 o p_i2047_0
-		1 o p_i2047_1
+		0 o p_i4066_0
+		1 o p_i4066_1
 	values ()[Lfw; values
 fx net/minecraft/src/EntitySorter
 	a field_1594_a
 	<init> (Llw;)V <init>
-		0 o p_i2051_0
+		0 o p_i4084_0
 	a (Lbw;Lbw;)I func_1063_a
 		0 o p_1063_0
 		1 o p_1063_1
@@ -4189,10 +4189,10 @@ fx net/minecraft/src/EntitySorter
 fy net/minecraft/src/BlockBreakable
 	a field_6363_a
 	<init> (IILhb;Z)V <init>
-		0 o p_i2056_0
-		1 o p_i2056_1
-		2 o p_i2056_2
-		3 o p_i2056_3
+		0 o p_i4106_0
+		1 o p_i4106_1
+		2 o p_i4106_2
+		3 o p_i4106_3
 	a ()Z func_217_b
 	b (Lpk;IIII)Z func_260_c
 		0 o p_260_0
@@ -4202,8 +4202,8 @@ fy net/minecraft/src/BlockBreakable
 		4 o p_260_4
 fz net/minecraft/src/BlockSnow
 	<init> (II)V <init>
-		0 o p_i2060_0
-		1 o p_i2060_1
+		0 o p_i4125_0
+		1 o p_i4125_1
 	a ()Z func_217_b
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
@@ -4288,13 +4288,13 @@ gb net/minecraft/src/EntityFallingSand
 	a field_799_a
 	b field_798_b
 	<init> (Lcy;)V <init>
-		0 o p_i2092_0
+		0 o p_i4178_0
 	<init> (Lcy;FFFI)V <init>
-		0 o p_i2093_0
-		1 o p_i2093_1
-		2 o p_i2093_2
-		3 o p_i2093_3
-		4 o p_i2093_4
+		0 o p_i4179_0
+		1 o p_i4179_1
+		2 o p_i4179_2
+		3 o p_i4179_3
+		4 o p_i4179_4
 	a (Liq;)V func_352_a
 		0 o p_352_0
 	b (Liq;)V func_357_b
@@ -4310,11 +4310,11 @@ gc net/minecraft/src/Packet14BlockDig
 	d field_544_d
 	e field_543_e
 	<init> (IIIII)V <init>
-		0 o p_i2106_0
-		1 o p_i2106_1
-		2 o p_i2106_2
-		3 o p_i2106_3
-		4 o p_i2106_4
+		0 o p_i4201_0
+		1 o p_i4201_1
+		2 o p_i4201_2
+		3 o p_i4201_3
+		4 o p_i4201_4
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -4325,8 +4325,8 @@ gc net/minecraft/src/Packet14BlockDig
 		0 o p_323_0
 gd net/minecraft/src/BlockFence
 	<init> (II)V <init>
-		0 o p_i2113_0
-		1 o p_i2113_1
+		0 o p_i4218_0
+		1 o p_i4218_1
 	a ()Z func_217_b
 	a (Lcy;IIILco;Ljava/util/ArrayList;)V func_230_a
 		0 o p_230_0
@@ -4430,17 +4430,17 @@ gh net/minecraft/src/GuiButton
 	g field_937_g
 	h field_936_h
 	<init> (IIILjava/lang/String;)V <init>
-		0 o p_i2181_0
-		1 o p_i2181_1
-		2 o p_i2181_2
-		3 o p_i2181_3
+		0 o p_i4291_0
+		1 o p_i4291_1
+		2 o p_i4291_2
+		3 o p_i4291_3
 	<init> (IIIIILjava/lang/String;)V <init>
-		0 o p_i2182_0
-		1 o p_i2182_1
-		2 o p_i2182_2
-		3 o p_i2182_3
-		4 o p_i2182_4
-		5 o p_i2182_5
+		0 o p_i4292_0
+		1 o p_i4292_1
+		2 o p_i4292_2
+		3 o p_i4292_3
+		4 o p_i4292_4
+		5 o p_i4292_5
 	a (Lnet/minecraft/client/Minecraft;II)V func_561_a
 		0 o p_561_0
 		1 o p_561_1
@@ -4461,19 +4461,19 @@ gh net/minecraft/src/GuiButton
 gi net/minecraft/src/ThreadSleepForever
 	a field_1588_a
 	<init> (Lnet/minecraft/client/Minecraft;Ljava/lang/String;)V <init>
-		0 o p_i2190_0
-		1 o p_i2190_1
+		0 o p_i4312_0
+		1 o p_i4312_1
 	run ()V run
 gj net/minecraft/src/MinecraftImpl
 	a field_20919_a
 	<init> (Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZLjava/awt/Frame;)V <init>
-		0 o p_i2194_0
-		1 o p_i2194_1
-		2 o p_i2194_2
-		3 o p_i2194_3
-		4 o p_i2194_4
-		5 o p_i2194_5
-		6 o p_i2194_6
+		0 o p_i4329_0
+		1 o p_i4329_1
+		2 o p_i4329_2
+		3 o p_i4329_3
+		4 o p_i4329_4
+		5 o p_i4329_5
+		6 o p_i4329_6
 	a (Lhr;)V func_4007_a
 		0 o p_4007_0
 gk net/minecraft/src/Packet
@@ -4538,8 +4538,8 @@ gn net/minecraft/src/GameWindowListener
 	a field_1587_a
 	b field_1586_b
 	<init> (Lnet/minecraft/client/Minecraft;Ljava/lang/Thread;)V <init>
-		0 o p_i2224_0
-		1 o p_i2224_1
+		0 o p_i4410_0
+		1 o p_i4410_1
 	windowClosing (Ljava/awt/event/WindowEvent;)V windowClosing
 		0 o p_windowClosing_0
 go net/minecraft/src/EnumOSMappingHelper
@@ -4552,7 +4552,7 @@ gp net/minecraft/src/TextureWatchFX
 	j field_4222_j
 	k field_4221_k
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i2235_0
+		0 o p_i4445_0
 	a ()V func_783_a
 gq net/minecraft/src/GameSettings
 	A field_1559_y
@@ -4587,8 +4587,8 @@ gq net/minecraft/src/GameSettings
 	<clinit> ()V <clinit>
 	<init> ()V <init>
 	<init> (Lnet/minecraft/client/Minecraft;Ljava/io/File;)V <init>
-		0 o p_i2269_0
-		1 o p_i2269_1
+		0 o p_i4466_0
+		1 o p_i4466_1
 	a (II)V func_1042_a
 		0 o p_1042_0
 		1 o p_1042_1
@@ -4613,7 +4613,7 @@ gq net/minecraft/src/GameSettings
 gr net/minecraft/src/RecipeSorter
 	a field_1557_a
 	<init> (Len;)V <init>
-		0 o p_i2282_0
+		0 o p_i4484_0
 	a (Lcd;Lcd;)I func_1040_a
 		0 o p_1040_0
 		1 o p_1040_1
@@ -4630,9 +4630,9 @@ gs net/minecraft/src/ChunkProviderLoadOrGenerate
 	g field_893_g
 	h field_892_h
 	<init> (Lcy;Lai;Lbd;)V <init>
-		0 o p_i2294_0
-		1 o p_i2294_1
-		2 o p_i2294_2
+		0 o p_i4503_0
+		1 o p_i4503_1
+		2 o p_i4503_2
 	a (ZLpu;)Z func_535_a
 		0 o p_535_0
 		1 o p_535_1
@@ -4657,8 +4657,8 @@ gs net/minecraft/src/ChunkProviderLoadOrGenerate
 		1 o p_542_1
 gt net/minecraft/src/ItemHoe
 	<init> (II)V <init>
-		0 o p_i2305_0
-		1 o p_i2305_1
+		0 o p_i4521_0
+		1 o p_i4521_1
 	a ()Z func_4017_a
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
@@ -4672,8 +4672,8 @@ gu net/minecraft/src/ModelSkeleton
 	<init> ()V <init>
 gv net/minecraft/src/BlockDoor
 	<init> (ILhb;)V <init>
-		0 o p_i2311_0
-		1 o p_i2311_1
+		0 o p_i4557_0
+		1 o p_i4557_1
 	a (Lcy;IIII)V func_226_a
 		0 o p_226_0
 		1 o p_226_1
@@ -4770,10 +4770,10 @@ gy net/minecraft/src/EnumCreatureType
 	e field_6518_e
 	<clinit> ()V <clinit>
 	<init> (Ljava/lang/String;ILjava/lang/Class;I)V <init>
-		0 o p_i2352_0
-		1 o p_i2352_1
-		2 o p_i2352_2
-		3 o p_i2352_3
+		0 o p_i4619_0
+		1 o p_i4619_1
+		2 o p_i4619_2
+		3 o p_i4619_3
 	values ()[Lgy; values
 gz net/minecraft/src/TileEntityRenderer
 	a field_1554_a
@@ -4817,7 +4817,7 @@ gz net/minecraft/src/TileEntityRenderer
 h net/minecraft/src/NBTTagFloat
 	a field_1097_a
 	<init> (F)V <init>
-		0 o p_i2380_0
+		0 o p_i4657_0
 	<init> ()V <init>
 	a (Ljava/io/DataInput;)V func_736_a
 		0 o p_736_0
@@ -4846,14 +4846,14 @@ ha net/minecraft/src/Chunk
 	r field_1523_r
 	s field_1522_s
 	<init> (Lcy;II)V <init>
-		0 o p_i2406_0
-		1 o p_i2406_1
-		2 o p_i2406_2
+		0 o p_i4670_0
+		1 o p_i4670_1
+		2 o p_i4670_2
 	<init> (Lcy;[BII)V <init>
-		0 o p_i2407_0
-		1 o p_i2407_1
-		2 o p_i2407_2
-		3 o p_i2407_3
+		0 o p_i4671_0
+		1 o p_i4671_1
+		2 o p_i4671_2
+		3 o p_i4671_3
 	a ([BIIIIIII)I func_1004_a
 		0 o p_1004_0
 		1 o p_1004_1
@@ -5022,7 +5022,7 @@ hd net/minecraft/src/GuiMultiplayer
 	h field_970_h
 	i field_969_i
 	<init> (Lbp;)V <init>
-		0 o p_i2485_0
+		0 o p_i4727_0
 	a (CI)V func_580_a
 		0 o p_580_0
 		1 o p_580_1
@@ -5041,7 +5041,7 @@ he net/minecraft/src/MovementInputFromOptions
 	f field_1179_f
 	g field_1178_g
 	<init> (Lgq;)V <init>
-		0 o p_i2495_0
+		0 o p_i4752_0
 	a ()V func_798_a
 	a (IZ)V func_796_a
 		0 o p_796_0
@@ -5104,7 +5104,7 @@ hf net/minecraft/src/EntityLiving
 	y field_9358_y
 	z field_9357_z
 	<init> (Lcy;)V <init>
-		0 o p_i2554_0
+		0 o p_i4770_0
 	A ()Ljava/lang/String; func_6376_z
 	B ()V func_391_y
 	C ()V func_415_z
@@ -5192,8 +5192,8 @@ hg net/minecraft/src/MaterialTransparent
 hh net/minecraft/src/ItemReed
 	a field_320_a
 	<init> (ILnq;)V <init>
-		0 o p_i2607_0
-		1 o p_i2607_1
+		0 o p_i4806_0
+		1 o p_i4806_1
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -5237,15 +5237,15 @@ hj net/minecraft/src/EntityFish
 	s field_6381_s
 	t field_6380_t
 	<init> (Lcy;)V <init>
-		0 o p_i2638_0
+		0 o p_i4847_0
 	<init> (Lcy;DDD)V <init>
-		0 o p_i2639_0
-		1 o p_i2639_1
-		2 o p_i2639_2
-		3 o p_i2639_3
+		0 o p_i4848_0
+		1 o p_i4848_1
+		2 o p_i4848_2
+		3 o p_i4848_3
 	<init> (Lcy;Leb;)V <init>
-		0 o p_i2640_0
-		1 o p_i2640_1
+		0 o p_i4849_0
+		1 o p_i4849_1
 	a (D)Z func_384_a
 		0 o p_384_0
 	a (DDD)V func_6375_a
@@ -5274,9 +5274,9 @@ hj net/minecraft/src/EntityFish
 	k ()I func_4043_i
 hk net/minecraft/src/BlockGlowStone
 	<init> (IILhb;)V <init>
-		0 o p_i2651_0
-		1 o p_i2651_1
-		2 o p_i2651_2
+		0 o p_i4862_0
+		1 o p_i4862_1
+		2 o p_i4862_2
 	a (ILjava/util/Random;)I func_240_a
 		0 o p_240_0
 		1 o p_240_1
@@ -5317,7 +5317,7 @@ hn net/minecraft/src/RenderArrow
 ho net/minecraft/src/RenderSorter
 	a field_4274_a
 	<init> (Leb;)V <init>
-		0 o p_i2668_0
+		0 o p_i4942_0
 	a (Lbw;Lbw;)I func_993_a
 		0 o p_993_0
 		1 o p_993_1
@@ -5326,9 +5326,9 @@ ho net/minecraft/src/RenderSorter
 		1 o p_compare_1
 hp net/minecraft/src/RenderPig
 	<init> (Lgm;Lgm;F)V <init>
-		0 o p_i2672_0
-		1 o p_i2672_1
-		2 o p_i2672_2
+		0 o p_i4959_0
+		1 o p_i4959_1
+		2 o p_i4959_2
 	a (Lop;I)Z func_180_a
 		0 o p_180_0
 		1 o p_180_1
@@ -5338,7 +5338,7 @@ hp net/minecraft/src/RenderPig
 hq net/minecraft/src/NBTTagLong
 	a field_1095_a
 	<init> (J)V <init>
-		0 o p_i2677_0
+		0 o p_i4974_0
 	<init> ()V <init>
 	a (Ljava/io/DataInput;)V func_736_a
 		0 o p_736_0
@@ -5350,8 +5350,8 @@ hr net/minecraft/src/UnexpectedThrowable
 	a field_6515_a
 	b field_6514_b
 	<init> (Ljava/lang/String;Ljava/lang/Throwable;)V <init>
-		0 o p_i2686_0
-		1 o p_i2686_1
+		0 o p_i4996_0
+		1 o p_i4996_1
 hs net/minecraft/src/Packet20NamedEntitySpawn
 	a field_534_a
 	b field_533_b
@@ -5362,7 +5362,7 @@ hs net/minecraft/src/Packet20NamedEntitySpawn
 	g field_536_g
 	h field_535_h
 	<init> (Leb;)V <init>
-		0 o p_i2696_0
+		0 o p_i5012_0
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -5374,9 +5374,9 @@ hs net/minecraft/src/Packet20NamedEntitySpawn
 ht net/minecraft/src/RenderSlime
 	a field_205_f
 	<init> (Lgm;Lgm;F)V <init>
-		0 o p_i2704_0
-		1 o p_i2704_1
-		2 o p_i2704_2
+		0 o p_i5033_0
+		1 o p_i5033_1
+		2 o p_i5033_2
 	a (Lhf;I)Z func_166_a
 		0 o p_166_0
 		1 o p_166_1
@@ -5396,7 +5396,7 @@ hu net/minecraft/src/LoadingScreenRenderer
 	d field_1006_d
 	e field_1005_e
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i2715_0
+		0 o p_i5055_0
 	a (Ljava/lang/String;)V func_596_a
 		0 o p_596_0
 	a (I)V func_593_a
@@ -5416,9 +5416,9 @@ hv net/minecraft/src/WorldClient
 	F field_20914_E
 	G field_1053_F
 	<init> (Lib;JI)V <init>
-		0 o p_i2729_0
-		1 o p_i2729_1
-		2 o p_i2729_2
+		0 o p_i5073_0
+		1 o p_i5073_1
+		2 o p_i5073_2
 	a (IIZ)V func_713_a
 		0 o p_713_0
 		1 o p_713_1
@@ -5488,7 +5488,7 @@ hv net/minecraft/src/WorldClient
 hw net/minecraft/src/Packet2Handshake
 	a field_532_a
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_i2753_0
+		0 o p_i5092_0
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -5502,12 +5502,12 @@ hx net/minecraft/src/InventoryCrafting
 	b field_839_b
 	c field_841_c
 	<init> (Lax;II)V <init>
-		0 o p_i2763_0
-		1 o p_i2763_1
-		2 o p_i2763_2
+		0 o p_i5112_0
+		1 o p_i5112_1
+		2 o p_i5112_2
 	<init> (Lax;[Lfp;)V <init>
-		0 o p_i2764_0
-		1 o p_i2764_1
+		0 o p_i5113_0
+		1 o p_i5113_1
 	a (ILfp;)V func_472_a
 		0 o p_472_0
 		1 o p_472_1
@@ -5524,7 +5524,7 @@ hy net/minecraft/src/WorldGenClay
 	a field_867_a
 	b field_866_b
 	<init> (I)V <init>
-		0 o p_i2775_0
+		0 o p_i5128_0
 	a (Lcy;Ljava/util/Random;III)Z func_516_a
 		0 o p_516_0
 		1 o p_516_1
@@ -5533,8 +5533,8 @@ hy net/minecraft/src/WorldGenClay
 		4 o p_516_4
 hz net/minecraft/src/BlockOre
 	<init> (II)V <init>
-		0 o p_i2778_0
-		1 o p_i2778_1
+		0 o p_i5145_0
+		1 o p_i5145_1
 	a (Ljava/util/Random;)I func_229_a
 		0 o p_229_0
 	a (ILjava/util/Random;)I func_240_a
@@ -5543,13 +5543,13 @@ hz net/minecraft/src/BlockOre
 i net/minecraft/src/MinecraftAppletImpl
 	a field_186_a
 	<init> (Lnet/minecraft/client/MinecraftApplet;Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V <init>
-		0 o p_i2783_0
-		1 o p_i2783_1
-		2 o p_i2783_2
-		3 o p_i2783_3
-		4 o p_i2783_4
-		5 o p_i2783_5
-		6 o p_i2783_6
+		0 o p_i5169_0
+		1 o p_i5169_1
+		2 o p_i5169_2
+		3 o p_i5169_3
+		4 o p_i5169_4
+		5 o p_i5169_5
+		6 o p_i5169_6
 	a (Lhr;)V func_4007_a
 		0 o p_4007_0
 ia net/minecraft/src/ModelSheep2
@@ -5563,9 +5563,9 @@ ib net/minecraft/src/NetClientHandler
 	f field_1211_f
 	g field_1210_g
 	<init> (Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V <init>
-		0 o p_i2795_0
-		1 o p_i2795_1
-		2 o p_i2795_2
+		0 o p_i5204_0
+		1 o p_i5204_1
+		2 o p_i5204_2
 	a (Ljk;)V func_9448_a
 		0 o p_9448_0
 	a (Lek;)V func_846_a
@@ -5636,8 +5636,8 @@ ib net/minecraft/src/NetClientHandler
 	b ()V func_849_b
 ic net/minecraft/src/BlockGravel
 	<init> (II)V <init>
-		0 o p_i2832_0
-		1 o p_i2832_1
+		0 o p_i5225_0
+		1 o p_i5225_1
 	a (ILjava/util/Random;)I func_240_a
 		0 o p_240_0
 		1 o p_240_1
@@ -5652,7 +5652,7 @@ id net/minecraft/src/Packet21PickupSpawn
 	h field_524_h
 	i field_523_i
 	<init> (Leo;)V <init>
-		0 o p_i2844_0
+		0 o p_i5241_0
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -5668,15 +5668,15 @@ if net/minecraft/src/ChunkCoordinates
 	a field_1518_a
 	b field_1517_b
 	<init> (II)V <init>
-		0 o p_i2855_0
-		1 o p_i2855_1
+		0 o p_i5278_0
+		1 o p_i5278_1
 	equals (Ljava/lang/Object;)Z equals
 		0 o p_equals_0
 	hashCode ()I hashCode
 ig net/minecraft/src/BlockCrops
 	<init> (II)V <init>
-		0 o p_i2859_0
-		1 o p_i2859_1
+		0 o p_i5300_0
+		1 o p_i5300_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -5707,8 +5707,8 @@ ig net/minecraft/src/BlockCrops
 		3 o p_270_3
 ih net/minecraft/src/BlockIce
 	<init> (II)V <init>
-		0 o p_i2869_0
-		1 o p_i2869_1
+		0 o p_i5319_0
+		1 o p_i5319_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -5734,8 +5734,8 @@ ii net/minecraft/src/Packet18ArmAnimation
 	b field_521_b
 	<init> ()V <init>
 	<init> (Llw;I)V <init>
-		0 o p_i2879_0
-		1 o p_i2879_1
+		0 o p_i5339_0
+		1 o p_i5339_1
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
 	a ()I func_329_a
@@ -5751,8 +5751,8 @@ ij net/minecraft/src/ModelQuadraped
 	h field_1262_h
 	i field_1261_i
 	<init> (IF)V <init>
-		0 o p_i2891_0
-		1 o p_i2891_1
+		0 o p_i5360_0
+		1 o p_i5360_1
 	a (FFFFFF)V func_863_a
 		0 o p_863_0
 		1 o p_863_1
@@ -5773,7 +5773,7 @@ ik net/minecraft/src/ModelSlime
 	c field_1260_c
 	d field_1259_d
 	<init> (I)V <init>
-		0 o p_i2899_0
+		0 o p_i5377_0
 	a (FFFFFF)V func_863_a
 		0 o p_863_0
 		1 o p_863_1
@@ -5791,10 +5791,10 @@ ik net/minecraft/src/ModelSlime
 il net/minecraft/src/BlockLeavesBase
 	a field_6359_a
 	<init> (IILhb;Z)V <init>
-		0 o p_i2904_0
-		1 o p_i2904_1
-		2 o p_i2904_2
-		3 o p_i2904_3
+		0 o p_i5397_0
+		1 o p_i5397_1
+		2 o p_i5397_2
+		3 o p_i5397_3
 	a ()Z func_217_b
 	b (Lpk;IIII)Z func_260_c
 		0 o p_260_0
@@ -5825,9 +5825,9 @@ in net/minecraft/src/MusInputStream
 	c field_1516_c
 	d field_1515_d
 	<init> (Lfj;Ljava/net/URL;Ljava/io/InputStream;)V <init>
-		0 o p_i2917_0
-		1 o p_i2917_1
-		2 o p_i2917_2
+		0 o p_i5434_0
+		1 o p_i5434_1
+		2 o p_i5434_2
 	read ([BII)I read
 		0 o p_read_0
 		1 o p_read_1
@@ -5846,7 +5846,7 @@ io net/minecraft/src/Packet39AttachEntity
 		0 o p_323_0
 ip net/minecraft/src/EntityZombieSimple
 	<init> (Lcy;)V <init>
-		0 o p_i2929_0
+		0 o p_i5468_0
 	a (III)F func_439_a
 		0 o p_439_0
 		1 o p_439_1
@@ -5919,8 +5919,8 @@ iq net/minecraft/src/NBTTagCompound
 	toString ()Ljava/lang/String; toString
 ir net/minecraft/src/BlockStationary
 	<init> (ILhb;)V <init>
-		0 o p_i2962_0
-		1 o p_i2962_1
+		0 o p_i5511_0
+		1 o p_i5511_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -5974,7 +5974,7 @@ is net/minecraft/src/Tessellator
 	z field_1485_z
 	<clinit> ()V <clinit>
 	<init> (I)V <init>
-		0 o p_i2997_0
+		0 o p_i5527_0
 	a (I)V func_992_a
 		0 o p_992_0
 	a (DDDDD)V func_983_a
@@ -6031,8 +6031,8 @@ is net/minecraft/src/Tessellator
 	d ()V func_985_d
 it net/minecraft/src/BlockSoulSand
 	<init> (II)V <init>
-		0 o p_i3016_0
-		1 o p_i3016_1
+		0 o p_i5548_0
+		1 o p_i5548_1
 	a (Lcy;IIILlw;)V func_236_b
 		0 o p_236_0
 		1 o p_236_1
@@ -6052,9 +6052,9 @@ iu net/minecraft/src/Packet1Login
 	e field_4073_e
 	<init> ()V <init>
 	<init> (Ljava/lang/String;Ljava/lang/String;I)V <init>
-		0 o p_i3026_0
-		1 o p_i3026_1
-		2 o p_i3026_2
+		0 o p_i5566_0
+		1 o p_i5566_1
+		2 o p_i5566_2
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
 	a ()I func_329_a
@@ -6066,7 +6066,7 @@ iv net/minecraft/src/PlayerController
 	a field_1065_a
 	b field_1064_b
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i3034_0
+		0 o p_i5583_0
 	a (F)V func_6467_a
 		0 o p_6467_0
 	a (Lcy;)V func_717_a
@@ -6123,9 +6123,9 @@ ix net/minecraft/src/InventoryLargeChest
 	b field_836_b
 	c field_838_c
 	<init> (Ljava/lang/String;Lhi;Lhi;)V <init>
-		0 o p_i3058_0
-		1 o p_i3058_1
-		2 o p_i3058_2
+		0 o p_i5621_0
+		1 o p_i5621_1
+		2 o p_i5621_2
 	a (ILfp;)V func_472_a
 		0 o p_472_0
 		1 o p_472_1
@@ -6140,8 +6140,8 @@ ix net/minecraft/src/InventoryLargeChest
 	o_ ()I func_470_e
 iy net/minecraft/src/BlockButton
 	<init> (II)V <init>
-		0 o p_i3067_0
-		1 o p_i3067_1
+		0 o p_i5639_0
+		1 o p_i5639_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -6230,7 +6230,7 @@ iz net/minecraft/src/TexureWaterFlowFX
 j net/minecraft/src/CanvasMinecraftApplet
 	a field_1696_a
 	<init> (Lnet/minecraft/client/MinecraftApplet;)V <init>
-		0 o p_i3096_0
+		0 o p_i5679_0
 	addNotify ()V addNotify
 	removeNotify ()V removeNotify
 ja net/minecraft/src/BlockFlowing
@@ -6238,8 +6238,8 @@ ja net/minecraft/src/BlockFlowing
 	b field_459_b
 	c field_461_c
 	<init> (ILhb;)V <init>
-		0 o p_i3103_0
-		1 o p_i3103_1
+		0 o p_i5701_0
+		1 o p_i5701_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -6310,7 +6310,7 @@ jb net/minecraft/src/RenderTNTPrimed
 jc net/minecraft/src/GuiCrafting
 	j field_979_j
 	<init> (Lfo;)V <init>
-		0 o p_i3120_0
+		0 o p_i5734_0
 	a (F)V func_589_a
 		0 o p_589_0
 	h ()V func_6449_h
@@ -6321,13 +6321,13 @@ jd net/minecraft/src/EntityPortalFX
 	p field_4085_q
 	q field_4084_r
 	<init> (Lcy;DDDDDD)V <init>
-		0 o p_i3129_0
-		1 o p_i3129_1
-		2 o p_i3129_2
-		3 o p_i3129_3
-		4 o p_i3129_4
-		5 o p_i3129_5
-		6 o p_i3129_6
+		0 o p_i5758_0
+		1 o p_i5758_1
+		2 o p_i5758_2
+		3 o p_i5758_3
+		4 o p_i5758_4
+		5 o p_i5758_5
+		6 o p_i5758_6
 	a (F)F func_382_a
 		0 o p_382_0
 	a (Lis;FFFFFF)V func_406_a
@@ -6341,8 +6341,8 @@ jd net/minecraft/src/EntityPortalFX
 	e_ ()V func_370_e_
 je net/minecraft/src/BlockCactus
 	<init> (II)V <init>
-		0 o p_i3134_0
-		1 o p_i3134_1
+		0 o p_i5776_0
+		1 o p_i5776_1
 	a ()Z func_217_b
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
@@ -6388,8 +6388,8 @@ je net/minecraft/src/BlockCactus
 	g ()I func_210_f
 jf net/minecraft/src/BlockDirt
 	<init> (II)V <init>
-		0 o p_i3147_0
-		1 o p_i3147_1
+		0 o p_i5797_0
+		1 o p_i5797_1
 jg net/minecraft/src/PlayerControllerSP
 	c field_1074_c
 	d field_1073_d
@@ -6399,7 +6399,7 @@ jg net/minecraft/src/PlayerControllerSP
 	h field_1069_h
 	i field_1068_i
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i3156_0
+		0 o p_i5810_0
 	a (IIII)V func_719_a
 		0 o p_719_0
 		1 o p_719_1
@@ -6426,7 +6426,7 @@ jg net/minecraft/src/PlayerControllerSP
 	c ()V func_6474_c
 jh net/minecraft/src/GuiDeleteWorld
 	<init> (Lbp;)V <init>
-		0 o p_i3167_0
+		0 o p_i5830_0
 	a (ZI)V func_568_a
 		0 o p_568_0
 		1 o p_568_1
@@ -6462,8 +6462,8 @@ ji net/minecraft/src/TileEntity
 jj net/minecraft/src/GuiFurnace
 	j field_978_j
 	<init> (Lfo;Llt;)V <init>
-		0 o p_i3191_0
-		1 o p_i3191_1
+		0 o p_i5868_0
+		1 o p_i5868_1
 	a (F)V func_589_a
 		0 o p_589_0
 	j ()V func_587_j
@@ -6498,8 +6498,8 @@ jm net/minecraft/src/TexturePackDefault
 		0 o p_6483_0
 jn net/minecraft/src/BlockMinecartTrack
 	<init> (II)V <init>
-		0 o p_i3215_0
-		1 o p_i3215_1
+		0 o p_i5949_0
+		1 o p_i5949_1
 	a (Ljava/util/Random;)I func_229_a
 		0 o p_229_0
 	a (Lcy;IIII)V func_226_a
@@ -6548,11 +6548,11 @@ jn net/minecraft/src/BlockMinecartTrack
 		3 o p_4031_3
 jo net/minecraft/src/EntitySlimeFX
 	<init> (Lcy;DDDLdx;)V <init>
-		0 o p_i3229_0
-		1 o p_i3229_1
-		2 o p_i3229_2
-		3 o p_i3229_3
-		4 o p_i3229_4
+		0 o p_i5962_0
+		1 o p_i5962_1
+		2 o p_i5962_2
+		3 o p_i5962_3
+		4 o p_i5962_4
 	a (Lis;FFFFFF)V func_406_a
 		0 o p_406_0
 		1 o p_406_1
@@ -6571,8 +6571,8 @@ jp net/minecraft/src/EnumOS2
 	f field_6511_f
 	<clinit> ()V <clinit>
 	<init> (Ljava/lang/String;I)V <init>
-		0 o p_i3240_0
-		1 o p_i3240_1
+		0 o p_i5988_0
+		1 o p_i5988_1
 	values ()[Ljp; values
 jq net/minecraft/src/NetworkManager
 	a field_1478_a
@@ -6598,9 +6598,9 @@ jq net/minecraft/src/NetworkManager
 	u field_1459_t
 	<clinit> ()V <clinit>
 	<init> (Ljava/net/Socket;Ljava/lang/String;Lmo;)V <init>
-		0 o p_i3265_0
-		1 o p_i3265_1
-		2 o p_i3265_2
+		0 o p_i6003_0
+		1 o p_i6003_1
+		2 o p_i6003_2
 	a (Ljava/lang/String;)V func_974_a
 		0 o p_974_0
 	a (Ljq;)Z func_971_a
@@ -6625,7 +6625,7 @@ jq net/minecraft/src/NetworkManager
 jr net/minecraft/src/Packet3Chat
 	a field_517_a
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_i3280_0
+		0 o p_i6021_0
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -6648,7 +6648,7 @@ js net/minecraft/src/WorldGenerator
 		4 o p_516_4
 jt net/minecraft/src/PlayerControllerTest
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i3291_0
+		0 o p_i6060_0
 	a (Lcy;)V func_717_a
 		0 o p_717_0
 	b (Leb;)V func_6473_b
@@ -6760,7 +6760,7 @@ jx net/minecraft/src/TileEntitySignRenderer
 jy net/minecraft/src/NBTTagInt
 	a field_1093_a
 	<init> (I)V <init>
-		0 o p_i3322_0
+		0 o p_i6152_0
 	<init> ()V <init>
 	a (Ljava/io/DataInput;)V func_736_a
 		0 o p_736_0
@@ -6795,8 +6795,8 @@ ka net/minecraft/src/ModelRenderer
 	n field_1397_n
 	o field_1396_o
 	<init> (II)V <init>
-		0 o p_i3350_0
-		1 o p_i3350_1
+		0 o p_i6209_0
+		1 o p_i6209_1
 	a (FFFIII)V func_921_a
 		0 o p_921_0
 		1 o p_921_1
@@ -6839,7 +6839,7 @@ kb net/minecraft/src/EntityRenderer
 	n field_1382_n
 	o field_1381_o
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i3373_0
+		0 o p_i6233_0
 	a (I)V func_4140_a
 		0 o p_4140_0
 	a (F)V func_910_a
@@ -6883,7 +6883,7 @@ kc net/minecraft/src/Timer
 	h field_1373_h
 	i field_1372_i
 	<init> (F)V <init>
-		0 o p_i3399_0
+		0 o p_i6251_0
 	a ()V func_904_a
 kd net/minecraft/src/Packet33RelEntityMoveLook
 	<init> ()V <init>
@@ -6896,12 +6896,12 @@ ke net/minecraft/src/KeyBinding
 	a field_1371_a
 	b field_1370_b
 	<init> (Ljava/lang/String;I)V <init>
-		0 o p_i3409_0
-		1 o p_i3409_1
+		0 o p_i6291_0
+		1 o p_i6291_1
 kf net/minecraft/src/WorldGenHellLava
 	a field_4158_a
 	<init> (I)V <init>
-		0 o p_i3412_0
+		0 o p_i6310_0
 	a (Lcy;Ljava/util/Random;III)Z func_516_a
 		0 o p_516_0
 		1 o p_516_1
@@ -6911,8 +6911,8 @@ kf net/minecraft/src/WorldGenHellLava
 kg net/minecraft/src/ItemSword
 	a field_319_a
 	<init> (II)V <init>
-		0 o p_i3416_0
-		1 o p_i3416_1
+		0 o p_i6323_0
+		1 o p_i6323_1
 	a (Lfp;IIII)V func_203_a
 		0 o p_203_0
 		1 o p_203_1
@@ -6942,14 +6942,14 @@ kh net/minecraft/src/GuiConflictWarning
 ki net/minecraft/src/EntityDiggingFX
 	a field_4082_a
 	<init> (Lcy;DDDDDDLnq;)V <init>
-		0 o p_i3431_0
-		1 o p_i3431_1
-		2 o p_i3431_2
-		3 o p_i3431_3
-		4 o p_i3431_4
-		5 o p_i3431_5
-		6 o p_i3431_6
-		7 o p_i3431_7
+		0 o p_i6361_0
+		1 o p_i6361_1
+		2 o p_i6361_2
+		3 o p_i6361_3
+		4 o p_i6361_4
+		5 o p_i6361_5
+		6 o p_i6361_6
+		7 o p_i6361_7
 	a (III)Lki; func_4041_a
 		0 o p_4041_0
 		1 o p_4041_1
@@ -6984,8 +6984,8 @@ kj net/minecraft/src/ChunkProviderHell
 	r field_4160_r
 	s field_4159_s
 	<init> (Lcy;J)V <init>
-		0 o p_i3455_0
-		1 o p_i3455_1
+		0 o p_i6386_0
+		1 o p_i6386_1
 	a (ZLpu;)Z func_535_a
 		0 o p_535_0
 		1 o p_535_1
@@ -7021,7 +7021,7 @@ kk net/minecraft/src/NBTTagByte
 	a field_1092_a
 	<init> ()V <init>
 	<init> (B)V <init>
-		0 o p_i3468_0
+		0 o p_i6404_0
 	a (Ljava/io/DataInput;)V func_736_a
 		0 o p_736_0
 	a ()B func_733_a
@@ -7033,16 +7033,16 @@ kl net/minecraft/src/ScaledResolution
 	b field_1367_b
 	c field_1369_c
 	<init> (II)V <init>
-		0 o p_i3477_0
-		1 o p_i3477_1
+		0 o p_i6422_0
+		1 o p_i6422_1
 	a ()I func_903_a
 	b ()I func_902_b
 km net/minecraft/src/BlockLeaves
 	b field_463_b
 	c field_464_c
 	<init> (II)V <init>
-		0 o p_i3483_0
-		1 o p_i3483_1
+		0 o p_i6441_0
+		1 o p_i6441_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -7102,10 +7102,10 @@ kn net/minecraft/src/GuiYesNo
 	i field_963_i
 	j field_962_j
 	<init> (Lbp;Ljava/lang/String;Ljava/lang/String;I)V <init>
-		0 o p_i3501_0
-		1 o p_i3501_1
-		2 o p_i3501_2
-		3 o p_i3501_3
+		0 o p_i6459_0
+		1 o p_i6459_1
+		2 o p_i6459_2
+		3 o p_i6459_3
 	a (Lgh;)V func_572_a
 		0 o p_572_0
 	a ()V func_6448_a
@@ -7116,13 +7116,13 @@ kn net/minecraft/src/GuiYesNo
 ko net/minecraft/src/EntityFlameFX
 	a field_672_a
 	<init> (Lcy;DDDDDD)V <init>
-		0 o p_i3507_0
-		1 o p_i3507_1
-		2 o p_i3507_2
-		3 o p_i3507_3
-		4 o p_i3507_4
-		5 o p_i3507_5
-		6 o p_i3507_6
+		0 o p_i6477_0
+		1 o p_i6477_1
+		2 o p_i6477_2
+		3 o p_i6477_3
+		4 o p_i6477_4
+		5 o p_i6477_5
+		6 o p_i6477_6
 	a (F)F func_382_a
 		0 o p_382_0
 	a (Lis;FFFFFF)V func_406_a
@@ -7142,13 +7142,13 @@ kp net/minecraft/src/EntityPainting
 	e field_9321_e
 	f field_9320_f
 	<init> (Lcy;IIII)V <init>
-		0 o p_i3518_0
-		1 o p_i3518_1
-		2 o p_i3518_2
-		3 o p_i3518_3
-		4 o p_i3518_4
+		0 o p_i6497_0
+		1 o p_i6497_1
+		2 o p_i6497_2
+		3 o p_i6497_3
+		4 o p_i6497_4
 	<init> (Lcy;)V <init>
-		0 o p_i3519_0
+		0 o p_i6498_0
 	a (Llw;I)Z func_396_a
 		0 o p_396_0
 		1 o p_396_1
@@ -7173,10 +7173,10 @@ kq net/minecraft/src/NextTickListEntry
 	g field_1362_g
 	<clinit> ()V <clinit>
 	<init> (IIII)V <init>
-		0 o p_i3537_0
-		1 o p_i3537_1
-		2 o p_i3537_2
-		3 o p_i3537_3
+		0 o p_i6520_0
+		1 o p_i6520_1
+		2 o p_i6520_2
+		3 o p_i6520_3
 	a (Lkq;)I func_899_a
 		0 o p_899_0
 	a (J)Lkq; func_900_a
@@ -7189,12 +7189,12 @@ kq net/minecraft/src/NextTickListEntry
 kr net/minecraft/src/EntityTNTPrimed
 	a field_689_a
 	<init> (Lcy;)V <init>
-		0 o p_i3545_0
+		0 o p_i6533_0
 	<init> (Lcy;DDD)V <init>
-		0 o p_i3546_0
-		1 o p_i3546_1
-		2 o p_i3546_2
-		3 o p_i3546_3
+		0 o p_i6534_0
+		1 o p_i6534_1
+		2 o p_i6534_2
+		3 o p_i6534_3
 	a (Liq;)V func_352_a
 		0 o p_352_0
 	b (Liq;)V func_357_b
@@ -7214,17 +7214,17 @@ ks net/minecraft/src/Explosion
 	h field_12250_h
 	i field_12249_i
 	<init> (Lcy;Llw;DDDF)V <init>
-		0 o p_i3563_0
-		1 o p_i3563_1
-		2 o p_i3563_2
-		3 o p_i3563_3
-		4 o p_i3563_4
-		5 o p_i3563_5
+		0 o p_i6554_0
+		1 o p_i6554_1
+		2 o p_i6554_2
+		3 o p_i6554_3
+		4 o p_i6554_4
+		5 o p_i6554_5
 	a ()V func_12248_a
 	b ()V func_12247_b
 kt net/minecraft/src/ItemBow
 	<init> (I)V <init>
-		0 o p_i3567_0
+		0 o p_i6576_0
 	a (Lfp;Lcy;Leb;)Lfp; func_193_a
 		0 o p_193_0
 		1 o p_193_1
@@ -7236,7 +7236,7 @@ ku net/minecraft/src/ItemRenderer
 	d field_9452_d
 	e field_1357_e
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i3575_0
+		0 o p_i6592_0
 	a (Lfp;)V func_4132_a
 		0 o p_4132_0
 	a (F)V func_4133_a
@@ -7275,9 +7275,9 @@ kw net/minecraft/src/IsoImageBuffer
 	g field_1350_g
 	h field_1349_h
 	<init> (Lcy;II)V <init>
-		0 o p_i3603_0
-		1 o p_i3603_1
-		2 o p_i3603_2
+		0 o p_i6631_0
+		1 o p_i6631_1
+		2 o p_i6631_2
 	a (II)V func_889_a
 		0 o p_889_0
 		1 o p_889_1
@@ -7298,7 +7298,7 @@ ky net/minecraft/src/Packet34EntityTeleport
 	e field_511_e
 	f field_510_f
 	<init> (Llw;)V <init>
-		0 o p_i3618_0
+		0 o p_i6666_0
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -7309,8 +7309,8 @@ ky net/minecraft/src/Packet34EntityTeleport
 		0 o p_323_0
 kz net/minecraft/src/BlockReed
 	<init> (II)V <init>
-		0 o p_i3625_0
-		1 o p_i3625_1
+		0 o p_i6688_0
+		1 o p_i6688_1
 	a ()Z func_217_b
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
@@ -7368,8 +7368,8 @@ l net/minecraft/src/RenderHelper
 la net/minecraft/src/ItemSeeds
 	a field_318_a
 	<init> (II)V <init>
-		0 o p_i3646_0
-		1 o p_i3646_1
+		0 o p_i6725_0
+		1 o p_i6725_1
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -7381,8 +7381,8 @@ la net/minecraft/src/ItemSeeds
 lb net/minecraft/src/ItemMinecart
 	a field_317_a
 	<init> (II)V <init>
-		0 o p_i3650_0
-		1 o p_i3650_1
+		0 o p_i6743_0
+		1 o p_i6743_1
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -7407,8 +7407,8 @@ lc net/minecraft/src/Packet60Explosion
 		0 o p_323_0
 ld net/minecraft/src/BlockFluids
 	<init> (ILhb;)V <init>
-		0 o p_i3664_0
-		1 o p_i3664_1
+		0 o p_i6784_0
+		1 o p_i6784_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -7508,7 +7508,7 @@ le net/minecraft/src/GuiSelectWorld
 	h field_960_h
 	i field_959_i
 	<init> (Lbp;)V <init>
-		0 o p_i3693_0
+		0 o p_i6802_0
 	a (Lgh;)V func_572_a
 		0 o p_572_0
 	a ()V func_6448_a
@@ -7550,17 +7550,17 @@ lg net/minecraft/src/EnumMobType
 	d field_1340_d
 	<clinit> ()V <clinit>
 	<init> (Ljava/lang/String;I)V <init>
-		0 o p_i3715_0
-		1 o p_i3715_1
+		0 o p_i6838_0
+		1 o p_i6838_1
 	values ()[Llg; values
 lh net/minecraft/src/BlockContainer
 	<init> (IILhb;)V <init>
-		0 o p_i3718_0
-		1 o p_i3718_1
-		2 o p_i3718_2
+		0 o p_i6856_0
+		1 o p_i6856_1
+		2 o p_i6856_2
 	<init> (ILhb;)V <init>
-		0 o p_i3719_0
-		1 o p_i3719_1
+		0 o p_i6857_0
+		1 o p_i6857_1
 	a_ ()Lji; func_283_a_
 	b (Lcy;III)V func_214_b
 		0 o p_214_0
@@ -7584,8 +7584,8 @@ li net/minecraft/src/Packet29DestroyEntity
 		0 o p_323_0
 lj net/minecraft/src/BlockClay
 	<init> (II)V <init>
-		0 o p_i3731_0
-		1 o p_i3731_1
+		0 o p_i6898_0
+		1 o p_i6898_1
 	a (Ljava/util/Random;)I func_229_a
 		0 o p_229_0
 	a (ILjava/util/Random;)I func_240_a
@@ -7593,7 +7593,7 @@ lj net/minecraft/src/BlockClay
 		1 o p_240_1
 lk net/minecraft/src/ItemSaddle
 	<init> (I)V <init>
-		0 o p_i3735_0
+		0 o p_i6912_0
 	a (Lfp;Lhf;)V func_4021_a
 		0 o p_4021_0
 		1 o p_4021_1
@@ -7638,7 +7638,7 @@ ln net/minecraft/src/TextureFlamesFX
 	g field_1133_g
 	h field_1132_h
 	<init> (I)V <init>
-		0 o p_i3761_0
+		0 o p_i6974_0
 	a ()V func_783_a
 lo net/minecraft/src/MaterialLiquid
 	<init> ()V <init>
@@ -7671,9 +7671,9 @@ lr net/minecraft/src/LogoEffectRandomizer
 	c field_1314_c
 	d field_1313_d
 	<init> (Ldj;II)V <init>
-		0 o p_i3785_0
-		1 o p_i3785_1
-		2 o p_i3785_2
+		0 o p_i7046_0
+		1 o p_i7046_1
+		2 o p_i7046_2
 	a ()V func_875_a
 ls net/minecraft/src/FontRenderer
 	a field_1308_a
@@ -7681,9 +7681,9 @@ ls net/minecraft/src/FontRenderer
 	c field_1310_c
 	d field_1309_d
 	<init> (Lgq;Ljava/lang/String;Lfu;)V <init>
-		0 o p_i3792_0
-		1 o p_i3792_1
-		2 o p_i3792_2
+		0 o p_i7070_0
+		1 o p_i7070_1
+		2 o p_i7070_2
 	a (Ljava/lang/String;IIIZ)V func_872_a
 		0 o p_872_0
 		1 o p_872_1
@@ -7738,8 +7738,8 @@ lt net/minecraft/src/TileEntityFurnace
 lu net/minecraft/src/BlockRedstoneWire
 	a field_453_a
 	<init> (II)V <init>
-		0 o p_i3821_0
-		1 o p_i3821_1
+		0 o p_i7104_0
+		1 o p_i7104_1
 	a (Lcy;IIII)V func_226_a
 		0 o p_226_0
 		1 o p_226_1
@@ -7826,15 +7826,15 @@ lv net/minecraft/src/EntityArrow
 	h field_681_h
 	i field_680_i
 	<init> (Lcy;Lhf;)V <init>
-		0 o p_i3850_0
-		1 o p_i3850_1
+		0 o p_i7123_0
+		1 o p_i7123_1
 	<init> (Lcy;)V <init>
-		0 o p_i3851_0
+		0 o p_i7124_0
 	<init> (Lcy;DDD)V <init>
-		0 o p_i3852_0
-		1 o p_i3852_1
-		2 o p_i3852_2
-		3 o p_i3852_3
+		0 o p_i7125_0
+		1 o p_i7125_1
+		2 o p_i7125_2
+		3 o p_i7125_3
 	a (DDD)V func_6375_a
 		0 o p_6375_0
 		1 o p_6375_1
@@ -7923,7 +7923,7 @@ lw net/minecraft/src/Entity
 	e field_667_e
 	<clinit> ()V <clinit>
 	<init> (Lcy;)V <init>
-		0 o p_i3929_0
+		0 o p_i7146_0
 	A ()Ljava/lang/String; func_6376_z
 	B ()V func_391_y
 	E ()Z func_354_B
@@ -8135,8 +8135,8 @@ lz net/minecraft/src/Packet23VehicleSpawn
 m net/minecraft/src/RenderBiped
 	a field_4013_a
 	<init> (Ldc;F)V <init>
-		0 o p_i4029_0
-		1 o p_i4029_1
+		0 o p_i7216_0
+		1 o p_i7216_1
 	b (Lhf;F)V func_6331_b
 		0 o p_6331_0
 		1 o p_6331_1
@@ -8162,8 +8162,8 @@ ma net/minecraft/src/Frustrum
 mb net/minecraft/src/BlockStairs
 	a field_452_a
 	<init> (ILnq;)V <init>
-		0 o p_i4042_0
-		1 o p_i4042_1
+		0 o p_i7256_0
+		1 o p_i7256_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -8315,13 +8315,13 @@ mc net/minecraft/src/MetadataChunkBlock
 	f field_1301_f
 	g field_1300_g
 	<init> (Lch;IIIIII)V <init>
-		0 o p_i4084_0
-		1 o p_i4084_1
-		2 o p_i4084_2
-		3 o p_i4084_3
-		4 o p_i4084_4
-		5 o p_i4084_5
-		6 o p_i4084_6
+		0 o p_i7274_0
+		1 o p_i7274_1
+		2 o p_i7274_2
+		3 o p_i7274_3
+		4 o p_i7274_4
+		5 o p_i7274_5
+		6 o p_i7274_6
 	a (IIIIII)Z func_866_a
 		0 o p_866_0
 		1 o p_866_1
@@ -8342,27 +8342,27 @@ me net/minecraft/src/ChatLine
 	a field_1297_a
 	b field_1296_b
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_i4095_0
+		0 o p_i7315_0
 mf net/minecraft/src/EntitySplashFX
 	<init> (Lcy;DDDDDD)V <init>
-		0 o p_i4097_0
-		1 o p_i4097_1
-		2 o p_i4097_2
-		3 o p_i4097_3
-		4 o p_i4097_4
-		5 o p_i4097_5
-		6 o p_i4097_6
+		0 o p_i7332_0
+		1 o p_i7332_1
+		2 o p_i7332_2
+		3 o p_i7332_3
+		4 o p_i7332_4
+		5 o p_i7332_5
+		6 o p_i7332_6
 mg net/minecraft/src/ItemAxe
 	bb field_327_aX
 	<clinit> ()V <clinit>
 	<init> (II)V <init>
-		0 o p_i4101_0
-		1 o p_i4101_1
+		0 o p_i7353_0
+		1 o p_i7353_1
 mh net/minecraft/src/NBTTagDouble
 	a field_1089_a
 	<init> ()V <init>
 	<init> (D)V <init>
-		0 o p_i4105_0
+		0 o p_i7371_0
 	a (Ljava/io/DataInput;)V func_736_a
 		0 o p_736_0
 	a ()B func_733_a
@@ -8389,8 +8389,8 @@ mi net/minecraft/src/RenderMinecart
 mj net/minecraft/src/BlockFurnace
 	a field_456_a
 	<init> (IZ)V <init>
-		0 o p_i4117_0
-		1 o p_i4117_1
+		0 o p_i7408_0
+		1 o p_i7408_1
 	a (ZLcy;III)V func_285_a
 		0 o p_285_0
 		1 o p_285_1
@@ -8622,10 +8622,10 @@ mp net/minecraft/src/EntityClientPlayerMP
 	by field_9380_bx
 	bz field_9379_by
 	<init> (Lnet/minecraft/client/Minecraft;Lcy;Lea;Lib;)V <init>
-		0 o p_i4235_0
-		1 o p_i4235_1
-		2 o p_i4235_2
-		3 o p_i4235_3
+		0 o p_i7523_0
+		1 o p_i7523_1
+		2 o p_i7523_2
+		3 o p_i7523_3
 	P ()V func_4056_N
 	Q ()V func_9375_Q
 	a (Ljava/lang/String;)V func_461_a
@@ -8648,14 +8648,14 @@ mq net/minecraft/src/ThreadDownloadImage
 	b field_1215_b
 	c field_1217_c
 	<init> (Lcl;Ljava/lang/String;Lie;)V <init>
-		0 o p_i4251_0
-		1 o p_i4251_1
-		2 o p_i4251_2
+		0 o p_i7541_0
+		1 o p_i7541_1
+		2 o p_i7541_2
 	run ()V run
 mr net/minecraft/src/BlockMushroom
 	<init> (II)V <init>
-		0 o p_i4254_0
-		1 o p_i4254_1
+		0 o p_i7562_0
+		1 o p_i7562_1
 	b (I)Z func_269_b
 		0 o p_269_0
 	g (Lcy;III)Z func_223_g
@@ -8672,12 +8672,12 @@ ms net/minecraft/src/WorldBlockPositionType
 	f field_1204_f
 	g field_1203_g
 	<init> (Lhv;IIIII)V <init>
-		0 o p_i4265_0
-		1 o p_i4265_1
-		2 o p_i4265_2
-		3 o p_i4265_3
-		4 o p_i4265_4
-		5 o p_i4265_5
+		0 o p_i7582_0
+		1 o p_i7582_1
+		2 o p_i7582_2
+		3 o p_i7582_3
+		4 o p_i7582_4
+		5 o p_i7582_5
 mt net/minecraft/src/Packet17AddToInventory
 	a field_497_a
 	b field_496_b
@@ -8694,8 +8694,8 @@ mu net/minecraft/src/ChunkLoader
 	a field_1200_a
 	b field_1199_b
 	<init> (Ljava/io/File;Z)V <init>
-		0 o p_i4278_0
-		1 o p_i4278_1
+		0 o p_i7618_0
+		1 o p_i7618_1
 	a (Lcy;II)Lha; func_813_a
 		0 o p_813_0
 		1 o p_813_1
@@ -8726,8 +8726,8 @@ mv net/minecraft/src/RecipesIngots
 mw net/minecraft/src/ItemRecord
 	a field_316_a
 	<init> (ILjava/lang/String;)V <init>
-		0 o p_i4293_0
-		1 o p_i4293_1
+		0 o p_i7654_0
+		1 o p_i7654_1
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -8753,14 +8753,14 @@ mx net/minecraft/src/Packet53BlockChange
 my net/minecraft/src/ThreadRunIsoClient
 	a field_1197_a
 	<init> (Lah;)V <init>
-		0 o p_i4308_0
+		0 o p_i7692_0
 	run ()V run
 mz net/minecraft/src/WorldIso
 	A field_20916_A
 	<init> (Lah;Ljava/io/File;Ljava/lang/String;)V <init>
-		0 o p_i4312_0
-		1 o p_i4312_1
-		2 o p_i4312_2
+		0 o p_i7711_0
+		1 o p_i7711_1
+		2 o p_i7711_2
 	a (Ljava/io/File;)Lbd; func_4081_a
 		0 o p_4081_0
 n net/minecraft/src/ClippingHelperImplementation
@@ -8779,13 +8779,13 @@ na net/minecraft/src/SlotArmor
 	c field_1124_c
 	d field_1123_d
 	<init> (Lne;Lex;Lhi;IIII)V <init>
-		0 o p_i4327_0
-		1 o p_i4327_1
-		2 o p_i4327_2
-		3 o p_i4327_3
-		4 o p_i4327_4
-		5 o p_i4327_5
-		6 o p_i4327_6
+		0 o p_i7749_0
+		1 o p_i7749_1
+		2 o p_i7749_2
+		3 o p_i7749_3
+		4 o p_i7749_4
+		5 o p_i7749_5
+		6 o p_i7749_6
 	a (Lfp;)Z func_4105_a
 		0 o p_4105_0
 	c ()I func_775_c
@@ -8830,13 +8830,13 @@ nc net/minecraft/src/TexturedQuad
 	b field_1194_b
 	c field_1196_c
 	<init> ([Lew;)V <init>
-		0 o p_i4343_0
+		0 o p_i7789_0
 	<init> ([Lew;IIII)V <init>
-		0 o p_i4344_0
-		1 o p_i4344_1
-		2 o p_i4344_2
-		3 o p_i4344_3
-		4 o p_i4344_4
+		0 o p_i7790_0
+		1 o p_i7790_1
+		2 o p_i7790_2
+		3 o p_i7790_3
+		4 o p_i7790_4
 	a (Lis;F)V func_808_a
 		0 o p_808_0
 		1 o p_808_1
@@ -8849,8 +8849,8 @@ ne net/minecraft/src/GuiInventory
 	l field_976_l
 	m field_975_m
 	<init> (Lhi;[Lfp;)V <init>
-		0 o p_i4354_0
-		1 o p_i4354_1
+		0 o p_i7826_0
+		1 o p_i7826_1
 	a (F)V func_589_a
 		0 o p_589_0
 	a (IIF)V func_571_a
@@ -8915,12 +8915,12 @@ net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	z field_9241_z
 	<clinit> ()V <clinit>
 	<init> (Ljava/awt/Component;Ljava/awt/Canvas;Lnet/minecraft/client/MinecraftApplet;IIZ)V <init>
-		0 o p_i4414_0
-		1 o p_i4414_1
-		2 o p_i4414_2
-		3 o p_i4414_3
-		4 o p_i4414_4
-		5 o p_i4414_5
+		0 o p_i1005_0
+		1 o p_i1005_1
+		2 o p_i1005_2
+		3 o p_i1005_3
+		4 o p_i1005_4
+		5 o p_i1005_5
 	a (Lbp;)V func_6272_a
 		0 o p_6272_0
 	a (II)V func_6249_a
@@ -9015,8 +9015,8 @@ nf net/minecraft/src/NoiseGeneratorOctaves
 	a field_1192_a
 	b field_1191_b
 	<init> (Ljava/util/Random;I)V <init>
-		0 o p_i4475_0
-		1 o p_i4475_1
+		0 o p_i7844_0
+		1 o p_i7844_1
 	a ([DDDDIIIDDD)[D func_807_a
 		0 o p_807_0
 		1 o p_807_1
@@ -9044,8 +9044,8 @@ ng net/minecraft/src/NoiseGeneratorOctaves2
 	a field_4234_a
 	b field_4233_b
 	<init> (Ljava/util/Random;I)V <init>
-		0 o p_i4482_0
-		1 o p_i4482_1
+		0 o p_i7868_0
+		1 o p_i7868_1
 	a ([DDDIIDDD)[D func_4112_a
 		0 o p_4112_0
 		1 o p_4112_1
@@ -9085,9 +9085,9 @@ ni net/minecraft/src/BlockSign
 	a field_455_a
 	b field_454_b
 	<init> (ILjava/lang/Class;Z)V <init>
-		0 o p_i4501_0
-		1 o p_i4501_1
-		2 o p_i4501_2
+		0 o p_i7905_0
+		1 o p_i7905_1
+		2 o p_i7905_2
 	a ()Z func_217_b
 	a (ILjava/util/Random;)I func_240_a
 		0 o p_240_0
@@ -9120,7 +9120,7 @@ nj net/minecraft/src/NBTTagShort
 	a field_1088_a
 	<init> ()V <init>
 	<init> (S)V <init>
-		0 o p_i4514_0
+		0 o p_i7923_0
 	a (Ljava/io/DataInput;)V func_736_a
 		0 o p_736_0
 	a ()B func_733_a
@@ -9152,7 +9152,7 @@ nl net/minecraft/src/GuiIngame
 	j field_9419_j
 	<clinit> ()V <clinit>
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
-		0 o p_i4542_0
+		0 o p_i7959_0
 	a (Ljava/lang/String;)V func_552_a
 		0 o p_552_0
 	a (IIIF)V func_554_a
@@ -9185,8 +9185,8 @@ nm net/minecraft/src/GuiControls
 	i field_956_i
 	j field_955_j
 	<init> (Lbp;Lgq;)V <init>
-		0 o p_i4556_0
-		1 o p_i4556_1
+		0 o p_i7981_0
+		1 o p_i7981_1
 	a (CI)V func_580_a
 		0 o p_580_0
 		1 o p_580_1
@@ -9224,7 +9224,7 @@ no net/minecraft/src/Teleporter
 		1 o p_4108_1
 np net/minecraft/src/MinecraftException
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_i4578_0
+		0 o p_i8035_0
 nq net/minecraft/src/Block
 	A field_401_B
 	B field_399_C
@@ -9349,12 +9349,12 @@ nq net/minecraft/src/Block
 	z field_403_A
 	<clinit> ()V <clinit>
 	<init> (ILhb;)V <init>
-		0 o p_i4702_0
-		1 o p_i4702_1
+		0 o p_i8055_0
+		1 o p_i8055_1
 	<init> (IILhb;)V <init>
-		0 o p_i4703_0
-		1 o p_i4703_1
-		2 o p_i4703_2
+		0 o p_i8056_0
+		1 o p_i8056_1
+		2 o p_i8056_2
 	a (Lbi;)Lnq; func_4024_a
 		0 o p_4024_0
 	a (Lcy;IIILjava/util/Random;)V func_208_a
@@ -9586,7 +9586,7 @@ nr net/minecraft/src/ChunkProviderClient
 	c field_889_c
 	d field_888_d
 	<init> (Lcy;)V <init>
-		0 o p_i4765_0
+		0 o p_i8077_0
 	a (ZLpu;)Z func_535_a
 		0 o p_535_0
 		1 o p_535_1
@@ -9614,7 +9614,7 @@ ns net/minecraft/src/EntitySlime
 	c field_770_c
 	d field_769_d
 	<init> (Lcy;)V <init>
-		0 o p_i4779_0
+		0 o p_i8092_0
 	J ()V func_395_F
 	a (Liq;)V func_352_a
 		0 o p_352_0
@@ -9633,7 +9633,7 @@ ns net/minecraft/src/EntitySlime
 	h ()F func_6393_h
 nt net/minecraft/src/EntityZombie
 	<init> (Lcy;)V <init>
-		0 o p_i4793_0
+		0 o p_i8113_0
 	d ()Ljava/lang/String; func_6389_d
 	f ()Ljava/lang/String; func_6390_f
 	f_ ()Ljava/lang/String; func_6394_f_
@@ -9641,8 +9641,8 @@ nt net/minecraft/src/EntityZombie
 	k ()V func_425_j
 nu net/minecraft/src/RenderCow
 	<init> (Lgm;F)V <init>
-		0 o p_i4800_0
-		1 o p_i4800_1
+		0 o p_i8129_0
+		1 o p_i8129_1
 	a (Lhf;DDDFF)V func_171_a
 		0 o p_171_0
 		1 o p_171_1
@@ -9666,7 +9666,7 @@ nu net/minecraft/src/RenderCow
 		5 o p_177_5
 nv net/minecraft/src/ItemSign
 	<init> (I)V <init>
-		0 o p_i4805_0
+		0 o p_i8148_0
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -9677,7 +9677,7 @@ nv net/minecraft/src/ItemSign
 		6 o p_192_6
 nw net/minecraft/src/ItemBoat
 	<init> (I)V <init>
-		0 o p_i4808_0
+		0 o p_i8169_0
 	a (Lfp;Lcy;Leb;)Lfp; func_193_a
 		0 o p_193_0
 		1 o p_193_1
@@ -9691,16 +9691,16 @@ nx net/minecraft/src/MovingObjectPosition
 	f field_1169_f
 	g field_1168_g
 	<init> (Llw;)V <init>
-		0 o p_i4818_0
+		0 o p_i8191_0
 	<init> (IIIILao;)V <init>
-		0 o p_i4819_0
-		1 o p_i4819_1
-		2 o p_i4819_2
-		3 o p_i4819_3
-		4 o p_i4819_4
+		0 o p_i8192_0
+		1 o p_i8192_1
+		2 o p_i8192_2
+		3 o p_i8192_3
+		4 o p_i8192_4
 ny net/minecraft/src/BlockLog
 	<init> (I)V <init>
-		0 o p_i4821_0
+		0 o p_i8209_0
 	a (I)I func_218_a
 		0 o p_218_0
 	a (Ljava/util/Random;)I func_229_a
@@ -9710,9 +9710,9 @@ ny net/minecraft/src/BlockLog
 		1 o p_240_1
 nz net/minecraft/src/Packet12PlayerLook
 	<init> (FFZ)V <init>
-		0 o p_i4826_0
-		1 o p_i4826_1
-		2 o p_i4826_2
+		0 o p_i8228_0
+		1 o p_i8228_1
+		2 o p_i8228_2
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -9727,7 +9727,7 @@ o net/minecraft/src/RecipesArmor
 		0 o p_1148_0
 oa net/minecraft/src/BlockFarmland
 	<init> (I)V <init>
-		0 o p_i4837_0
+		0 o p_i8265_0
 	a ()Z func_217_b
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
@@ -9771,8 +9771,8 @@ oa net/minecraft/src/BlockFarmland
 		3 o p_274_3
 ob net/minecraft/src/BlockTorch
 	<init> (II)V <init>
-		0 o p_i4849_0
-		1 o p_i4849_1
+		0 o p_i8284_0
+		1 o p_i8284_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -9836,11 +9836,11 @@ oc net/minecraft/src/MinecartTrackLogic
 	f field_1162_f
 	g field_1161_g
 	<init> (Ljn;Lcy;III)V <init>
-		0 o p_i4870_0
-		1 o p_i4870_1
-		2 o p_i4870_2
-		3 o p_i4870_3
-		4 o p_i4870_4
+		0 o p_i8301_0
+		1 o p_i8301_1
+		2 o p_i8301_2
+		3 o p_i8301_3
+		4 o p_i8301_4
 	a (Loc;)I func_791_a
 		0 o p_791_0
 	a (Z)V func_792_a
@@ -9874,7 +9874,7 @@ od net/minecraft/src/TexturePackCustom
 	g field_6494_g
 	h field_6493_h
 	<init> (Ljava/io/File;)V <init>
-		0 o p_i4888_0
+		0 o p_i8324_0
 	a (Ljava/lang/String;)Ljava/io/InputStream; func_6481_a
 		0 o p_6481_0
 	a (Lnet/minecraft/client/Minecraft;)V func_6485_a
@@ -9900,11 +9900,11 @@ of net/minecraft/src/SlotInventory
 	e field_1121_e
 	f field_1120_f
 	<init> (Lex;Lhi;III)V <init>
-		0 o p_i4908_0
-		1 o p_i4908_1
-		2 o p_i4908_2
-		3 o p_i4908_3
-		4 o p_i4908_4
+		0 o p_i8357_0
+		1 o p_i8357_1
+		2 o p_i8357_2
+		3 o p_i8357_3
+		4 o p_i8357_4
 	a (II)Z func_781_a
 		0 o p_781_0
 		1 o p_781_1
@@ -9912,9 +9912,9 @@ og net/minecraft/src/GuiConnecting
 	a field_952_a
 	h field_953_h
 	<init> (Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V <init>
-		0 o p_i4913_0
-		1 o p_i4913_1
-		2 o p_i4913_2
+		0 o p_i8378_0
+		1 o p_i8378_1
+		2 o p_i8378_2
 	a (Log;Lib;)Lib; func_582_a
 		0 o p_582_0
 		1 o p_582_1
@@ -9938,12 +9938,12 @@ oh net/minecraft/src/GuiSlider
 	j field_943_j
 	l field_942_l
 	<init> (IIIILjava/lang/String;F)V <init>
-		0 o p_i4926_0
-		1 o p_i4926_1
-		2 o p_i4926_2
-		3 o p_i4926_3
-		4 o p_i4926_4
-		5 o p_i4926_5
+		0 o p_i8396_0
+		1 o p_i8396_1
+		2 o p_i8396_2
+		3 o p_i8396_3
+		4 o p_i8396_4
+		5 o p_i8396_5
 	a (II)V func_559_a
 		0 o p_559_0
 		1 o p_559_1
@@ -9964,7 +9964,7 @@ oi net/minecraft/src/MouseHelper
 	d field_1116_d
 	e field_1115_e
 	<init> (Ljava/awt/Component;)V <init>
-		0 o p_i4937_0
+		0 o p_i8415_0
 	a ()V func_774_a
 	b ()V func_773_b
 	c ()V func_772_c
@@ -9977,14 +9977,14 @@ oj net/minecraft/src/ItemArmor
 	bf field_314_bb
 	<clinit> ()V <clinit>
 	<init> (IIII)V <init>
-		0 o p_i4949_0
-		1 o p_i4949_1
-		2 o p_i4949_2
-		3 o p_i4949_3
+		0 o p_i8435_0
+		1 o p_i8435_1
+		2 o p_i8435_2
+		3 o p_i8435_3
 ok net/minecraft/src/BlockFlower
 	<init> (II)V <init>
-		0 o p_i4951_0
-		1 o p_i4951_1
+		0 o p_i8456_0
+		1 o p_i8456_1
 	a ()Z func_217_b
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
@@ -10026,8 +10026,8 @@ ol net/minecraft/src/ItemSpade
 	bb field_326_aX
 	<clinit> ()V <clinit>
 	<init> (II)V <init>
-		0 o p_i4965_0
-		1 o p_i4965_1
+		0 o p_i8474_0
+		1 o p_i8474_1
 	a (Lnq;)Z func_4018_a
 		0 o p_4018_0
 om net/minecraft/src/WorldProviderHell
@@ -10052,18 +10052,18 @@ on net/minecraft/src/ChunkPosition
 	b field_1110_b
 	c field_1112_c
 	<init> (III)V <init>
-		0 o p_i4981_0
-		1 o p_i4981_1
-		2 o p_i4981_2
+		0 o p_i8509_0
+		1 o p_i8509_1
+		2 o p_i8509_2
 	equals (Ljava/lang/Object;)Z equals
 		0 o p_equals_0
 	hashCode ()I hashCode
 oo net/minecraft/src/NibbleArray
 	a field_1109_a
 	<init> ([B)V <init>
-		0 o p_i4986_0
+		0 o p_i8532_0
 	<init> (I)V <init>
-		0 o p_i4987_0
+		0 o p_i8533_0
 	a (IIII)V func_770_a
 		0 o p_770_0
 		1 o p_770_1
@@ -10077,7 +10077,7 @@ oo net/minecraft/src/NibbleArray
 op net/minecraft/src/EntityPig
 	a field_759_a
 	<init> (Lcy;)V <init>
-		0 o p_i4993_0
+		0 o p_i8550_0
 	a (Leb;)Z func_353_a
 		0 o p_353_0
 	a (Liq;)V func_352_a
@@ -10109,10 +10109,10 @@ or net/minecraft/src/HashEntry
 	c field_1108_c
 	d field_1107_d
 	<init> (IILjava/lang/Object;Lor;)V <init>
-		0 o p_i5016_0
-		1 o p_i5016_1
-		2 o p_i5016_2
-		3 o p_i5016_3
+		0 o p_i8590_0
+		1 o p_i8590_1
+		2 o p_i8590_2
+		3 o p_i8590_3
 	a ()I func_768_a
 	b ()Ljava/lang/Object; func_767_b
 	equals (Ljava/lang/Object;)Z equals
@@ -10121,7 +10121,7 @@ or net/minecraft/src/HashEntry
 	toString ()Ljava/lang/String; toString
 os net/minecraft/src/BlockGrass
 	<init> (I)V <init>
-		0 o p_i5023_0
+		0 o p_i8609_0
 	a (Lpk;IIII)I func_211_a
 		0 o p_211_0
 		1 o p_211_1
@@ -10144,7 +10144,7 @@ os net/minecraft/src/BlockGrass
 		3 o p_207_3
 ot net/minecraft/src/EntityFlying
 	<init> (Lcy;)V <init>
-		0 o p_i5029_0
+		0 o p_i8628_0
 	D ()Z func_429_A
 	b (FF)V func_435_b
 		0 o p_435_0
@@ -10160,7 +10160,7 @@ ou net/minecraft/src/EntityChicken
 	f field_755_h
 	i field_754_i
 	<init> (Lcy;)V <init>
-		0 o p_i5041_0
+		0 o p_i8647_0
 	a (Liq;)V func_352_a
 		0 o p_352_0
 	b (Liq;)V func_357_b
@@ -10189,7 +10189,7 @@ ov net/minecraft/src/Packet52MultiBlockChange
 		0 o p_323_0
 ow net/minecraft/src/CanvasCrashReport
 	<init> (I)V <init>
-		0 o p_i5063_0
+		0 o p_i8683_0
 ox net/minecraft/src/WorldGenPumpkin
 	<init> ()V <init>
 	a (Lcy;Ljava/util/Random;III)Z func_516_a
@@ -10204,10 +10204,10 @@ oy net/minecraft/src/ThreadConnectToServer
 	c field_1104_c
 	d field_1103_d
 	<init> (Log;Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V <init>
-		0 o p_i5072_0
-		1 o p_i5072_1
-		2 o p_i5072_2
-		3 o p_i5072_3
+		0 o p_i8720_0
+		1 o p_i8720_1
+		2 o p_i8720_2
+		3 o p_i8720_3
 	run ()V run
 oz net/minecraft/src/WorldProvider
 	a field_4216_a
@@ -10245,8 +10245,8 @@ p net/minecraft/src/Packet5PlayerInventory
 	a field_571_a
 	b field_570_b
 	<init> (I[Lfp;)V <init>
-		0 o p_i5098_0
-		1 o p_i5098_1
+		0 o p_i8759_0
+		1 o p_i8759_1
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -10264,7 +10264,7 @@ pa net/minecraft/src/RecipesWeapons
 pb net/minecraft/src/NBTTagString
 	a field_1098_a
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_i5111_0
+		0 o p_i8797_0
 	<init> ()V <init>
 	a (Ljava/io/DataInput;)V func_736_a
 		0 o p_736_0
@@ -10274,10 +10274,10 @@ pb net/minecraft/src/NBTTagString
 	toString ()Ljava/lang/String; toString
 pc net/minecraft/src/EntityRainFX
 	<init> (Lcy;DDD)V <init>
-		0 o p_i5118_0
-		1 o p_i5118_1
-		2 o p_i5118_2
-		3 o p_i5118_3
+		0 o p_i8812_0
+		1 o p_i8812_1
+		2 o p_i8812_2
+		3 o p_i8812_3
 	a (Lis;FFFFFF)V func_406_a
 		0 o p_406_0
 		1 o p_406_1
@@ -10289,7 +10289,7 @@ pc net/minecraft/src/EntityRainFX
 	e_ ()V func_370_e_
 pd net/minecraft/src/BlockSponge
 	<init> (I)V <init>
-		0 o p_i5122_0
+		0 o p_i8833_0
 	b (Lcy;III)V func_214_b
 		0 o p_214_0
 		1 o p_214_1
@@ -10303,13 +10303,13 @@ pd net/minecraft/src/BlockSponge
 pe net/minecraft/src/NetworkMasterThread
 	a field_1086_a
 	<init> (Ljq;)V <init>
-		0 o p_i5127_0
+		0 o p_i8856_0
 	run ()V run
 pf net/minecraft/src/NetworkReaderThread
 	a field_1085_a
 	<init> (Ljq;Ljava/lang/String;)V <init>
-		0 o p_i5131_0
-		1 o p_i5131_1
+		0 o p_i8869_0
+		1 o p_i8869_1
 	run ()V run
 pg net/minecraft/src/PlayerControllerMP
 	c field_9445_c
@@ -10323,8 +10323,8 @@ pg net/minecraft/src/PlayerControllerMP
 	k field_9438_k
 	l field_1075_l
 	<init> (Lnet/minecraft/client/Minecraft;Lib;)V <init>
-		0 o p_i5144_0
-		1 o p_i5144_1
+		0 o p_i8892_0
+		1 o p_i8892_1
 	a (F)V func_6467_a
 		0 o p_6467_0
 	a (Lcy;)V func_717_a
@@ -10373,22 +10373,22 @@ pg net/minecraft/src/PlayerControllerMP
 ph net/minecraft/src/NetworkWriterThread
 	a field_1063_a
 	<init> (Ljq;Ljava/lang/String;)V <init>
-		0 o p_i5162_0
-		1 o p_i5162_1
+		0 o p_i8908_0
+		1 o p_i8908_1
 	run ()V run
 pi net/minecraft/src/EntitySmokeFX
 	a field_671_a
 	<init> (Lcy;DDDF)V <init>
-		0 o p_i5166_0
-		1 o p_i5166_1
-		2 o p_i5166_2
-		3 o p_i5166_3
-		4 o p_i5166_4
+		0 o p_i8928_0
+		1 o p_i8928_1
+		2 o p_i8928_2
+		3 o p_i8928_3
+		4 o p_i8928_4
 	<init> (Lcy;DDD)V <init>
-		0 o p_i5167_0
-		1 o p_i5167_1
-		2 o p_i5167_2
-		3 o p_i5167_3
+		0 o p_i8929_0
+		1 o p_i8929_1
+		2 o p_i8929_2
+		3 o p_i8929_3
 	a (Lis;FFFFFF)V func_406_a
 		0 o p_406_0
 		1 o p_406_1
@@ -10401,7 +10401,7 @@ pi net/minecraft/src/EntitySmokeFX
 pj net/minecraft/src/WorldGenLiquids
 	a field_4157_a
 	<init> (I)V <init>
-		0 o p_i5172_0
+		0 o p_i8948_0
 	a (Lcy;Ljava/util/Random;III)Z func_516_a
 		0 o p_516_0
 		1 o p_516_1
@@ -10436,8 +10436,8 @@ pk net/minecraft/src/IBlockAccess
 		2 o p_601_2
 pl net/minecraft/src/BlockLever
 	<init> (II)V <init>
-		0 o p_i5183_0
-		1 o p_i5183_1
+		0 o p_i8983_0
+		1 o p_i8983_1
 	a (Lcy;IIII)V func_226_a
 		0 o p_226_0
 		1 o p_226_1
@@ -10522,10 +10522,10 @@ pn net/minecraft/src/RedstoneUpdateInfo
 	c field_1011_c
 	d field_1010_d
 	<init> (IIIJ)V <init>
-		0 o p_i5208_0
-		1 o p_i5208_1
-		2 o p_i5208_2
-		3 o p_i5208_3
+		0 o p_i9024_0
+		1 o p_i9024_1
+		2 o p_i9024_2
+		3 o p_i9024_3
 po net/minecraft/src/WorldChunkManager
 	a field_4198_a
 	b field_4197_b
@@ -10535,7 +10535,7 @@ po net/minecraft/src/WorldChunkManager
 	f field_4193_f
 	g field_4192_g
 	<init> (Lcy;)V <init>
-		0 o p_i5217_0
+		0 o p_i9043_0
 	<init> ()V <init>
 	a ([DIIII)[D func_4071_a
 		0 o p_4071_0
@@ -10577,13 +10577,13 @@ pp net/minecraft/src/EntityFX
 	m field_659_m
 	n field_658_n
 	<init> (Lcy;DDDDDD)V <init>
-		0 o p_i5239_0
-		1 o p_i5239_1
-		2 o p_i5239_2
-		3 o p_i5239_3
-		4 o p_i5239_4
-		5 o p_i5239_5
-		6 o p_i5239_6
+		0 o p_i9064_0
+		1 o p_i9064_1
+		2 o p_i9064_2
+		3 o p_i9064_3
+		4 o p_i9064_4
+		5 o p_i9064_5
+		6 o p_i9064_6
 	a (Liq;)V func_352_a
 		0 o p_352_0
 	a (Lis;FFFFFF)V func_406_a
@@ -10606,9 +10606,9 @@ pq net/minecraft/src/MinecraftError
 	<init> ()V <init>
 pr net/minecraft/src/RenderSheep
 	<init> (Lgm;Lgm;F)V <init>
-		0 o p_i5250_0
-		1 o p_i5250_1
-		2 o p_i5250_2
+		0 o p_i9101_0
+		1 o p_i9101_1
+		2 o p_i9101_2
 	a (Lbx;I)Z func_176_a
 		0 o p_176_0
 		1 o p_176_1
@@ -10624,8 +10624,8 @@ ps net/minecraft/src/EntityOtherPlayerMP
 	c field_784_bh
 	d field_783_bi
 	<init> (Lcy;Ljava/lang/String;)V <init>
-		0 o p_i5261_0
-		1 o p_i5261_1
+		0 o p_i9119_0
+		1 o p_i9119_1
 	a (Llw;I)Z func_396_a
 		0 o p_396_0
 		1 o p_396_1
@@ -10646,7 +10646,7 @@ pt net/minecraft/src/EntityPigZombie
 	c field_4118_c
 	<clinit> ()V <clinit>
 	<init> (Lcy;)V <init>
-		0 o p_i5273_0
+		0 o p_i9140_0
 	a (Llw;I)Z func_396_a
 		0 o p_396_0
 		1 o p_396_1
@@ -10678,7 +10678,7 @@ pv net/minecraft/src/GuiEditSign
 	i field_4189_i
 	j field_1000_j
 	<init> (Lqc;)V <init>
-		0 o p_i5296_0
+		0 o p_i9176_0
 	a (CI)V func_580_a
 		0 o p_580_0
 		1 o p_580_1
@@ -10693,7 +10693,7 @@ pv net/minecraft/src/GuiEditSign
 	h ()V func_6449_h
 pw net/minecraft/src/ItemFlintAndSteel
 	<init> (I)V <init>
-		0 o p_i5304_0
+		0 o p_i9192_0
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -10727,8 +10727,8 @@ px net/minecraft/src/ChunkProviderGenerate
 	v field_4179_v
 	w field_4178_w
 	<init> (Lcy;J)V <init>
-		0 o p_i5330_0
-		1 o p_i5330_1
+		0 o p_i9213_0
+		1 o p_i9213_1
 	a (ZLpu;)Z func_535_a
 		0 o p_535_0
 		1 o p_535_1
@@ -10770,10 +10770,10 @@ py net/minecraft/src/Packet59ComplexEntity
 	d field_476_d
 	e field_475_e
 	<init> (IIILji;)V <init>
-		0 o p_i5346_0
-		1 o p_i5346_1
-		2 o p_i5346_2
-		3 o p_i5346_3
+		0 o p_i9233_0
+		1 o p_i9233_1
+		2 o p_i9233_2
+		3 o p_i9233_3
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -10785,9 +10785,9 @@ py net/minecraft/src/Packet59ComplexEntity
 pz net/minecraft/src/RenderZombieSimple
 	a field_204_f
 	<init> (Lgm;FF)V <init>
-		0 o p_i5354_0
-		1 o p_i5354_1
-		2 o p_i5354_2
+		0 o p_i9255_0
+		1 o p_i9255_1
+		2 o p_i9255_2
 	a (Lhf;F)V func_6330_a
 		0 o p_6330_0
 		1 o p_6330_1
@@ -10798,7 +10798,7 @@ q net/minecraft/src/CraftingInventoryPlayerCB
 	a field_1620_a
 	b field_1619_b
 	<init> ([Lfp;)V <init>
-		0 o p_i5360_0
+		0 o p_i9268_0
 	a (Lhi;)V func_1103_a
 		0 o p_1103_0
 	a (Leb;)V func_1104_a
@@ -10813,8 +10813,8 @@ qa net/minecraft/src/WorldGenTrees
 		4 o p_516_4
 qb net/minecraft/src/BlockNetherrack
 	<init> (II)V <init>
-		0 o p_i5367_0
-		1 o p_i5367_1
+		0 o p_i9310_0
+		1 o p_i9310_1
 qc net/minecraft/src/TileEntitySign
 	a field_826_a
 	b field_825_b
@@ -10845,13 +10845,13 @@ qd net/minecraft/src/EntityMinecart
 	s field_9407_s
 	<clinit> ()V <clinit>
 	<init> (Lcy;)V <init>
-		0 o p_i5395_0
+		0 o p_i9351_0
 	<init> (Lcy;DDDI)V <init>
-		0 o p_i5396_0
-		1 o p_i5396_1
-		2 o p_i5396_2
-		3 o p_i5396_3
-		4 o p_i5396_4
+		0 o p_i9352_0
+		1 o p_i9352_1
+		2 o p_i9352_2
+		3 o p_i9352_3
+		4 o p_i9352_4
 	J ()V func_395_F
 	a (Liq;)V func_352_a
 		0 o p_352_0
@@ -10907,7 +10907,7 @@ qd net/minecraft/src/EntityMinecart
 	o_ ()I func_470_e
 qe net/minecraft/src/ItemPainting
 	<init> (I)V <init>
-		0 o p_i5423_0
+		0 o p_i9366_0
 	a (Lfp;Leb;Lcy;IIII)Z func_192_a
 		0 o p_192_0
 		1 o p_192_1
@@ -10975,8 +10975,8 @@ qh net/minecraft/src/BlockFire
 	a field_449_a
 	b field_448_b
 	<init> (II)V <init>
-		0 o p_i5455_0
-		1 o p_i5455_1
+		0 o p_i9426_0
+		1 o p_i9426_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -11052,7 +11052,7 @@ qh net/minecraft/src/BlockFire
 qi net/minecraft/src/Packet255KickDisconnect
 	a field_582_a
 	<init> (Ljava/lang/String;)V <init>
-		0 o p_i5476_0
+		0 o p_i9442_0
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -11064,8 +11064,8 @@ qi net/minecraft/src/Packet255KickDisconnect
 qj net/minecraft/src/BlockStep
 	a field_469_a
 	<init> (IZ)V <init>
-		0 o p_i5484_0
-		1 o p_i5484_1
+		0 o p_i9464_0
+		1 o p_i9464_1
 	a ()Z func_217_b
 	a (I)I func_218_a
 		0 o p_218_0
@@ -11093,8 +11093,8 @@ qj net/minecraft/src/BlockStep
 qk net/minecraft/src/ItemFood
 	a field_332_a
 	<init> (II)V <init>
-		0 o p_i5494_0
-		1 o p_i5494_1
+		0 o p_i9478_0
+		1 o p_i9478_1
 	a (Lfp;Lcy;Leb;)Lfp; func_193_a
 		0 o p_193_0
 		1 o p_193_1
@@ -11115,21 +11115,21 @@ qm net/minecraft/src/ChunkCoordIntPair
 	a field_189_a
 	b field_188_b
 	<init> (II)V <init>
-		0 o p_i5505_0
-		1 o p_i5505_1
+		0 o p_i9516_0
+		1 o p_i9516_1
 	equals (Ljava/lang/Object;)Z equals
 		0 o p_equals_0
 	hashCode ()I hashCode
 r net/minecraft/src/GuiSmallButton
 	<init> (IIILjava/lang/String;)V <init>
-		0 o p_i5509_0
-		1 o p_i5509_1
-		2 o p_i5509_2
-		3 o p_i5509_3
+		0 o p_i9535_0
+		1 o p_i9535_1
+		2 o p_i9535_2
+		3 o p_i9535_3
 s net/minecraft/src/BlockSnowBlock
 	<init> (II)V <init>
-		0 o p_i5511_0
-		1 o p_i5511_1
+		0 o p_i9554_0
+		1 o p_i9554_1
 	a (Lcy;IIILjava/util/Random;)V func_208_a
 		0 o p_208_0
 		1 o p_208_1
@@ -11143,11 +11143,11 @@ s net/minecraft/src/BlockSnowBlock
 		1 o p_240_1
 t net/minecraft/src/Packet11PlayerPosition
 	<init> (DDDDZ)V <init>
-		0 o p_i5516_0
-		1 o p_i5516_1
-		2 o p_i5516_2
-		3 o p_i5516_3
-		4 o p_i5516_4
+		0 o p_i9578_0
+		1 o p_i9578_1
+		2 o p_i9578_2
+		3 o p_i9578_3
+		4 o p_i9578_4
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V func_322_a
 		0 o p_322_0
@@ -11171,8 +11171,8 @@ u net/minecraft/src/TileEntityMobSpawnerRenderer
 		4 o p_931_4
 v net/minecraft/src/BlockTNT
 	<init> (II)V <init>
-		0 o p_i5527_0
-		1 o p_i5527_1
+		0 o p_i9613_0
+		1 o p_i9613_1
 	a (I)I func_218_a
 		0 o p_218_0
 	a (Ljava/util/Random;)I func_229_a
@@ -11196,14 +11196,14 @@ v net/minecraft/src/BlockTNT
 		3 o p_4027_3
 w net/minecraft/src/StepSoundSand
 	<init> (Ljava/lang/String;FF)V <init>
-		0 o p_i5534_0
-		1 o p_i5534_1
-		2 o p_i5534_2
+		0 o p_i9633_0
+		1 o p_i9633_1
+		2 o p_i9633_2
 	a ()Ljava/lang/String; func_1146_a
 x net/minecraft/src/BlockPortal
 	<init> (II)V <init>
-		0 o p_i5537_0
-		1 o p_i5537_1
+		0 o p_i9653_0
+		1 o p_i9653_1
 	a ()Z func_217_b
 	a (Lcy;IIILlw;)V func_236_b
 		0 o p_236_0
@@ -11250,9 +11250,9 @@ x net/minecraft/src/BlockPortal
 		3 o p_221_3
 y net/minecraft/src/StepSoundStone
 	<init> (Ljava/lang/String;FF)V <init>
-		0 o p_i5550_0
-		1 o p_i5550_1
-		2 o p_i5550_2
+		0 o p_i9668_0
+		1 o p_i9668_1
+		2 o p_i9668_2
 	a ()Ljava/lang/String; func_1146_a
 z net/minecraft/src/NoiseGeneratorPerlin
 	a field_1188_a
@@ -11261,7 +11261,7 @@ z net/minecraft/src/NoiseGeneratorPerlin
 	d field_1189_d
 	<init> ()V <init>
 	<init> (Ljava/util/Random;)V <init>
-		0 o p_i5558_0
+		0 o p_i9692_0
 	a (DDD)D func_802_a
 		0 o p_802_0
 		1 o p_802_1
