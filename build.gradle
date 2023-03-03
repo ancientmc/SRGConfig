@@ -13,17 +13,18 @@ repositories {
 }
 
 configurations {
-    retroguard
     forgeart
     jarsplitter
     installertools
     mcinject
+    quiltflower
 }
 
 dependencies {
     forgeart 'net.minecraftforge:ForgeAutoRenamingTool:0.1.24'
     jarsplitter 'net.minecraftforge:jarsplitter:1.1.4'
     installertools 'net.minecraftforge:installertools:1.3.2'
+    quiltflower 'org.quiltmc:quiltflower:1.8.0'
 }
 
 import com.ancientmc.srgconfig.tasks.*
@@ -55,27 +56,14 @@ ext {
     TSRG_JAR = "${DIR_JARS}\\${MC_VERSION}-tsrg.jar"
     INJECT_JAR = "${DIR_JARS}\\${MC_VERSION}-inject.jar"
     DECOMP_JAR = "${DIR_JARS}\\${MC_VERSION}-decomp.jar"
-    DIR_TEMP = "${DIR_JARS}\\temp\\"
     DIR_CFG = "${DIR_DATA}\\cfg"
     DIR_LOGS = "${DIR_BUILD}\\logs"
-}
 
-FileFilter gitIgnoreFilter = (File file) -> { return !file.getName().endsWith(".gitignore") }
-
-clean {
-    delete(file(RGS_FILE),
-            file(SRG_FILE),
-            file(DIR_JARS),
-            file(DIR_TEMP),
-            file(DIR_LOGS).listFiles(gitIgnoreFilter))
-}
-
-task buildSRG(type: GradleBuild) {
-    tasks = ['extractRGSFile', 'applyClassesCSV', 'convertToSRG', 'removeUnwantedLines', 'applyFieldsCSV', 'applyMethodsCSV']
-}
-
-task testSRG(type: GradleBuild) {
-    tasks = ['testDownloadJar', 'testDeobfJar', 'testUnzipJar']
+    /** WIP test stuff **/
+    DIR_TEST = "$project.projectDir\\test"
+    DIR_TEST_SRC = "${DIR_TEST}\\src\\main\\java"
+    DIR_TEST_SRC_BACKUP = "${DIR_TEST}\\src_backup\\main\\java"
+    DIR_TEST_PATCHES = "${DIR_TEST}\\patches"
 }
 
 task downloadVersionManifest(type: Download) {
@@ -228,7 +216,7 @@ task copySRGToFinal(type: Copy) {
 task mcinject(type: JavaExec, dependsOn: [downloadJar, updateExc]) {
     main = 'de.oceanlabs.mcp.mcinjector.MCInjector'
     classpath = files('data\\mcinjector.jar') // temporary
-    args('--in', BASE_JAR, '--out', INJECT_JAR, '--lvt=LVT', '--exc', "${DIR_BUILD}\\map_data\\exceptions.txt")
+    args('--in', SLIM_JAR, '--out', INJECT_JAR, '--lvt=LVT', '--exc', "${DIR_BUILD}\\map_data\\exceptions.txt")
 }
 
 // Deobfuscates the JAR using the complete TSRG file
@@ -238,3 +226,13 @@ task deobfJarMain(type: JavaExec, dependsOn: [mcinject, applyAllCsv]) {
     args('--input', INJECT_JAR, '--output', TSRG_JAR, '--map', TSRG_FILE)
 }
 
+task decompile(type: JavaExec, dependsOn: deobfJarMain) {
+    main = 'org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
+    classpath = files(project.configurations.getByName('quiltflower'))
+    args('-rbr=0', '-rsy=0', '-asc=1', '-dgs=1', '-jvn=1', '-dec=0', TSRG_JAR, DECOMP_JAR)
+}
+
+task unzip(type: Copy) {
+    from(zipTree(file(DECOMP_JAR)))
+    into(file(DIR_TEST_SRC))
+}

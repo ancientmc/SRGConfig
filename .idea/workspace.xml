@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="huge update&#10;- added some params&#10;- constructor ids are now obtained through pre-assigned class ids (parsed via a new CSV file). Assuming constructors in classes are similar between each Minecraft version, this should make it at least somewhat easier to update constructor params. Note that since all the ids are new, the progress I made previously with constructor params is null, but I've added some of them for the new ids&#10;- Base SRG file (the one extracted from a ZIP) now has package headers removed&#10;- Updated testing tasks. A custom version of MCInjector is now going to be used moving forward. This is because, during ACP runtime, injection will occur before deobfuscation; however, regular versions of MCInjector are unable to parse any class that doesn't have a &quot;net.minecraft&quot; or &quot;com.mojang&quot; package prefix (aka it only parses deobfuscated stuff). This custom version fixes that. It is already prepared and just needs to be uploaded to the Maven (Since the changes are minor, I'll just be posting a DiffPatch file to this repo, instead of giving it a separate repository).">
+    <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddConstructors.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddConstructors.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/AddParams.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/DumpConstructors.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/tasks/DumpConstructors.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/Utils.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/com/ancientmc/srgconfig/utils/Utils.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cfg/options.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/cfg/retroguard.cfg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/csv/versions/a1.2.6/params_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/params_a1.2.6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/ids_a1.2.6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/mappings/versions/a1.2.6/mappings-a1.2.6.zip" beforeDir="false" afterPath="$PROJECT_DIR$/data/mappings/versions/a1.2.6/mappings-a1.2.6.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/wip-mappings/a1.2.6.tsrg" beforeDir="false" afterPath="$PROJECT_DIR$/data/wip-mappings/a1.2.6.tsrg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,18 +99,18 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/Programs/Projects/AncientMC/SRGConfig/data",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.19885057",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programs/Projects/AncientMC/SRGConfig/data&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.19885057&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programs\Projects\AncientMC\SRGConfig\data" />
@@ -141,8 +132,8 @@
       <recent name="com.entropy.rcp.srgconfig" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SRGConfig [deobfJarMain]">
-    <configuration name="SRGConfig [applyAllCsv]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.SRGConfig [unzip]">
+    <configuration name="SRGConfig [decompile]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -153,7 +144,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="applyAllCsv" />
+            <option value="decompile" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -163,7 +154,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SRGConfig [createParamsCsv]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SRGConfig [deobfJarInterm]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -174,7 +165,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="createParamsCsv" />
+            <option value="deobfJarInterm" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,6 +187,27 @@
         <option name="taskNames">
           <list>
             <option value="deobfJarMain" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SRGConfig [downloadLibraries]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="downloadLibraries" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -251,7 +263,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SRGConfig [mcinject]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SRGConfig [unzip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -262,28 +274,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="mcinject" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SRGConfig [updateExc]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="updateExc" />
+            <option value="unzip" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -296,19 +287,19 @@
     <list>
       <item itemvalue="Gradle.SRGConfig [generate]" />
       <item itemvalue="Gradle.SRGConfig [dumpConstructors]" />
-      <item itemvalue="Gradle.SRGConfig [applyAllCsv]" />
-      <item itemvalue="Gradle.SRGConfig [createParamsCsv]" />
+      <item itemvalue="Gradle.SRGConfig [deobfJarInterm]" />
+      <item itemvalue="Gradle.SRGConfig [unzip]" />
+      <item itemvalue="Gradle.SRGConfig [decompile]" />
+      <item itemvalue="Gradle.SRGConfig [downloadLibraries]" />
       <item itemvalue="Gradle.SRGConfig [deobfJarMain]" />
-      <item itemvalue="Gradle.SRGConfig [mcinject]" />
-      <item itemvalue="Gradle.SRGConfig [updateExc]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SRGConfig [unzip]" />
+        <item itemvalue="Gradle.SRGConfig [deobfJarInterm]" />
+        <item itemvalue="Gradle.SRGConfig [decompile]" />
+        <item itemvalue="Gradle.SRGConfig [downloadLibraries]" />
         <item itemvalue="Gradle.SRGConfig [deobfJarMain]" />
-        <item itemvalue="Gradle.SRGConfig [mcinject]" />
-        <item itemvalue="Gradle.SRGConfig [updateExc]" />
-        <item itemvalue="Gradle.SRGConfig [applyAllCsv]" />
-        <item itemvalue="Gradle.SRGConfig [createParamsCsv]" />
       </list>
     </recent_temporary>
   </component>
@@ -489,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677388403758</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="huge update&#10;- added some params&#10;- constructor ids are now obtained through pre-assigned class ids (parsed via a new CSV file). Assuming constructors in classes are similar between each Minecraft version, this should make it at least somewhat easier to update constructor params. Note that since all the ids are new, the progress I made previously with constructor params is null, but I've added some of them for the new ids&#10;- Base SRG file (the one extracted from a ZIP) now has package headers removed&#10;- Updated testing tasks. See comment about MCInjector.">
+      <created>1677745758392</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1677745758392</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -528,7 +526,8 @@
     <MESSAGE value="more params" />
     <MESSAGE value="- more params&#10;- rewrote the csv application file, it's much, much faster now. I love Groovy." />
     <MESSAGE value="- first big batch of constructor params, getting those out of the way since they're mostly just field initializations&#10;- some refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="- first big batch of constructor params, getting those out of the way since they're mostly just field initializations&#10;- some refactoring" />
+    <MESSAGE value="huge update&#10;- added some params&#10;- constructor ids are now obtained through pre-assigned class ids (parsed via a new CSV file). Assuming constructors in classes are similar between each Minecraft version, this should make it at least somewhat easier to update constructor params. Note that since all the ids are new, the progress I made previously with constructor params is null, but I've added some of them for the new ids&#10;- Base SRG file (the one extracted from a ZIP) now has package headers removed&#10;- Updated testing tasks. See comment about MCInjector." />
+    <option name="LAST_COMMIT_MESSAGE" value="huge update&#10;- added some params&#10;- constructor ids are now obtained through pre-assigned class ids (parsed via a new CSV file). Assuming constructors in classes are similar between each Minecraft version, this should make it at least somewhat easier to update constructor params. Note that since all the ids are new, the progress I made previously with constructor params is null, but I've added some of them for the new ids&#10;- Base SRG file (the one extracted from a ZIP) now has package headers removed&#10;- Updated testing tasks. See comment about MCInjector." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
