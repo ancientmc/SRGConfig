@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApplyMap.java.patch" beforeDir="false" afterPath="$PROJECT_DIR$/MCInjectorImpl.java.patch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/csv/versions/a1.2.6/params_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/params_a1.2.6.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,23 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SRGConfig" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SRGConfig" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SRGConfig" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SRGConfig" type="f1a62948:ProjectNode" />
                 <item name="buildSrc" type="2d1252cf:ModuleNode" />
               </path>
               <path>
@@ -46,13 +64,6 @@
                 <item name="SRGConfig" type="f1a62948:ProjectNode" />
                 <item name="buildSrc" type="2d1252cf:ModuleNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SRGConfig" type="f1a62948:ProjectNode" />
-                <item name="buildSrc" type="2d1252cf:ModuleNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -126,7 +137,7 @@
       <recent name="com.entropy.rcp.srgconfig" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SRGConfig [mcinject]">
+  <component name="RunManager" selected="Gradle.SRGConfig [unzip]">
     <configuration name="SRGConfig [decompile]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -148,7 +159,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SRGConfig [deobfJarInterm]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SRGConfig [deobfJarMain]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -159,7 +170,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="deobfJarInterm" />
+            <option value="deobfJarMain" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -281,19 +292,19 @@
     <list>
       <item itemvalue="Gradle.SRGConfig [generate]" />
       <item itemvalue="Gradle.SRGConfig [dumpConstructors]" />
+      <item itemvalue="Gradle.SRGConfig [decompile]" />
+      <item itemvalue="Gradle.SRGConfig [deobfJarMain]" />
       <item itemvalue="Gradle.SRGConfig [dependencies]" />
       <item itemvalue="Gradle.SRGConfig [mcinject]" />
-      <item itemvalue="Gradle.SRGConfig [deobfJarInterm]" />
       <item itemvalue="Gradle.SRGConfig [unzip]" />
-      <item itemvalue="Gradle.SRGConfig [decompile]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SRGConfig [unzip]" />
+        <item itemvalue="Gradle.SRGConfig [decompile]" />
+        <item itemvalue="Gradle.SRGConfig [deobfJarMain]" />
         <item itemvalue="Gradle.SRGConfig [mcinject]" />
         <item itemvalue="Gradle.SRGConfig [dependencies]" />
-        <item itemvalue="Gradle.SRGConfig [unzip]" />
-        <item itemvalue="Gradle.SRGConfig [deobfJarInterm]" />
-        <item itemvalue="Gradle.SRGConfig [decompile]" />
       </list>
     </recent_temporary>
   </component>
