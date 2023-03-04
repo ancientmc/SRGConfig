@@ -1,0 +1,36 @@
+plugins {
+    id 'java-library'
+    id 'com.github.spotbugs' version '5.0.13'
+    id 'uk.jamierocks.propatcher' version '2.0.0'
+}
+
+sourceSets {
+    main
+}
+
+ext {
+    LIBRARIES = '{libraries}'
+    JAR_ASSETS = '{jar_assets}'
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://libraries.minecraft.net' }
+    maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven' }
+}
+
+dependencies {
+    implementation files(LIBRARIES).getAsFileTree()
+}
+
+spotbugs {
+    toolVersion = '5.0.13'
+}
+
+task testRun(type: JavaExec) {
+    main = 'acp.client.Start'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task findBugs(dependsOn: spotbugsMain) { }
+

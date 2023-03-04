@@ -54,6 +54,7 @@ ext {
     DIR_JARS = "${DIR_BUILD}\\jars"
     BASE_JAR = "${DIR_JARS}\\${MC_VERSION}.jar"
     SLIM_JAR = "${DIR_JARS}\\${MC_VERSION}-slim.jar"
+    EXTRAS_JAR = "${DIR_JAR}\\${MC_VERSION}-extra.jar"
     SRG_JAR = "${DIR_JARS}\\${MC_VERSION}-srg.jar"
     TSRG_JAR = "${DIR_JARS}\\${MC_VERSION}-tsrg.jar"
     INJECT_JAR = "${DIR_JARS}\\${MC_VERSION}-inject.jar"
@@ -237,4 +238,24 @@ task decompile(type: JavaExec, dependsOn: deobfJarMain) {
 task unzip(type: Copy) {
     from(zipTree(file(DECOMP_JAR)))
     into(file(DIR_TEST_SRC))
+}
+
+task createTestProject() {
+    doFirst {
+        copy {
+            from('templates\\acp\\client\\Start.java')
+            into('test\\src\\main\\java\\acp\\client\\')
+        }
+    }
+    def gradles = new File[] { file('templates\\build.gradle'), file('templates\\settings.gradle') }
+    gradles.each { grd ->
+        def text = grd.text
+        def dest = file('test\\' + grd.name)
+        text = text.replace('{libraries}', file(LIBRARIES).absolutePath.replace('\\', '/') + '/')
+        text = text.replace('{project_name}', 'client-' + MC_VERSION)
+        dest.withWriter('UTF-8') {
+            it.write(text)
+            it.flush()
+        }
+    }
 }
