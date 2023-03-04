@@ -253,6 +253,7 @@ task createTestProject() {
         def dest = file('test\\' + grd.name)
         text = text.replace('{libraries}', file(LIBRARIES).absolutePath.replace('\\', '/') + '/')
         text = text.replace('{project_name}', 'client-' + MC_VERSION)
+        text = text.replace('{jar_assets}', file(EXTRAS_JAR).absolutePath.replace('\\', '/'))
         dest.withWriter('UTF-8') {
             it.write(text)
             it.flush()

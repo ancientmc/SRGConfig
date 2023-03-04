@@ -21,6 +21,7 @@ repositories {
 
 dependencies {
     implementation files(LIBRARIES).getAsFileTree()
+    implementation file(JAR_ASSETS)
 }
 
 spotbugs {
