@@ -7,7 +7,6 @@
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/csv/versions/a1.2.6/params_a1.2.6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/csv/versions/a1.2.6/params_a1.2.6.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,18 +39,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SRGConfig" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SRGConfig" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SRGConfig" type="f1a62948:ProjectNode" />
                 <item name="buildSrc" type="2d1252cf:ModuleNode" />
               </path>
               <path>
@@ -59,6 +46,13 @@
                 <item name="SRGConfig" type="f1a62948:ProjectNode" />
                 <item name="buildSrc" type="2d1252cf:ModuleNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SRGConfig" type="f1a62948:ProjectNode" />
+                <item name="buildSrc" type="2d1252cf:ModuleNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -132,7 +126,7 @@
       <recent name="com.entropy.rcp.srgconfig" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SRGConfig [unzip]">
+  <component name="RunManager" selected="Gradle.SRGConfig [mcinject]">
     <configuration name="SRGConfig [decompile]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -175,7 +169,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SRGConfig [deobfJarMain]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SRGConfig [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -186,28 +180,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="deobfJarMain" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SRGConfig [downloadLibraries]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="downloadLibraries" />
+            <option value="dependencies" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -263,6 +236,27 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="SRGConfig [mcinject]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="mcinject" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="SRGConfig [unzip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -287,19 +281,19 @@
     <list>
       <item itemvalue="Gradle.SRGConfig [generate]" />
       <item itemvalue="Gradle.SRGConfig [dumpConstructors]" />
+      <item itemvalue="Gradle.SRGConfig [dependencies]" />
+      <item itemvalue="Gradle.SRGConfig [mcinject]" />
       <item itemvalue="Gradle.SRGConfig [deobfJarInterm]" />
       <item itemvalue="Gradle.SRGConfig [unzip]" />
       <item itemvalue="Gradle.SRGConfig [decompile]" />
-      <item itemvalue="Gradle.SRGConfig [downloadLibraries]" />
-      <item itemvalue="Gradle.SRGConfig [deobfJarMain]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SRGConfig [mcinject]" />
+        <item itemvalue="Gradle.SRGConfig [dependencies]" />
         <item itemvalue="Gradle.SRGConfig [unzip]" />
         <item itemvalue="Gradle.SRGConfig [deobfJarInterm]" />
         <item itemvalue="Gradle.SRGConfig [decompile]" />
-        <item itemvalue="Gradle.SRGConfig [downloadLibraries]" />
-        <item itemvalue="Gradle.SRGConfig [deobfJarMain]" />
       </list>
     </recent_temporary>
   </component>
@@ -487,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677745758392</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="- Added placeholders in csv file, mostly for testing&#10;- Added decompilation/unzipping task, added testing directory properties">
+      <created>1677803834612</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1677803834612</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -502,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed everything lol whoops" />
     <MESSAGE value="- updated some field, method, &amp; class names to fit with modern MC&#10;- added some new tasks, a clean task and a task that extracts a fresh copy of the RGS file from a ZIP archive" />
     <MESSAGE value="- Added a file to Git (my arch-enemy)&#10;- Changed some names of tasks for uniformity" />
     <MESSAGE value="- major overhauls involving the CSV files. The files have been reworked. Things should be somewhat more efficient now.&#10;- added some test tasks involving RetroGuard" />
@@ -527,7 +527,8 @@
     <MESSAGE value="- more params&#10;- rewrote the csv application file, it's much, much faster now. I love Groovy." />
     <MESSAGE value="- first big batch of constructor params, getting those out of the way since they're mostly just field initializations&#10;- some refactoring" />
     <MESSAGE value="huge update&#10;- added some params&#10;- constructor ids are now obtained through pre-assigned class ids (parsed via a new CSV file). Assuming constructors in classes are similar between each Minecraft version, this should make it at least somewhat easier to update constructor params. Note that since all the ids are new, the progress I made previously with constructor params is null, but I've added some of them for the new ids&#10;- Base SRG file (the one extracted from a ZIP) now has package headers removed&#10;- Updated testing tasks. See comment about MCInjector." />
-    <option name="LAST_COMMIT_MESSAGE" value="huge update&#10;- added some params&#10;- constructor ids are now obtained through pre-assigned class ids (parsed via a new CSV file). Assuming constructors in classes are similar between each Minecraft version, this should make it at least somewhat easier to update constructor params. Note that since all the ids are new, the progress I made previously with constructor params is null, but I've added some of them for the new ids&#10;- Base SRG file (the one extracted from a ZIP) now has package headers removed&#10;- Updated testing tasks. See comment about MCInjector." />
+    <MESSAGE value="- Added placeholders in csv file, mostly for testing&#10;- Added decompilation/unzipping task, added testing directory properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added placeholders in csv file, mostly for testing&#10;- Added decompilation/unzipping task, added testing directory properties" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

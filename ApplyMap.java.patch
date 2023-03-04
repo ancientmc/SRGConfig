@@ -1,0 +1,19 @@
+Index: src/main/java/de/oceanlabs/mcp/mcinjector/MCInjectorImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/de/oceanlabs/mcp/mcinjector/MCInjectorImpl.java b/src/main/java/de/oceanlabs/mcp/mcinjector/MCInjectorImpl.java
+--- a/src/main/java/de/oceanlabs/mcp/mcinjector/MCInjectorImpl.java	
++++ b/src/main/java/de/oceanlabs/mcp/mcinjector/MCInjectorImpl.java	(date 1677892573408)
+@@ -113,9 +113,7 @@
+ 
+                     byte[] entryData = entryBuffer.toByteArray();
+ 
+-                    boolean mojang = entryName.startsWith("net/minecraft/") || entryName.startsWith("com/mojang/");
+-
+-                    if (entryName.endsWith(".class") && mojang) //TODO: Remove this hardcoding? SRG input? process all?
++                    if (entryName.endsWith(".class")) // Process all class files regardless of packaging, anything unwanted will get removed via JarSplitter
+                     {
+                         MCInjector.LOG.log(Level.INFO, "Processing " + entryName);
+ 
