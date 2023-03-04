@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a332fa8-7f59-4032-a658-857084a4c8be" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -509,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677967627578</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Add creation task and templates for project task. Very much inspired by MCPConfig, which uses a similar idea.">
+      <created>1677972461762</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1677972461762</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -524,7 +526,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- Added a file to Git (my arch-enemy)&#10;- Changed some names of tasks for uniformity" />
     <MESSAGE value="- major overhauls involving the CSV files. The files have been reworked. Things should be somewhat more efficient now.&#10;- added some test tasks involving RetroGuard" />
     <MESSAGE value="- added task that removes unneeded field/method lines from the SRG file (paulscode and jcraft methods/fields)&#10;- fixed mistake involving retroguard config files getting deleted by clean task&#10;- added &quot;final&quot; folder that shows a copy of the outputted mappings generated from SRGConfig." />
     <MESSAGE value="- changed some class names&#10;- updated remove unused lines task" />
@@ -549,7 +550,8 @@
     <MESSAGE value="huge update&#10;- added some params&#10;- constructor ids are now obtained through pre-assigned class ids (parsed via a new CSV file). Assuming constructors in classes are similar between each Minecraft version, this should make it at least somewhat easier to update constructor params. Note that since all the ids are new, the progress I made previously with constructor params is null, but I've added some of them for the new ids&#10;- Base SRG file (the one extracted from a ZIP) now has package headers removed&#10;- Updated testing tasks. See comment about MCInjector." />
     <MESSAGE value="- Added placeholders in csv file, mostly for testing&#10;- Added decompilation/unzipping task, added testing directory properties" />
     <MESSAGE value="- rename patch file to correct class&#10;- more params" />
-    <option name="LAST_COMMIT_MESSAGE" value="- rename patch file to correct class&#10;- more params" />
+    <MESSAGE value="Add creation task and templates for project task. Very much inspired by MCPConfig, which uses a similar idea." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add creation task and templates for project task. Very much inspired by MCPConfig, which uses a similar idea." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

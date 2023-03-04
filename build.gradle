@@ -54,7 +54,7 @@ ext {
     DIR_JARS = "${DIR_BUILD}\\jars"
     BASE_JAR = "${DIR_JARS}\\${MC_VERSION}.jar"
     SLIM_JAR = "${DIR_JARS}\\${MC_VERSION}-slim.jar"
-    EXTRAS_JAR = "${DIR_JAR}\\${MC_VERSION}-extra.jar"
+    EXTRAS_JAR = "${DIR_JARS}\\${MC_VERSION}-extra.jar"
     SRG_JAR = "${DIR_JARS}\\${MC_VERSION}-srg.jar"
     TSRG_JAR = "${DIR_JARS}\\${MC_VERSION}-tsrg.jar"
     INJECT_JAR = "${DIR_JARS}\\${MC_VERSION}-inject.jar"
