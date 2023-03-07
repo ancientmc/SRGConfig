@@ -36,6 +36,7 @@ class DownloadAssets extends DefaultTask {
             def url = 'https://resources.download.minecraft.net/' + path
             def file = new File(resources, asset.key.toString())
             if(!file.exists()) file.parentFile.mkdirs()
+            project.logger.lifecycle('Download ' + asset.key.toString())
             writeToFile(new URL(url).openStream(), new FileOutputStream(file))
         }
     }
