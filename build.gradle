@@ -41,6 +41,7 @@ ext {
     RGS_FILE_STRIPPED = "${DIR_MAPPINGS}\\${MC_VERSION}-stripped.rgs"
     SRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.srg"
     TSRG_FILE_BASE = "${DIR_MAPPINGS}\\${MC_VERSION}-base.tsrg"
+    TSRG_FILE_PARAMS = "${DIR_MAPPINGS}\\${MC_VERSION}-params.tsrg"
     TSRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.tsrg"
     CLASSES_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\classes_${MC_VERSION}.csv"
     FIELDS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\fields_${MC_VERSION}.csv"
@@ -59,8 +60,6 @@ ext {
     TSRG_JAR = "${DIR_JARS}\\${MC_VERSION}-tsrg.jar"
     INJECT_JAR = "${DIR_JARS}\\${MC_VERSION}-inject.jar"
     DECOMP_JAR = "${DIR_JARS}\\${MC_VERSION}-decomp.jar"
-    DIR_CFG = "${DIR_DATA}\\cfg"
-    DIR_LOGS = "${DIR_BUILD}\\logs"
 
     /** WIP test stuff **/
     DIR_TEST = "$project.projectDir\\test"
@@ -86,6 +85,12 @@ task downloadLibraries(type: DownloadLibraries, dependsOn: downloadJson) {
     json = downloadJson.json
     libraries = file(LIBRARIES)
     list = file(LIBS_FILE)
+}
+
+task downloadAssets(type: DownloadAssets, dependsOn: downloadJson) {
+    json = downloadJson.json
+    buildDir = file(DIR_BUILD)
+    resources = file("${DIR_BUILD}\\resources\\")
 }
 
 // Downloads the JAR
@@ -164,36 +169,35 @@ task addParams(type: AddParams, dependsOn: srg2Tsrg) {
     tsrg = file(TSRG_FILE_BASE)
     jar = file(SRG_JAR)
     csv = file("${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\ids_${MC_VERSION}.csv")
-    newTsrg = file(TSRG_FILE)
+    newTsrg = file(TSRG_FILE_PARAMS)
 }
 
-// Converts a template exceptions file with SRG names to one with notch (obfuscated) names.
-task updateExc(type: UpdateExc, dependsOn: addConstructors) {
-    excOld = file("${DIR_CFG}\\exceptions-base.txt")
-    srg = file(SRG_FILE)
-    excNew = file("${DIR_BUILD}\\map_data\\exceptions.txt")
+task makeFinalTsrg(type: Copy, dependsOn: addParams) {
+    from(file(TSRG_FILE_PARAMS))
+    into(file(DIR_MAPPINGS))
+    rename '-params.tsrg', '.tsrg'
 }
 
 // Creates an empty params csv file
-task createParamsCsv(type: CreateParamsCsv, dependsOn: addParams) {
+task createParamsCsv(type: CreateParamsCsv, dependsOn: makeFinalTsrg) {
     tsrg = file(TSRG_FILE)
     csv = file(PARAMS_CSV)
 }
 
 // Converts the fields from SRG to MCP.
-task applyFieldsCsv(type: ApplyCsv, dependsOn: addParams) {
+task applyFieldsCsv(type: ApplyCsv, dependsOn: makeFinalTsrg) {
     script = file(TSRG_FILE)
     csv = file(FIELDS_CSV)
 }
 
 // Converts the methods from SRG to MCP.
-task applyMethodsCsv(type: ApplyCsv, dependsOn: addParams) {
+task applyMethodsCsv(type: ApplyCsv, dependsOn: makeFinalTsrg) {
     script = file(TSRG_FILE)
     csv = file(METHODS_CSV)
 }
 
 // Converts the params to a SRG file.
-task applyParamsCsv(type: ApplyCsv, dependsOn: addParams) {
+task applyParamsCsv(type: ApplyCsv, dependsOn: makeFinalTsrg) {
     if(file(PARAMS_CSV) != null) {
         script = file(TSRG_FILE)
         csv = file(PARAMS_CSV)
@@ -213,6 +217,13 @@ task applyAllCsv(dependsOn: [applyFieldsCsv, applyMethodsCsv, applyParamsCsv]) {
 task copySRGToFinal(type: Copy) {
     from file(SRG_FILE)
     into file("final\\srg\\alpha\\")
+}
+
+// Converts a template exceptions file with SRG names to one with notch (obfuscated) names.
+task updateExc(type: UpdateExc, dependsOn: addConstructors) {
+    excOld = file("data\\cfg\\exceptions-base.txt")
+    srg = file(SRG_FILE)
+    excNew = file("${DIR_BUILD}\\map_data\\exceptions.txt")
 }
 
 // Injects the JAR with params and constructors
@@ -235,28 +246,26 @@ task decompile(type: JavaExec, dependsOn: deobfJarMain) {
     args('-rbr=0', '-rsy=0', '-asc=1', '-dgs=1', '-jvn=1', '-dec=0', TSRG_JAR, DECOMP_JAR)
 }
 
-task unzip(type: Copy) {
+task unzip(type: Copy, dependsOn: decompile) {
     from(zipTree(file(DECOMP_JAR)))
     into(file(DIR_TEST_SRC))
 }
 
-task createTestProject() {
+task extractNatives(type: ExtractNatives, dependsOn: downloadJson) {
+    json = file(JSON)
+    nativesDir = file("${DIR_BUILD}\\natives")
+}
+
+task createTestProject(type: CreateTestProject, dependsOn: [unzip, downloadLibraries]) {
     doFirst {
         copy {
             from('templates\\acp\\client\\Start.java')
             into('test\\src\\main\\java\\acp\\client\\')
         }
     }
-    def gradles = new File[] { file('templates\\build.gradle'), file('templates\\settings.gradle') }
-    gradles.each { grd ->
-        def text = grd.text
-        def dest = file('test\\' + grd.name)
-        text = text.replace('{libraries}', file(LIBRARIES).absolutePath.replace('\\', '/') + '/')
-        text = text.replace('{project_name}', 'client-' + MC_VERSION)
-        text = text.replace('{jar_assets}', file(EXTRAS_JAR).absolutePath.replace('\\', '/'))
-        dest.withWriter('UTF-8') {
-            it.write(text)
-            it.flush()
-        }
-    }
+    version = MC_VERSION
+    gradles = new File[] { file('templates\\buildDir.gradle'), file('templates\\settings.gradle') }
+    extras = file(EXTRAS_JAR)
+    libraries = file(LIBRARIES)
+    outDir = file(DIR_TEST)
 }

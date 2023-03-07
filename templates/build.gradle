@@ -1,6 +1,5 @@
 plugins {
     id 'java-library'
-    id 'com.github.spotbugs' version '5.0.13'
     id 'uk.jamierocks.propatcher' version '2.0.0'
 }
 
@@ -15,23 +14,14 @@ ext {
 
 repositories {
     mavenCentral()
-    maven { url = 'https://libraries.minecraft.net' }
-    maven { url = 'https://github.com/ancientmc/ancientmc-maven/raw/maven' }
 }
 
 dependencies {
     implementation files(LIBRARIES).getAsFileTree()
-    implementation file(JAR_ASSETS)
-}
-
-spotbugs {
-    toolVersion = '5.0.13'
+    implementation files(JAR_ASSETS)
 }
 
 task testRun(type: JavaExec) {
     main = 'acp.client.Start'
     classpath = sourceSets.main.runtimeClasspath
 }
-
-task findBugs(dependsOn: spotbugsMain) { }
-
