@@ -3,8 +3,8 @@ package com.ancientmc.srgconfig.tasks
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.InputDirectory
-import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.InputFiles
+import org.gradle.api.tasks.Internal
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 
@@ -13,23 +13,35 @@ import org.gradle.api.tasks.TaskAction
  */
 class CreateTestProject extends DefaultTask {
     @Input String version
-    @InputFile File extras
+    @InputFiles File[] templates
+    @InputDirectory File mc_dir
     @InputDirectory File libraries
-    @InputFiles File[] gradles
+    @InputDirectory File natives
     @OutputDirectory File outDir
 
     @TaskAction
     void exec() {
-        gradles.each { grd ->
-            def text = grd.text
-            def dest = new File(outDir, grd.name)
-            text = text.replace('{libraries}', libraries.absolutePath.replace('\\', '/') + '/')
-            text = text.replace('{project_name}', 'client-' + version)
-            text = text.replace('{jar_assets}', extras.absolutePath.replace('\\', '/'))
+        templates.each { tmp ->
+            def text = tmp.text
+            def path = tmp.canonicalPath.substring(tmp.canonicalPath.lastIndexOf('templates\\') + 10)
+            def dest = new File(outDir, path)
+            if(!dest.exists()) dest.parentFile.mkdirs()
+            getMap().each { text = text.replace(it.key, it.value) }
             dest.withWriter('UTF-8') {
                 it.write(text)
                 it.flush()
             }
         }
+    }
+
+    @Internal
+    def getMap() {
+        Map<String, String> map = new HashMap<>()
+        map.put('{libraries}', libraries.absolutePath.replace('\\', '/') + '/')
+        map.put('{project_name}', 'client-' + version)
+        map.put('{natives}', natives.absolutePath.replace('\\', '/') + '/')
+        map.put('{mc_dir}', mc_dir.absolutePath.replace('\\', '/') + '/')
+
+        return map
     }
 }

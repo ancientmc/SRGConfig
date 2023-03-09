@@ -51,7 +51,9 @@ ext {
     JSON = "${DIR_BUILD}\\game_data\\${MC_VERSION}.json"
     LIBRARIES = "${DIR_BUILD}\\libraries\\"
     LIBS_FILE = "${DIR_BUILD}\\map_data\\libraries-list.txt"
+    NATIVES = "${DIR_BUILD}\\natives\\"
     INHERITANCE = "${DIR_BUILD}\\map_data\\inheritance.json"
+    DIR_RUN = "${DIR_BUILD}\\run"
     DIR_JARS = "${DIR_BUILD}\\jars"
     BASE_JAR = "${DIR_JARS}\\${MC_VERSION}.jar"
     SLIM_JAR = "${DIR_JARS}\\${MC_VERSION}-slim.jar"
@@ -62,10 +64,11 @@ ext {
     DECOMP_JAR = "${DIR_JARS}\\${MC_VERSION}-decomp.jar"
 
     /** WIP test stuff **/
-    DIR_TEST = "$project.projectDir\\test"
+    DIR_TEST = "$project.projectDir\\test\\client-${MC_VERSION}"
     DIR_TEST_SRC = "${DIR_TEST}\\src\\main\\java"
     DIR_TEST_SRC_BACKUP = "${DIR_TEST}\\src_backup\\main\\java"
     DIR_TEST_PATCHES = "${DIR_TEST}\\patches"
+    DIR_TEST_RESOURCES = "${DIR_TEST}\\src\\main\\resources"
 }
 
 task downloadVersionManifest(type: Download) {
@@ -87,10 +90,16 @@ task downloadLibraries(type: DownloadLibraries, dependsOn: downloadJson) {
     list = file(LIBS_FILE)
 }
 
+task extractNatives(type: ExtractNatives, dependsOn: downloadJson) {
+    json = file(JSON)
+    nativesDir = file(NATIVES)
+}
+
+
 task downloadAssets(type: DownloadAssets, dependsOn: downloadJson) {
     json = downloadJson.json
     buildDir = file(DIR_BUILD)
-    resources = file("${DIR_BUILD}\\resources\\")
+    resources = file("${DIR_RUN}\\resources\\")
 }
 
 // Downloads the JAR
@@ -251,21 +260,18 @@ task unzip(type: Copy, dependsOn: decompile) {
     into(file(DIR_TEST_SRC))
 }
 
-task extractNatives(type: ExtractNatives, dependsOn: downloadJson) {
-    json = file(JSON)
-    nativesDir = file("${DIR_BUILD}\\natives")
+task copyJarAssets(type: Copy, dependsOn: [unzip, stripJar]) {
+    from(zipTree(file(EXTRAS_JAR))) {
+        exclude('com/', 'paulscode/')
+    }
+    into(file(DIR_TEST_RESOURCES))
 }
 
-task createTestProject(type: CreateTestProject, dependsOn: [unzip, downloadLibraries]) {
-    doFirst {
-        copy {
-            from('templates\\acp\\client\\Start.java')
-            into('test\\src\\main\\java\\acp\\client\\')
-        }
-    }
+task createTestProject(type: CreateTestProject, dependsOn: [unzip, downloadLibraries, copyJarAssets, downloadAssets, extractNatives]) {
     version = MC_VERSION
-    gradles = new File[] { file('templates\\buildDir.gradle'), file('templates\\settings.gradle') }
-    extras = file(EXTRAS_JAR)
+    templates = new File[] { file('templates\\build.gradle'), file('templates\\settings.gradle'), file('templates\\src\\main\\java\\acp\\client\\Start.java') }
+    mc_dir = file(DIR_RUN)
     libraries = file(LIBRARIES)
+    natives = file(NATIVES)
     outDir = file(DIR_TEST)
 }

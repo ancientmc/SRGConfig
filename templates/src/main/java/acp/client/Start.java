@@ -11,19 +11,9 @@ public class Start {
         try {
             Field f = Minecraft.class.getDeclaredField("minecraftDir");
             Field.setAccessible(new Field[] { f }, true);
-            f.set(null, new File("run"));
+            f.set(null, new File("{mc_dir}"));
         } catch (Exception e) {
             e.printStackTrace();
-            return;
-        }
-
-        // Sets resource location to build directory. Hasn't been tested yet.
-        try {
-            Field f1 = ThreadDownloadResources.class.getDeclaredField("resourcesFolder");
-            Field.setAccessible(new Field[] { f1 }, true);
-            f1.set(null, new File("..\\build\\resources\\"));
-        } catch (Exception e1) {
-            e1.printStackTrace();
             return;
         }
 
