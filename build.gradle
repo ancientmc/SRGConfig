@@ -272,3 +272,11 @@ task createTestProject(type: CreateTestProject, dependsOn: [unzip, downloadLibra
     natives = file(NATIVES)
     outDir = file(DIR_TEST)
 }
+
+FileFilter srgFilter = (File file) -> !file.name.endsWith('.zip')
+
+clean {
+    delete(file('test\\'))
+    delete(file("${DIR_BUILD}"))
+    delete(file("${DIR_MAPPINGS}").listFiles(srgFilter))
+}
