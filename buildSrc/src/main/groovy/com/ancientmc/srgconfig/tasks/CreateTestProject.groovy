@@ -15,6 +15,7 @@ class CreateTestProject extends DefaultTask {
     @Input String version
     @InputFiles File[] templates
     @InputDirectory File mc_dir
+    @InputDirectory File backup_src
     @InputDirectory File libraries
     @InputDirectory File natives
     @OutputDirectory File outDir
@@ -37,11 +38,16 @@ class CreateTestProject extends DefaultTask {
     @Internal
     def getMap() {
         Map<String, String> map = new HashMap<>()
-        map.put('{libraries}', libraries.absolutePath.replace('\\', '/') + '/')
+        map.put('{libraries}', getPath(libraries))
         map.put('{project_name}', 'client-' + version)
-        map.put('{natives}', natives.absolutePath.replace('\\', '/') + '/')
-        map.put('{mc_dir}', mc_dir.absolutePath.replace('\\', '/') + '/')
+        map.put('{natives}', getPath(natives))
+        map.put('{mc_dir}', getPath(mc_dir))
+        map.put('{backup_src}', getPath(backup_src))
 
         return map
+    }
+
+    static def getPath(File file) {
+        return file.absolutePath.replace('\\', '/') + '/'
     }
 }

@@ -4,25 +4,27 @@ import de.undercouch.gradle.tasks.download.DownloadAction
 import groovy.json.JsonSlurper
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.InputFile
+import org.gradle.api.tasks.InputFiles
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.OutputFile
 import org.gradle.api.tasks.TaskAction
 import org.gradle.internal.os.OperatingSystem
 
 class DownloadLibraries extends DefaultTask {
-    @InputFile File json
+    @InputFiles File[] jsons
     @OutputDirectory File libraries
-    @OutputFile File list
 
     @TaskAction
     void exec() {
-        def jsonObj = new JsonSlurper().parse(json)
-        jsonObj.libraries.each { lib ->
-            // Tuple partially from https://github.com/MinecraftForge/MCPConfig/blob/master/buildSrc/src/main/groovy/net/minecraftforge/mcpconfig/tasks/DownloadLibraries.groovy
-            def artifacts = (lib.downloads.artifact == null ? [] : [lib.downloads.artifact])
-            artifacts.findAll { isAllowed(it.path) }.each { art ->
-                String location = libraries.absolutePath + '/' + art.path
-                download(art.url, location)
+        jsons.each { json ->
+            def jsonObj = new JsonSlurper().parse(json)
+            jsonObj.libraries.each { lib ->
+                // Tuple partially from https://github.com/MinecraftForge/MCPConfig/blob/master/buildSrc/src/main/groovy/net/minecraftforge/mcpconfig/tasks/DownloadLibraries.groovy
+                def artifacts = (lib.downloads.artifact == null ? [] : [lib.downloads.artifact])
+                artifacts.findAll { isAllowed(it.path) }.each { art ->
+                    String location = libraries.absolutePath + '/' + art.path
+                    download(art.url, location)
+                }
             }
         }
     }
@@ -43,7 +45,7 @@ class DownloadLibraries extends DefaultTask {
     static def isAllowed(def path) {
         def lwjgl = '2.9.0'
         def lwjglMac = '2.9.1-debug'
-        if(!path.contains('lwjgl')) return true
+        if(!path.contains('org/lwjgl')) return true
         if(OperatingSystem.current().isMacOsX()) {
             if(path.contains(lwjglMac)) {
                 return true
@@ -54,14 +56,5 @@ class DownloadLibraries extends DefaultTask {
             }
         }
         return false
-    }
-
-    void writeList(List<String> locs) {
-        def writer = new FileWriter(list)
-        locs.each { loc ->
-            def line = '-e=' + loc + '\n'
-            writer.write(line)
-            writer.flush()
-        }
     }
 }
