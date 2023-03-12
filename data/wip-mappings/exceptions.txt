@@ -10,7 +10,7 @@ ab/a (Liq;Ljava/io/DataOutput;)V java/io/IOException
 ai/a (Lcy;II)Lha; java/io/IOException
 ai/a (Lcy;Lha;)V java/io/IOException
 ai/b (Lcy;Lha;)V java/io/IOException
-in/read ([BII)I java/io/IOException
+in/read ()I java/io/IOException
 in/read ([BII)I java/io/IOException
 fd/a (Ljava/io/DataOutput;)V java/io/IOException
 fd/a (Ljava/io/DataInput;)V java/io/IOException

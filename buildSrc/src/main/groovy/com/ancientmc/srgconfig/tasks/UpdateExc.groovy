@@ -33,8 +33,8 @@ class UpdateExc extends DefaultTask {
         String method = split[0].substring(split[0].lastIndexOf('/') + 1)
 
         String originalClass = getOriginalClass(mapping, clazz)
-        String originalMethod = getOriginalMethod(mapping, originalClass, method)
-        String originalDesc = getOriginalDesc(mapping, originalClass, method)
+        String originalMethod = getOriginalMethod(mapping, originalClass, method, split[1])
+        String originalDesc = getOriginalDesc(mapping, originalClass, method, split[1])
 
         line = line.replace(split[0], originalClass + '/' + originalMethod)
         line = line.replace(split[1], originalDesc)
@@ -47,15 +47,15 @@ class UpdateExc extends DefaultTask {
         if(clazz != null) return clazz.original
     }
 
-    String getOriginalMethod(IMappingFile mapping, String originalClass, String mappedMethod) {
+    String getOriginalMethod(IMappingFile mapping, String originalClass, String mappedMethod, String mappedDesc) {
         def clazz = mapping.getClass(originalClass)
-        def method = clazz.methods.find {it.mapped == mappedMethod }
+        def method = clazz.methods.find {it.mapped == mappedMethod && it.mappedDescriptor == mappedDesc }
         if(method != null) return method.original
     }
 
-    String getOriginalDesc(IMappingFile mapping, String originalClass, String mappedMethod) {
+    String getOriginalDesc(IMappingFile mapping, String originalClass, String mappedMethod, String mappedDesc) {
         def clazz = mapping.getClass(originalClass)
-        def method = clazz.methods.find { it.mapped == mappedMethod }
+        def method = clazz.methods.find { it.mapped == mappedMethod && it.mappedDescriptor == mappedDesc }
         if(method != null) return method.descriptor
     }
 }

@@ -220,7 +220,7 @@ task applyAllCsv(dependsOn: [applyFieldsCsv, applyMethodsCsv, applyParamsCsv]) {
 // Converts a template exceptions file with SRG names to one with notch (obfuscated) names.
 task updateExc(type: UpdateExc, dependsOn: addConstructors) {
     excOld = file("data\\cfg\\exceptions-base.txt")
-    srg = file(SRG_FILE)
+    srg = file(addConstructors.newSrg)
     excNew = file("${DIR_BUILD}\\map_data\\exceptions.txt")
 }
 
