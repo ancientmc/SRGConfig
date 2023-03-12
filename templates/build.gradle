@@ -1,7 +1,9 @@
 plugins {
     id 'java-library'
-    id 'uk.jamierocks.propatcher' version '2.0.0'
+    id 'uk.jamierocks.propatcher' version '2.0.1'
 }
+
+import uk.jamierocks.propatcher.task.*
 
 sourceSets {
     main
@@ -9,6 +11,7 @@ sourceSets {
 
 ext {
     LIBRARIES = '{libraries}'
+    BACKUP_SRC = '{backup_src}'
 }
 
 repositories {
@@ -26,4 +29,15 @@ tasks.withType(JavaExec) {
 task testRun(type: JavaExec) {
     main = 'acp.client.Start'
     classpath = sourceSets.main.runtimeClasspath
+}
+
+task createPatchesDir() {
+    def dir = new File('patches\\')
+    dir.mkdir()
+}
+
+task createPatches(type: MakePatchesTask, dependsOn: createPatchesDir) {
+    rootDir file(BACKUP_SRC)
+    target file('src\\main\\java\\')
+    patches file('patches\\')
 }

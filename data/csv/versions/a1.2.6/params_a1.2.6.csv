@@ -750,7 +750,7 @@ p_214_0,world
 p_214_1,posX
 p_214_2,posY
 p_214_3,posZ
-p_215_0,lightValue
+p_215_0,value
 p_216_0,world
 p_216_1,posX
 p_216_2,posY
@@ -863,7 +863,7 @@ p_255_2,posY
 p_255_3,posZ
 p_255_4,startVector
 p_255_5,endVector
-p_256_0,lightOpacity
+p_256_0,opacity
 p_257_0,world
 p_257_1,posX
 p_257_2,posY
