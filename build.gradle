@@ -42,6 +42,7 @@ ext {
     TSRG_FILE_BASE = "${DIR_MAPPINGS}\\${MC_VERSION}-base.tsrg"
     TSRG_FILE_PARAMS = "${DIR_MAPPINGS}\\${MC_VERSION}-params.tsrg"
     TSRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.tsrg"
+    TSRG_INTERM = "final\\versions\\${MC_VERSION}\\mappings\\${MC_VERSION}-interm.tsrg"
     CLASSES_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\classes_${MC_VERSION}.csv"
     FIELDS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\fields_${MC_VERSION}.csv"
     METHODS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\methods_${MC_VERSION}.csv"
@@ -179,10 +180,11 @@ task addParams(type: AddParams, dependsOn: srg2Tsrg) {
     newTsrg = file(TSRG_FILE_PARAMS)
 }
 
-task makeFinalTsrg(type: Copy, dependsOn: addParams) {
-    from(file(TSRG_FILE_PARAMS))
+task makeFinalTsrg(type: Copy, dependsOn: (file(TSRG_INTERM) != null ? [] : addParams)) {
+    def oldTsrg = (file(TSRG_INTERM) != null ? file(TSRG_INTERM) : addParams.newTsrg)
+    from(oldTsrg)
     into(file(DIR_MAPPINGS))
-    rename '-params.tsrg', '.tsrg'
+    rename oldTsrg.name, "${MC_VERSION}.tsrg"
 }
 
 // Creates an empty params csv file
