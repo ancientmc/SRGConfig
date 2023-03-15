@@ -16,7 +16,7 @@ class ApplyCsv extends DefaultTask {
     void exec() throws CsvValidationException, IOException {
         List<String> lines = new ArrayList<>()
         script.text.eachLine { line ->
-            def matches = getMap().findAll { line.contains(it.key) }
+            def matches = getMap().findAll { line.substring(line.lastIndexOf(' ') + 1).matches(it.key) }
             matches.each { line = line.replaceAll(it.key, it.value) }
             lines.add(line)
         }
