@@ -12,6 +12,7 @@ sourceSets {
 ext {
     LIBRARIES = '{libraries}'
     BACKUP_SRC = '{backup_src}'
+    PATCHES = '{patches}'
 }
 
 repositories {
@@ -40,4 +41,9 @@ task createPatches(type: MakePatchesTask, dependsOn: createPatchesDir) {
     rootDir file(BACKUP_SRC)
     target file('src\\main\\java\\')
     patches file('patches\\')
+}
+
+task apply(type: ApplyPatchesTask) {
+    target file('src\\main\\java\\')
+    patches file(PATCHES)
 }

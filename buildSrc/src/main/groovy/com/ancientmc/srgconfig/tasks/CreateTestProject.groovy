@@ -18,6 +18,7 @@ class CreateTestProject extends DefaultTask {
     @InputDirectory File backup_src
     @InputDirectory File libraries
     @InputDirectory File natives
+    @InputDirectory File patches
     @OutputDirectory File outDir
 
     @TaskAction
@@ -43,6 +44,7 @@ class CreateTestProject extends DefaultTask {
         map.put('{natives}', getPath(natives))
         map.put('{mc_dir}', getPath(mc_dir))
         map.put('{backup_src}', getPath(backup_src))
+        map.put('{patches}', getPath(patches))
 
         return map
     }

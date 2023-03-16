@@ -271,6 +271,7 @@ task createTestProject(type: CreateTestProject, dependsOn: [unzip, downloadLibra
     backup_src = file(DIR_TEST_SRC_BACKUP)
     libraries = file(LIBRARIES)
     natives = file(NATIVES)
+    patches = file('final\\versions\\' + MC_VERSION + '\\patches\\')
     outDir = file(DIR_TEST)
 }
 
