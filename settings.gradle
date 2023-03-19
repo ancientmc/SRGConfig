@@ -1,2 +1,10 @@
 rootProject.name = 'SRGConfig'
 
+// Project is auto-added upon generation
+// Inspired from MCPConfig in their settings.gradle (this is less advanced than that but the same idea)
+def testDir = new File(rootDir, '/test/')
+testDir.eachDir { dir ->
+    def proj = rootDir.toPath().relativize(dir.toPath()).toFile()
+    include proj.path
+    project(':' + proj.path).name = dir.name
+}
