@@ -17,7 +17,7 @@ class DownloadAssets extends DefaultTask {
         def jsonObj = new JsonSlurper().parse(json)
         def indexUrl = jsonObj.assetIndex.url
         def path = indexUrl.toString().substring(indexUrl.lastIndexOf('/') + 1)
-        def file = new File(buildDir.absolutePath + '/game_data/', path)
+        def file = new File(buildDir.absolutePath + '/data/game/', path)
         download(indexUrl, file)
         getAssets(file)
     }

@@ -48,11 +48,10 @@ ext {
     METHODS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\methods_${MC_VERSION}.csv"
     PARAMS_CSV = "${DIR_DATA}\\csv\\versions\\${MC_VERSION}\\params_${MC_VERSION}.csv"
 
-    JSON = "${DIR_BUILD}\\game_data\\${MC_VERSION}.json"
-    LIBRARIES = "${DIR_BUILD}\\libraries\\"
-    LIBS_FILE = "${DIR_BUILD}\\map_data\\libraries-list.txt"
-    NATIVES = "${DIR_BUILD}\\natives\\"
-    INHERITANCE = "${DIR_BUILD}\\map_data\\inheritance.json"
+    JSON = "${DIR_BUILD}\\data\\game\\${MC_VERSION}.json"
+    LIBRARIES = "${DIR_BUILD}\\run\\libraries\\"
+    NATIVES = "${DIR_BUILD}\\run\\natives\\"
+    INHERITANCE = "${DIR_BUILD}\\data\\mappings\\inheritance.json"
     DIR_RUN = "${DIR_BUILD}\\run"
     DIR_JARS = "${DIR_BUILD}\\jars"
     BASE_JAR = "${DIR_JARS}\\${MC_VERSION}.jar"
@@ -73,7 +72,7 @@ ext {
 
 task downloadVersionManifest(type: Download) {
     src 'https://piston-meta.mojang.com/mc/game/version_manifest_v2.json'
-    dest DIR_BUILD + '/game_data/version_manifest.json'
+    dest DIR_BUILD + '/data/game/version_manifest.json'
 }
 
 // Downloads JSON
@@ -156,13 +155,13 @@ task extractInheritance(type: JavaExec, dependsOn: deobfJarSrg) {
 // Dumps constructor info from inheritance map into a text file
 task dumpConstructors(type: DumpConstructors, dependsOn: extractInheritance) {
     json = file(INHERITANCE)
-    constructors = file("${DIR_BUILD}\\map_data\\constructors.txt")
+    constructors = file("${DIR_BUILD}\\data\\mappings\\constructors.txt")
 }
 
 // Adds the constructors to the SRG file.
 task addConstructors(type: AddConstructors, dependsOn: dumpConstructors) {
     srg = file(SRG_FILE)
-    constructors = file("${DIR_BUILD}\\map_data\\constructors.txt")
+    constructors = file("${DIR_BUILD}\\data\\mappings\\constructors.txt")
     newSrg = file(SRG_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}-ctrs.srg")
 }
 
@@ -180,6 +179,7 @@ task addParams(type: AddParams, dependsOn: srg2Tsrg) {
     newTsrg = file(TSRG_FILE_PARAMS)
 }
 
+// Makes the final TSRG file that will get mapped.
 task makeFinalTsrg(type: Copy, dependsOn: (file(TSRG_INTERM) != null ? [] : addParams)) {
     def oldTsrg = (file(TSRG_INTERM) != null ? file(TSRG_INTERM) : addParams.newTsrg)
     from(oldTsrg)
@@ -222,14 +222,14 @@ task applyAllCsv(dependsOn: [applyFieldsCsv, applyMethodsCsv, applyParamsCsv]) {
 task updateExc(type: UpdateExc, dependsOn: addConstructors) {
     excOld = file("data\\cfg\\exceptions-base.txt")
     srg = file(addConstructors.newSrg)
-    excNew = file("${DIR_BUILD}\\map_data\\exceptions.txt")
+    excNew = file("${DIR_BUILD}\\data\\mappings\\exceptions.txt")
 }
 
 // Injects the JAR with params and constructors
 task mcinject(type: JavaExec, dependsOn: [downloadJar, updateExc]) {
     main = 'de.oceanlabs.mcp.mcinjector.MCInjector'
     classpath = files(project.configurations.getByName('mcinject')) // temporary
-    args('--in', SLIM_JAR, '--out', INJECT_JAR, '--lvt=LVT', '--exc', "${DIR_BUILD}\\map_data\\exceptions.txt")
+    args('--in', SLIM_JAR, '--out', INJECT_JAR, '--lvt=LVT', '--exc', "${DIR_BUILD}\\data\\mappings\\exceptions.txt")
 }
 
 // Deobfuscates the JAR using the complete TSRG file
@@ -239,14 +239,16 @@ task deobfJarMain(type: JavaExec, dependsOn: [mcinject, applyAllCsv]) {
     args('--input', INJECT_JAR, '--output', TSRG_JAR, '--map', TSRG_FILE)
 }
 
+// Decompiles the JAR
 task decompile(type: JavaExec, dependsOn: deobfJarMain) {
     main = 'org.jetbrains.java.decompiler.main.decompiler.ConsoleDecompiler'
     classpath = files(project.configurations.getByName('fernflower'))
     args('-rbr=0', '-rsy=0', '-asc=1', '-dgs=1', '-jvn=1', TSRG_JAR, DECOMP_JAR)
 }
 
+// Unzips the decompiled jar.
 task unzip(dependsOn: decompile) {
-    def dirs = new File[]{ file(DIR_TEST_SRC), file(DIR_TEST_SRC_BACKUP) }
+    def dirs = new File[]{file(DIR_TEST_SRC), file(DIR_TEST_SRC_BACKUP)}
     doLast {
         dirs.each { dir ->
             copy {
@@ -257,6 +259,7 @@ task unzip(dependsOn: decompile) {
     }
 }
 
+// Copies JAR assets (textures mostly) into the resources folder in the test project
 task copyJarAssets(type: Copy, dependsOn: [unzip, stripJar]) {
     from(zipTree(file(EXTRAS_JAR))) {
         exclude('com/', 'paulscode/')
@@ -264,6 +267,7 @@ task copyJarAssets(type: Copy, dependsOn: [unzip, stripJar]) {
     into(file(DIR_TEST_RESOURCES))
 }
 
+// Creates a runnable test project. Patch creation/application is found within this test project's gradle.
 task createTestProject(type: CreateTestProject, dependsOn: [unzip, downloadLibraries, copyJarAssets, downloadAssets, extractNatives]) {
     version = MC_VERSION
     templates = new File[] { file('templates\\build.gradle'), file('templates\\settings.gradle'), file('templates\\src\\main\\java\\acp\\client\\Start.java') }
@@ -273,6 +277,19 @@ task createTestProject(type: CreateTestProject, dependsOn: [unzip, downloadLibra
     natives = file(NATIVES)
     patches = file('final\\versions\\' + MC_VERSION + '\\patches\\')
     outDir = file(DIR_TEST)
+}
+
+// Makes the ZIP published on the Maven.
+task makeZip(type: Zip) {
+    archiveBaseName = 'acp-data'
+    archiveVersion = MC_VERSION
+    destinationDirectory = file("${DIR_BUILD}\\zips\\")
+
+    from(file('data\\cfg\\jardep.json'))
+    from(file(TSRG_FILE)) { into ('mappings\\') }
+    from(file("${DIR_BUILD}\\data\\mappings\\exceptions.txt")) { into ('mappings\\') }
+    from(file("final\\versions\\${MC_VERSION}\\patches\\")) { into ('patches\\') }
+
 }
 
 FileFilter gitFilter = (File file) -> !file.name.endsWith('.gitignore')
