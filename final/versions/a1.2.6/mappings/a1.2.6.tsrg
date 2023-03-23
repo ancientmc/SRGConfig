@@ -140,12 +140,12 @@ ah net/minecraft/src/CanvasIsomPreview
 		0 o brightness
 	a ()Ljava/io/File; getWorkingDirectory
 	a (Ljava/lang/String;)Ljava/io/File; getWorkingDirectory
-		0 o name
+		0 o dirName
 	a (II)Lkw; getZone
 		0 o coordX
 		1 o coordY
 	b (Ljava/lang/String;)V loadLevel
-		0 o directory
+		0 o worldName
 	b ()V start
 	c ()V stop
 	d ()V render
@@ -10938,36 +10938,36 @@ qg net/minecraft/src/SoundManager
 	a (Lgq;)V loadSoundSettings
 		0 o options
 	a (Ljava/lang/String;FF)V playSoundFX
-		0 o name
+		0 o soundName
 		1 o volume
 		2 o pitch
 	a (Ljava/lang/String;FFFFF)V playStreaming
-		0 o name
+		0 o soundName
 		1 o posX
 		2 o posY
 		3 o posZ
 		4 o volume
 		5 o pitch
 	a (Ljava/lang/String;Ljava/io/File;)V addSound
-		0 o name
+		0 o soundName
 		1 o file
 	a ()V onSoundOptionsChanged
 	a (Lhf;F)V setListener
 		0 o entity
 		1 o partialTicks
 	b (Ljava/lang/String;FFFFF)V playSound
-		0 o name
+		0 o soundName
 		1 o posX
 		2 o posY
 		3 o posZ
 		4 o volume
 		5 o pitch
 	b (Ljava/lang/String;Ljava/io/File;)V addStreaming
-		0 o name
+		0 o soundName
 		1 o file
 	b ()V closeMinecraft
 	c (Ljava/lang/String;Ljava/io/File;)V addMusic
-		0 o name
+		0 o soundName
 		1 o file
 	c ()V playRandomMusicIfReady
 	d ()V tryToSetLibraryAndCodecs
