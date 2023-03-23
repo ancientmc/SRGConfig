@@ -2603,7 +2603,7 @@ p_i1788_0,blockAccess
 p_i1841_0,minecraftDir
 p_i1841_1,mc
 p_i1862_0,blockID
-p_i1862_1,blockMaterial
+p_i1862_1,blockIndexInTexture
 p_i1862_2,torchActive
 p_i1897_0,mc
 p_i1897_1,worldObj
@@ -2646,7 +2646,7 @@ p_i2333_1,entityToPickup
 p_i2333_2,entityPickingUp
 p_i2333_3,yOffs
 p_i2355_0,blockID
-p_i2355_1,blockMaterial
+p_i2355_1,blockIndexInTexture
 p_i2373_0,minX
 p_i2373_1,minY
 p_i2373_2,minZ
@@ -2672,7 +2672,7 @@ p_i2471_1,errorDetail
 p_i2487_0,worldObj
 p_i2487_1,chunkLoader
 p_i2525_0,blockID
-p_i2525_1,blockMaterial
+p_i2525_1,blockIndexInTexture
 p_i2544_0,blockID
 p_i2544_1,blockIndexInTexture
 p_i2544_2,blockType
@@ -2722,7 +2722,7 @@ p_i3024_1,valueX
 p_i3024_2,valueY
 p_i3024_3,valueZ
 p_i3042_0,blockID
-p_i3042_1,blockMaterial
+p_i3042_1,blockIndexInTexture
 p_i3057_0,itemID
 p_i3097_0,inventory
 p_i3097_1,slotIndex
@@ -2935,7 +2935,7 @@ p_i5204_0,mc
 p_i5204_1,hostName
 p_i5204_2,port
 p_i5225_0,blockID
-p_i5225_1,blockMaterial
+p_i5225_1,blockIndexInTexture
 p_i5241_0,entityItem
 p_i5278_0,pInt
 p_i5278_1,pInt1

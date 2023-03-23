@@ -1005,7 +1005,7 @@ bo net/minecraft/src/BlockRedstoneTorch
 	<clinit> ()V <clinit>
 	<init> (IIZ)V <init>
 		0 o blockID
-		1 o blockMaterial
+		1 o blockIndexInTexture
 		2 o torchActive
 	a (Lcy;IIIZ)Z checkForBurnout
 		0 o world
@@ -1586,7 +1586,7 @@ cm net/minecraft/src/EntityPickupFX
 cn net/minecraft/src/BlockStone
 	<init> (II)V <init>
 		0 o blockID
-		1 o blockMaterial
+		1 o blockIndexInTexture
 	a (ILjava/util/Random;)I idDropped
 		0 o metadata
 		1 o random
@@ -1818,7 +1818,7 @@ cv net/minecraft/src/ModelBoat
 cw net/minecraft/src/BlockObsidian
 	<init> (II)V <init>
 		0 o blockID
-		1 o blockMaterial
+		1 o blockIndexInTexture
 	a (Ljava/util/Random;)I quantityDropped
 		0 o random
 	a (ILjava/util/Random;)I idDropped
@@ -2777,7 +2777,7 @@ dw net/minecraft/src/BlockSand
 	<clinit> ()V <clinit>
 	<init> (II)V <init>
 		0 o blockID
-		1 o blockMaterial
+		1 o blockIndexInTexture
 	a (Lcy;IIILjava/util/Random;)V updateTick
 		0 o world
 		1 o posX
@@ -5637,7 +5637,7 @@ ib net/minecraft/src/NetClientHandler
 ic net/minecraft/src/BlockGravel
 	<init> (II)V <init>
 		0 o blockID
-		1 o blockMaterial
+		1 o blockIndexInTexture
 	a (ILjava/util/Random;)I idDropped
 		0 o metadata
 		1 o random
