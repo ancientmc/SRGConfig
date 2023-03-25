@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'de.undercouch.download'
+    id 'maven-publish'
 }
 
 group 'com.ancientmc.srgconfig'
@@ -289,7 +290,40 @@ task makeZip(type: Zip) {
     from(file(TSRG_FILE)) { into ('mappings\\') }
     from(file("${DIR_BUILD}\\data\\mappings\\exceptions.txt")) { into ('mappings\\') }
     from(file("final\\versions\\${MC_VERSION}\\patches\\")) { into ('patches\\') }
+}
 
+publishing {
+    publications {
+        normal(MavenPublication) {
+            groupId = 'com.ancientmc.acp'
+            artifactId = 'acp-data'
+            version = MC_VERSION
+            artifact makeZip
+            pom {
+                name = 'ACP-Data'
+                description = 'Data files used in the Ancient Coder Pack. Generated using SRGConfig.'
+                url = 'https://github.com/ancientmc/SRGConfig'
+                licenses {
+                    license {
+                        name = 'AncientMC License.'
+                        url = 'https://github.com/ancientmc/license/blob/master/LICENSE'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'mason'
+                        name = 'Mason'
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = 'ancientmc-maven'
+            url = 'D:\\Programs\\Projects\\AncientMC\\ancientmc-maven'
+        }
+    }
 }
 
 FileFilter gitFilter = (File file) -> !file.name.endsWith('.gitignore')
