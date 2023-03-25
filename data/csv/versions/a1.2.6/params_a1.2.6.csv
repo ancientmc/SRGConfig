@@ -1536,7 +1536,7 @@ p_493_0,tag
 p_495_0,id
 p_495_1,stackSize
 p_496_0,id
-p_496_1,isInTestMode
+p_496_1,inTestMode
 p_497_0,id
 p_498_0,id
 p_500_0,inventory
