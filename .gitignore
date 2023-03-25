@@ -4,6 +4,8 @@ lib/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+test/**/
+!test/.gitignore
 
 ### IntelliJ IDEA ###
 .idea/
