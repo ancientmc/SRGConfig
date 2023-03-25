@@ -335,15 +335,15 @@ ao net/minecraft/src/Vec3D
 		0 o vector
 	c ()D lengthVector
 	c (DDD)Lao; addVector
-		0 o additionX
-		1 o additionY
-		2 o additionZ
+		0 o coordX
+		1 o coordY
+		2 o coordZ
 	d (Lao;)D squareDistanceTo
 		0 o vector
 	d (DDD)D squareDistanceTo
-		0 o targetX
-		1 o targetY
-		2 o targetZ
+		0 o coordX
+		1 o coordY
+		2 o coordZ
 	e (DDD)Lao; setComponents
 		0 o xCoord
 		1 o yCoord
@@ -439,7 +439,7 @@ aq net/minecraft/src/Render
 		2 o coordY
 		3 o coordZ
 	a (Ljava/lang/String;)V loadTexture
-		0 o id
+		0 o name
 	a (Lnq;DDDIIIFFDDD)V renderShadowOnBlock
 		0 o block
 		1 o centerX
@@ -603,8 +603,8 @@ ay net/minecraft/src/GuiUnused
 		1 o key
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 az net/minecraft/src/EntityFireball
 	a field_9406_a
@@ -678,8 +678,8 @@ bb net/minecraft/src/GuiGameOver
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	b ()Z doesGuiPauseGame
 bc net/minecraft/src/ItemBlock
@@ -737,8 +737,8 @@ bf net/minecraft/src/GuiOptions
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 bg net/minecraft/src/SpawnerAnimals
 	a eligibleChunksForSpawning
@@ -1076,8 +1076,8 @@ bp net/minecraft/src/GuiScreen
 	g fontRenderer
 	<init> ()V <init>
 	a (ZI)V confirmClicked
-		0 o clickResult
-		1 o clickID
+		0 o correctID
+		1 o worldID
 	a (CI)V keyTyped
 		0 o eventChar
 		1 o key
@@ -1088,13 +1088,13 @@ bp net/minecraft/src/GuiScreen
 	a (I)V drawWorldBackground
 		0 o color
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	a (III)V mouseClicked
 		0 o coordX
 		1 o coordY
-		2 o mouseButtonValue
+		2 o buttonID
 	a (Lgh;)V actionPerformed
 		0 o button
 	a ()V initGui
@@ -1135,8 +1135,8 @@ bq net/minecraft/src/EntityPlayerSP
 	a (Llt;)V displayGUIFurnace
 		0 o furnace
 	a (IZ)V handleKeyPress
-		0 o key
-		1 o keyState
+		0 o id
+		1 o state
 	a_ (Llw;)V useCurrentItemOnEntity
 		0 o entity
 	a_ (I)V setHealth
@@ -1390,7 +1390,7 @@ cb net/minecraft/src/ItemTool
 		3 o blocksEffectiveAgainst
 	a (Lfp;IIII)V hitBlock
 		0 o itemStack
-		1 o blockID
+		1 o id
 		2 o posX
 		3 o posY
 		4 o posZ
@@ -1570,7 +1570,7 @@ cm net/minecraft/src/EntityPickupFX
 	r yOffs
 	<init> (Lcy;Llw;Llw;F)V <init>
 		0 o worldObj
-		1 o entityToPickup
+		1 o entityToPickUp
 		2 o entityPickingUp
 		3 o yOffs
 	a (Lis;FFFFFF)V renderParticle
@@ -1768,8 +1768,8 @@ ct net/minecraft/src/GuiConnectFailed
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	g ()V updateScreen
 cu net/minecraft/src/ChunkProviderIso
@@ -1935,7 +1935,7 @@ cy net/minecraft/src/World
 		0 o posX
 		1 o posY
 		2 o posZ
-		3 o blockID
+		3 o id
 		4 o metadata
 	a (Lao;Lao;Z)Lnx; rayTraceBlocks_do
 		0 o startVector
@@ -1945,7 +1945,7 @@ cy net/minecraft/src/World
 		0 o posX
 		1 o posY
 		2 o posZ
-		3 o blockID
+		3 o id
 	a (Ljava/lang/Class;Lco;)Ljava/util/List; getEntitiesWithinAABB
 		0 o entityClass
 		1 o aabb
@@ -1967,7 +1967,7 @@ cy net/minecraft/src/World
 		1 o posX
 		2 o posY
 		3 o posZ
-		4 o light
+		4 o lightValue
 	a (Ljava/io/File;Ljava/lang/String;)Liq; func_629_a
 		0 o file
 		1 o pString
@@ -1999,14 +1999,14 @@ cy net/minecraft/src/World
 		1 o posX
 		2 o posY
 		3 o posZ
-		4 o explosionSize
+		4 o size
 		5 o isFlaming
 	a (Lao;Lao;)Lnx; rayTraceBlocks
 		0 o startVector
 		1 o endVector
 	a (Llw;Ljava/lang/String;FF)V playSoundAtEntity
 		0 o entity
-		1 o soundName
+		1 o name
 		2 o volume
 		3 o pitch
 	a (Ljava/lang/String;DDDDDD)V spawnParticle
@@ -2028,7 +2028,7 @@ cy net/minecraft/src/World
 		1 o posX
 		2 o posY
 		3 o posZ
-		4 o explosionSize
+		4 o size
 	a (IIIIII)Z checkChunksExist
 		0 o minX
 		1 o minY
@@ -2050,7 +2050,7 @@ cy net/minecraft/src/World
 		1 o posX
 		2 o posY
 		3 o posZ
-		4 o maxDistance
+		4 o distance
 	a (IIILji;)V setBlockTileEntity
 		0 o posX
 		1 o posY
@@ -2062,7 +2062,7 @@ cy net/minecraft/src/World
 	a (Llw;Llw;F)Lbt; getPathToEntity
 		0 o entityOne
 		1 o entityTwo
-		2 o maxDistance
+		2 o distance
 	a (DDDD)Leb; getClosestPlayer
 		0 o posX
 		1 o posY
@@ -2088,7 +2088,7 @@ cy net/minecraft/src/World
 		0 o posX
 		1 o posY
 		2 o posZ
-		3 o soundName
+		3 o name
 		4 o volume
 		5 o pitch
 	a (Ljv;)V addWorldAccess
@@ -2096,7 +2096,7 @@ cy net/minecraft/src/World
 	a (F)I calculateSkylightSubtracted
 		0 o partialTicks
 	a (Ljava/lang/String;III)V playRecord
-		0 o recordName
+		0 o name
 		1 o posX
 		2 o posY
 		3 o posZ
@@ -2113,7 +2113,7 @@ cy net/minecraft/src/World
 		0 o posX
 		1 o posY
 		2 o posZ
-		3 o skylightSubtracted
+		3 o pFlag
 	b (Llw;)V obtainEntitySkin
 		0 o entity
 	b (Lco;)Z isAnyLiquid
@@ -2235,16 +2235,16 @@ cy net/minecraft/src/World
 		1 o posY
 		2 o posZ
 	f (IIII)V markBlocksDirtyVertical
-		0 o posX
-		1 o posY
-		2 o posZ
-		3 o newY
+		0 o minX
+		1 o minZ
+		2 o maxX
+		3 o maxZ
 	f ()Ljava/lang/String; getDebugLoadedEntities
 	g (IIII)V notifyBlocksOfNeighborChange
 		0 o posX
 		1 o posY
 		2 o posZ
-		3 o blockID
+		3 o id
 	g (III)Z isBlockOpaqueCube
 		0 o posX
 		1 o posY
@@ -2327,15 +2327,15 @@ d net/minecraft/src/TexturePackBase
 	d texturePackID
 	<init> ()V <init>
 	a (Ljava/lang/String;)Ljava/io/InputStream; getResourceAsStream
-		0 o textureName
+		0 o name
 	a (Lnet/minecraft/client/Minecraft;)V func_6485_a
-		0 o mc
+		0 o minecraft
 	a ()V func_6482_a
 	b (Lnet/minecraft/client/Minecraft;)V unbindThumbnailTexture
-		0 o mc
+		0 o minecraft
 	b ()V closeTexturePackFile
 	c (Lnet/minecraft/client/Minecraft;)V bindThumbnailTexture
-		0 o mc
+		0 o minecraft
 da net/minecraft/src/RenderBoat
 	a modelBoat
 	<init> ()V <init>
@@ -2495,8 +2495,8 @@ dj net/minecraft/src/GuiMainMenu
 		0 o partialTicks
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	g ()V updateScreen
 	j ()Ljava/util/Random; getRand
@@ -2521,13 +2521,13 @@ dk net/minecraft/src/GuiTexturePacks
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	a (III)V mouseClicked
 		0 o coordX
 		1 o coordY
-		2 o mouseButtonValue
+		2 o buttonID
 	b (III)V mouseMovedOrUp
 		0 o coordX
 		1 o coordY
@@ -2569,13 +2569,13 @@ dm net/minecraft/src/Pathfinder
 		1 o posX
 		2 o posY
 		3 o posZ
-		4 o maxDistance
+		4 o distance
 	a (Llw;IIIF)Lbt; createEntityPathTo
 		0 o entity
 		1 o posX
 		2 o posY
 		3 o posZ
-		4 o maxDistance
+		4 o distance
 	a (Llw;IIILb;)I getVerticalOffset
 		0 o entity
 		1 o posX
@@ -2587,11 +2587,11 @@ dm net/minecraft/src/Pathfinder
 		1 o start
 		2 o end
 		3 o unused
-		4 o maxDistance
+		4 o distance
 	a (Llw;Llw;F)Lbt; createEntityPathTo
 		0 o entityOne
 		1 o entityTwo
-		2 o maxDistance
+		2 o distance
 	a (Llw;IIILb;I)Lb; getSafePoint
 		0 o entity
 		1 o posX
@@ -2604,7 +2604,7 @@ dm net/minecraft/src/Pathfinder
 		1 o current
 		2 o unused
 		3 o target
-		4 o maxDistance
+		4 o distance
 dn net/minecraft/src/WorldGenCactus
 	<init> ()V <init>
 	a (Lcy;Ljava/util/Random;III)Z generate
@@ -2703,13 +2703,13 @@ dr net/minecraft/src/GuiChat
 		1 o key
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	a (III)V mouseClicked
 		0 o coordX
 		1 o coordY
-		2 o mouseButtonValue
+		2 o buttonID
 	g ()V updateScreen
 	h ()V onGuiClosed
 ds net/minecraft/src/GLAllocation
@@ -2721,7 +2721,7 @@ ds net/minecraft/src/GLAllocation
 		0 o range
 	a ()V deleteTexturesAndDisplayLists
 	a (Ljava/nio/IntBuffer;)V generateTextureNames
-		0 o name
+		0 o textures
 	b (I)Ljava/nio/ByteBuffer; createDirectByteBuffer
 		0 o capacity
 	c (I)Ljava/nio/IntBuffer; createDirectIntBuffer
@@ -2748,8 +2748,8 @@ du net/minecraft/src/GuiDownloadTerrain
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	g ()V updateScreen
 dv net/minecraft/src/Packet28EntityVelocity
@@ -2761,9 +2761,9 @@ dv net/minecraft/src/Packet28EntityVelocity
 		0 o entity
 	<init> (IDDD)V <init>
 		0 o entityId
-		1 o valueX
-		2 o valueY
-		3 o valueZ
+		1 o motionX
+		2 o motionY
+		3 o motionZ
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V writePacketData
 		0 o out
@@ -2937,7 +2937,7 @@ dx net/minecraft/src/Item
 		0 o entity
 	a (Lfp;IIII)V hitBlock
 		0 o itemStack
-		1 o blockID
+		1 o id
 		2 o posX
 		3 o posY
 		4 o posZ
@@ -3412,23 +3412,23 @@ ex net/minecraft/src/GuiContainer
 	<clinit> ()V <clinit>
 	<init> ()V <init>
 	a (II)Ldz; getSlotAtPosition
-		0 o posX
-		1 o posY
+		0 o coordX
+		1 o coordY
 	a (CI)V keyTyped
 		0 o eventChar
 		1 o key
 	a (F)V drawGuiContainerBackgroundLayer
 		0 o partialTicks
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	a (III)V mouseClicked
 		0 o coordX
 		1 o coordY
-		2 o mouseButtonValue
+		2 o buttonID
 	a (Lof;)V drawSlotInventory
-		0 o slotInventory
+		0 o slot
 	b ()Z doesGuiPauseGame
 	b (III)V mouseMovedOrUp
 		0 o coordX
@@ -3543,7 +3543,7 @@ f net/minecraft/src/RenderGlobal
 	a (Llw;)V obtainEntitySkin
 		0 o entity
 	a (Ljava/lang/String;DDDFF)V playSound
-		0 o soundName
+		0 o name
 		1 o posX
 		2 o posY
 		3 o posZ
@@ -3562,7 +3562,7 @@ f net/minecraft/src/RenderGlobal
 		1 o pInt
 		2 o partialTicks
 	a (Ljava/lang/String;III)V playRecord
-		0 o recordName
+		0 o name
 		1 o posX
 		2 o posY
 		3 o posZ
@@ -3573,7 +3573,7 @@ f net/minecraft/src/RenderGlobal
 		1 o camera
 		2 o partialTicks
 	a (Ljava/lang/String;DDDDDD)V spawnParticle
-		0 o particleName
+		0 o name
 		1 o posX
 		2 o posY
 		3 o posZ
@@ -3806,11 +3806,11 @@ fi net/minecraft/src/MathHelper
 	a (F)F sin
 		0 o value
 	a (DD)D abs_max
-		0 o valueX
-		1 o valueY
+		0 o valueOne
+		1 o valueTwo
 	a (II)I bucketInt
-		0 o valueX
-		1 o valueY
+		0 o valueOne
+		1 o valueTwo
 	b (F)F cos
 		0 o value
 	b (D)I floor_double
@@ -3933,7 +3933,7 @@ fo net/minecraft/src/InventoryPlayer
 		1 o decrement
 	a ()Lfp; getCurrentItem
 	a (I)V changeCurrentItem
-		0 o itemID
+		0 o id
 	a (Lfp;Lfp;)Z compareItemStack
 		0 o stackOne
 		1 o stackTwo
@@ -3945,15 +3945,15 @@ fo net/minecraft/src/InventoryPlayer
 	a (Lly;)Lly; writeToNBT
 		0 o tag
 	a (IZ)V setCurrentItem
-		0 o itemID
-		1 o isInTestMode
+		0 o id
+		1 o inTestMode
 	b (Lly;)V readFromNBT
 		0 o tag
 	b (I)Z consumeInventoryItem
-		0 o itemID
+		0 o id
 	b (II)I addItemsToInventory
-		0 o itemID
-		1 o increment
+		0 o id
+		1 o stackSize
 	b (Lnq;)Z canHarvestBlock
 		0 o block
 	b ()V decrementAnimations
@@ -3967,10 +3967,10 @@ fo net/minecraft/src/InventoryPlayer
 		0 o increment
 	f ()I getTotalArmorValue
 	f (I)I getInventorySlotContainItem
-		0 o itemID
+		0 o id
 	g ()V dropAllItems
 	g (I)I getFirstPartialMatchingStack
-		0 o itemID
+		0 o id
 	h ()V onInventoryChanged
 	i ()Lfo; copyInventory
 	j ()I getFirstEmptyStack
@@ -4126,7 +4126,7 @@ fu net/minecraft/src/RenderEngine
 		0 o name
 	a (Ljava/awt/image/BufferedImage;I)V setupTexture
 		0 o image
-		1 o intBuffer
+		1 o texture
 	a (Ljava/lang/String;Lie;)Lcl; obtainImageData
 		0 o url
 		1 o buffer
@@ -4310,11 +4310,11 @@ gc net/minecraft/src/Packet14BlockDig
 	d face
 	e status
 	<init> (IIIII)V <init>
-		0 o xPosition
-		1 o yPosition
-		2 o zPosition
-		3 o face
-		4 o status
+		0 o status
+		1 o xPosition
+		2 o yPosition
+		3 o zPosition
+		4 o face
 	<init> ()V <init>
 	a (Ljava/io/DataOutputStream;)V writePacketData
 		0 o out
@@ -4449,7 +4449,7 @@ gh net/minecraft/src/GuiButton
 		0 o coordX
 		1 o coordY
 	a (Z)I getHoverState
-		0 o isHoveringOver
+		0 o hoveringOver
 	b (Lnet/minecraft/client/Minecraft;II)V mouseDragged
 		0 o minecraft
 		1 o coordX
@@ -4747,7 +4747,7 @@ gw net/minecraft/src/Path
 	a ()V clearPath
 	a (Lb;F)V changeDistance
 		0 o point
-		1 o distance
+		1 o distanceToTarget
 	a (Lb;)Lb; addPoint
 		0 o point
 	b ()Lb; dequeue
@@ -4807,7 +4807,7 @@ gz net/minecraft/src/TileEntityRenderer
 		0 o worldObj
 		1 o renderEngine
 		2 o fontRenderer
-		3 o player
+		3 o entityPlayer
 		4 o tick
 	a (Ljava/lang/Class;)Lfr; getSpecialRendererForClass
 		0 o tileEntityClass
@@ -4888,7 +4888,7 @@ ha net/minecraft/src/Chunk
 		1 o posX
 		2 o posY
 		3 o posZ
-		4 o value
+		4 o lightValue
 	a (Z)Z needsSaving
 		0 o pFlag
 	a ()V func_1014_a
@@ -5033,8 +5033,8 @@ hd net/minecraft/src/GuiMultiplayer
 		1 o port
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	g ()V updateScreen
 he net/minecraft/src/MovementInputFromOptions
@@ -5434,7 +5434,7 @@ hv net/minecraft/src/WorldClient
 		0 o posX
 		1 o posY
 		2 o posZ
-		3 o blockID
+		3 o id
 		4 o metadata
 	a (Llw;)Z spawnEntityInWorld
 		0 o entity
@@ -5442,7 +5442,7 @@ hv net/minecraft/src/WorldClient
 		0 o posX
 		1 o posY
 		2 o posZ
-		3 o blockID
+		3 o id
 	b (I)Llw; getEntityByID
 		0 o id
 	b (Llw;)V obtainEntitySkin
@@ -5571,7 +5571,7 @@ ib net/minecraft/src/NetClientHandler
 	a (Lek;)V handleUpdateTime
 		0 o packet
 	a (Ljava/lang/String;)V handleErrorMessage
-		0 o packet
+		0 o detail
 	a (Leq;)V handleBlockItemSwitch
 		0 o packet
 	a (Lio;)V handleAttachEntity
@@ -6141,7 +6141,7 @@ ix net/minecraft/src/InventoryLargeChest
 iy net/minecraft/src/BlockButton
 	<init> (II)V <init>
 		0 o blockID
-		1 o block
+		1 o blockIndexInTexture
 	a (Lcy;IIILjava/util/Random;)V updateTick
 		0 o world
 		1 o posX
@@ -6230,7 +6230,7 @@ iz net/minecraft/src/TexureWaterFlowFX
 j net/minecraft/src/CanvasMinecraftApplet
 	a mcApplet
 	<init> (Lnet/minecraft/client/MinecraftApplet;)V <init>
-		0 o blockIndexInTexture
+		0 o mcApplet
 	addNotify ()V addNotify
 	removeNotify ()V removeNotify
 ja net/minecraft/src/BlockFlowing
@@ -6428,8 +6428,8 @@ jh net/minecraft/src/GuiDeleteWorld
 	<init> (Lbp;)V <init>
 		0 o parentScreen
 	a (ZI)V confirmClicked
-		0 o clickResult
-		1 o clickID
+		0 o correctID
+		1 o worldID
 	c (I)V selectWorld
 		0 o worldID
 	j ()V initButtons
@@ -6484,8 +6484,8 @@ jl net/minecraft/src/GuiIngameMenu
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	g ()V updateScreen
 jm net/minecraft/src/TexturePackDefault
@@ -6493,9 +6493,9 @@ jm net/minecraft/src/TexturePackDefault
 	f texturePackThumbnail
 	<init> ()V <init>
 	b (Lnet/minecraft/client/Minecraft;)V unbindThumbnailTexture
-		0 o mc
+		0 o minecraft
 	c (Lnet/minecraft/client/Minecraft;)V bindThumbnailTexture
-		0 o mc
+		0 o minecraft
 jn net/minecraft/src/BlockMinecartTrack
 	<init> (II)V <init>
 		0 o blockID
@@ -6686,12 +6686,12 @@ ju net/minecraft/src/MapGenCavesHell
 		5 o pByteA
 jv net/minecraft/src/IWorldAccess
 	a (Ljava/lang/String;III)V playRecord
-		0 o recordName
+		0 o name
 		1 o posX
 		2 o posY
 		3 o posZ
 	a (Ljava/lang/String;DDDDDD)V spawnParticle
-		0 o particleName
+		0 o name
 		1 o posX
 		2 o posY
 		3 o posZ
@@ -6710,7 +6710,7 @@ jv net/minecraft/src/IWorldAccess
 	a (Llw;)V obtainEntitySkin
 		0 o entity
 	a (Ljava/lang/String;DDDFF)V playSound
-		0 o soundName
+		0 o name
 		1 o posX
 		2 o posY
 		3 o posZ
@@ -6915,7 +6915,7 @@ kg net/minecraft/src/ItemSword
 		1 o ingredientQuality
 	a (Lfp;IIII)V hitBlock
 		0 o itemStack
-		1 o blockID
+		1 o id
 		2 o posX
 		3 o posY
 		4 o posZ
@@ -6935,8 +6935,8 @@ kh net/minecraft/src/GuiConflictWarning
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	g ()V updateScreen
 ki net/minecraft/src/EntityDiggingFX
@@ -7110,8 +7110,8 @@ kn net/minecraft/src/GuiYesNo
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 ko net/minecraft/src/EntityFlameFX
 	a flameScale
@@ -7244,7 +7244,7 @@ ku net/minecraft/src/ItemRenderer
 	a ()V updateEquippedItem
 	a (FI)V renderInsideOfBlock
 		0 o partialTicks
-		1 o blockTextureIndex
+		1 o blockTexture
 	b (F)V renderOverlays
 		0 o partialTicks
 	b ()V func_9449_b
@@ -7513,8 +7513,8 @@ le net/minecraft/src/GuiSelectWorld
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	c (I)V selectWorld
 		0 o worldID
@@ -7638,7 +7638,7 @@ ln net/minecraft/src/TextureFlamesFX
 	g field_1133_g
 	h field_1132_h
 	<init> (I)V <init>
-		0 o iconIndex
+		0 o state
 	a ()V onTick
 lo net/minecraft/src/MaterialLiquid
 	<init> ()V <init>
@@ -7689,7 +7689,7 @@ ls net/minecraft/src/FontRenderer
 		1 o coordX
 		2 o coordY
 		3 o color
-		4 o hasDropShadow
+		4 o dropShadow
 	a (Ljava/lang/String;III)V drawStringWithShadow
 		0 o text
 		1 o coordX
@@ -7731,7 +7731,7 @@ lt net/minecraft/src/TileEntityFurnace
 		0 o slot
 	d ()Ljava/lang/String; getInvName
 	d (I)I getSmeltingResultItem
-		0 o resultID
+		0 o id
 	i ()V smeltItem
 	j ()Z canSmelt
 	o_ ()I getInventoryStackLimit
@@ -7940,7 +7940,7 @@ lw net/minecraft/src/Entity
 	a (Lhb;)Z isInsideOfMaterial
 		0 o material
 	a (DZ)V updateFallState
-		0 o offsetY
+		0 o motionY
 		1 o onGround
 	a (IIF)Leo; dropItemWithOffset
 		0 o itemID
@@ -8007,9 +8007,9 @@ lw net/minecraft/src/Entity
 	c (Liq;)Z addEntityID
 		0 o tag
 	c (DDD)Z isOffsetPositionInLiquid
-		0 o coordX
-		1 o coordY
-		2 o coordZ
+		0 o motionX
+		1 o motionY
+		2 o motionZ
 	c (DDDFF)V setLocationAndAngles
 		0 o posX
 		1 o posY
@@ -8112,7 +8112,7 @@ ly net/minecraft/src/NBTTagList
 	a (Ljava/io/DataInput;)V load
 		0 o in
 	a (I)Lfd; tagAt
-		0 o element
+		0 o index
 	a ()B getId
 	a (Ljava/io/DataOutput;)V write
 		0 o out
@@ -8163,7 +8163,7 @@ mb net/minecraft/src/BlockStairs
 	a modelBlock
 	<init> (ILnq;)V <init>
 		0 o blockID
-		1 o block
+		1 o modelBlock
 	a (Lcy;IIILjava/util/Random;)V updateTick
 		0 o world
 		1 o posX
@@ -8543,7 +8543,7 @@ mo net/minecraft/src/NetHandler
 	a (Lek;)V handleUpdateTime
 		0 o packet
 	a (Ljava/lang/String;)V handleErrorMessage
-		0 o packet
+		0 o detail
 	a (Leq;)V handleBlockItemSwitch
 		0 o packet
 	a (Lio;)V handleAttachEntity
@@ -8780,7 +8780,7 @@ na net/minecraft/src/SlotArmor
 	d parent
 	<init> (Lne;Lex;Lhi;IIII)V <init>
 		0 o parent
-		1 o guiContainer
+		1 o guiHandler
 		2 o inventory
 		3 o slotIndex
 		4 o posX
@@ -8802,8 +8802,8 @@ nb net/minecraft/src/Gui
 	a (Lls;Ljava/lang/String;III)V drawCenteredString
 		0 o fontRenderer
 		1 o text
-		2 o posX
-		3 o posY
+		2 o coordX
+		3 o coordY
 		4 o color
 	a (IIIIII)V drawGradientRect
 		0 o sideOne
@@ -8813,8 +8813,8 @@ nb net/minecraft/src/Gui
 		4 o color
 		5 o gradient
 	b (IIIIII)V drawTexturedModalRect
-		0 o posX
-		1 o posY
+		0 o coordX
+		1 o coordY
 		2 o textureU
 		3 o textureV
 		4 o width
@@ -8822,8 +8822,8 @@ nb net/minecraft/src/Gui
 	b (Lls;Ljava/lang/String;III)V drawString
 		0 o fontRenderer
 		1 o text
-		2 o posX
-		3 o posY
+		2 o coordX
+		3 o coordY
 		4 o color
 nc net/minecraft/src/TexturedQuad
 	a vertexPositions
@@ -8833,10 +8833,10 @@ nc net/minecraft/src/TexturedQuad
 		0 o vertexPositions
 	<init> ([Lew;IIII)V <init>
 		0 o vertexPositions
-		1 o coordUOne
-		2 o coordVOne
-		3 o coordUTwo
-		4 o coordVTwo
+		1 o textureUOne
+		2 o textureVOne
+		3 o textureUTwo
+		4 o textureVTwo
 	a (Lis;F)V draw
 		0 o tessellator
 		1 o scale
@@ -8854,8 +8854,8 @@ ne net/minecraft/src/GuiInventory
 	a (F)V drawGuiContainerBackgroundLayer
 		0 o partialTicks
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	j ()V drawGuiContainerForegroundLayer
 net/minecraft/client/Minecraft net/minecraft/client/Minecraft
@@ -9174,7 +9174,7 @@ nl net/minecraft/src/GuiIngame
 		2 o width
 		3 o height
 	b (Ljava/lang/String;)V setRecordPlayingMessage
-		0 o recordName
+		0 o name
 	b (FII)V renderPortalOverlay
 		0 o partialTicks
 		1 o width
@@ -9194,8 +9194,8 @@ nm net/minecraft/src/GuiControls
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 nn net/minecraft/src/MovementInput
 	a moveStrafe
@@ -9876,17 +9876,17 @@ od net/minecraft/src/TexturePackCustom
 	<init> (Ljava/io/File;)V <init>
 		0 o texturePackFile
 	a (Ljava/lang/String;)Ljava/io/InputStream; getResourceAsStream
-		0 o textureName
+		0 o name
 	a (Lnet/minecraft/client/Minecraft;)V func_6485_a
-		0 o mc
+		0 o minecraft
 	a ()V func_6482_a
 	b (Lnet/minecraft/client/Minecraft;)V unbindThumbnailTexture
-		0 o mc
+		0 o minecraft
 	b ()V closeTexturePackFile
 	b (Ljava/lang/String;)Ljava/lang/String; truncateString
 		0 o line
 	c (Lnet/minecraft/client/Minecraft;)V bindThumbnailTexture
-		0 o mc
+		0 o minecraft
 oe net/minecraft/src/TextureWaterFX
 	g red
 	h green
@@ -9917,7 +9917,7 @@ og net/minecraft/src/GuiConnecting
 		2 o port
 	a (Log;Lib;)Lib; setNetClientHandler
 		0 o guiConnecting
-		1 o clientHandler
+		1 o handler
 	a (CI)V keyTyped
 		0 o eventChar
 		1 o key
@@ -9927,8 +9927,8 @@ og net/minecraft/src/GuiConnecting
 		0 o guiConnecting
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	b (Log;)Lib; getNetClientHandler
 		0 o guiConnecting
@@ -9948,7 +9948,7 @@ oh net/minecraft/src/GuiSlider
 		0 o coordX
 		1 o coordY
 	a (Z)I getHoverState
-		0 o isHoveringOver
+		0 o hoveringOver
 	b (Lnet/minecraft/client/Minecraft;II)V mouseDragged
 		0 o minecraft
 		1 o coordX
@@ -10043,7 +10043,7 @@ om net/minecraft/src/WorldProviderHell
 		0 o worldTime
 		1 o partialTicks
 	a (Ljava/io/File;)Lai; getChunkLoader
-		0 o file
+		0 o saveDir
 	b ()V generateLightBrightnessTable
 	c ()Lbd; getChunkProvider
 	d ()Z canRespawnHere
@@ -10234,7 +10234,7 @@ oz net/minecraft/src/WorldProvider
 		0 o worldTime
 		1 o partialTicks
 	a (Ljava/io/File;)Lai; getChunkLoader
-		0 o file
+		0 o saveDir
 	b (FF)[F calcSunriseSunsetColors
 		0 o celestialAngle
 		1 o partialTicks
@@ -10686,8 +10686,8 @@ pv net/minecraft/src/GuiEditSign
 		0 o button
 	a ()V initGui
 	a (IIF)V drawScreen
-		0 o buttonX
-		1 o buttonY
+		0 o coordX
+		1 o coordY
 		2 o partialTicks
 	g ()V updateScreen
 	h ()V onGuiClosed
@@ -10938,36 +10938,36 @@ qg net/minecraft/src/SoundManager
 	a (Lgq;)V loadSoundSettings
 		0 o options
 	a (Ljava/lang/String;FF)V playSoundFX
-		0 o soundName
+		0 o name
 		1 o volume
 		2 o pitch
 	a (Ljava/lang/String;FFFFF)V playStreaming
-		0 o soundName
+		0 o name
 		1 o posX
 		2 o posY
 		3 o posZ
 		4 o volume
 		5 o pitch
 	a (Ljava/lang/String;Ljava/io/File;)V addSound
-		0 o soundName
+		0 o name
 		1 o file
 	a ()V onSoundOptionsChanged
 	a (Lhf;F)V setListener
 		0 o entity
 		1 o partialTicks
 	b (Ljava/lang/String;FFFFF)V playSound
-		0 o soundName
+		0 o name
 		1 o posX
 		2 o posY
 		3 o posZ
 		4 o volume
 		5 o pitch
 	b (Ljava/lang/String;Ljava/io/File;)V addStreaming
-		0 o soundName
+		0 o name
 		1 o file
 	b ()V closeMinecraft
 	c (Ljava/lang/String;Ljava/io/File;)V addMusic
-		0 o soundName
+		0 o name
 		1 o file
 	c ()V playRandomMusicIfReady
 	d ()V tryToSetLibraryAndCodecs
@@ -11116,7 +11116,7 @@ qm net/minecraft/src/ChunkCoordIntPair
 	b chunkZPos
 	<init> (II)V <init>
 		0 o chunkXPos
-		1 o chunkYPos
+		1 o chunkZPos
 	equals (Ljava/lang/Object;)Z equals
 		0 o obj
 	hashCode ()I hashCode
