@@ -8985,6 +8985,8 @@ net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	k ()V func_6237_k
 	l ()Lbm; func_6251_l
 	m ()Ljava/lang/String; func_6241_m
+	main ([Ljava/lang/String;)V main
+		0 o p_main_0
 	n ()Ljava/lang/String; func_6262_n
 	o ()Ljava/lang/String; func_6245_o
 	p ()V func_6239_p

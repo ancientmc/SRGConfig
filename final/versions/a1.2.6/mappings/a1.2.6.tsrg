@@ -4334,7 +4334,7 @@ gd net/minecraft/src/BlockFence
 		2 o posY
 		3 o posZ
 		4 o aabb
-		5 o list
+		5 o entities
 	a (Lcy;III)Z canPlaceBlockAt
 		0 o world
 		1 o posX
@@ -4866,7 +4866,7 @@ ha net/minecraft/src/Chunk
 	a (Ljava/lang/Class;Lco;Ljava/util/List;)V getEntitiesOfTypeWithinAAAB
 		0 o entityClass
 		1 o aabb
-		2 o list
+		2 o entities
 	a (J)Ljava/util/Random; getRandomWithSeed
 		0 o seed
 	a (II)Z isAtLocation
@@ -4916,7 +4916,7 @@ ha net/minecraft/src/Chunk
 	a (Llw;Lco;Ljava/util/List;)V getEntitiesWithinAABBForEntity
 		0 o entity
 		1 o aabb
-		2 o list
+		2 o entities
 	b (Llw;)V removeEntity
 		0 o entity
 	b (III)I getBlockMetadata
@@ -8209,7 +8209,7 @@ mb net/minecraft/src/BlockStairs
 		2 o posY
 		3 o posZ
 		4 o aabb
-		5 o list
+		5 o entities
 	a (I)I getBlockTextureFromSide
 		0 o side
 	a (Ljava/util/Random;)I quantityDropped
@@ -8985,6 +8985,8 @@ net/minecraft/client/Minecraft net/minecraft/client/Minecraft
 	k ()V usePortal
 	l ()Lbm; getOpenGlCapsChecker
 	m ()Ljava/lang/String; debugInfoRenders
+	main ([Ljava/lang/String;)V main
+		0 o args
 	n ()Ljava/lang/String; getEntityDebug
 	o ()Ljava/lang/String; debugInfoEntities
 	p ()V respawn
@@ -9437,7 +9439,7 @@ nq net/minecraft/src/Block
 		2 o posY
 		3 o posZ
 		4 o aabb
-		5 o list
+		5 o entities
 	a (I)I getBlockTextureFromSide
 		0 o side
 	a (Leb;)F blockStrength

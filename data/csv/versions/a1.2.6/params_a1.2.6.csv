@@ -42,7 +42,7 @@ p_1011_4,lightValue
 p_1012_0,pFlag
 p_1013_0,entityClass
 p_1013_1,aabb
-p_1013_2,list
+p_1013_2,entities
 p_1015_0,entity
 p_1016_0,entity
 p_1016_1,index
@@ -793,7 +793,7 @@ p_230_1,posX
 p_230_2,posY
 p_230_3,posZ
 p_230_4,aabb
-p_230_5,list
+p_230_5,entities
 p_231_0,world
 p_231_1,posX
 p_231_2,posY
@@ -2518,7 +2518,7 @@ p_993_0,rendererOne
 p_993_1,rendererTwo
 p_994_0,entity
 p_994_1,aabb
-p_994_2,list
+p_994_2,entities
 p_996_0,posX
 p_996_1,posZ
 p_997_0,seed
@@ -3348,6 +3348,7 @@ p_i9692_0,random
 p_keyPressed_0,e
 p_keyReleased_0,e
 p_keyTyped_0,e
+p_main_0,args
 p_mouseClicked_0,e
 p_mouseDragged_0,e
 p_mouseEntered_0,e
