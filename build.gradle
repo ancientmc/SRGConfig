@@ -35,6 +35,7 @@ ext {
     MC_VERSION = "a1.2.6"
     DIR_DATA = "$project.projectDir\\data"
     DIR_BUILD = "$project.buildDir"
+    DIR_FINAL = "final\\versions\\${MC_VERSION}\\"
     DIR_MAPPINGS = "${DIR_DATA}\\mappings\\versions\\${MC_VERSION}"
     MAPPINGS_ZIP = "${DIR_MAPPINGS}\\mappings-${MC_VERSION}.zip"
     RGS_FILE = "${DIR_MAPPINGS}\\${MC_VERSION}.rgs"
@@ -276,7 +277,7 @@ task createTestProject(type: CreateTestProject, dependsOn: [unzip, downloadLibra
     backup_src = file(DIR_TEST_SRC_BACKUP)
     libraries = file(LIBRARIES)
     natives = file(NATIVES)
-    patches = file('final\\versions\\' + MC_VERSION + '\\patches\\')
+    patches = file("${DIR_FINAL}\\patches\\")
     outDir = file(DIR_TEST)
 }
 
@@ -287,9 +288,9 @@ task makeZip(type: Zip) {
     destinationDirectory = file("${DIR_BUILD}\\zips\\")
 
     from(file('data\\cfg\\jardep.json'))
-    from(file(TSRG_FILE)) { into ('mappings\\') }
-    from(file("${DIR_BUILD}\\data\\mappings\\exceptions.txt")) { into ('mappings\\') }
-    from(file("final\\versions\\${MC_VERSION}\\patches\\")) { into ('patches\\') }
+    from(file(DIR_FINAL)) {
+        exclude 'mappings\\' + MC_VERSION + '-interm.tsrg'
+    }
 }
 
 publishing {
