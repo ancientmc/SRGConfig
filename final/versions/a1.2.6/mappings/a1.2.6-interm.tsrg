@@ -11296,3 +11296,5 @@ z net/minecraft/src/NoiseGeneratorPerlin
 		0 o p_804_0
 		1 o p_804_1
 		2 o p_804_2
+BaseMod risugami/modloader/BaseMod
+ModLoader risugami/modloader/ModLoader
