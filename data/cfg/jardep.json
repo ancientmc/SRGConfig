@@ -12,8 +12,8 @@
         {
             "downloads": {
                 "artifact": {
-                    "url": "https://github.com/ancientmc/ancientmc-maven/raw/maven/com/paulscode/codecjorbis-impl/20221222/codecjorbis-impl-20221222.jar",
-                    "path": "com/paulscode/codecjorbis-impl/20221222/codecjorbis-impl-20221222.jar"
+                    "url": "https://github.com/ancientmc/ancientmc-maven/raw/maven/com/paulscode/codecjorbis-impl/20230413/codecjorbis-impl-20230413.jar",
+                    "path": "com/paulscode/codecjorbis-impl/20230413/codecjorbis-impl-20230413.jar"
                 }
             },
             "name": "com.paulscode:codecjorbis-impl:20230413"
