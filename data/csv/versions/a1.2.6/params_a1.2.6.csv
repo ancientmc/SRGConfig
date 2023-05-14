@@ -2367,7 +2367,7 @@ p_923_2,coordZ
 p_923_3,width
 p_923_4,height
 p_923_5,depth
-p_923_6,pFloat
+p_923_6,scaleFactor
 p_924_0,pFloat
 p_925_0,rotationPointX
 p_925_1,rotationPointY
@@ -2638,7 +2638,7 @@ p_i2167_3,resultStack
 p_i2244_0,name
 p_i2244_1,ordinal
 p_i2244_2,defaultLightValue
-p_i2280_0,modelSize
+p_i2280_0,scaleFactor
 p_i2317_0,location
 p_i2317_1,buffer
 p_i2333_0,worldObj
@@ -2694,9 +2694,9 @@ p_i2637_0,worldObj
 p_i2637_1,posX
 p_i2637_2,posY
 p_i2637_3,posZ
-p_i2661_0,modelSize
+p_i2661_0,scaleFactor
 p_i2661_1,pFloat
-p_i2662_0,modelSize
+p_i2662_0,scaleFactor
 p_i2678_0,blockID
 p_i2698_0,blockID
 p_i2698_1,blockIndexInTexture
@@ -2946,7 +2946,7 @@ p_i5319_1,blockIndexInTexture
 p_i5339_0,entity
 p_i5339_1,animate
 p_i5360_0,pInt
-p_i5360_1,modelSize
+p_i5360_1,scaleFactor
 p_i5377_0,slimeSize
 p_i5397_0,blockID
 p_i5397_1,blockIndexInTexture

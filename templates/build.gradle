@@ -27,11 +27,6 @@ tasks.withType(JavaExec) {
     systemProperty 'java.library.path', '{natives}'
 }
 
-task testRun(type: JavaExec) {
-    main = 'acp.client.Start'
-    classpath = sourceSets.main.runtimeClasspath
-}
-
 task createPatchesDir() {
     def dir = new File('patches\\')
     dir.mkdir()
@@ -46,4 +41,9 @@ task createPatches(type: MakePatchesTask, dependsOn: createPatchesDir) {
 task apply(type: ApplyPatchesTask) {
     target file('src\\main\\java\\')
     patches file(PATCHES)
+}
+
+task testRun(type: JavaExec, dependsOn: (file(PATCHES) != null ? apply : [])) {
+    main = 'acp.client.Start'
+    classpath = sourceSets.main.runtimeClasspath
 }
