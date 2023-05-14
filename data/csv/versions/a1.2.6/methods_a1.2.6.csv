@@ -351,7 +351,7 @@ func_228_c,isIndirectlyPoweringTo,Release 1.6.4
 func_229_a,quantityDropped,Release 1.6.4
 func_230_a,getCollidingBoundingBoxes,Release 1.2.5
 func_231_b,isPoweringTo,Release 1.6.4
-func_232_a,getIcon,Release 1.6.4
+func_232_a,getBlockTextureFromSideAndMetadata,Release 1.6.4
 func_233_b,onBlockClicked,Release 1.6.4
 func_234_g,getRenderBlockPass,Release 1.6.4
 func_235_e,onBlockAdded,Release 1.6.4

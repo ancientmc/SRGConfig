@@ -901,7 +901,7 @@ field_4014_g,flintAndSteel,Release 1.6.4
 field_4015_b,itemRand,Release 1.6.4
 field_4016_av,bucketWater,Release 1.6.4
 field_4017_ap,porkCooked,Release 1.6.4
-field_4018_aZ,itemIcon,Release 1.6.4
+field_4018_aZ,iconIndex,Release 1.4.7
 field_4019_aV,recordCat,Release 1.6.4
 field_402_as,fire,Release 1.6.4
 field_4020_aT,fishCooked,Release 1.6.4
