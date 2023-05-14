@@ -66,7 +66,7 @@ ae net/minecraft/src/TextureCompassFX
 		0 o mc
 	a ()V onTick
 af net/minecraft/src/RenderItem
-	a renderBlocks
+	a itemRenderBlocks
 	e random
 	<init> ()V <init>
 	a (Leo;DDDFF)V doRenderItem
@@ -589,11 +589,11 @@ aw net/minecraft/src/NoiseGenerator2
 		6 o pDouble3
 		7 o pDouble4
 ax net/minecraft/src/CraftingInventoryCB
-	c crafters
+	c windowId
 	<init> ()V <init>
 	a (Lhi;)V onCraftMatrixChanged
 		0 o inventory
-	a (Leb;)V onCraftGuiClosed
+	a (Leb;)V onContainerClosed
 		0 o player
 ay net/minecraft/src/GuiUnused
 	a message1
@@ -698,7 +698,7 @@ bd net/minecraft/src/IChunkProvider
 	a (ZLpu;)Z saveChunks
 		0 o pFlag
 		1 o progressUpdate
-	a ()Z unload100OldestChunks
+	a ()Z unloadQueuedChunks
 	a (II)Z chunkExists
 		0 o posX
 		1 o posZ
@@ -799,7 +799,7 @@ bk net/minecraft/src/RenderBlocks
 		1 o posX
 		2 o posY
 		3 o posZ
-	a (Lnq;DDDI)V renderBottomFace
+	a (Lnq;DDDI)V renderFaceYNeg
 		0 o block
 		1 o posX
 		2 o posY
@@ -858,7 +858,7 @@ bk net/minecraft/src/RenderBlocks
 		1 o posX
 		2 o posY
 		3 o posZ
-	b (Lnq;DDDI)V renderTopFace
+	b (Lnq;DDDI)V renderFaceYPos
 		0 o block
 		1 o posX
 		2 o posY
@@ -870,7 +870,7 @@ bk net/minecraft/src/RenderBlocks
 		2 o posX
 		3 o posY
 		4 o posZ
-	c (Lnq;DDDI)V renderEastFace
+	c (Lnq;DDDI)V renderFaceZNeg
 		0 o block
 		1 o posX
 		2 o posY
@@ -881,7 +881,7 @@ bk net/minecraft/src/RenderBlocks
 		1 o posX
 		2 o posY
 		3 o posZ
-	d (Lnq;DDDI)V renderWestFace
+	d (Lnq;DDDI)V renderFaceZPos
 		0 o block
 		1 o posX
 		2 o posY
@@ -897,7 +897,7 @@ bk net/minecraft/src/RenderBlocks
 		1 o posX
 		2 o posY
 		3 o posZ
-	e (Lnq;DDDI)V renderNorthFace
+	e (Lnq;DDDI)V renderFaceXNeg
 		0 o block
 		1 o posX
 		2 o posY
@@ -908,7 +908,7 @@ bk net/minecraft/src/RenderBlocks
 		1 o posX
 		2 o posY
 		3 o posZ
-	f (Lnq;DDDI)V renderSouthFace
+	f (Lnq;DDDI)V renderFaceXPos
 		0 o block
 		1 o posX
 		2 o posY
@@ -1028,7 +1028,7 @@ bo net/minecraft/src/BlockRedstoneTorch
 	a (ILjava/util/Random;)I idDropped
 		0 o metadata
 		1 o random
-	a (II)I getBlockTextureFromSideAndMetadata
+	a (II)I getIcon
 		0 o side
 		1 o metadata
 	b (Lcy;III)V onBlockRemoval
@@ -1071,7 +1071,7 @@ bp net/minecraft/src/GuiScreen
 	b mc
 	c width
 	d height
-	e controlList
+	e buttonList
 	f allowUserInput
 	g fontRenderer
 	<init> ()V <init>
@@ -1139,7 +1139,7 @@ bq net/minecraft/src/EntityPlayerSP
 		1 o state
 	a_ (Llw;)V useCurrentItemOnEntity
 		0 o entity
-	a_ (I)V setHealth
+	a_ (I)V setPlayerSPHealth
 		0 o health
 	b (Liq;)V readEntityFromNBT
 		0 o tag
@@ -1148,7 +1148,7 @@ bq net/minecraft/src/EntityPlayerSP
 		1 o itemStackSize
 	b_ ()V updateEntityActionState
 	k ()V onLivingUpdate
-	m ()V displayWorkbenchGUI
+	m ()V displayGUIWorkbench
 	m_ ()V resetPlayerKeyState
 	n ()I getPlayerArmorValue
 	o ()V func_6420_o
@@ -1493,7 +1493,7 @@ cf net/minecraft/src/RenderPainting
 		2 o pInt1
 		3 o pInt2
 		4 o pInt3
-	a (Lkp;DDDFF)V func_158_a
+	a (Lkp;DDDFF)V renderThePainting
 		0 o entity
 		1 o posX
 		2 o posY
@@ -1783,7 +1783,7 @@ cu net/minecraft/src/ChunkProviderIso
 	a (ZLpu;)Z saveChunks
 		0 o pFlag
 		1 o progressUpdate
-	a ()Z unload100OldestChunks
+	a ()Z unloadQueuedChunks
 	a (II)Z chunkExists
 		0 o posX
 		1 o posZ
@@ -1843,7 +1843,7 @@ cx net/minecraft/src/BlockPumpkin
 		3 o posZ
 	a (I)I getBlockTextureFromSide
 		0 o side
-	a (II)I getBlockTextureFromSideAndMetadata
+	a (II)I getIcon
 		0 o side
 		1 o metadata
 	e (Lcy;III)V onBlockAdded
@@ -1881,7 +1881,7 @@ cy net/minecraft/src/World
 	n spawnY
 	o spawnZ
 	p isNewWorld
-	q worldProvider
+	q provider
 	r worldAccesses
 	s worldFile
 	t savePath
@@ -1917,7 +1917,7 @@ cy net/minecraft/src/World
 		2 o posZ
 	a (Llw;)Z spawnEntityInWorld
 		0 o entity
-	a (Lco;)Z checkIfAABBIsClear
+	a (Lco;)Z checkNoEntityCollision
 		0 o aabb
 	a (II)I getFirstUncoveredBlock
 		0 o posX
@@ -1937,7 +1937,7 @@ cy net/minecraft/src/World
 		2 o posZ
 		3 o id
 		4 o metadata
-	a (Lao;Lao;Z)Lnx; rayTraceBlocks_do
+	a (Lao;Lao;Z)Lnx; clip
 		0 o startVector
 		1 o endVector
 		2 o stopOnLiquid
@@ -2001,7 +2001,7 @@ cy net/minecraft/src/World
 		3 o posZ
 		4 o size
 		5 o isFlaming
-	a (Lao;Lao;)Lnx; rayTraceBlocks
+	a (Lao;Lao;)Lnx; clip
 		0 o startVector
 		1 o endVector
 	a (Llw;Ljava/lang/String;FF)V playSoundAtEntity
@@ -2114,7 +2114,7 @@ cy net/minecraft/src/World
 		1 o posY
 		2 o posZ
 		3 o pFlag
-	b (Llw;)V obtainEntitySkin
+	b (Llw;)V onEntityAdded
 		0 o entity
 	b (Lco;)Z isAnyLiquid
 		0 o aabb
@@ -2140,13 +2140,13 @@ cy net/minecraft/src/World
 		0 o posX
 		1 o posY
 		2 o posZ
-	b (IIIII)Z setBlockAndMetadataWithNotify
+	b (IIIII)Z setBlock
 		0 o posX
 		1 o posY
 		2 o posZ
 		3 o id
 		4 o metadata
-	b (IIILji;)V updateTileEntityChunkAndDoNothing
+	b (IIILji;)V markTileEntityChunkModified
 		0 o posX
 		1 o posY
 		2 o posZ
@@ -2157,7 +2157,7 @@ cy net/minecraft/src/World
 	b (Lco;Lhb;)Z isAABBInMaterial
 		0 o aabb
 		1 o material
-	b (IIIIII)V markBlocksDirty
+	b (IIIIII)V markBlockRangeForRenderUpdate
 		0 o minX
 		1 o minY
 		2 o minZ
@@ -2172,7 +2172,7 @@ cy net/minecraft/src/World
 		2 o posZ
 		3 o metadata
 	b ()V setSpawnLocation
-	c (Llw;)V releaseEntitySkin
+	c (Llw;)V onEntityRemoved
 		0 o entity
 	c (Lco;)Z isBoundingBoxBurning
 		0 o aabb
@@ -2189,9 +2189,9 @@ cy net/minecraft/src/World
 		0 o posX
 		1 o posY
 		2 o posZ
-	c (F)Lao; drawClouds
+	c (F)Lao; getCloudColour
 		0 o partialTicks
-	d (Llw;)V setEntityDead
+	d (Llw;)V removeEntity
 		0 o entity
 	d (III)Z blockExists
 		0 o posX
@@ -2259,7 +2259,7 @@ cy net/minecraft/src/World
 		1 o posY
 		2 o posZ
 		3 o id
-	h (III)V markBlockNeedsUpdate
+	h (III)V markBlockForUpdate
 		0 o posX
 		1 o posY
 		2 o posZ
@@ -2283,7 +2283,7 @@ cy net/minecraft/src/World
 		2 o posZ
 		3 o direction
 	j ()V tickBlocksAndAmbiance
-	k (IIII)Z isBlockIndirectlyProvidingPowerTo
+	k (IIII)Z getIndirectPowerLevelTo
 		0 o posX
 		1 o posY
 		2 o posZ
@@ -2687,7 +2687,7 @@ dq net/minecraft/src/EntityCreeper
 		0 o tag
 	b (Llw;)V onDeath
 		0 o entity
-	b (F)F setCreeperFlashTime
+	b (F)F getCreeperFlashIntensity
 		0 o partialTicks
 	b_ ()V updateEntityActionState
 	e_ ()V onUpdate
@@ -2820,7 +2820,7 @@ dx net/minecraft/src/Item
 	K gunpowder
 	L hoeWood
 	M hoeStone
-	N hoeSteel
+	N hoeIron
 	O hoeDiamond
 	P hoeGold
 	Q seeds
@@ -2850,20 +2850,20 @@ dx net/minecraft/src/Item
 	aO compass
 	aP fishingRod
 	aQ pocketSundial
-	aR lightStoneDust
+	aR glowstone
 	aS fishRaw
 	aT fishCooked
 	aU record13
 	aV recordCat
-	aW shiftedIndex
+	aW itemID
 	aX maxStackSize
 	aY maxDamage
-	aZ iconIndex
+	aZ itemIcon
 	aa bootsChain
-	ab helmetSteel
-	ac plateSteel
-	ad legsSteel
-	ae bootsSteel
+	ab helmetIron
+	ac plateIron
+	ad legsIron
+	ae bootsIron
 	af helmetDiamond
 	ag plateDiamond
 	ah legsDiamond
@@ -2884,13 +2884,13 @@ dx net/minecraft/src/Item
 	aw bucketLava
 	ax minecartEmpty
 	ay saddle
-	az doorSteel
+	az doorIron
 	b itemRand
 	ba bFull3D
 	c itemsList
-	d shovelSteel
-	e pickaxeSteel
-	f axeSteel
+	d shovelIron
+	e pickaxeIron
+	f axeIron
 	g flintAndSteel
 	h appleRed
 	i bow
@@ -2899,8 +2899,8 @@ dx net/minecraft/src/Item
 	l diamond
 	m ingotIron
 	n ingotGold
-	o swordSteel
-	p swordWood
+	o swordIron
+	p swordWoodf
 	q shovelWood
 	r pickaxeWood
 	s axeWood
@@ -2955,7 +2955,7 @@ dx net/minecraft/src/Item
 	d ()I getMaxDamage
 	e ()Ldx; setFull3D
 dy net/minecraft/src/RenderFallingSand
-	a renderBlocks
+	a sandRenderBlocks
 	<init> ()V <init>
 	a (Lgb;DDDFF)V doRenderFallingSand
 		0 o entity
@@ -3057,7 +3057,7 @@ eb net/minecraft/src/EntityPlayer
 	i (Llw;)V collideWithPlayer
 		0 o entity
 	k ()V onLivingUpdate
-	m ()V displayWorkbenchGUI
+	m ()V displayGUIWorkbench
 	r ()V respawnPlayer
 	s ()V updateRidden
 	t ()V preparePlayerToSpawn
@@ -3185,7 +3185,7 @@ eh net/minecraft/src/BlockBookshelf
 	a (Ljava/util/Random;)I quantityDropped
 		0 o random
 ei net/minecraft/src/WorldChunkManagerHell
-	e biomeGenerator
+	e biomeToUse
 	f hellTemperature
 	g rainfall
 	<init> (Lgg;DD)V <init>
@@ -3282,7 +3282,7 @@ eo net/minecraft/src/EntityItem
 	a item
 	b age
 	c delayBeforeCanPickup
-	d field_804_d
+	d hoverStart
 	e field_803_e
 	f health
 	<init> (Lcy;DDDLfp;)V <init>
@@ -3498,7 +3498,7 @@ f net/minecraft/src/RenderGlobal
 	u globalRenderBlocks
 	v glOcclusionQueryBase
 	w occlusionEnabled
-	x cloudOffsetX
+	x cloudTickCounter
 	y starGLCallList
 	z glSkyList
 	<init> (Lnet/minecraft/client/Minecraft;Lfu;)V <init>
@@ -3518,7 +3518,7 @@ f net/minecraft/src/RenderGlobal
 	a (II)V checkOcclusionQueryResult
 		0 o pInt
 		1 o pInt1
-	a (III)V markBlockNeedsUpdate
+	a (III)V markBlockForUpdate
 		0 o posX
 		1 o posY
 		2 o posZ
@@ -3540,7 +3540,7 @@ f net/minecraft/src/RenderGlobal
 	a (Lco;)V drawOutlinedBoundingBox
 		0 o aabb
 	a ()V loadRenderers
-	a (Llw;)V obtainEntitySkin
+	a (Llw;)V onEntityCreate
 		0 o entity
 	a (Ljava/lang/String;DDDFF)V playSound
 		0 o name
@@ -3580,9 +3580,9 @@ f net/minecraft/src/RenderGlobal
 		4 o motionX
 		5 o motionY
 		6 o motionZ
-	b (Llw;)V releaseEntitySkin
+	b (Llw;)V onEntityDestroy
 		0 o entity
-	b (IIIIII)V markBlockRangeNeedsUpdate
+	b (IIIIII)V markBlockRangeForRenderUpdate
 		0 o minX
 		1 o minY
 		2 o minZ
@@ -3910,7 +3910,7 @@ fn net/minecraft/src/CraftingInventoryWorkbenchCB
 	<init> ()V <init>
 	a (Lhi;)V onCraftMatrixChanged
 		0 o inventory
-	a (Leb;)V onCraftGuiClosed
+	a (Leb;)V onContainerClosed
 		0 o player
 fo net/minecraft/src/InventoryPlayer
 	a mainInventory
@@ -4636,7 +4636,7 @@ gs net/minecraft/src/ChunkProviderLoadOrGenerate
 	a (ZLpu;)Z saveChunks
 		0 o pFlag
 		1 o progressUpdate
-	a ()Z unload100OldestChunks
+	a ()Z unloadQueuedChunks
 	a (II)Z chunkExists
 		0 o posX
 		1 o posZ
@@ -4708,7 +4708,7 @@ gv net/minecraft/src/BlockDoor
 	a (ILjava/util/Random;)I idDropped
 		0 o metadata
 		1 o random
-	a (II)I getBlockTextureFromSideAndMetadata
+	a (II)I getIcon
 		0 o side
 		1 o metadata
 	a (Lpk;III)V setBlockBoundsBasedOnState
@@ -4982,7 +4982,7 @@ hb net/minecraft/src/Material
 	n circuits
 	o glass
 	p tnt
-	q unused
+	q coral
 	r ice
 	s snow
 	t craftedSnow
@@ -5070,9 +5070,9 @@ hf net/minecraft/src/EntityLiving
 	S dead
 	T field_9326_T
 	U field_9325_U
-	V field_705_Q
-	W field_704_R
-	X field_703_S
+	V prevLimbSwingAmount
+	W limbSwingAmount
+	X limbSwing
 	Y newPosRotationIncrements
 	Z newPosX
 	a livingSoundTime
@@ -5081,7 +5081,7 @@ hf net/minecraft/src/EntityLiving
 	ac newRotationYaw
 	ad newRotationPitch
 	ae field_9348_ae
-	af naturalArmorRating
+	af lastDamage
 	ag entityAge
 	ah moveStrafing
 	ai moveForward
@@ -5091,7 +5091,7 @@ hf net/minecraft/src/EntityLiving
 	am moveSpeed
 	b currentTarget
 	c numTicksToChaseTarget
-	o heartsHalvesLife
+	o maxHurtResistantTime
 	p field_9365_p
 	q field_9364_q
 	r field_9363_r
@@ -5397,21 +5397,21 @@ hu net/minecraft/src/LoadingScreenRenderer
 	e field_1005_e
 	<init> (Lnet/minecraft/client/Minecraft;)V <init>
 		0 o mc
-	a (Ljava/lang/String;)V printText
+	a (Ljava/lang/String;)V resetProgressAndMessage
 		0 o text
 	a (I)V setLoadingProgress
 		0 o progress
-	b (Ljava/lang/String;)V displaySavingString
+	b (Ljava/lang/String;)V displayProgressMessage
 		0 o savingString
 	c (Ljava/lang/String;)V func_597_c
 		0 o pString
-	d (Ljava/lang/String;)V displayLoadingString
+	d (Ljava/lang/String;)V resetProgresAndWorkingMessage
 		0 o loadingString
 hv net/minecraft/src/WorldClient
 	A blocksToReceive
 	B sendQueue
-	C field_20915_C
-	D tileEntityUpdated
+	C clientChunkProvider
+	D chunkModified
 	E entityHashSet
 	F entityList
 	G entitySpawnQueue
@@ -5445,9 +5445,9 @@ hv net/minecraft/src/WorldClient
 		3 o id
 	b (I)Llw; getEntityByID
 		0 o id
-	b (Llw;)V obtainEntitySkin
+	b (Llw;)V onEntityAdded
 		0 o entity
-	b (IIILji;)V updateTileEntityChunkAndDoNothing
+	b (IIILji;)V markTileEntityChunkModified
 		0 o posX
 		1 o posY
 		2 o posZ
@@ -5460,7 +5460,7 @@ hv net/minecraft/src/WorldClient
 		1 o posY
 		2 o posZ
 		3 o metadata
-	c (Llw;)V releaseEntitySkin
+	c (Llw;)V onEntityRemoved
 		0 o entity
 	c (IIIII)Z setBlockAndMetadataAndInvalidate
 		0 o posX
@@ -5475,7 +5475,7 @@ hv net/minecraft/src/WorldClient
 		3 o maxX
 		4 o maxY
 		5 o maxZ
-	d (Llw;)V setEntityDead
+	d (Llw;)V removeEntity
 		0 o entity
 	h (IIII)V scheduleBlockUpdate
 		0 o posX
@@ -5561,7 +5561,7 @@ ib net/minecraft/src/NetClientHandler
 	d netManager
 	e mc
 	f worldClient
-	g field_1210_g
+	g doneLoadingTerrain
 	<init> (Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V <init>
 		0 o mc
 		1 o hostName
@@ -5685,7 +5685,7 @@ ig net/minecraft/src/BlockCrops
 		4 o random
 	a (Ljava/util/Random;)I quantityDropped
 		0 o random
-	a (II)I getBlockTextureFromSideAndMetadata
+	a (II)I getIcon
 		0 o side
 		1 o metadata
 	a (ILjava/util/Random;)I idDropped
@@ -6300,7 +6300,7 @@ jb net/minecraft/src/RenderTNTPrimed
 		3 o posZ
 		4 o yaw
 		5 o partialTicks
-	a (Lkr;DDDFF)V func_153_a
+	a (Lkr;DDDFF)V renderPrimedTNT
 		0 o entity
 		1 o posX
 		2 o posY
@@ -6521,7 +6521,7 @@ jn net/minecraft/src/BlockMinecartTrack
 		3 o posZ
 		4 o startVector
 		5 o endVector
-	a (II)I getBlockTextureFromSideAndMetadata
+	a (II)I getIcon
 		0 o side
 		1 o metadata
 	a (Lpk;III)V setBlockBoundsBasedOnState
@@ -6703,11 +6703,11 @@ jv net/minecraft/src/IWorldAccess
 		1 o posY
 		2 o posZ
 		3 o tileEntity
-	a (III)V markBlockNeedsUpdate
+	a (III)V markBlockForUpdate
 		0 o posX
 		1 o posY
 		2 o posZ
-	a (Llw;)V obtainEntitySkin
+	a (Llw;)V onEntityCreate
 		0 o entity
 	a (Ljava/lang/String;DDDFF)V playSound
 		0 o name
@@ -6716,9 +6716,9 @@ jv net/minecraft/src/IWorldAccess
 		3 o posZ
 		4 o volume
 		5 o pitch
-	b (Llw;)V releaseEntitySkin
+	b (Llw;)V onEntityDestroy
 		0 o entity
-	b (IIIIII)V markBlockRangeNeedsUpdate
+	b (IIIIII)V markBlockRangeForRenderUpdate
 		0 o minX
 		1 o minY
 		2 o minZ
@@ -6770,7 +6770,7 @@ jy net/minecraft/src/NBTTagInt
 	toString ()Ljava/lang/String; toString
 jz net/minecraft/src/RenderGhast
 	<init> ()V <init>
-	a (Lam;F)V func_4014_a
+	a (Lam;F)V preRenderGhast
 		0 o entity
 		1 o partialTicks
 	a (Lhf;F)V preRenderCallback
@@ -6950,10 +6950,10 @@ ki net/minecraft/src/EntityDiggingFX
 		5 o motionY
 		6 o motionZ
 		7 o block
-	a (III)Lki; func_4041_a
-		0 o pInt
-		1 o pInt1
-		2 o pInt2
+	a (III)Lki; applyColourMultiplier
+		0 o posX
+		1 o posY
+		2 o posZ
 	a (Lis;FFFFFF)V renderParticle
 		0 o tessellator
 		1 o pFloat
@@ -6978,7 +6978,7 @@ kj net/minecraft/src/ChunkProviderHell
 	l slowsandGravelNoiseGen
 	m netherrackExculsivityNoiseGen
 	n worldObj
-	o field_4163_o
+	o noiseField
 	p slowsandNoise
 	q gravelNoise
 	r netherrackExclusivityNoise
@@ -6989,7 +6989,7 @@ kj net/minecraft/src/ChunkProviderHell
 	a (ZLpu;)Z saveChunks
 		0 o pFlag
 		1 o progressUpdate
-	a ()Z unload100OldestChunks
+	a ()Z unloadQueuedChunks
 	a (II)Z chunkExists
 		0 o posX
 		1 o posZ
@@ -7001,7 +7001,7 @@ kj net/minecraft/src/ChunkProviderHell
 		0 o pInt
 		1 o pInt1
 		2 o pByteA
-	a ([DIIIIII)[D func_4057_a
+	a ([DIIIIII)[D initializeNoiseField
 		0 o pDoubleA
 		1 o pInt
 		2 o pInt1
@@ -7009,7 +7009,7 @@ kj net/minecraft/src/ChunkProviderHell
 		4 o pInt3
 		5 o pInt4
 		6 o pInt5
-	b (II[B)V func_4058_b
+	b (II[B)V replaceBlocksForBiome
 		0 o pInt
 		1 o pInt1
 		2 o pByteA
@@ -7247,10 +7247,10 @@ ku net/minecraft/src/ItemRenderer
 		1 o blockTexture
 	b (F)V renderOverlays
 		0 o partialTicks
-	b ()V func_9449_b
+	b ()V resetEquippedProgress
 	c (F)V renderWarpedTextureOverlay
 		0 o partialTicks
-	c ()V func_9450_c
+	c ()V resetEquippedProgress2
 	d (F)V renderFireInFirstPerson
 		0 o partialTicks
 kv net/minecraft/src/Packet6SpawnPosition
@@ -7416,11 +7416,11 @@ ld net/minecraft/src/BlockFluids
 		3 o posZ
 		4 o random
 	a ()Z isOpaqueCube
-	a (Lpk;IIILhb;)D func_293_a
+	a (Lpk;IIILhb;)D getFlowDirection
 		0 o world
-		1 o pInt
-		2 o pInt1
-		3 o pInt2
+		1 o posX
+		2 o posY
+		3 o posZ
 		4 o material
 	a (ILjava/util/Random;)I idDropped
 		0 o metadata
@@ -7526,19 +7526,19 @@ lf net/minecraft/src/ImageBufferDownload
 	b imageWidth
 	c imageHeight
 	<init> ()V <init>
-	a (IIII)V func_885_a
+	a (IIII)V setAreaTransparent
 		0 o pInt
 		1 o pInt1
 		2 o pInt2
 		3 o pInt3
 	a (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage; parseUserSkin
 		0 o image
-	b (IIII)V func_884_b
+	b (IIII)V setAreaOpaque
 		0 o pInt
 		1 o pInt1
 		2 o pInt2
 		3 o pInt3
-	c (IIII)Z func_886_c
+	c (IIII)Z hasTransparency
 		0 o pInt
 		1 o pInt1
 		2 o pInt2
@@ -7752,7 +7752,7 @@ lu net/minecraft/src/BlockRedstoneWire
 		1 o posX
 		2 o posY
 		3 o posZ
-	a (II)I getBlockTextureFromSideAndMetadata
+	a (II)I getIcon
 		0 o side
 		1 o metadata
 	a (ILjava/util/Random;)I idDropped
@@ -7904,7 +7904,7 @@ lw net/minecraft/src/Entity
 	bg fire
 	bh maxAir
 	bi inWater
-	bj heartsLife
+	bj hurtResistantTime
 	bk air
 	bl cloakUrl
 	bm isImmuneToFire
@@ -8004,7 +8004,7 @@ lw net/minecraft/src/Entity
 		2 o posZ
 		3 o rotationYaw
 		4 o rotationPitch
-	c (Liq;)Z addEntityID
+	c (Liq;)Z writeToNBTOptional
 		0 o tag
 	c (DDD)Z isOffsetPositionInLiquid
 		0 o motionX
@@ -8179,7 +8179,7 @@ mb net/minecraft/src/BlockStairs
 		3 o posZ
 		4 o side
 	a ()Z isOpaqueCube
-	a (II)I getBlockTextureFromSideAndMetadata
+	a (II)I getIcon
 		0 o side
 		1 o metadata
 	a (ILjava/util/Random;)I idDropped
@@ -8372,7 +8372,7 @@ mh net/minecraft/src/NBTTagDouble
 mi net/minecraft/src/RenderMinecart
 	a modelMinecart
 	<init> ()V <init>
-	a (Lqd;DDDFF)V func_152_a
+	a (Lqd;DDDFF)V renderTheMinecart
 		0 o entity
 		1 o posX
 		2 o posY
@@ -8501,9 +8501,9 @@ mn net/minecraft/src/RenderManager
 	i playerViewY
 	j playerViewX
 	k options
-	l field_1222_l
-	m field_1221_m
-	n field_1220_n
+	l viewerPosX
+	m viewerPosY
+	n viewerPosZ
 	o entityRenderMap
 	p fontRenderer
 	<clinit> ()V <clinit>
@@ -8606,7 +8606,7 @@ mo net/minecraft/src/NetHandler
 		0 o packet
 	a (Lp;)V handlePlayerInventory
 		0 o packet
-	b (Lgk;)V registerPacket
+	b (Lgk;)V unexpectedPacket
 		0 o packet
 mp net/minecraft/src/EntityClientPlayerMP
 	bA oldMinY
@@ -9255,23 +9255,23 @@ nq net/minecraft/src/Block
 	Y deadBush
 	Z pistonBase
 	aA tilledField
-	aB stoneOvenIdle
-	aC stoneOvenActive
+	aB furnaceIdle
+	aC furnaceBurning
 	aD signPost
 	aE doorWood
 	aF ladder
 	aG rail
-	aH stairCompactCobblestone
+	aH stairsCobblestone
 	aI signWall
 	aJ lever
 	aK pressurePlateStone
-	aL doorSteel
+	aL doorIron
 	aM pressurePlatePlanks
 	aN oreRedstone
 	aO oreRedstoneGlowing
 	aP torchRedstoneIdle
 	aQ torchRedstoneActive
-	aR button
+	aR stoneButton
 	aS snow
 	aT ice
 	aU blockSnow
@@ -9288,7 +9288,7 @@ nq net/minecraft/src/Block
 	af mushroomBrown
 	ag mushroomRed
 	ah blockGold
-	ai blockSteel
+	ai blockIron
 	aj stairDouble
 	ak stairSingle
 	al brick
@@ -9299,7 +9299,7 @@ nq net/minecraft/src/Block
 	aq torchWood
 	ar fire
 	as mobSpawner
-	at stairCompactPlanks
+	at stairsWoodOak
 	au chest
 	av redstoneWire
 	aw oreDiamond
@@ -9374,7 +9374,7 @@ nq net/minecraft/src/Block
 		3 o maxX
 		4 o maxY
 		5 o maxZ
-	a (II)I getBlockTextureFromSideAndMetadata
+	a (II)I getIcon
 		0 o side
 		1 o metadata
 	a (ILjava/util/Random;)I idDropped
@@ -9585,14 +9585,14 @@ nq net/minecraft/src/Block
 nr net/minecraft/src/ChunkProviderClient
 	a blankChunk
 	b chunkMapping
-	c field_889_c
+	c chunkListing
 	d worldObj
 	<init> (Lcy;)V <init>
 		0 o worldObj
 	a (ZLpu;)Z saveChunks
 		0 o pFlag
 		1 o progressUpdate
-	a ()Z unload100OldestChunks
+	a ()Z unloadQueuedChunks
 	a (II)Z chunkExists
 		0 o posX
 		1 o posZ
@@ -9604,15 +9604,15 @@ nr net/minecraft/src/ChunkProviderClient
 		0 o posX
 		1 o posZ
 	b ()Z canSave
-	c (II)V func_539_c
+	c (II)V unloadChunk
 		0 o pInt
 		1 o pInt1
 	d (II)Lha; loadChunk
 		0 o posX
 		1 o posZ
 ns net/minecraft/src/EntitySlime
-	a field_768_a
-	b field_767_b
+	a squishFactor
+	b prevSquishFactor
 	c slimeSize
 	d slimeJumpDelay
 	<init> (Lcy;)V <init>
@@ -9746,7 +9746,7 @@ oa net/minecraft/src/BlockFarmland
 		2 o posY
 		3 o posZ
 		4 o id
-	a (II)I getBlockTextureFromSideAndMetadata
+	a (II)I getIcon
 		0 o side
 		1 o metadata
 	b (Lcy;IIILlw;)V onEntityWalking
@@ -9843,7 +9843,7 @@ oc net/minecraft/src/MinecartTrackLogic
 		2 o trackX
 		3 o trackY
 		4 o trackZ
-	a (Loc;)I getNAdjacentTracks
+	a (Loc;)I getAdjacentTrackCount
 		0 o logic
 	a (Z)V refreshTrackShape
 		0 o indirectlyPowered
@@ -10047,7 +10047,7 @@ om net/minecraft/src/WorldProviderHell
 	a (Ljava/io/File;)Lai; getChunkLoader
 		0 o saveDir
 	b ()V generateLightBrightnessTable
-	c ()Lbd; getChunkProvider
+	c ()Lbd; createChunkGenerator
 	d ()Z canRespawnHere
 on net/minecraft/src/ChunkPosition
 	a x
@@ -10218,7 +10218,7 @@ oz net/minecraft/src/WorldProvider
 	d isHellWorld
 	e hasNoSky
 	f lightBrightnessTable
-	g worldType
+	g dimensionId
 	h colorsSunriseSunset
 	<init> ()V <init>
 	a (II)Z canCoordinateBeSpawn
@@ -10241,7 +10241,7 @@ oz net/minecraft/src/WorldProvider
 		0 o celestialAngle
 		1 o partialTicks
 	b ()V generateLightBrightnessTable
-	c ()Lbd; getChunkProvider
+	c ()Lbd; createChunkGenerator
 	d ()Z canRespawnHere
 p net/minecraft/src/Packet5PlayerInventory
 	a entityID
@@ -10565,7 +10565,7 @@ po net/minecraft/src/WorldChunkManager
 		0 o posX
 		1 o posZ
 pp net/minecraft/src/EntityFX
-	b particleTextureIndex
+	b particleIcon
 	c particleTextureJitterX
 	d particleTextureJitterY
 	e particleAge
@@ -10600,7 +10600,7 @@ pp net/minecraft/src/EntityFX
 		0 o tag
 	b (F)Lpp; multiplyVelocity
 		0 o multiplier
-	d (F)Lpp; func_405_d
+	d (F)Lpp; multipleParticleScaleBy
 		0 o pFloat
 	e_ ()V onUpdate
 	l_ ()I getFXLayer
@@ -10670,9 +10670,9 @@ pt net/minecraft/src/EntityPigZombie
 pu net/minecraft/src/IProgressUpdate
 	a (I)V setLoadingProgress
 		0 o progress
-	b (Ljava/lang/String;)V displaySavingString
+	b (Ljava/lang/String;)V displayProgressMessage
 		0 o savingString
-	d (Ljava/lang/String;)V displayLoadingString
+	d (Ljava/lang/String;)V resetProgresAndWorkingMessage
 		0 o loadingString
 pv net/minecraft/src/GuiEditSign
 	a screenTitle
@@ -10734,7 +10734,7 @@ px net/minecraft/src/ChunkProviderGenerate
 	a (ZLpu;)Z saveChunks
 		0 o pFlag
 		1 o progressUpdate
-	a ()Z unload100OldestChunks
+	a ()Z unloadQueuedChunks
 	a (II[B[Lgg;[D)V generateTerrain
 		0 o pInt
 		1 o pInt1
@@ -10803,7 +10803,7 @@ q net/minecraft/src/CraftingInventoryPlayerCB
 		0 o stackList
 	a (Lhi;)V onCraftMatrixChanged
 		0 o inventory
-	a (Leb;)V onCraftGuiClosed
+	a (Leb;)V onContainerClosed
 		0 o player
 qa net/minecraft/src/WorldGenTrees
 	<init> ()V <init>
@@ -10834,8 +10834,8 @@ qd net/minecraft/src/EntityMinecart
 	f pushX
 	g pushZ
 	h cargoItems
-	i field_856_i
-	j field_855_j
+	i isInReverse
+	j matrix
 	k turnProgress
 	l minecartX
 	m minecartY
@@ -10967,7 +10967,7 @@ qg net/minecraft/src/SoundManager
 	b (Ljava/lang/String;Ljava/io/File;)V addStreaming
 		0 o name
 		1 o file
-	b ()V closeMinecraft
+	b ()V cleanup
 	c (Ljava/lang/String;Ljava/io/File;)V addMusic
 		0 o name
 		1 o file
@@ -11273,7 +11273,7 @@ z net/minecraft/src/NoiseGeneratorPerlin
 		1 o pDouble
 		2 o pDouble1
 		3 o pDouble2
-	a ([DDDDIIIDDDD)V func_805_a
+	a ([DDDDIIIDDDD)V populateNoiseArray
 		0 o pDoubleA
 		1 o pDouble
 		2 o pDouble1

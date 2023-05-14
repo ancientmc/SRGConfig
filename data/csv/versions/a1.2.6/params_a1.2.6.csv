@@ -993,9 +993,9 @@ p_292_1,posX
 p_292_2,posY
 p_292_3,posZ
 p_293_0,world
-p_293_1,pInt
-p_293_2,pInt1
-p_293_3,pInt2
+p_293_1,posX
+p_293_2,posY
+p_293_3,posZ
 p_293_4,material
 p_295_0,world
 p_295_1,posX
@@ -1230,9 +1230,9 @@ p_4032_3,posZ
 p_403_0,motionX
 p_403_1,motionY
 p_403_2,motionZ
-p_4041_0,pInt
-p_4041_1,pInt1
-p_4041_2,pInt2
+p_4041_0,posX
+p_4041_1,posY
+p_4041_2,posZ
 p_4042_0,motionX
 p_4042_1,motionY
 p_4042_2,motionZ
