@@ -1028,7 +1028,7 @@ bo net/minecraft/src/BlockRedstoneTorch
 	a (ILjava/util/Random;)I idDropped
 		0 o metadata
 		1 o random
-	a (II)I getIcon
+	a (II)I getBlockTextureFromSideAndMetadata
 		0 o side
 		1 o metadata
 	b (Lcy;III)V onBlockRemoval
@@ -1543,7 +1543,7 @@ ci net/minecraft/src/Packet51MapChunk
 		0 o handler
 cj net/minecraft/src/ModelPig
 	<init> (F)V <init>
-		0 o modelSize
+		0 o scaleFactor
 	<init> ()V <init>
 ck net/minecraft/src/ModelZombie
 	<init> ()V <init>
@@ -1843,7 +1843,7 @@ cx net/minecraft/src/BlockPumpkin
 		3 o posZ
 	a (I)I getBlockTextureFromSide
 		0 o side
-	a (II)I getIcon
+	a (II)I getBlockTextureFromSideAndMetadata
 		0 o side
 		1 o metadata
 	e (Lcy;III)V onBlockAdded
@@ -2383,10 +2383,10 @@ dc net/minecraft/src/ModelBiped
 	i heldItemRight
 	j isSneak
 	<init> (FF)V <init>
-		0 o modelSize
+		0 o scaleFactor
 		1 o pFloat
 	<init> (F)V <init>
-		0 o modelSize
+		0 o scaleFactor
 	<init> ()V <init>
 	a (FFFFFF)V setRotationAngles
 		0 o pFloat
@@ -2858,7 +2858,7 @@ dx net/minecraft/src/Item
 	aW itemID
 	aX maxStackSize
 	aY maxDamage
-	aZ itemIcon
+	aZ iconIndex
 	aa bootsChain
 	ab helmetIron
 	ac plateIron
@@ -2900,7 +2900,7 @@ dx net/minecraft/src/Item
 	m ingotIron
 	n ingotGold
 	o swordIron
-	p swordWoodf
+	p swordWood
 	q shovelWood
 	r pickaxeWood
 	s axeWood
@@ -4708,7 +4708,7 @@ gv net/minecraft/src/BlockDoor
 	a (ILjava/util/Random;)I idDropped
 		0 o metadata
 		1 o random
-	a (II)I getIcon
+	a (II)I getBlockTextureFromSideAndMetadata
 		0 o side
 		1 o metadata
 	a (Lpk;III)V setBlockBoundsBasedOnState
@@ -5685,7 +5685,7 @@ ig net/minecraft/src/BlockCrops
 		4 o random
 	a (Ljava/util/Random;)I quantityDropped
 		0 o random
-	a (II)I getIcon
+	a (II)I getBlockTextureFromSideAndMetadata
 		0 o side
 		1 o metadata
 	a (ILjava/util/Random;)I idDropped
@@ -5752,7 +5752,7 @@ ij net/minecraft/src/ModelQuadraped
 	i leg4
 	<init> (IF)V <init>
 		0 o pInt
-		1 o modelSize
+		1 o scaleFactor
 	a (FFFFFF)V setRotationAngles
 		0 o pFloat
 		1 o pFloat1
@@ -6521,7 +6521,7 @@ jn net/minecraft/src/BlockMinecartTrack
 		3 o posZ
 		4 o startVector
 		5 o endVector
-	a (II)I getIcon
+	a (II)I getBlockTextureFromSideAndMetadata
 		0 o side
 		1 o metadata
 	a (Lpk;III)V setBlockBoundsBasedOnState
@@ -6817,7 +6817,7 @@ ka net/minecraft/src/ModelRenderer
 		3 o width
 		4 o height
 		5 o depth
-		6 o pFloat
+		6 o scaleFactor
 	b (F)V postRender
 		0 o pFloat
 	c (F)V compileDisplayList
@@ -7752,7 +7752,7 @@ lu net/minecraft/src/BlockRedstoneWire
 		1 o posX
 		2 o posY
 		3 o posZ
-	a (II)I getIcon
+	a (II)I getBlockTextureFromSideAndMetadata
 		0 o side
 		1 o metadata
 	a (ILjava/util/Random;)I idDropped
@@ -8179,7 +8179,7 @@ mb net/minecraft/src/BlockStairs
 		3 o posZ
 		4 o side
 	a ()Z isOpaqueCube
-	a (II)I getIcon
+	a (II)I getBlockTextureFromSideAndMetadata
 		0 o side
 		1 o metadata
 	a (ILjava/util/Random;)I idDropped
@@ -9374,7 +9374,7 @@ nq net/minecraft/src/Block
 		3 o maxX
 		4 o maxY
 		5 o maxZ
-	a (II)I getIcon
+	a (II)I getBlockTextureFromSideAndMetadata
 		0 o side
 		1 o metadata
 	a (ILjava/util/Random;)I idDropped
@@ -9746,7 +9746,7 @@ oa net/minecraft/src/BlockFarmland
 		2 o posY
 		3 o posZ
 		4 o id
-	a (II)I getIcon
+	a (II)I getBlockTextureFromSideAndMetadata
 		0 o side
 		1 o metadata
 	b (Lcy;IIILlw;)V onEntityWalking
