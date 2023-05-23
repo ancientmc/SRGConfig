@@ -4334,7 +4334,7 @@ gd net/minecraft/src/BlockFence
 		2 o posY
 		3 o posZ
 		4 o aabb
-		5 o entities
+		5 o boundingBoxes
 	a (Lcy;III)Z canPlaceBlockAt
 		0 o world
 		1 o posX
@@ -8209,7 +8209,7 @@ mb net/minecraft/src/BlockStairs
 		2 o posY
 		3 o posZ
 		4 o aabb
-		5 o entities
+		5 o boundingBoxes
 	a (I)I getBlockTextureFromSide
 		0 o side
 	a (Ljava/util/Random;)I quantityDropped
@@ -9439,7 +9439,7 @@ nq net/minecraft/src/Block
 		2 o posY
 		3 o posZ
 		4 o aabb
-		5 o entities
+		5 o boundingBoxes
 	a (I)I getBlockTextureFromSide
 		0 o side
 	a (Leb;)F blockStrength
